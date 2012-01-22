@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Functions</title>
+    <link rel="stylesheet" type="text/less" href="./style/css/o-blog.less">
+    <script src="./style/js/less-1.2.1.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <!-- <script src="./style/js/jquery.tableofcontents.min.js" type="text/javascript"></script> -->
+    <script src="./style/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+  </head>
+  <body>
+    <div class="topbar-wrapper" style="z-index: 5;">
+      <div class="topbar" data-dropdown="dropdown">
+	<div class="topbar-inner">
+	  <div class="container">
+	    <ul>
+<li><a href="./index.html">Home</a>
+</li>
+<li><a href="./features.html">Features</a>
+</li>
+<li><a href="#">Documentation</a>
+<ul>
+<li><a href="./templates.html">Templates</a>
+</li>
+<li><a href="./structures.html">Structures</a>
+</li>
+<li><a href="./functions.html">Functions</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+</ul>
+
+</li>
+<li><a href="#">Blog</a>
+<ul>
+<li><a href="./blog/2012/01/15_admonitions.html">Admonitions</a>
+</li>
+<li><a href="./blog/2012/01/10_some-html-samples.html">Some HTML5 samples</a>
+</li>
+<li><a href="./blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a>
+</li>
+<li><a href="./blog/2012/01/07_how-to-use-tags.html">How to use tags</a>
+</li>
+<li><a href="./blog/2012/01/07_creating-a-blog.html">Creating a blog</a>
+</li>
+</ul>
+
+</li>
+<li><a href="./tags/index.html">Tags</a>
+</li>
+<li><a href="./archives.html">Archives</a>
+</li>
+<li><a href="./index.xml">RSS</a>
+</li>
+<li><a href="./debug.html">(debug)</a>
+</li>
+</ul>
+
+
+
+	  </div>
+	</div>
+	<div class="topbar-inner" style="opacity: 0.95;">
+	  <header>
+	    <hgroup>
+	    <div class="container">
+	      <div class="offset4">
+		<h1>o-blog</h1>
+		<h2 class="pull-right">standalone blogging system for org-mode</h2>
+	      </div>
+	    </div>
+	    </hgroup>
+	  </header>
+	</div>
+
+      </div>
+    </div>
+    <div class="container" style="padding-top: 150px; margin-bottom: 20px; min-height:350px;">
+
+<article>
+  <header class="article-header">
+    <div class="row">
+      <h1 class="offset1" style="font-size: 250%;">Functions</h1>
+    </div>
+  </header>
+  <div class="article-content">
+    <p>
+Basically any lisp function could be used withing a blog template as long as
+they are known when exporting. Meanwhile some of them are specifically made
+to be used withing templates. These functions are prefixed by <code>ob:</code>.
+</p>
+<p>
+Descriptions are taken from function docstrings.
+</p>
+
+<div id="outline-container-1" class="outline-3">
+<h3 id="sec-1"><code>(ob:get-posts &amp;optional PREDICATE COUNT SORTFUNC COLLECT)</code></h3>
+<div class="outline-text-3" id="text-1">
+
+
+<p>
+Return posts (from <code>POSTS</code> as defined in <code>org-publish-blog</code>) matching
+<code>PREDICATE</code>. Limit to <code>COUNT</code> results if defined and sorted using
+<code>SORTFUNC</code>.
+</p>
+<p>
+<code>PREDICATE</code> is a function run for each post with the post itself as
+argument. If <code>PREDICATE</code> is nil, no filter would be done on posts.
+</p>
+<p>
+<code>SORTFUNC</code> is used a <code>sort</code> <code>PREDICATE</code>.
+</p>
+<p>
+If <code>COLLECT</code> is defined, only returns the <code>COLLECT</code> field of a
+<code>ob:post</code> structure.
+</p>
+<p>
+Examples:
+</p>
+<p>
+Getting last 10 posts:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(ob:get-posts nil 10)
+</pre>
+
+
+
+<p>
+Getting post from January 2012:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(ob:get-posts
+   (<span style="color: #729fcf; font-weight: bold;">lambda</span> (x)
+      (and (= 2012 (ob:post-year x))
+           (= 1 (ob:post-month x)))))
+</pre>
+
+
+<p>
+Getting all categories:
+</p>
+
+
+
+<pre class="src src-emacs-lisp">(ob:get-posts nil nil nil 'category)
+</pre>
+
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-4">
+<h4 id="sec-1-1">Template usages</h4>
+<div class="outline-text-4" id="text-1-1">
+
+
+<p>
+For archive navigation:
+</p>
+
+
+
+<pre class="src src-html">&lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">nav</span> <span style="color: #eeeeec;">id</span>=<span style="color: #ad7fa8; font-style: italic;">"archives"</span>&gt;
+  &lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">Archives</span>&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">h1</span>&gt;
+  &lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">ul</span>&gt;
+    &lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;
+      (loop for p in (ob:get-posts nil 10)
+            do (insert (format <span style="color: #ad7fa8; font-style: italic;">"&lt;li&gt;&lt;a href=\"</span><span style="color: #eeeeec;">%s</span>/<span style="color: #eeeeec;">%s</span>\<span style="color: #ad7fa8; font-style: italic;">"&gt;%s&lt;/a&gt;&lt;/li&gt; "</span>
+                               (ob:path-to-root)
+                               (ob:post-htmlfile p)
+                               (ob:post-title p))))
+    &lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;
+  &lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">ul</span>&gt;
+&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">nav</span>&gt;
+</pre>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2"><code>(ob:get-post-by-id ID)</code></h3>
+<div class="outline-text-3" id="text-2">
+
+
+<p>
+Return post which id is <code>ID</code>.
+</p>
+
+</div>
+
+<div id="outline-container-2-1" class="outline-4">
+<h4 id="sec-2-1">Template usages</h4>
+<div class="outline-text-4" id="text-2-1">
+
+
+<p>
+Posts navigation:
+</p>
+
+
+
+<pre class="src src-html">&lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">nav</span> <span style="color: #eeeeec;">class</span>=<span style="color: #ad7fa8; font-style: italic;">"articles-nav"</span>&gt;
+  &lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">ul</span>&gt;
+    &lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;
+      (progn
+        ;; Get previous post
+        (let ((ppost (ob:get-post-by-id (1+ (ob:post-id POST)))))
+          (if ppost
+              (insert (format <span style="color: #ad7fa8; font-style: italic;">"&lt;li class=\"</span>prev\<span style="color: #ad7fa8; font-style: italic;">"&gt;&lt;a href=\"</span><span style="color: #eeeeec;">%s</span>/<span style="color: #eeeeec;">%s</span>\<span style="color: #ad7fa8; font-style: italic;">"&gt;%s&lt;/a&gt;&lt;/li&gt;"</span>
+                              (ob:path-to-root)
+                              (ob:post-htmlfile ppost)
+                              (ob:post-title ppost)))
+            (insert <span style="color: #ad7fa8; font-style: italic;">"&lt;li&gt;&amp;nbsp;&lt;/li&gt;"</span>)))
+        ;; Get next post
+        (let ((npost (ob:get-post-by-id (1- (ob:post-id POST)))))
+          (if npost
+              (insert (format <span style="color: #ad7fa8; font-style: italic;">"&lt;li class=\"</span>next\<span style="color: #ad7fa8; font-style: italic;">"&gt;&lt;a href=\"</span><span style="color: #eeeeec;">%s</span>/<span style="color: #eeeeec;">%s</span>\<span style="color: #ad7fa8; font-style: italic;">"&gt;%s&lt;/a&gt;&lt;/li&gt;"</span>
+                              (ob:path-to-root)
+                              (ob:post-htmlfile npost)
+                              (ob:post-title npost)))
+            (insert <span style="color: #ad7fa8; font-style: italic;">"&lt;li&gt;&amp;nbsp;&lt;/li&gt;"</span>))))
+    &lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;
+  &lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">ul</span>&gt;
+&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">nav</span>&gt;
+</pre>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3"><code>(ob:get-snippet NAME)</code></h3>
+<div class="outline-text-3" id="text-3">
+
+
+<p>
+Get first snippet matching <code>NAME</code>.
+</p>
+
+</div>
+
+<div id="outline-container-3-1" class="outline-4">
+<h4 id="sec-3-1">Template usages</h4>
+<div class="outline-text-4" id="text-3-1">
+
+
+<p>
+Insert the <i>About</i> section in page footer:
+</p>
+
+
+
+<pre class="src src-html">&lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">About</span>&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">h1</span>&gt;
+&lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">address</span>&gt;
+  &lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;(ob:post-content-html (ob:get-snippet <span style="color: #ad7fa8; font-style: italic;">"About"</span>))&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;
+&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">address</span>&gt;
+</pre>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-3">
+<h3 id="sec-4"><code>(ob:get-header HEADER &amp;optional ALL)</code></h3>
+<div class="outline-text-3" id="text-4">
+
+
+<p>
+Get <code>HEADER</code> from blog buffer as defined in <code>BLOG</code> global context variable.
+</p>
+<p>
+Returns only fist match except if <code>ALL</code> is defined.
+</p>
+
+</div>
+
+<div id="outline-container-4-1" class="outline-4">
+<h4 id="sec-4-1">Template usages</h4>
+<div class="outline-text-4" id="text-4-1">
+
+
+<p>
+Get the last updated header for rss export:
+</p>
+
+
+
+<pre class="src src-html">&lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">updated</span>&gt;&lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;(ob:format-date (ob:get-header <span style="color: #ad7fa8; font-style: italic;">"DATE"</span>))&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">updated</span>&gt;
+</pre>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-5" class="outline-3">
+<h3 id="sec-5"><code>(ob:insert-template TEMPLATE)</code></h3>
+<div class="outline-text-3" id="text-5">
+
+
+<p>
+Insert <code>TEMPLATE</code> in current buffer.
+</p>
+
+</div>
+
+<div id="outline-container-5-1" class="outline-4">
+<h4 id="sec-5-1">Template usages</h4>
+<div class="outline-text-4" id="text-5-1">
+
+
+<p>
+Insert html header:
+</p>
+
+
+
+<pre class="src src-html">&lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;(ob:insert-template <span style="color: #ad7fa8; font-style: italic;">"page_header.html"</span>)&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;
+</pre>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-6" class="outline-3">
+<h3 id="sec-6"><code>(ob:format-date DATE &amp;optional FORMAT LOCALE)</code></h3>
+<div class="outline-text-3" id="text-6">
+
+
+<p>
+Format <code>DATE</code> using <code>FORMAT</code> and <code>LOCALE</code>.
+</p>
+<p>
+<code>DATE</code> can heither be string suitable for <code>parse-time-string</code> or a list of
+interger using <code>current-time</code> format.
+</p>
+<p>
+<code>FORMAT</code> is a <code>format-time-string</code> compatible definition. If not
+set ISO8601 <code>%Y-%m-%dT%TZ</code> format would be used.
+</p>
+
+</div>
+
+<div id="outline-container-6-1" class="outline-4">
+<h4 id="sec-6-1">Template usages</h4>
+<div class="outline-text-4" id="text-6-1">
+
+
+<p>
+Add a human readable timestamp for a post:
+</p>
+
+
+
+<pre class="src src-html">Posted on &lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">time</span> <span style="color: #eeeeec;">datetime</span>=<span style="color: #ad7fa8; font-style: italic;">"&lt;lisp&gt; (ob:format-date (ob:post-timestamp POST)) &lt;/lisp&gt;"</span>&gt;
+  &lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt; (ob:format-date (ob:post-timestamp POST) <span style="color: #ad7fa8; font-style: italic;">"%A %B, %d %Y at %H:%M:%S"</span>) &lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;
+&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">time</span>&gt;.
+</pre>
+
+
+</div>
+</div>
+</div>
+
+  </div>
+</article>
+      </div>
+      <footer class="footer">
+	<div class="container">
+	  <div class="row">
+	    <section class="span4">
+	      <h1>About</h1>
+	      <address>
+		<p>
+This is a sample blog to explain how <a href="https://github.com/renard/o-blog">o-blog</a> works.
+</p>
+	      </address>
+	    </section>
+	    <nav id="links" class="span4">
+	      <h1>Links</h1>
+	      <ul>
+		  <li class="home"><a href="./index.html">Home</a></li>
+  <li class="blog"><a href="./blog/2012/01/15_admonitions.html">Blog</a></li>
+  <li class="tags"><a href="./tags/index.html">Tags</a></li>
+  <li class="archives"><a href="./archives.html">Archives</a></li>
+  <li class="rss"><a href="./index.xml">RSS</a></li>
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span4">
+	      <h1>Archives</h1>
+	      <ul>
+		<li><a href="./blog/2012/01/15_admonitions.html">Admonitions</a></li> <li><a href="./blog/2012/01/10_some-html-samples.html">Some HTML5 samples</a></li> <li><a href="./blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="./blog/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="./blog/2012/01/07_creating-a-blog.html">Creating a blog</a></li> 
+	      </ul>
+	    </nav>
+	    <nav class="tags span4">
+	      <h1>Tags</h1>
+	      <ul>
+  <li style="font-size: 80.00%;"><a href="./tags/html5.html">html5</a></li> <li style="font-size: 126.67%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li> 
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+Copyright © 2008-2012 <a href="mailto:seb%20❨ɑƦɵϐɑʂɛ❩%20chezwam%20❨Ƥɵɩɲʈ❩%20org">Sébastien Gross</a>. Published under the therm of the
+<a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.
+</p>
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </footer>
+      <script>
+	$('[data-dropdown] ul ul').addClass('dropdown-menu');
+	$('[data-dropdown] ul ul').parent().addClass('menu');
+	$('[data-dropdown] ul li.menu > a').addClass('menu');
+	$('.dropdown-menu li').each(function() { if ( $(this).text() == '\n') $(this).addClass('divider')});
+	$('[data-dropdown]').dropdown();
+      </script>
+</body>
+</html>
+

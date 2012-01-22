@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Templates</title>
+    <link rel="stylesheet" type="text/less" href="./style/css/o-blog.less">
+    <script src="./style/js/less-1.2.1.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <!-- <script src="./style/js/jquery.tableofcontents.min.js" type="text/javascript"></script> -->
+    <script src="./style/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+  </head>
+  <body>
+    <div class="topbar-wrapper" style="z-index: 5;">
+      <div class="topbar" data-dropdown="dropdown">
+	<div class="topbar-inner">
+	  <div class="container">
+	    <ul>
+<li><a href="./index.html">Home</a>
+</li>
+<li><a href="./features.html">Features</a>
+</li>
+<li><a href="#">Documentation</a>
+<ul>
+<li><a href="./templates.html">Templates</a>
+</li>
+<li><a href="./structures.html">Structures</a>
+</li>
+<li><a href="./functions.html">Functions</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+</ul>
+
+</li>
+<li><a href="#">Blog</a>
+<ul>
+<li><a href="./blog/2012/01/15_admonitions.html">Admonitions</a>
+</li>
+<li><a href="./blog/2012/01/10_some-html-samples.html">Some HTML5 samples</a>
+</li>
+<li><a href="./blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a>
+</li>
+<li><a href="./blog/2012/01/07_how-to-use-tags.html">How to use tags</a>
+</li>
+<li><a href="./blog/2012/01/07_creating-a-blog.html">Creating a blog</a>
+</li>
+</ul>
+
+</li>
+<li><a href="./tags/index.html">Tags</a>
+</li>
+<li><a href="./archives.html">Archives</a>
+</li>
+<li><a href="./index.xml">RSS</a>
+</li>
+<li><a href="./debug.html">(debug)</a>
+</li>
+</ul>
+
+
+
+	  </div>
+	</div>
+	<div class="topbar-inner" style="opacity: 0.95;">
+	  <header>
+	    <hgroup>
+	    <div class="container">
+	      <div class="offset4">
+		<h1>o-blog</h1>
+		<h2 class="pull-right">standalone blogging system for org-mode</h2>
+	      </div>
+	    </div>
+	    </hgroup>
+	  </header>
+	</div>
+
+      </div>
+    </div>
+    <div class="container" style="padding-top: 150px; margin-bottom: 20px; min-height:350px;">
+
+<article>
+  <header class="article-header">
+    <div class="row">
+      <h1 class="offset1" style="font-size: 250%;">Templates</h1>
+    </div>
+  </header>
+  <div class="article-content">
+    <p>
+Templates which are a big part of the <a href="https://github.com/renard/o-blog">o-blog</a> export process, are HTML-based
+files. Lisp code could be interpreted as long as <code>&lt;lisp&gt;</code> tags surrounds it.
+</p>
+
+
+
+<pre class="src src-html">&lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">h1</span>&gt;&lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;(ob:blog-title BLOG)&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">lisp</span>&gt;&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">h1</span>&gt;
+</pre>
+
+
+<p>
+The previous snippet would be exported to something similar to:
+</p>
+
+
+
+<pre class="src src-html">&lt;<span style="color: #edd400; font-weight: bold; font-style: italic;">h1</span>&gt;<span style="font-weight: bold; text-decoration: underline;">o-blog</span>&lt;/<span style="color: #edd400; font-weight: bold; font-style: italic;">h1</span>&gt;
+</pre>
+
+
+<div class="alert-message block-message warning info"><p class="admonition-header"><strong>Information</strong></p>
+
+<p>
+<a href="https://github.com/renard/o-blog">o-blog</a> only needs <code>blog_</code> prefixed templates as long as they do not need any
+other templates (using <code>ob:insert-template</code> function).
+</p>
+<p>
+All other templates are defined for convenience.
+</p>
+
+
+</div>
+
+
+
+
+<div id="outline-container-1" class="outline-3">
+<h3 id="sec-1">Required templates</h3>
+<div class="outline-text-3" id="text-1">
+
+
+<p>
+<code>blog_</code> prefixed templates.
+</p>
+<ul>
+<li><code>blog_static.html</code>: exports any static page (function <code>ob-write-static</code>).
+</li>
+<li><code>blog_post.html</code>: exports a blog post (function <code>ob-write-posts</code>).
+</li>
+<li><code>blog_tags.html</code>: exports a tag cloud page (function <code>ob-write-tags</code>).
+</li>
+<li><code>blog_tags-detail.html</code>: exports page matching a specific tag (function
+   <code>ob-write-tags</code>).
+</li>
+<li><code>blog_archive.html</code>: exports the whole archives (all categories, all
+   years, all months) page (function <code>ob-write-index</code>).
+</li>
+<li><code>blog_rss.html</code>: exports the rss feed (function <code>ob-write-index</code>).
+</li>
+<li><code>blog_index_month.html</code> export index page for a given month (function
+   <code>ob-write-index</code>).
+</li>
+<li><code>blog_index_year.html</code> export index page for a given year (function
+   <code>ob-write-index</code>).
+</li>
+<li><code>blog_index_catery.html</code> export index page for a given category (function
+   <code>ob-write-index</code>).
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2">index templates</h3>
+<div class="outline-text-3" id="text-2">
+
+
+<p>
+<code>index_</code> prefixed templates. They are used my all <code>blog_index_*.html</code>
+templates to generate a list of articles matching given category, year and
+month and the whole archives.
+</p>
+<ul>
+<li><code>index_archives.html</code>
+</li>
+<li><code>index_category.html</code>
+</li>
+<li><code>index_month.html</code>
+</li>
+<li><code>index_year.html</code>
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-3" class="outline-3">
+<h3 id="sec-3">Navigation templates</h3>
+<div class="outline-text-3" id="text-3">
+
+
+<p>
+<code>nav_</code> prefixed templates used to generate navigation snippets:
+</p>
+<ul>
+<li><code>nav_links.html</code>: used to generate navigation menu used in both page
+   header and footer.
+</li>
+<li><code>nav_tag-cloud.html</code>: used to generate tag cloud on page bottom.
+</li>
+</ul>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-4" class="outline-3">
+<h3 id="sec-4">Page templates</h3>
+<div class="outline-text-3" id="text-4">
+
+
+<p>
+<code>page_</code> prefixed templates used for both html header and footer.
+</p>
+</div>
+</div>
+
+  </div>
+</article>
+      </div>
+      <footer class="footer">
+	<div class="container">
+	  <div class="row">
+	    <section class="span4">
+	      <h1>About</h1>
+	      <address>
+		<p>
+This is a sample blog to explain how <a href="https://github.com/renard/o-blog">o-blog</a> works.
+</p>
+	      </address>
+	    </section>
+	    <nav id="links" class="span4">
+	      <h1>Links</h1>
+	      <ul>
+		  <li class="home"><a href="./index.html">Home</a></li>
+  <li class="blog"><a href="./blog/2012/01/15_admonitions.html">Blog</a></li>
+  <li class="tags"><a href="./tags/index.html">Tags</a></li>
+  <li class="archives"><a href="./archives.html">Archives</a></li>
+  <li class="rss"><a href="./index.xml">RSS</a></li>
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span4">
+	      <h1>Archives</h1>
+	      <ul>
+		<li><a href="./blog/2012/01/15_admonitions.html">Admonitions</a></li> <li><a href="./blog/2012/01/10_some-html-samples.html">Some HTML5 samples</a></li> <li><a href="./blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="./blog/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="./blog/2012/01/07_creating-a-blog.html">Creating a blog</a></li> 
+	      </ul>
+	    </nav>
+	    <nav class="tags span4">
+	      <h1>Tags</h1>
+	      <ul>
+  <li style="font-size: 80.00%;"><a href="./tags/html5.html">html5</a></li> <li style="font-size: 126.67%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li> 
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+Copyright © 2008-2012 <a href="mailto:seb%20❨ɑƦɵϐɑʂɛ❩%20chezwam%20❨Ƥɵɩɲʈ❩%20org">Sébastien Gross</a>. Published under the therm of the
+<a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.
+</p>
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </footer>
+      <script>
+	$('[data-dropdown] ul ul').addClass('dropdown-menu');
+	$('[data-dropdown] ul ul').parent().addClass('menu');
+	$('[data-dropdown] ul li.menu > a').addClass('menu');
+	$('.dropdown-menu li').each(function() { if ( $(this).text() == '\n') $(this).addClass('divider')});
+	$('[data-dropdown]').dropdown();
+      </script>
+</body>
+</html>
+
