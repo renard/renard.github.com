@@ -60,7 +60,7 @@
 <ul>
 <li><a href="./blog/2012/01/15_admonitions.html">Admonitions</a>
 </li>
-<li><a href="./blog/2012/01/10_some-html-samples.html">Some HTML5 samples</a>
+<li><a href="./blog/2012/01/10_some-html5-samples.html">Some HTML5 samples</a>
 </li>
 <li><a href="./blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a>
 </li>
@@ -77,10 +77,11 @@
 </li>
 <li><a href="./index.xml">RSS</a>
 </li>
+<li><a href="./changelog.html">Changelog</a>
+</li>
 <li><a href="./debug.html">(debug)</a>
 </li>
 </ul>
-
 
 
 	  </div>
@@ -176,7 +177,7 @@
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>15</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>("usage")</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"admonitions"</pre></td></tr>
@@ -290,7 +291,6 @@ nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
 #+BEGIN_HTML
 &lt;/div&gt;
 #+END_HTML
-
 
 
 "</pre></td></tr>
@@ -407,7 +407,6 @@ nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
 &lt;/div&gt;
 
 
-
 "</pre></td></tr>
     </tbody>
   </table>
@@ -425,11 +424,11 @@ nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>("html5")</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "html 5" "html-5" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
-      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"some-html-samples"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/10_some-html-samples.html"</pre></td></tr>
+      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"some-html5-samples"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/10_some-html5-samples.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:5 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -511,7 +510,7 @@ Works only with chrome.
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>("usage" "org")</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "org" "org" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"example-of-some-org-syntax"</pre></td></tr>
@@ -1002,7 +1001,7 @@ Some example from a text file.
 
 
 
-&lt;pre class=\"src src-emacs-lisp\"&gt;(&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;defun&lt;/span&gt; &lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;org-xor&lt;/span&gt; (a b)
+&lt;pre class=\"src src-emacs-lisp\"&gt;(&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;defun&lt;/span&gt; &lt;span style=\"color: #edd400; font-weight: bold;\"&gt;org-xor&lt;/span&gt; (a b)
   &lt;span style=\"color: #888a85;\"&gt;\"Exclusive or.\"&lt;/span&gt;
   (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;if&lt;/span&gt; a (not b) b))
 &lt;/pre&gt;
@@ -1090,7 +1089,7 @@ the sun is R&lt;sub&gt;sun&lt;/sub&gt; = 6.96 x 10&lt;sup&gt;8&lt;/sup&gt; m.
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>("usage" "o-blog")</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "o-blog" "o-blog" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"how-to-use-tags"</pre></td></tr>
@@ -1099,27 +1098,36 @@ the sun is R&lt;sub&gt;sun&lt;/sub&gt; = 6.96 x 10&lt;sup&gt;8&lt;/sup&gt; m.
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:5 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
-Tags are useful to classify articles. They are stored in the =tags= property
-for each entries. They are not defined as =org= tags to allows any character
-but comma (\",\") to be used.
+Tags are useful to classify articles. They are stored as [[http://orgmode.org/manual/Tags.html][org-mode tags]] for
+each entries. To add or modify a tag for a post, just use =C-c C-c= and
+enter the tag value.
 
-To add or modify a tag for a post, just use =C-c C-x p tags= and enter the
-tag value.
+If an article has more than one tag, separate them by a colon (=:=).
 
-If an article has more than one tag, separate them by a comma (\",\"). 
+Special characters used in tags:
+
+  - At sign (=@=) is converted to a dash (=-=).
+  - Underscore (=_=) is converted to a blank (=&#160;=).
 "</pre></td></tr>
       <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;p&gt;
-Tags are useful to classify articles. They are stored in the &lt;code&gt;tags&lt;/code&gt; property
-for each entries. They are not defined as &lt;code&gt;org&lt;/code&gt; tags to allows any character
-but comma (\",\") to be used.
+Tags are useful to classify articles. They are stored as &lt;a href=\"http://orgmode.org/manual/Tags.html\"&gt;org-mode tags&lt;/a&gt; for
+each entries. To add or modify a tag for a post, just use &lt;code&gt;C-c C-c&lt;/code&gt; and
+enter the tag value.
 &lt;/p&gt;
 &lt;p&gt;
-To add or modify a tag for a post, just use &lt;code&gt;C-c C-x p tags&lt;/code&gt; and enter the
-tag value.
+If an article has more than one tag, separate them by a colon (&lt;code&gt;:&lt;/code&gt;).
 &lt;/p&gt;
 &lt;p&gt;
-If an article has more than one tag, separate them by a comma (\",\"). 
-&lt;/p&gt;"</pre></td></tr>
+Special characters used in tags:
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;At sign (&lt;code&gt;@&lt;/code&gt;) is converted to a dash (&lt;code&gt;-&lt;/code&gt;).
+&lt;/li&gt;
+&lt;li&gt;Underscore (&lt;code&gt;_&lt;/code&gt;) is converted to a blank (&lt;code&gt;&#160;&lt;/code&gt;).
+&lt;/li&gt;
+&lt;/ul&gt;
+
+"</pre></td></tr>
     </tbody>
   </table>
 </div>
@@ -1136,7 +1144,7 @@ If an article has more than one tag, separate them by a comma (\",\").
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>("usage" "o-blog")</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "o-blog" "o-blog" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"creating-a-blog"</pre></td></tr>
@@ -1200,7 +1208,7 @@ A minimal blog file could be something like:
 
 &lt;span style=\"color: #888a85;\"&gt;#+URL: http://blog.example.com&lt;/span&gt;
 
-&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;* &lt;/span&gt;&lt;span style=\"color: #228b22; font-weight: bold;\"&gt;DONE&lt;/span&gt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt; Lorem ipsum&lt;/span&gt;
+&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;* &lt;/span&gt;&lt;span style=\"color: #228b22; font-weight: bold;\"&gt;DONE&lt;/span&gt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt; Lorem ipsum&lt;/span&gt;
   &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;CLOSED:&lt;/span&gt; &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;[2012-01-07 Sat 00:13]&lt;/span&gt;
 &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;  :PROPERTIES:&lt;/span&gt;
   &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;:tags:&lt;/span&gt;     Lorem
@@ -1239,10 +1247,10 @@ entry.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Quick start Guide"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20251 17264)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20252 38128)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>22</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>23</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -1361,7 +1369,7 @@ And add following to your &lt;code&gt;~/.emacs.d/init.el&lt;/code&gt; file:
 
 
 
-&lt;pre class=\"src src-emacs-lisp\"&gt;(add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"~/.emacs.d/o-blog\"&lt;/span&gt;)
+&lt;pre class=\"src src-emacs-lisp\"&gt;(add-to-list 'load-path &lt;span style=\"color: #ad7fa8;\"&gt;\"~/.emacs.d/o-blog\"&lt;/span&gt;)
 (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;o-blog&lt;/span&gt;)
 &lt;/pre&gt;
 
@@ -1390,17 +1398,56 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
   </table>
 </div>
 <div class="debug post">
+  <h2>Changelog</h2>
+  <table>
+    <caption>Dump information for post Changelog</caption>
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
+      <tr><td class="property"><code>title</code></td><td class="value"><pre>"Changelog"</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20252 38128)</pre></td></tr>
+      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>23</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"changelog"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"changelog.html"</pre></td></tr>
+      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:5 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+
+
+- 2012-01-23
+  - Change tag system from \"Tags\" to org tagging system.
+"</pre></td></tr>
+      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;ul&gt;
+&lt;li&gt;2012-01-23
+&lt;ul&gt;
+&lt;li&gt;Change tag system from \"Tags\" to org tagging system.
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+
+"</pre></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="debug post">
   <h2>Debug</h2>
   <table>
     <caption>Dump information for post Debug</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Debug"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20251 17264)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20252 38128)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>22</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>23</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"debug.html"</pre></td></tr>
@@ -1422,12 +1469,12 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <caption>Dump information for post Features</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Features"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20251 17264)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20252 38128)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>22</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>23</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -1515,12 +1562,12 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <caption>Dump information for post Templates</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Templates"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20251 17264)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20252 38128)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>22</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>23</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -1609,7 +1656,7 @@ files. Lisp code could be interpreted as long as &lt;code&gt;&amp;lt;lisp&amp;gt
 
 
 
-&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;h1&lt;/span&gt;&amp;gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;(ob:blog-title BLOG)&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;h1&lt;/span&gt;&amp;gt;
+&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;h1&lt;/span&gt;&amp;gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;(ob:blog-title BLOG)&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;h1&lt;/span&gt;&amp;gt;
 &lt;/pre&gt;
 
 
@@ -1619,7 +1666,7 @@ The previous snippet would be exported to something similar to:
 
 
 
-&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;h1&lt;/span&gt;&amp;gt;&lt;span style=\"font-weight: bold; text-decoration: underline;\"&gt;o-blog&lt;/span&gt;&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;h1&lt;/span&gt;&amp;gt;
+&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;h1&lt;/span&gt;&amp;gt;&lt;span style=\"font-weight: bold; text-decoration: underline;\"&gt;o-blog&lt;/span&gt;&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;h1&lt;/span&gt;&amp;gt;
 &lt;/pre&gt;
 
 
@@ -1745,12 +1792,12 @@ month and the whole archives.
     <caption>Dump information for post Structures</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Structures"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20251 17264)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20252 38128)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>22</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>23</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -1808,7 +1855,7 @@ Example:
  - =month=: numerical month computed from =timestamp=.
  - =day=: numerical day computed from =timestamp=.
  - =category=: category read from =CATEGORY= property org =blog=.
- - =tags=: list of tags read from =tags= property (comma separated).
+ - =tags=: list of =ob:tags=.
  - =template=: template to use for current post read from =TEMPLATE=
    property or =blog_post.html=.
  - =filepath=: relative path from the blog root directory to the post
@@ -1832,6 +1879,7 @@ Example:
 Structure used to define a tag:
 
  - =name=: string defying the tag name.
+ - =safe=: web safe tag name for URL.
  - =count=: how many time the tag is used.
  - =size=: the font size in percent.
 
@@ -1955,7 +2003,7 @@ Example:
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;category&lt;/code&gt;: category read from &lt;code&gt;CATEGORY&lt;/code&gt; property org &lt;code&gt;blog&lt;/code&gt;.
 &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;tags&lt;/code&gt;: list of tags read from &lt;code&gt;tags&lt;/code&gt; property (comma separated).
+&lt;li&gt;&lt;code&gt;tags&lt;/code&gt;: list of &lt;code&gt;ob:tags&lt;/code&gt;.
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;template&lt;/code&gt;: template to use for current post read from &lt;code&gt;TEMPLATE&lt;/code&gt;
    property or &lt;code&gt;blog_post.html&lt;/code&gt;.
@@ -2002,6 +2050,8 @@ Structure used to define a tag:
 &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;name&lt;/code&gt;: string defying the tag name.
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;safe&lt;/code&gt;: web safe tag name for URL.
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;count&lt;/code&gt;: how many time the tag is used.
 &lt;/li&gt;
@@ -2081,12 +2131,12 @@ Some variables may be defined in some functions:
     <caption>Dump information for post Functions</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Functions"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20251 17264)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20252 38128)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>22</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>23</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2339,18 +2389,18 @@ For archive navigation:
 
 
 
-&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;nav&lt;/span&gt; &lt;span style=\"color: #eeeeec;\"&gt;id&lt;/span&gt;=&lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"archives\"&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;h1&lt;/span&gt;&amp;gt;&lt;span style=\"font-weight: bold; text-decoration: underline;\"&gt;Archives&lt;/span&gt;&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;h1&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;ul&lt;/span&gt;&amp;gt;
-    &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;
+&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;nav&lt;/span&gt; &lt;span style=\"color: #eeeeec;\"&gt;id&lt;/span&gt;=&lt;span style=\"color: #ad7fa8;\"&gt;\"archives\"&lt;/span&gt;&amp;gt;
+  &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;h1&lt;/span&gt;&amp;gt;&lt;span style=\"font-weight: bold; text-decoration: underline;\"&gt;Archives&lt;/span&gt;&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;h1&lt;/span&gt;&amp;gt;
+  &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;ul&lt;/span&gt;&amp;gt;
+    &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;
       (loop for p in (ob:get-posts nil 10)
-            do (insert (format &lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"&amp;lt;li&amp;gt;&amp;lt;a href=\\\"&lt;/span&gt;&lt;span style=\"color: #eeeeec;\"&gt;%s&lt;/span&gt;/&lt;span style=\"color: #eeeeec;\"&gt;%s&lt;/span&gt;\\&lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"&amp;gt;%s&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; \"&lt;/span&gt;
+            do (insert (format &lt;span style=\"color: #ad7fa8;\"&gt;\"&amp;lt;li&amp;gt;&amp;lt;a href=\\\"&lt;/span&gt;&lt;span style=\"color: #eeeeec;\"&gt;%s&lt;/span&gt;/&lt;span style=\"color: #eeeeec;\"&gt;%s&lt;/span&gt;\\&lt;span style=\"color: #ad7fa8;\"&gt;\"&amp;gt;%s&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt; \"&lt;/span&gt;
                                (ob:path-to-root)
                                (ob:post-htmlfile p)
                                (ob:post-title p))))
-    &amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;
-  &amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;ul&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;nav&lt;/span&gt;&amp;gt;
+    &amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;
+  &amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;ul&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;nav&lt;/span&gt;&amp;gt;
 &lt;/pre&gt;
 
 
@@ -2381,29 +2431,29 @@ Posts navigation:
 
 
 
-&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;nav&lt;/span&gt; &lt;span style=\"color: #eeeeec;\"&gt;class&lt;/span&gt;=&lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"articles-nav\"&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;ul&lt;/span&gt;&amp;gt;
-    &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;
+&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;nav&lt;/span&gt; &lt;span style=\"color: #eeeeec;\"&gt;class&lt;/span&gt;=&lt;span style=\"color: #ad7fa8;\"&gt;\"articles-nav\"&lt;/span&gt;&amp;gt;
+  &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;ul&lt;/span&gt;&amp;gt;
+    &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;
       (progn
         ;; Get previous post
         (let ((ppost (ob:get-post-by-id (1+ (ob:post-id POST)))))
           (if ppost
-              (insert (format &lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"&amp;lt;li class=\\\"&lt;/span&gt;prev\\&lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"&amp;gt;&amp;lt;a href=\\\"&lt;/span&gt;&lt;span style=\"color: #eeeeec;\"&gt;%s&lt;/span&gt;/&lt;span style=\"color: #eeeeec;\"&gt;%s&lt;/span&gt;\\&lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"&amp;gt;%s&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;\"&lt;/span&gt;
+              (insert (format &lt;span style=\"color: #ad7fa8;\"&gt;\"&amp;lt;li class=\\\"&lt;/span&gt;prev\\&lt;span style=\"color: #ad7fa8;\"&gt;\"&amp;gt;&amp;lt;a href=\\\"&lt;/span&gt;&lt;span style=\"color: #eeeeec;\"&gt;%s&lt;/span&gt;/&lt;span style=\"color: #eeeeec;\"&gt;%s&lt;/span&gt;\\&lt;span style=\"color: #ad7fa8;\"&gt;\"&amp;gt;%s&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;\"&lt;/span&gt;
                               (ob:path-to-root)
                               (ob:post-htmlfile ppost)
                               (ob:post-title ppost)))
-            (insert &lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"&amp;lt;li&amp;gt;&amp;amp;nbsp;&amp;lt;/li&amp;gt;\"&lt;/span&gt;)))
+            (insert &lt;span style=\"color: #ad7fa8;\"&gt;\"&amp;lt;li&amp;gt;&amp;amp;nbsp;&amp;lt;/li&amp;gt;\"&lt;/span&gt;)))
         ;; Get next post
         (let ((npost (ob:get-post-by-id (1- (ob:post-id POST)))))
           (if npost
-              (insert (format &lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"&amp;lt;li class=\\\"&lt;/span&gt;next\\&lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"&amp;gt;&amp;lt;a href=\\\"&lt;/span&gt;&lt;span style=\"color: #eeeeec;\"&gt;%s&lt;/span&gt;/&lt;span style=\"color: #eeeeec;\"&gt;%s&lt;/span&gt;\\&lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"&amp;gt;%s&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;\"&lt;/span&gt;
+              (insert (format &lt;span style=\"color: #ad7fa8;\"&gt;\"&amp;lt;li class=\\\"&lt;/span&gt;next\\&lt;span style=\"color: #ad7fa8;\"&gt;\"&amp;gt;&amp;lt;a href=\\\"&lt;/span&gt;&lt;span style=\"color: #eeeeec;\"&gt;%s&lt;/span&gt;/&lt;span style=\"color: #eeeeec;\"&gt;%s&lt;/span&gt;\\&lt;span style=\"color: #ad7fa8;\"&gt;\"&amp;gt;%s&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;\"&lt;/span&gt;
                               (ob:path-to-root)
                               (ob:post-htmlfile npost)
                               (ob:post-title npost)))
-            (insert &lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"&amp;lt;li&amp;gt;&amp;amp;nbsp;&amp;lt;/li&amp;gt;\"&lt;/span&gt;))))
-    &amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;
-  &amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;ul&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;nav&lt;/span&gt;&amp;gt;
+            (insert &lt;span style=\"color: #ad7fa8;\"&gt;\"&amp;lt;li&amp;gt;&amp;amp;nbsp;&amp;lt;/li&amp;gt;\"&lt;/span&gt;))))
+    &amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;
+  &amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;ul&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;nav&lt;/span&gt;&amp;gt;
 &lt;/pre&gt;
 
 
@@ -2434,10 +2484,10 @@ Insert the &lt;i&gt;About&lt;/i&gt; section in page footer:
 
 
 
-&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;h1&lt;/span&gt;&amp;gt;&lt;span style=\"font-weight: bold; text-decoration: underline;\"&gt;About&lt;/span&gt;&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;h1&lt;/span&gt;&amp;gt;
-&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;address&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;(ob:post-content-html (ob:get-snippet &lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"About\"&lt;/span&gt;))&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;address&lt;/span&gt;&amp;gt;
+&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;h1&lt;/span&gt;&amp;gt;&lt;span style=\"font-weight: bold; text-decoration: underline;\"&gt;About&lt;/span&gt;&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;h1&lt;/span&gt;&amp;gt;
+&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;address&lt;/span&gt;&amp;gt;
+  &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;(ob:post-content-html (ob:get-snippet &lt;span style=\"color: #ad7fa8;\"&gt;\"About\"&lt;/span&gt;))&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;address&lt;/span&gt;&amp;gt;
 &lt;/pre&gt;
 
 
@@ -2471,7 +2521,7 @@ Get the last updated header for rss export:
 
 
 
-&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;updated&lt;/span&gt;&amp;gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;(ob:format-date (ob:get-header &lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"DATE\"&lt;/span&gt;))&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;updated&lt;/span&gt;&amp;gt;
+&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;updated&lt;/span&gt;&amp;gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;(ob:format-date (ob:get-header &lt;span style=\"color: #ad7fa8;\"&gt;\"DATE\"&lt;/span&gt;))&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;updated&lt;/span&gt;&amp;gt;
 &lt;/pre&gt;
 
 
@@ -2502,7 +2552,7 @@ Insert html header:
 
 
 
-&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;(ob:insert-template &lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"page_header.html\"&lt;/span&gt;)&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;
+&lt;pre class=\"src src-html\"&gt;&amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;(ob:insert-template &lt;span style=\"color: #ad7fa8;\"&gt;\"page_header.html\"&lt;/span&gt;)&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;
 &lt;/pre&gt;
 
 
@@ -2541,9 +2591,9 @@ Add a human readable timestamp for a post:
 
 
 
-&lt;pre class=\"src src-html\"&gt;Posted on &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;time&lt;/span&gt; &lt;span style=\"color: #eeeeec;\"&gt;datetime&lt;/span&gt;=&lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"&amp;lt;lisp&amp;gt; (ob:format-date (ob:post-timestamp POST)) &amp;lt;/lisp&amp;gt;\"&lt;/span&gt;&amp;gt;
-  &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt; (ob:format-date (ob:post-timestamp POST) &lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"%A %B, %d %Y at %H:%M:%S\"&lt;/span&gt;) &amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;lisp&lt;/span&gt;&amp;gt;
-&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold; font-style: italic;\"&gt;time&lt;/span&gt;&amp;gt;.
+&lt;pre class=\"src src-html\"&gt;Posted on &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;time&lt;/span&gt; &lt;span style=\"color: #eeeeec;\"&gt;datetime&lt;/span&gt;=&lt;span style=\"color: #ad7fa8;\"&gt;\"&amp;lt;lisp&amp;gt; (ob:format-date (ob:post-timestamp POST)) &amp;lt;/lisp&amp;gt;\"&lt;/span&gt;&amp;gt;
+  &amp;lt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt; (ob:format-date (ob:post-timestamp POST) &lt;span style=\"color: #ad7fa8;\"&gt;\"%A %B, %d %Y at %H:%M:%S\"&lt;/span&gt;) &amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;lisp&lt;/span&gt;&amp;gt;
+&amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;time&lt;/span&gt;&amp;gt;.
 &lt;/pre&gt;
 
 
@@ -2560,12 +2610,12 @@ Add a human readable timestamp for a post:
     <caption>Dump information for post FAQ</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"FAQ"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20251 17264)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20252 38128)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>22</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>23</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2672,7 +2722,7 @@ Or within emacs you can run &lt;a href=\"https://github.com/jrhbailey/emacs-http
 
 
 &lt;pre class=\"src src-emacs-lisp\"&gt;(&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;httpd&lt;/span&gt;)
-(setq httpd-root &lt;span style=\"color: #ad7fa8; font-style: italic;\"&gt;\"/path/to/your/site\"&lt;/span&gt;)
+(setq httpd-root &lt;span style=\"color: #ad7fa8;\"&gt;\"/path/to/your/site\"&lt;/span&gt;)
 (httpd-start)
 &lt;/pre&gt;
 
@@ -2702,16 +2752,16 @@ complex.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Copyright"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20251 17264)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20252 38128)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>22</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>23</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"copyright"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/22_copyright.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/23_copyright.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:5 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -2734,16 +2784,16 @@ Copyright &#169; 2008-2012 &lt;a href=\"mailto:seb%20&#10088;&#593;&#422;&#629;&
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"About"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20251 17264)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20252 38128)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>22</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>23</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"about"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/22_about.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/23_about.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:5 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -2764,16 +2814,16 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Navigation"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20251 17264)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20252 38128)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>22</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>23</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"navigation"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/22_navigation.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/23_navigation.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:5 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -2795,8 +2845,8 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
 - [[file:../../../tags/index.html][Tags]]
 - [[file:../../../archives.html][Archives]]
 - [[file:../../../index.xml][RSS]]
+- [[file:../../../changelog.html][Changelog]]
 - [[file:../../../debug.html][(debug)]]
-
 "</pre></td></tr>
       <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;ul&gt;
 &lt;li&gt;&lt;a href=\"../../../index.html\"&gt;Home&lt;/a&gt;
@@ -2839,10 +2889,11 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=\"../../../index.xml\"&gt;RSS&lt;/a&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href=\"../../../changelog.html\"&gt;Changelog&lt;/a&gt;
+&lt;/li&gt;
 &lt;li&gt;&lt;a href=\"../../../debug.html\"&gt;(debug)&lt;/a&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-
 
 "</pre></td></tr>
     </tbody>
@@ -2854,12 +2905,13 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
   <h1>Tags</h1>
   <div class="debug tags">
   <div class="debug tag">
-  <h2>html5</h2>
+  <h2>html 5</h2>
   <table>
-    <caption>Dump information for tags "html5"</caption>
+    <caption>Dump information for tags "html 5"</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>name</code></td><td class="value"><pre>"html5"</pre></td></tr>
+      <tr><td class="property"><code>name</code></td><td class="value"><pre>"html 5"</pre></td></tr>
+      <tr><td class="property"><code>safe</code></td><td class="value"><pre>"html-5"</pre></td></tr>
       <tr><td class="property"><code>count</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>size</code></td><td class="value"><pre>80.0</pre></td></tr>
     </tbody>
@@ -2872,6 +2924,7 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
       <tr><td class="property"><code>name</code></td><td class="value"><pre>"o-blog"</pre></td></tr>
+      <tr><td class="property"><code>safe</code></td><td class="value"><pre>"o-blog"</pre></td></tr>
       <tr><td class="property"><code>count</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>size</code></td><td class="value"><pre>126.66666666666666</pre></td></tr>
     </tbody>
@@ -2884,6 +2937,7 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
       <tr><td class="property"><code>name</code></td><td class="value"><pre>"org"</pre></td></tr>
+      <tr><td class="property"><code>safe</code></td><td class="value"><pre>"org"</pre></td></tr>
       <tr><td class="property"><code>count</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>size</code></td><td class="value"><pre>80.0</pre></td></tr>
     </tbody>
@@ -2896,6 +2950,7 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
       <tr><td class="property"><code>name</code></td><td class="value"><pre>"usage"</pre></td></tr>
+      <tr><td class="property"><code>safe</code></td><td class="value"><pre>"usage"</pre></td></tr>
       <tr><td class="property"><code>count</code></td><td class="value"><pre>4</pre></td></tr>
       <tr><td class="property"><code>size</code></td><td class="value"><pre>220.0</pre></td></tr>
     </tbody>
@@ -2931,13 +2986,13 @@ This is a sample blog to explain how <a href="https://github.com/renard/o-blog">
 	    <nav id="archives" class="span4">
 	      <h1>Archives</h1>
 	      <ul>
-		<li><a href="./blog/2012/01/15_admonitions.html">Admonitions</a></li> <li><a href="./blog/2012/01/10_some-html-samples.html">Some HTML5 samples</a></li> <li><a href="./blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="./blog/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="./blog/2012/01/07_creating-a-blog.html">Creating a blog</a></li> 
+		<li><a href="./blog/2012/01/15_admonitions.html">Admonitions</a></li> <li><a href="./blog/2012/01/10_some-html5-samples.html">Some HTML5 samples</a></li> <li><a href="./blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="./blog/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="./blog/2012/01/07_creating-a-blog.html">Creating a blog</a></li> 
 	      </ul>
 	    </nav>
 	    <nav class="tags span4">
 	      <h1>Tags</h1>
 	      <ul>
-  <li style="font-size: 80.00%;"><a href="./tags/html5.html">html5</a></li> <li style="font-size: 126.67%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li> 
+  <li style="font-size: 80.00%;"><a href="./tags/html-5.html">html 5</a></li> <li style="font-size: 126.67%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li> 
 </ul>
 
 	    </nav>

@@ -60,7 +60,7 @@
 <ul>
 <li><a href="../../../blog/2012/01/15_admonitions.html">Admonitions</a>
 </li>
-<li><a href="../../../blog/2012/01/10_some-html-samples.html">Some HTML5 samples</a>
+<li><a href="../../../blog/2012/01/10_some-html5-samples.html">Some HTML5 samples</a>
 </li>
 <li><a href="../../../blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a>
 </li>
@@ -77,10 +77,11 @@
 </li>
 <li><a href="../../../index.xml">RSS</a>
 </li>
+<li><a href="../../../changelog.html">Changelog</a>
+</li>
 <li><a href="../../../debug.html">(debug)</a>
 </li>
 </ul>
-
 
 
 	  </div>
@@ -121,17 +122,24 @@
   </header>
   <div class="article-content">
     <p>
-Tags are useful to classify articles. They are stored in the <code>tags</code> property
-for each entries. They are not defined as <code>org</code> tags to allows any character
-but comma (",") to be used.
+Tags are useful to classify articles. They are stored as <a href="http://orgmode.org/manual/Tags.html">org-mode tags</a> for
+each entries. To add or modify a tag for a post, just use <code>C-c C-c</code> and
+enter the tag value.
 </p>
 <p>
-To add or modify a tag for a post, just use <code>C-c C-x p tags</code> and enter the
-tag value.
+If an article has more than one tag, separate them by a colon (<code>:</code>).
 </p>
 <p>
-If an article has more than one tag, separate them by a comma (","). 
+Special characters used in tags:
 </p>
+<ul>
+<li>At sign (<code>@</code>) is converted to a dash (<code>-</code>).
+</li>
+<li>Underscore (<code>_</code>) is converted to a blank (<code> </code>).
+</li>
+</ul>
+
+
   </div>
   
   <footer class="article-footer">
@@ -172,13 +180,13 @@ This is a sample blog to explain how <a href="https://github.com/renard/o-blog">
 	    <nav id="archives" class="span4">
 	      <h1>Archives</h1>
 	      <ul>
-		<li><a href="../../../blog/2012/01/15_admonitions.html">Admonitions</a></li> <li><a href="../../../blog/2012/01/10_some-html-samples.html">Some HTML5 samples</a></li> <li><a href="../../../blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="../../../blog/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="../../../blog/2012/01/07_creating-a-blog.html">Creating a blog</a></li> 
+		<li><a href="../../../blog/2012/01/15_admonitions.html">Admonitions</a></li> <li><a href="../../../blog/2012/01/10_some-html5-samples.html">Some HTML5 samples</a></li> <li><a href="../../../blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="../../../blog/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="../../../blog/2012/01/07_creating-a-blog.html">Creating a blog</a></li> 
 	      </ul>
 	    </nav>
 	    <nav class="tags span4">
 	      <h1>Tags</h1>
 	      <ul>
-  <li style="font-size: 80.00%;"><a href="../../../tags/html5.html">html5</a></li> <li style="font-size: 126.67%;"><a href="../../../tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="../../../tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="../../../tags/usage.html">usage</a></li> 
+  <li style="font-size: 80.00%;"><a href="../../../tags/html-5.html">html 5</a></li> <li style="font-size: 126.67%;"><a href="../../../tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="../../../tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="../../../tags/usage.html">usage</a></li> 
 </ul>
 
 	    </nav>
