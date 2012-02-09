@@ -3,7 +3,7 @@
   <title>o-blog</title>
   <link href="http://renard.github.com/o-blogindex.xml" rel="self" />
   <link href="http://renard.github.com/o-blog"/>
-  <updated>2012-02-09T10:52:15Z</updated>
+  <updated>2012-02-09T21:06:48Z</updated>
   <id>http://renard.github.com/o-blogindex.xml</id>
   <entry><title type="html">Alerts</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/blog/2012/01/15_alerts.html"/><updated>2012-01-15T20:40:00Z</updated><published>2012-01-15T20:40:00Z</published><id>blog/2012/01/15_alerts.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><content type="html">&lt;p&gt;
 Alerts are declared in &lt;code&gt;o_blog_alert&lt;/code&gt; blocks. There are 4 types of
