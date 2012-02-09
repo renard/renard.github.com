@@ -2,9 +2,14 @@
  * Used for o-blog
  */
 
+
+
+/* Generate an error on version v2.0.0-34-gc8c4d5b */
+@gridColumnGutter: 12;
+
+
 @import "bootstrap.less";
 
-//@basefont: 1em;
 
 @clearYellow: #e2e2b1;
 
@@ -24,6 +29,14 @@
     color: #eeeeec;
     border: 1px solid @grayLighter;
 }
+
+.buffer-overlay() {
+    background: #2e3436;
+    color: #eeeeec;
+}
+
+
+
 
 .navtags(@fontSize) {
     nav {
@@ -295,6 +308,37 @@ article {
 	    }
 	}
 
+
+	.modal {
+	    .resizable();
+	    max-height: 50%;
+	    width: 650px;
+	    .modal-header {
+		.close {
+		    cursor: pointer;
+		}
+	    }
+	    .modal-body {
+		padding: 0;
+		pre {
+		    margin: 0;
+		    padding: 1em;
+		    .linenums {
+			padding-left: 1em;
+			margin-top:0;
+			margin-bottom:0;
+			li {
+			    padding-left: 1em;
+			    background: #2e3436;
+			    color: #eeeeec;
+			}
+		    }
+		}
+	    }
+	}
+
+
+
 	hr {
 	    width: 50%;
 	    .center-block();
@@ -369,6 +413,7 @@ article {
     .navtags(85%);
 
 }
+
 
 #debug {
     table {

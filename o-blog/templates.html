@@ -3,11 +3,15 @@
   <head>
     <meta charset="utf-8"/>
     <title>Templates</title>
-    <link rel="stylesheet" type="text/less" href="./style/css/o-blog.less">
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less">
     <script src="./style/js/less-1.2.1.min.js" type="text/javascript"></script>
     <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <!-- <script src="./style/js/jquery.tableofcontents.min.js" type="text/javascript"></script> -->
+    <script src="./style/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/js/bootstrap-transition.js" type="text/javascript"></script>
     <script src="./style/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
     <script type="text/javascript">
 <!--/*--><![CDATA[/*><!--*/
  function CodeHighlightOn(elem, id)
@@ -32,12 +36,14 @@
 </script>
   </head>
   <body>
-    <div class="topbar-wrapper" style="z-index: 5;">
-      <div class="topbar" data-dropdown="dropdown">
-	<div class="topbar-inner">
-	  <div class="container">
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="brand" href="#">o-blog</a>
+	  <div class="nav-collapse">
 	    <ul>
-<li><a href="./index.html">Home</a>
+<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
 </li>
 <li><a href="./features.html">Features</a>
 </li>
@@ -58,7 +64,7 @@
 </li>
 <li><a href="#">Blog</a>
 <ul>
-<li><a href="./blog/2012/01/15_admonitions.html">Admonitions</a>
+<li><a href="./blog/2012/01/15_alerts.html">Alerts</a>
 </li>
 <li><a href="./blog/2012/01/10_some-html5-samples.html">Some HTML5 samples</a>
 </li>
@@ -86,24 +92,17 @@
 
 	  </div>
 	</div>
-	<div class="topbar-inner" style="opacity: 0.95;">
-	  <header>
-	    <div class="container">
-	      <div class="offset4">
-		<h1>o-blog</h1>
-		<h2 class="pull-right">standalone blogging system for org-mode</h2>
-	      </div>
-	    </div>
-	  </header>
-	</div>
       </div>
     </div>
-    <div class="container" style="padding-top: 150px; margin-bottom: 20px; min-height:350px;">
+
+    <div id="page" class="container">
 
 <article>
   <header class="article-header">
-    <div class="row">
-      <h1 class="offset1" style="font-size: 250%;">Templates</h1>
+    <div class="well">
+      <div class="row">
+	<h1 class="offset1" style="font-size: 250%;">Templates</h1>
+      </div>
     </div>
   </header>
   <div class="article-content">
@@ -128,7 +127,7 @@ The previous snippet would be exported to something similar to:
 </pre>
 
 
-<div class="alert-message block-message warning info"><p class="admonition-header"><strong>Information</strong></p>
+<div class="alert alert-info"><p class="alert-heading">Information</p>
 
 <p>
 <a href="https://github.com/renard/o-blog">o-blog</a> only needs <code>blog_</code> prefixed templates as long as they do not need any
@@ -244,35 +243,33 @@ month and the whole archives.
   </div>
 </article>
       </div>
-      <footer class="footer">
+      <div id="footer">
 	<div class="container">
 	  <div class="row">
-	    <section class="span4">
+	    <section class="span3">
 	      <h1>About</h1>
-	      <address>
-		<p>
+	      <p>
 This is a sample blog to explain how <a href="https://github.com/renard/o-blog">o-blog</a> works.
 </p>
-	      </address>
 	    </section>
-	    <nav id="links" class="span4">
+	    <nav id="links" class="span3">
 	      <h1>Links</h1>
 	      <ul>
 		  <li class="home"><a href="./index.html">Home</a></li>
-  <li class="blog"><a href="./blog/2012/01/15_admonitions.html">Blog</a></li>
+  <li class="blog"><a href="./blog/2012/01/15_alerts.html">Blog</a></li>
   <li class="tags"><a href="./tags/index.html">Tags</a></li>
   <li class="archives"><a href="./archives.html">Archives</a></li>
   <li class="rss"><a href="./index.xml">RSS</a></li>
 
 	      </ul>
 	    </nav>
-	    <nav id="archives" class="span4">
+	    <nav id="archives" class="span3">
 	      <h1>Archives</h1>
 	      <ul>
-		<li><a href="./blog/2012/01/15_admonitions.html">Admonitions</a></li> <li><a href="./blog/2012/01/10_some-html5-samples.html">Some HTML5 samples</a></li> <li><a href="./blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="./blog/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="./blog/2012/01/07_creating-a-blog.html">Creating a blog</a></li> 
+		<li><a href="./blog/2012/01/15_alerts.html">Alerts</a></li> <li><a href="./blog/2012/01/10_some-html5-samples.html">Some HTML5 samples</a></li> <li><a href="./blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="./blog/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="./blog/2012/01/07_creating-a-blog.html">Creating a blog</a></li> 
 	      </ul>
 	    </nav>
-	    <nav class="tags span4">
+	    <nav class="tags span3">
 	      <h1>Tags</h1>
 	      <ul>
   <li style="font-size: 80.00%;"><a href="./tags/html-5.html">html 5</a></li> <li style="font-size: 126.67%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li> 
@@ -288,14 +285,7 @@ Copyright © 2008-2012 <a href="mailto:seb%20❨ɑƦɵϐɑʂɛ❩%20chezwam%20�
 </p>
 	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
 	</div>
-      </footer>
-      <script>
-	$('[data-dropdown] ul ul').addClass('dropdown-menu');
-	$('[data-dropdown] ul ul').parent().addClass('menu');
-	$('[data-dropdown] ul li.menu > a').addClass('menu');
-	$('.dropdown-menu li').each(function() { if ( $(this).text() == '\n') $(this).addClass('divider')});
-	$('[data-dropdown]').dropdown();
-      </script>
+      </div>
 </body>
 </html>
 
