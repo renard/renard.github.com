@@ -365,8 +365,9 @@ Icons from [[http://glyphicons.com/][glyphicons]] are supported support by simpl
 italic style:
 
 #+BEGIN_HTML
-&lt;div class=\"row\"&gt;&lt;div class=\"span5 span5\"&gt;
+&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
 #+END_HTML
+
 
 
 *Source example*
@@ -375,24 +376,31 @@ italic style:
   ,/icon-calendar/ calendar  
 #+end_src
 
-#+o_blog_row_column 3 -3
+#+BEGIN_HTML
+&lt;/div&gt;&lt;div class=\"span6 \"&gt;
+#+END_HTML
+
 
 *Rendered output*
 
 /icon-calendar/ calendar
 
-#+end_o_blog_row
+
+#+BEGIN_HTML
+&lt;/div&gt;&lt;/div&gt;
+#+END_HTML
+
 
 
 
 This could also be used for the top /navbar/ using something like:
 
 #+BEGIN_HTML
-&lt;div class=\"row\"&gt;&lt;div class=\"span6 span6\"&gt;
+&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
 #+END_HTML
 
-*Source example*
 
+*Source example*
 
 #+begin_src org
   
@@ -413,7 +421,12 @@ This could also be used for the top /navbar/ using something like:
   ,- [[file:../../../tags/index.html][/icon-tags icon-white/ Tags]]
   
 #+end_src
-#+o_blog_row_column 6
+
+#+BEGIN_HTML
+&lt;/div&gt;&lt;div class=\"span6 \"&gt;
+#+END_HTML
+
+
 *Rendered output*
 
 
@@ -450,9 +463,12 @@ This could also be used for the top /navbar/ using something like:
 Please note the blank line between menu items. if blanks are omitted, the
 rendered result might be damaged.
 
+
 #+BEGIN_HTML
 &lt;/div&gt;&lt;/div&gt;
 #+END_HTML
+
+
 
 
 "</pre></td></tr>
@@ -462,7 +478,8 @@ italic style:
 &lt;/p&gt;
 
 
-&lt;div class=\"row\"&gt;&lt;div class=\"span5 span5\"&gt;
+&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
+
 
 
 &lt;p&gt;
@@ -475,6 +492,8 @@ italic style:
 &lt;/pre&gt;
 
 
+&lt;/div&gt;&lt;div class=\"span6 \"&gt;
+
 
 &lt;p&gt;
 &lt;b&gt;Rendered output&lt;/b&gt;
@@ -485,17 +504,22 @@ italic style:
 
 
 
+&lt;/div&gt;&lt;/div&gt;
+
+
+
+
 &lt;p&gt;
 This could also be used for the top &lt;i&gt;navbar&lt;/i&gt; using something like:
 &lt;/p&gt;
 
 
-&lt;div class=\"row\"&gt;&lt;div class=\"span6 span6\"&gt;
+&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
+
 
 &lt;p&gt;
 &lt;b&gt;Source example&lt;/b&gt;
 &lt;/p&gt;
-
 
 
 
@@ -516,6 +540,10 @@ This could also be used for the top &lt;i&gt;navbar&lt;/i&gt; using something li
 - &lt;span style=\"color: #00ffff; font-style: italic; text-decoration: underline;\"&gt;/icon-tags icon-white/&lt;/span&gt;&lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt; Tags&lt;/span&gt;
 
 &lt;/pre&gt;
+
+
+&lt;/div&gt;&lt;div class=\"span6 \"&gt;
+
 
 &lt;p&gt;
 &lt;b&gt;Rendered output&lt;/b&gt;
@@ -579,7 +607,10 @@ rendered result might be damaged.
 &lt;/p&gt;
 
 
+
 &lt;/div&gt;&lt;/div&gt;
+
+
 
 
 "</pre></td></tr>
