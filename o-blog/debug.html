@@ -4,11 +4,11 @@
     <meta charset="utf-8"/>
     <title>Debug</title>
     <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less">
-    <script src="./style/js/less-1.2.1.min.js" type="text/javascript"></script>
+    <script src="./style/js/less-1.2.2.min.js" type="text/javascript"></script>
     <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
-    <script src="./style/js/bootstrap-modal.js" type="text/javascript"></script>
-    <script src="./style/js/bootstrap-transition.js" type="text/javascript"></script>
-    <script src="./style/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
     <script src="./style/js/prettify.js" type="text/javascript"></script>
     <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
     <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
@@ -40,12 +40,9 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
 	<div class="container">
-	  <a class="brand" href="#">o-blog</a>
+	  <a class="brand" href="./index.html">o-blog</a>
 	  <div class="nav-collapse">
 	    <ul>
-<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
-
-</li>
 <li><a href="./features.html"><i>icon-cog icon-white</i> Features</a>
 
 </li>
@@ -65,17 +62,17 @@
 </ul>
 
 </li>
-<li><a href="#"><i>icon-file icon-white</i> Blog</a>
+<li><a href="#"><i>icon-file icon-white</i> Tips</a>
 <ul>
-<li><a href="./blog/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a>
+<li><a href="./Tips/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a>
 </li>
-<li><a href="./blog/2012/02/10_adding-icons.html">Adding icons</a>
+<li><a href="./Tips/2012/02/10_adding-icons.html">Adding icons</a>
 </li>
-<li><a href="./blog/2012/02/09_using-modal-source-code.html">Using modal source code</a>
+<li><a href="./Tips/2012/02/09_using-modal-source-code.html">Using modal source code</a>
 </li>
-<li><a href="./blog/2012/01/15_alerts.html">Alerts</a>
+<li><a href="./Tips/2012/01/15_alerts.html">Alerts</a>
 </li>
-<li><a href="./blog/2012/01/10_some-html5-samples.html">Some HTML5 samples</a>
+<li><a href="./Tips/2012/01/10_some-html5-samples.html">Some HTML5 samples</a>
 
 </li>
 </ul>
@@ -102,7 +99,16 @@
 	</div>
       </div>
     </div>
+    <div class="subnav subnav-fixed">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
+  <li>Debug</li>
+  <ul>
 
+
+      </div>
+    </div>
     <div id="page" class="container">
 
  <div id="toc"></div>
@@ -114,7 +120,7 @@
   $("#debug h1, #debug h2, #debug h3, #debug h4, #debug h5, #debug h6").each(function(i) {
   var current = $(this);
   current.attr("id", "title" + i);
-  
+
   $("#toc").append("<a id='link" + i + "' href='#title" + i + "' title='" + current[0].tagName + "'>" + current.html() + "</a>");
   });
   });
@@ -139,7 +145,7 @@
   #toc a[title=H4] { font-size: 11pt; margin-left: 40px;}
   #toc a[title=H5] { font-size: 10pt; margin-left: 50px;}
   #toc a[title=H6] { font-size: 9pt; margin-left: 60px;}
-  
+
 </style>
 
 <div id="debug">
@@ -178,12 +184,12 @@
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "Bootstrap" "bootstrap" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/02"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/02"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"using-bootstrap-grid"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/02/10_using-bootstrap-grid.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/02/10_using-bootstrap-grid.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -254,7 +260,7 @@ The syntax is:
   ,#+o_blog_row_column SPAN OFFSET
   ,Column n
   ,#+end_o_blog_row
-  
+
 #+end_src
 
 "</pre></td></tr>
@@ -351,12 +357,12 @@ Column n
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "Bootstrap" "bootstrap" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/02"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/02"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"adding-icons"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/02/10_adding-icons.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/02/10_adding-icons.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -373,7 +379,7 @@ italic style:
 *Source example*
 
 #+begin_src org
-  ,/icon-calendar/ calendar  
+  ,/icon-calendar/ calendar
 #+end_src
 
 #+BEGIN_HTML
@@ -403,23 +409,23 @@ This could also be used for the top /navbar/ using something like:
 *Source example*
 
 #+begin_src org
-  
+
   ,- [[#][/icon-book icon-white/ Documentation]]
   ,  - [[file:../../../templates.html][Templates]]
   ,  - [[file:../../../structures.html][Structures]]
   ,  - [[file:../../../functions.html][Functions]]
   ,  -
   ,  - [[file:../../../faq.html][FAQ]]
-  
+
   ,- [[#][/icon-file icon-white/ Blog]]
-  ,  - [[file:Lisp error in nil: (void-function format%20"%25s/%25s"%20)][Lisp error in nil: (void-variable "blog")]]
-  ,  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "blog")]]
-  ,  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "blog")]]
-  ,  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "blog")]]
-  ,  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "blog")]]
-  
+  ,  - [[file:Lisp error in nil: (void-function format%20"%25s/%25s"%20)][Lisp error in nil: (void-variable "Tips")]]
+  ,  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
+  ,  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
+  ,  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
+  ,  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
+
   ,- [[file:../../../tags/index.html][/icon-tags icon-white/ Tags]]
-  
+
 #+end_src
 
 #+BEGIN_HTML
@@ -445,11 +451,11 @@ This could also be used for the top /navbar/ using something like:
   - [[file:../../../faq.html][FAQ]]
 
 - [[#][/icon-file icon-white/ Blog]]
-  - [[file:Lisp error in nil: (void-function format%20"%25s/%25s"%20)][Lisp error in nil: (void-variable "blog")]]
-  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "blog")]]
-  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "blog")]]
-  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "blog")]]
-  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "blog")]]
+  - [[file:Lisp error in nil: (void-function format%20"%25s/%25s"%20)][Lisp error in nil: (void-variable "Tips")]]
+  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
+  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
+  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
+  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
 
 - [[file:../../../tags/index.html][/icon-tags icon-white/ Tags]]
 
@@ -488,7 +494,7 @@ italic style:
 
 
 
-&lt;pre class=\"src src-org\"&gt;&lt;span style=\"font-style: italic;\"&gt;/icon-calendar/&lt;/span&gt; calendar  
+&lt;pre class=\"src src-org\"&gt;&lt;span style=\"font-style: italic;\"&gt;/icon-calendar/&lt;/span&gt; calendar
 &lt;/pre&gt;
 
 
@@ -531,11 +537,11 @@ This could also be used for the top &lt;i&gt;navbar&lt;/i&gt; using something li
   - &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;FAQ&lt;/span&gt;
 
 - &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;/icon-file icon-white/ Blog&lt;/span&gt;
-  - &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;Lisp error in nil: (void-variable "blog")&lt;/span&gt;
-  - &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;Lisp error in nil: (void-variable "blog")&lt;/span&gt;
-  - &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;Lisp error in nil: (void-variable "blog")&lt;/span&gt;
-  - &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;Lisp error in nil: (void-variable "blog")&lt;/span&gt;
-  - &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;Lisp error in nil: (void-variable "blog")&lt;/span&gt;
+  - &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/span&gt;
+  - &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/span&gt;
+  - &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/span&gt;
+  - &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/span&gt;
+  - &lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/span&gt;
 
 - &lt;span style=\"color: #00ffff; font-style: italic; text-decoration: underline;\"&gt;/icon-tags icon-white/&lt;/span&gt;&lt;span style=\"color: #00ffff; text-decoration: underline;\"&gt; Tags&lt;/span&gt;
 
@@ -575,15 +581,15 @@ This could also be used for the top &lt;i&gt;navbar&lt;/i&gt; using something li
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=\"#\"&gt;&lt;i&gt;icon-file icon-white&lt;/i&gt; Blog&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "blog")&lt;/a&gt;
+&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "blog")&lt;/a&gt;
+&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "blog")&lt;/a&gt;
+&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "blog")&lt;/a&gt;
+&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "blog")&lt;/a&gt;
+&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/a&gt;
 
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -629,12 +635,12 @@ rendered result might be damaged.
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>9</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "Bootstrap" "bootstrap" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/02"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/02"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"using-modal-source-code"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/02/09_using-modal-source-code.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/02/09_using-modal-source-code.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -654,62 +660,58 @@ The /org template shorcut/ is =&lt;os= =TAB=. Two parameters might be used:
 Here is an example of the =README.asciidoc= file:
 
 #+BEGIN_HTML
-&lt;div class=\"o-blog-source\"&gt;&lt;a class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#readmeasciidoc\" &gt;README.asciidoc&lt;/a&gt;&lt;/div&gt;&lt;div class=\"modal fade hide\" id=\"readmeasciidoc\"&gt;&lt;div class=\"modal-header\"&gt;&lt;a class=\"close\" data-dismiss=\"modal\"&gt;&#215;&lt;/a&gt;&lt;h3&gt;README.asciidoc&lt;/h3&gt;&lt;/div&gt;&lt;div class=\"modal-body\"&gt;
-#+END_HTML
-#+BEGIN_SRC  adoc
-= o-blog quick start
+&lt;div class=\"o-blog-source\"&gt;&lt;a class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#readmeasciidoc\" &gt;&lt;i class=\"icon-file icon-white\"&gt;&lt;/i&gt;&amp;nbsp;README.asciidoc&lt;/a&gt;&lt;/div&gt;&lt;div class=\"modal fade hide\" id=\"readmeasciidoc\"&gt;&lt;div class=\"modal-header\"&gt;&lt;a class=\"close\" data-dismiss=\"modal\"&gt;&#215;&lt;/a&gt;&lt;h3&gt;README.asciidoc&lt;/h3&gt;&lt;/div&gt;&lt;div class=\"modal-body\"&gt;&lt;pre&gt;
+&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;= &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 200%; font-weight: bold;\"&gt;o-blog quick start&lt;/span&gt;
 
-How to use https://github.com/renard/o-blog[o-blog].
+How to use &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/renard/o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt;.
 
-http://renard.github.com/o-blog[Demo site].
+&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://renard.github.com/o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Demo site&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt;.
 
-== Quick start guide
+&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 180%; font-weight: bold;\"&gt;Quick start guide&lt;/span&gt;
 First you need:
 
-- http:www.gnu.org/s/emacs[emacs] (I assume you already have it)
-- http://orgmode.org/[org-mode] (same as above)
+&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:www.gnu.org/s/emacs&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;emacs&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt; (I assume you already have it)
+&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://orgmode.org/&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;org-mode&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt; (same as above)
 
-If you don't have them, you should install them fist.
+If you don&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;'&lt;/span&gt;t have them, you should install them fist.
 
-=== Setup
+&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;=== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 140%; font-weight: bold;\"&gt;Setup&lt;/span&gt;
 
-==== Using +el-get+
+&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;==== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;Using &lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;
 
-If you are using https://github.com/dimitri/el-get[el-get] it would be very
-easy to install. All you need to do is to add +o-blog+ to +el-get-sources+
-and type +M-x el-get-install o-blog+.
+If you are using &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/dimitri/el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt; it would be very
+easy to install. All you need to do is to add &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; to &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;el-get-sources&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;
+and type &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
 
-If you are using +el-get+ 4 or greater, you only need to type: +M-x
-el-get-install o-blog+.
+If you are using &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; 4 or greater, you only need to type: &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x
+el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
 
-==== Manual setup
-Start by cloning the +git+ repository from http:github.com[Github].
+&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;==== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;Manual setup&lt;/span&gt;
+Start by cloning the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;git&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; repository from &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:github.com&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Github&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt;.
 
-----
-cd ~/.emacs.d
+&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
+&lt;span style=\"color: #87ceeb;\"&gt;cd ~/.emacs.d
 git clone https://github.com/renard/o-blog.git
-----
+&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
 
-And add following to your +~/.emacs.d/init.el+ file:
+And add following to your &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/init.el&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; file:
 
-----
-(add-to-list 'load-path \"~/.emacs.d/o-blog\")
+&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
+&lt;span style=\"color: #87ceeb;\"&gt;(add-to-list 'load-path \"~/.emacs.d/o-blog\")
 (require 'o-blog)
-----
+&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
 
-=== Publish
+&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;=== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 140%; font-weight: bold;\"&gt;Publish&lt;/span&gt;
 
-Open the +~/.emacs.d/o-blog/example/sample.org+ file and type +M-x
-org-publish-blog+. The result site would be published by default in
-+~/.emacs.d/o-blog/out+.
+Open the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/o-blog/example/sample.org&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; file and type &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x
+org-publish-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;. The result site would be published by default in
+&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/o-blog/out&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
 
-See the +example/out/blog/index.html+ and +example/out/todo.html+' for more
+See the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;example/out/blog/index.html&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; and &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;example/out/todo.html&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;' for more
 details.
 
 
-#+END_SRC
-#+BEGIN_HTML
-&lt;/div&gt;&lt;/div&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 #+END_HTML
 
 "</pre></td></tr>
@@ -740,9 +742,8 @@ Here is an example of the &lt;code&gt;README.asciidoc&lt;/code&gt; file:
 &lt;/p&gt;
 
 
-&lt;div class=\"o-blog-source\"&gt;&lt;a class=\"btn btn-primary\" data-toggle=\"modal\" data-target=\"#readmeasciidoc\" &gt;README.asciidoc&lt;/a&gt;&lt;/div&gt;&lt;div class=\"modal fade hide\" id=\"readmeasciidoc\"&gt;&lt;div class=\"modal-header\"&gt;&lt;a class=\"close\" data-dismiss=\"modal\"&gt;&#215;&lt;/a&gt;&lt;h3&gt;README.asciidoc&lt;/h3&gt;&lt;/div&gt;&lt;div class=\"modal-body\"&gt;
-
-&lt;pre class=\"src src-adoc\"&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;= &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 200%; font-weight: bold;\"&gt;o-blog quick start&lt;/span&gt;
+&lt;div class=\"o-blog-source\"&gt;&lt;a class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#readmeasciidoc\" &gt;&lt;i class=\"icon-file icon-white\"&gt;&lt;/i&gt;&amp;nbsp;README.asciidoc&lt;/a&gt;&lt;/div&gt;&lt;div class=\"modal fade hide\" id=\"readmeasciidoc\"&gt;&lt;div class=\"modal-header\"&gt;&lt;a class=\"close\" data-dismiss=\"modal\"&gt;&#215;&lt;/a&gt;&lt;h3&gt;README.asciidoc&lt;/h3&gt;&lt;/div&gt;&lt;div class=\"modal-body\"&gt;&lt;pre&gt;
+&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;= &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 200%; font-weight: bold;\"&gt;o-blog quick start&lt;/span&gt;
 
 How to use &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/renard/o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt;.
 
@@ -764,37 +765,35 @@ If you are using &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&g
 easy to install. All you need to do is to add &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; to &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;el-get-sources&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;
 and type &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
 
-If you are using &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; 4 or greater, you only need to type: &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x&lt;/span&gt;
-&lt;span style=\"color: #87ceeb;\"&gt;el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
+If you are using &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; 4 or greater, you only need to type: &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x
+el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
 
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;==== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;Manual setup&lt;/span&gt;
 Start by cloning the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;git&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; repository from &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:github.com&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Github&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt;.
 
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
-&lt;span style=\"color: #87ceeb;\"&gt;cd ~/.emacs.d&lt;/span&gt;
-&lt;span style=\"color: #87ceeb;\"&gt;git clone https://github.com/renard/o-blog.git&lt;/span&gt;
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
+&lt;span style=\"color: #87ceeb;\"&gt;cd ~/.emacs.d
+git clone https://github.com/renard/o-blog.git
+&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
 
 And add following to your &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/init.el&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; file:
 
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
-&lt;span style=\"color: #87ceeb;\"&gt;(add-to-list 'load-path \"~/.emacs.d/o-blog\")&lt;/span&gt;
-&lt;span style=\"color: #87ceeb;\"&gt;(require 'o-blog)&lt;/span&gt;
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
+&lt;span style=\"color: #87ceeb;\"&gt;(add-to-list 'load-path \"~/.emacs.d/o-blog\")
+(require 'o-blog)
+&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
 
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;=== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 140%; font-weight: bold;\"&gt;Publish&lt;/span&gt;
 
-Open the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/o-blog/example/sample.org&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; file and type &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x&lt;/span&gt;
-&lt;span style=\"color: #87ceeb;\"&gt;org-publish-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;. The result site would be published by default in
+Open the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/o-blog/example/sample.org&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; file and type &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x
+org-publish-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;. The result site would be published by default in
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/o-blog/out&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
 
 See the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;example/out/blog/index.html&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; and &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;example/out/todo.html&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;' for more
 details.
 
 
-&lt;/pre&gt;
-
-&lt;/div&gt;&lt;/div&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 "</pre></td></tr>
     </tbody>
@@ -812,12 +811,12 @@ details.
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>15</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"alerts"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/15_alerts.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/01/15_alerts.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -1059,12 +1058,12 @@ nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "html 5" "html-5" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"some-html5-samples"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/10_some-html5-samples.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/01/10_some-html5-samples.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -1145,12 +1144,12 @@ Works only with chrome.
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "org" "org" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"example-of-some-org-syntax"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/07_example-of-some-org-syntax.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/01/07_example-of-some-org-syntax.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -1758,12 +1757,12 @@ the sun is R&lt;sub&gt;sun&lt;/sub&gt; = 6.96 x 10&lt;sup&gt;8&lt;/sup&gt; m.
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "o-blog" "o-blog" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"how-to-use-tags"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/07_how-to-use-tags.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/01/07_how-to-use-tags.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -1813,12 +1812,12 @@ Special characters used in tags:
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "o-blog" "o-blog" nil nil))</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/01"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"creating-a-blog"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/01/07_creating-a-blog.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/01/07_creating-a-blog.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -1830,28 +1829,28 @@ some text. Exporting a blog means publishing all entries with a =DONE=
 A minimal blog file could be something like:
 
 #+begin_src org
-  
+
   ,#+TITLE: Lorem ipsum
   ,#+DESCRIPTION: dolor sit amet
   ,#+DATE:
-  
+
   ,#+STARTUP: logdone
-  
+
   ,#+URL: http://blog.example.com
-  
+
   ,* DONE Lorem ipsum
   ,  CLOSED: [2012-01-07 Sat 00:13]
   ,  :PROPERTIES:
   ,  :tags:     Lorem
   ,  :END:
-  
+
   ,  Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec hendrerit
   ,  tempor tellus. Donec pretium posuere tellus. Proin quam nisl, tincidunt
   ,  et, mattis eget, convallis nec, purus. Cum sociis natoque penatibus et
   ,  magnis dis parturient montes, nascetur ridiculus mus. Nulla posuere. Donec
   ,  vitae dolor. Nullam tristique diam non turpis. Cras placerat accumsan
   ,  nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
-  
+
 #+end_src
 
 Please note the blank line between the properties section and the text itself.
@@ -1917,11 +1916,11 @@ entry.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Quick start Guide"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 20464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
@@ -1929,6 +1928,22 @@ entry.
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"index.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+
+
+#+BEGIN_HTML
+&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
+#+END_HTML
+
+
+#+HTML: &lt;p style=\"font-size: 400%;\"&gt;&lt;br/&gt;o-blog&lt;br/&gt;&lt;/p&gt;
+
+
+#+HTML: &lt;p style=\"font-size: 150%;\"&gt;&lt;br/&gt;&lt;br/&gt;Stand alone blog publication too for &lt;a href=\"http://orgmode.org/\"&gt;org-mode&lt;/a&gt;.&lt;/p&gt;
+
+
+#+BEGIN_HTML
+&lt;/div&gt;&lt;div class=\"span6 \"&gt;
+#+END_HTML
 
 
 This is a sample website to show how to use [[https://github.com/renard/o-blog][o-blog]].
@@ -1940,9 +1955,22 @@ First you need:
 
 If you don't have them, you should install them fist.
 
+
+
+#+BEGIN_HTML
+&lt;/div&gt;&lt;/div&gt;
+#+END_HTML
+
+
+
 ** Setup
 
-*** Using =el-get=
+#+BEGIN_HTML
+&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
+#+END_HTML
+
+
+*Using el-get*
 
 If you are using [[https://github.com/dimitri/el-get][el-get]] it would be very easy to install. All you need to do
 is to add =o-blog= to =el-get-sources= and type =M-x el-get-install o-blog=.
@@ -1950,7 +1978,12 @@ is to add =o-blog= to =el-get-sources= and type =M-x el-get-install o-blog=.
 If you are using =el-get= 4 or greater, you only need to type: =M-x
 el-get-install o-blog=.
 
-*** Manual setup
+#+BEGIN_HTML
+&lt;/div&gt;&lt;div class=\"span5 \"&gt;
+#+END_HTML
+
+
+*Manual setup*
 
 Start by cloning the /git/ repository from [[http://github.com][Github]].
 
@@ -1966,6 +1999,13 @@ And add following to your =~/.emacs.d/init.el= file:
   (require 'o-blog)
 #+end_src
 
+
+#+BEGIN_HTML
+&lt;/div&gt;&lt;/div&gt;
+#+END_HTML
+
+
+
 ** Publish
 
 Open the =~/.emacs.d/o-blog/example/sample.org= file and type =M-x
@@ -1975,7 +2015,21 @@ org-publish-blog=. The result site would be published by default in
 See the [[file:blog/index.html][blog]] for more details.
 
 "</pre></td></tr>
-      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;p&gt;
+      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
+
+
+
+
+&lt;p style=\"font-size: 400%;\"&gt;&lt;br/&gt;o-blog&lt;br/&gt;&lt;/p&gt;
+
+
+&lt;p style=\"font-size: 150%;\"&gt;&lt;br/&gt;&lt;br/&gt;Stand alone blog publication too for &lt;a href=\"http://orgmode.org/\"&gt;org-mode&lt;/a&gt;.&lt;/p&gt;
+
+
+&lt;/div&gt;&lt;div class=\"span6 \"&gt;
+
+
+&lt;p&gt;
 This is a sample website to show how to use &lt;a href=\"https://github.com/renard/o-blog\"&gt;o-blog&lt;/a&gt;.
 &lt;/p&gt;
 &lt;p&gt;
@@ -1993,19 +2047,27 @@ First you need:
 If you don't have them, you should install them fist.
 &lt;/p&gt;
 
+
+
+
+&lt;/div&gt;&lt;/div&gt;
+
+
+
+
 &lt;div id=\"outline-container-1\" class=\"outline-3\"&gt;
 &lt;h3 id=\"sec-1\"&gt;Setup&lt;/h3&gt;
 &lt;div class=\"outline-text-3\" id=\"text-1\"&gt;
 
 
 
-&lt;/div&gt;
 
-&lt;div id=\"outline-container-1-1\" class=\"outline-4\"&gt;
-&lt;h4 id=\"sec-1-1\"&gt;Using &lt;code&gt;el-get&lt;/code&gt;&lt;/h4&gt;
-&lt;div class=\"outline-text-4\" id=\"text-1-1\"&gt;
+&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
 
 
+&lt;p&gt;
+&lt;b&gt;Using el-get&lt;/b&gt;
+&lt;/p&gt;
 &lt;p&gt;
 If you are using &lt;a href=\"https://github.com/dimitri/el-get\"&gt;el-get&lt;/a&gt; it would be very easy to install. All you need to do
 is to add &lt;code&gt;o-blog&lt;/code&gt; to &lt;code&gt;el-get-sources&lt;/code&gt; and type &lt;code&gt;M-x el-get-install o-blog&lt;/code&gt;.
@@ -2013,15 +2075,14 @@ is to add &lt;code&gt;o-blog&lt;/code&gt; to &lt;code&gt;el-get-sources&lt;/code
 &lt;p&gt;
 If you are using &lt;code&gt;el-get&lt;/code&gt; 4 or greater, you only need to type: &lt;code&gt;M-x el-get-install o-blog&lt;/code&gt;.
 &lt;/p&gt;
-&lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;div id=\"outline-container-1-2\" class=\"outline-4\"&gt;
-&lt;h4 id=\"sec-1-2\"&gt;Manual setup&lt;/h4&gt;
-&lt;div class=\"outline-text-4\" id=\"text-1-2\"&gt;
 
 
+&lt;/div&gt;&lt;div class=\"span5 \"&gt;
+
+
+&lt;p&gt;
+&lt;b&gt;Manual setup&lt;/b&gt;
+&lt;/p&gt;
 &lt;p&gt;
 Start by cloning the &lt;i&gt;git&lt;/i&gt; repository from &lt;a href=\"http://github.com\"&gt;Github&lt;/a&gt;.
 &lt;/p&gt;
@@ -2044,7 +2105,11 @@ And add following to your &lt;code&gt;~/.emacs.d/init.el&lt;/code&gt; file:
 &lt;/pre&gt;
 
 
-&lt;/div&gt;
+
+&lt;/div&gt;&lt;/div&gt;
+
+
+
 &lt;/div&gt;
 
 &lt;/div&gt;
@@ -2075,11 +2140,11 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Changelog"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 20464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
@@ -2114,11 +2179,11 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Debug"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 20464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"debug.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
@@ -2141,11 +2206,11 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Features"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 20464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
@@ -2237,11 +2302,11 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Templates"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 20464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
@@ -2467,11 +2532,11 @@ month and the whole archives.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Structures"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 20464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
@@ -2509,6 +2574,8 @@ Structure used to define a blog:
  - =title=: Blog title defined by the =#+TITLE:= header directive.
  - =description=: blog description defined by the =#+DESCRIPTION:= header
    directive.
+ - =default-category=: default category for posts  defined by the
+   =#DEFAULT_CATEGORY:= header or =Blog=.
 
 Example:
 
@@ -2521,7 +2588,7 @@ Example:
 
  - =id=: the post numerical id. Posts are sort by reversed chronological
    order. The most recent post get the id 0.
- - =title=: the post title read from the entry title. 
+ - =title=: the post title read from the entry title.
  - =timestamp=: the post timestamp given by the =CLOSED= property or the
    current time.
  - =year=: numerical year computed from =timestamp=.
@@ -2636,6 +2703,9 @@ Structure used to define a blog:
 &lt;li&gt;&lt;code&gt;description&lt;/code&gt;: blog description defined by the &lt;code&gt;#+DESCRIPTION:&lt;/code&gt; header
    directive.
 &lt;/li&gt;
+&lt;li&gt;&lt;code&gt;default-category&lt;/code&gt;: default category for posts  defined by the
+   &lt;code&gt;#DEFAULT_CATEGORY:&lt;/code&gt; header or &lt;code&gt;Blog&lt;/code&gt;.
+&lt;/li&gt;
 &lt;/ul&gt;
 
 
@@ -2663,7 +2733,7 @@ Example:
 &lt;li&gt;&lt;code&gt;id&lt;/code&gt;: the post numerical id. Posts are sort by reversed chronological
    order. The most recent post get the id 0.
 &lt;/li&gt;
-&lt;li&gt;&lt;code&gt;title&lt;/code&gt;: the post title read from the entry title. 
+&lt;li&gt;&lt;code&gt;title&lt;/code&gt;: the post title read from the entry title.
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;timestamp&lt;/code&gt;: the post timestamp given by the &lt;code&gt;CLOSED&lt;/code&gt; property or the
    current time.
@@ -2806,11 +2876,11 @@ Some variables may be defined in some functions:
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Functions"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 20464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
@@ -3285,11 +3355,11 @@ Add a human readable timestamp for a post:
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"FAQ"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 20464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
@@ -3425,16 +3495,16 @@ complex.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Copyright"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 20464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/02"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/02"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"copyright"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/02/10_copyright.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/02/28_copyright.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -3457,16 +3527,16 @@ Copyright &#169; 2008-2012 &lt;a href=\"mailto:seb%20&#10088;&#593;&#422;&#629;&
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"About"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 20464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/02"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/02"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"about"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/02/10_about.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/02/28_about.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -3487,21 +3557,19 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Navigation"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 20464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"blog"</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"blog/2012/02"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/02"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"navigation"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"blog/2012/02/10_navigation.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/02/28_navigation.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
-
-- [[file:../../../index.html][/icon-home icon-white/ Home]]
 
 - [[file:../../../features.html][/icon-cog icon-white/ Features]]
 
@@ -3512,12 +3580,12 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
   -
   - [[file:../../../faq.html][FAQ]]
 
-- [[#][/icon-file icon-white/ Blog]]
-  - [[file:Lisp error in nil: (void-function format%20"%25s/%25s"%20)][Lisp error in nil: (void-variable "blog")]]
-  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "blog")]]
-  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "blog")]]
-  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "blog")]]
-  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "blog")]]
+- [[#][/icon-file icon-white/ Tips]]
+  - [[file:Lisp error in nil: (void-function format%20"%25s/%25s"%20)][Lisp error in nil: (void-variable "Tips")]]
+  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
+  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
+  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
+  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
 
 - [[file:../../../tags/index.html][/icon-tags icon-white/ Tags]]
 
@@ -3530,9 +3598,6 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
 - [[file:../../../debug.html][(debug)]]
 "</pre></td></tr>
       <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;ul&gt;
-&lt;li&gt;&lt;a href=\"../../../index.html\"&gt;&lt;i&gt;icon-home icon-white&lt;/i&gt; Home&lt;/a&gt;
-
-&lt;/li&gt;
 &lt;li&gt;&lt;a href=\"../../../features.html\"&gt;&lt;i&gt;icon-cog icon-white&lt;/i&gt; Features&lt;/a&gt;
 
 &lt;/li&gt;
@@ -3552,17 +3617,17 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
 &lt;/ul&gt;
 
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=\"#\"&gt;&lt;i&gt;icon-file icon-white&lt;/i&gt; Blog&lt;/a&gt;
+&lt;li&gt;&lt;a href=\"#\"&gt;&lt;i&gt;icon-file icon-white&lt;/i&gt; Tips&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "blog")&lt;/a&gt;
+&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "blog")&lt;/a&gt;
+&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "blog")&lt;/a&gt;
+&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "blog")&lt;/a&gt;
+&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "blog")&lt;/a&gt;
+&lt;li&gt;&lt;a href=\"Lisp error in nil: (void-variable "%s/%s")\"&gt;Lisp error in nil: (void-variable "Tips")&lt;/a&gt;
 
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -3676,7 +3741,7 @@ This is a sample blog to explain how <a href="https://github.com/renard/o-blog">
 	      <h1>Links</h1>
 	      <ul>
 		  <li class="home"><a href="./index.html">Home</a></li>
-  <li class="blog"><a href="./blog/2012/02/10_using-bootstrap-grid.html">Blog</a></li>
+  <li class="blog"><a href="Lisp error in nil: (error ob:post-htmlfile accessing a non-ob:post)">Blog</a></li>
   <li class="tags"><a href="./tags/index.html">Tags</a></li>
   <li class="archives"><a href="./archives.html">Archives</a></li>
   <li class="rss"><a href="./index.xml">RSS</a></li>
@@ -3686,13 +3751,13 @@ This is a sample blog to explain how <a href="https://github.com/renard/o-blog">
 	    <nav id="archives" class="span3">
 	      <h1>Archives</h1>
 	      <ul>
-		<li><a href="./blog/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a></li> <li><a href="./blog/2012/02/10_adding-icons.html">Adding icons</a></li> <li><a href="./blog/2012/02/09_using-modal-source-code.html">Using modal source code</a></li> <li><a href="./blog/2012/01/15_alerts.html">Alerts</a></li> <li><a href="./blog/2012/01/10_some-html5-samples.html">Some HTML5 samples</a></li> <li><a href="./blog/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="./blog/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="./blog/2012/01/07_creating-a-blog.html">Creating a blog</a></li> 
+		<li><a href="./Tips/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a></li> <li><a href="./Tips/2012/02/10_adding-icons.html">Adding icons</a></li> <li><a href="./Tips/2012/02/09_using-modal-source-code.html">Using modal source code</a></li> <li><a href="./Tips/2012/01/15_alerts.html">Alerts</a></li> <li><a href="./Tips/2012/01/10_some-html5-samples.html">Some HTML5 samples</a></li> <li><a href="./Tips/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="./Tips/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="./Tips/2012/01/07_creating-a-blog.html">Creating a blog</a></li>
 	      </ul>
 	    </nav>
 	    <nav class="tags span3">
 	      <h1>Tags</h1>
 	      <ul>
-  <li style="font-size: 126.67%;"><a href="./tags/bootstrap.html">Bootstrap</a></li> <li style="font-size: 80.00%;"><a href="./tags/html-5.html">html 5</a></li> <li style="font-size: 103.33%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li> 
+  <li style="font-size: 126.67%;"><a href="./tags/bootstrap.html">Bootstrap</a></li> <li style="font-size: 80.00%;"><a href="./tags/html-5.html">html 5</a></li> <li style="font-size: 103.33%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li>
 </ul>
 
 	    </nav>
@@ -3708,4 +3773,3 @@ Copyright © 2008-2012 <a href="mailto:seb%20❨ɑƦɵϐɑʂɛ❩%20chezwam%20�
       </div>
 </body>
 </html>
-

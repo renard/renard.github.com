@@ -3,9 +3,9 @@
   <title>o-blog</title>
   <link href="http://renard.github.com/o-blogindex.xml" rel="self" />
   <link href="http://renard.github.com/o-blog"/>
-  <updated>2012-02-10T20:29:08Z</updated>
+  <updated>2012-02-28T15:53:30Z</updated>
   <id>http://renard.github.com/o-blogindex.xml</id>
-  <entry><title type="html">Using Bootstrap grid</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/blog/2012/02/10_using-bootstrap-grid.html"/><updated>2012-02-10T01:19:00Z</updated><published>2012-02-10T01:19:00Z</published><id>blog/2012/02/10_using-bootstrap-grid.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/bootstrap.html" term="Bootstrap" label="Bootstrap"/><content type="html">&lt;p&gt;
+  <entry><title type="html">Using Bootstrap grid</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/Tips/2012/02/10_using-bootstrap-grid.html"/><updated>2012-02-10T01:19:00Z</updated><published>2012-02-10T01:19:00Z</published><id>Tips/2012/02/10_using-bootstrap-grid.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/bootstrap.html" term="Bootstrap" label="Bootstrap"/><content type="html">&lt;p&gt;
 &lt;a href="http://twitter.github.com/bootstrap/scaffolding.html"&gt;Bootstrap scaffolding&lt;/a&gt; could be defined using both &lt;code&gt;#+begin_o_blog_row&lt;/code&gt; and
 &lt;code&gt;#+end_o_blog_row&lt;/code&gt; directives (or &lt;code&gt;&amp;lt;og&lt;/code&gt; &lt;code&gt;TAB&lt;/code&gt; shortcut). A new column could
 be started using &lt;code&gt;#+o_blog_row_column&lt;/code&gt; single directive (or &lt;code&gt;&amp;lt;ogr&lt;/code&gt; &lt;code&gt;TAB&lt;/code&gt;
@@ -82,7 +82,7 @@ Column n
 &lt;/pre&gt;
 
 
-</content></entry><entry><title type="html">Adding icons</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/blog/2012/02/10_adding-icons.html"/><updated>2012-02-10T00:19:00Z</updated><published>2012-02-10T00:19:00Z</published><id>blog/2012/02/10_adding-icons.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/bootstrap.html" term="Bootstrap" label="Bootstrap"/><content type="html">&lt;p&gt;
+</content></entry><entry><title type="html">Adding icons</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/Tips/2012/02/10_adding-icons.html"/><updated>2012-02-10T00:19:00Z</updated><published>2012-02-10T00:19:00Z</published><id>Tips/2012/02/10_adding-icons.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/bootstrap.html" term="Bootstrap" label="Bootstrap"/><content type="html">&lt;p&gt;
 Icons from &lt;a href="http://glyphicons.com/"&gt;glyphicons&lt;/a&gt; are supported support by simply naming the icon using
 italic style:
 &lt;/p&gt;
@@ -98,7 +98,7 @@ italic style:
 
 
 
-&lt;pre class="src src-org"&gt;&lt;span style="font-style: italic;"&gt;/icon-calendar/&lt;/span&gt; calendar  
+&lt;pre class="src src-org"&gt;&lt;span style="font-style: italic;"&gt;/icon-calendar/&lt;/span&gt; calendar
 &lt;/pre&gt;
 
 
@@ -185,15 +185,15 @@ This could also be used for the top &lt;i&gt;navbar&lt;/i&gt; using something li
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="#"&gt;&lt;i&gt;icon-file icon-white&lt;/i&gt; Blog&lt;/a&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href="./blog/2012/02/10_using-bootstrap-grid.html"&gt;Using Bootstrap grid&lt;/a&gt;
+&lt;li&gt;&lt;a href="./Tips/2012/02/10_using-bootstrap-grid.html"&gt;Using Bootstrap grid&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="./blog/2012/02/10_adding-icons.html"&gt;Adding icons&lt;/a&gt;
+&lt;li&gt;&lt;a href="./Tips/2012/02/10_adding-icons.html"&gt;Adding icons&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="./blog/2012/02/09_using-modal-source-code.html"&gt;Using modal source code&lt;/a&gt;
+&lt;li&gt;&lt;a href="./Tips/2012/02/09_using-modal-source-code.html"&gt;Using modal source code&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="./blog/2012/01/15_alerts.html"&gt;Alerts&lt;/a&gt;
+&lt;li&gt;&lt;a href="./Tips/2012/01/15_alerts.html"&gt;Alerts&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href="./blog/2012/01/10_some-html5-samples.html"&gt;Some HTML5 samples&lt;/a&gt;
+&lt;li&gt;&lt;a href="./Tips/2012/01/10_some-html5-samples.html"&gt;Some HTML5 samples&lt;/a&gt;
 
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -223,7 +223,7 @@ rendered result might be damaged.
 
 
 
-</content></entry><entry><title type="html">Using modal source code</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/blog/2012/02/09_using-modal-source-code.html"/><updated>2012-02-09T23:13:00Z</updated><published>2012-02-09T23:13:00Z</published><id>blog/2012/02/09_using-modal-source-code.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/bootstrap.html" term="Bootstrap" label="Bootstrap"/><content type="html">&lt;p&gt;
+</content></entry><entry><title type="html">Using modal source code</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/Tips/2012/02/09_using-modal-source-code.html"/><updated>2012-02-09T23:13:00Z</updated><published>2012-02-09T23:13:00Z</published><id>Tips/2012/02/09_using-modal-source-code.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/bootstrap.html" term="Bootstrap" label="Bootstrap"/><content type="html">&lt;p&gt;
 The &lt;a href="http://twitter.github.com/bootstrap/javascript.html#modals"&gt;Modal&lt;/a&gt; bootstrap script can be used to display the content of an external
 file in a modal window. The magic line is:
 &lt;/p&gt;
@@ -250,9 +250,8 @@ Here is an example of the &lt;code&gt;README.asciidoc&lt;/code&gt; file:
 &lt;/p&gt;
 
 
-&lt;div class="o-blog-source"&gt;&lt;a class="btn btn-primary" data-toggle="modal" data-target="#readmeasciidoc" &gt;README.asciidoc&lt;/a&gt;&lt;/div&gt;&lt;div class="modal fade hide" id="readmeasciidoc"&gt;&lt;div class="modal-header"&gt;&lt;a class="close" data-dismiss="modal"&gt;&#215;&lt;/a&gt;&lt;h3&gt;README.asciidoc&lt;/h3&gt;&lt;/div&gt;&lt;div class="modal-body"&gt;
-
-&lt;pre class="src src-adoc"&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;= &lt;/span&gt;&lt;span style="color: #87ceeb; font-size: 200%; font-weight: bold;"&gt;o-blog quick start&lt;/span&gt;
+&lt;div class="o-blog-source"&gt;&lt;a class="btn btn-info" data-toggle="modal" data-target="#readmeasciidoc" &gt;&lt;i class="icon-file icon-white"&gt;&lt;/i&gt;&amp;nbsp;README.asciidoc&lt;/a&gt;&lt;/div&gt;&lt;div class="modal fade hide" id="readmeasciidoc"&gt;&lt;div class="modal-header"&gt;&lt;a class="close" data-dismiss="modal"&gt;&#215;&lt;/a&gt;&lt;h3&gt;README.asciidoc&lt;/h3&gt;&lt;/div&gt;&lt;div class="modal-body"&gt;&lt;pre&gt;
+&lt;span style="color: #666666; background-color: #2e3436;"&gt;= &lt;/span&gt;&lt;span style="color: #87ceeb; font-size: 200%; font-weight: bold;"&gt;o-blog quick start&lt;/span&gt;
 
 How to use &lt;span style="color: #7f7f7f; background-color: #333333;"&gt;https://github.com/renard/o-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;o-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;]&lt;/span&gt;.
 
@@ -274,39 +273,37 @@ If you are using &lt;span style="color: #7f7f7f; background-color: #333333;"&gt;
 easy to install. All you need to do is to add &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;o-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt; to &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;el-get-sources&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;
 and type &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;M-x el-get-install o-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;.
 
-If you are using &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;el-get&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt; 4 or greater, you only need to type: &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;M-x&lt;/span&gt;
-&lt;span style="color: #87ceeb;"&gt;el-get-install o-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;.
+If you are using &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;el-get&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt; 4 or greater, you only need to type: &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;M-x
+el-get-install o-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;.
 
 &lt;span style="color: #666666; background-color: #2e3436;"&gt;==== &lt;/span&gt;&lt;span style="color: #87ceeb; font-weight: bold; font-style: italic;"&gt;Manual setup&lt;/span&gt;
 Start by cloning the &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;git&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt; repository from &lt;span style="color: #7f7f7f; background-color: #333333;"&gt;http:github.com&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;Github&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;]&lt;/span&gt;.
 
 &lt;span style="color: #666666; background-color: #2e3436;"&gt;----&lt;/span&gt;
-&lt;span style="color: #87ceeb;"&gt;cd ~/.emacs.d&lt;/span&gt;
-&lt;span style="color: #87ceeb;"&gt;git clone https://github.com/renard/o-blog.git&lt;/span&gt;
-&lt;span style="color: #666666; background-color: #2e3436;"&gt;----&lt;/span&gt;
+&lt;span style="color: #87ceeb;"&gt;cd ~/.emacs.d
+git clone https://github.com/renard/o-blog.git
+&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;----&lt;/span&gt;
 
 And add following to your &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;~/.emacs.d/init.el&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt; file:
 
 &lt;span style="color: #666666; background-color: #2e3436;"&gt;----&lt;/span&gt;
-&lt;span style="color: #87ceeb;"&gt;(add-to-list 'load-path "~/.emacs.d/o-blog")&lt;/span&gt;
-&lt;span style="color: #87ceeb;"&gt;(require 'o-blog)&lt;/span&gt;
-&lt;span style="color: #666666; background-color: #2e3436;"&gt;----&lt;/span&gt;
+&lt;span style="color: #87ceeb;"&gt;(add-to-list 'load-path "~/.emacs.d/o-blog")
+(require 'o-blog)
+&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;----&lt;/span&gt;
 
 &lt;span style="color: #666666; background-color: #2e3436;"&gt;=== &lt;/span&gt;&lt;span style="color: #87ceeb; font-size: 140%; font-weight: bold;"&gt;Publish&lt;/span&gt;
 
-Open the &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;~/.emacs.d/o-blog/example/sample.org&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt; file and type &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;M-x&lt;/span&gt;
-&lt;span style="color: #87ceeb;"&gt;org-publish-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;. The result site would be published by default in
+Open the &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;~/.emacs.d/o-blog/example/sample.org&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt; file and type &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;M-x
+org-publish-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;. The result site would be published by default in
 &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;~/.emacs.d/o-blog/out&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;.
 
 See the &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;example/out/blog/index.html&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt; and &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;example/out/todo.html&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;' for more
 details.
 
 
-&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;/div&gt;&lt;/div&gt;
-
-</content></entry><entry><title type="html">Alerts</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/blog/2012/01/15_alerts.html"/><updated>2012-01-15T20:40:00Z</updated><published>2012-01-15T20:40:00Z</published><id>blog/2012/01/15_alerts.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><content type="html">&lt;p&gt;
+</content></entry><entry><title type="html">Alerts</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/Tips/2012/01/15_alerts.html"/><updated>2012-01-15T20:40:00Z</updated><published>2012-01-15T20:40:00Z</published><id>Tips/2012/01/15_alerts.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><content type="html">&lt;p&gt;
 Alerts are declared in &lt;code&gt;o_blog_alert&lt;/code&gt; blocks. There are 4 types of
 them:
 &lt;/p&gt;
@@ -419,7 +416,7 @@ nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
 
 &lt;/div&gt;
 
-</content></entry><entry><title type="html">Some HTML5 samples</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/blog/2012/01/10_some-html5-samples.html"/><updated>2012-01-10T20:58:00Z</updated><published>2012-01-10T20:58:00Z</published><id>blog/2012/01/10_some-html5-samples.html</id><category scheme="/tags/html-5.html" term="html 5" label="html 5"/><content type="html">&lt;div id="outline-container-1" class="outline-3"&gt;
+</content></entry><entry><title type="html">Some HTML5 samples</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/Tips/2012/01/10_some-html5-samples.html"/><updated>2012-01-10T20:58:00Z</updated><published>2012-01-10T20:58:00Z</published><id>Tips/2012/01/10_some-html5-samples.html</id><category scheme="/tags/html-5.html" term="html 5" label="html 5"/><content type="html">&lt;div id="outline-container-1" class="outline-3"&gt;
 &lt;h3 id="sec-1"&gt;tag: &amp;lt;details&amp;gt;&lt;/h3&gt;
 &lt;div class="outline-text-3" id="text-1"&gt;
 
@@ -457,7 +454,7 @@ Works only with chrome.
 
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title type="html">Example of some org syntax</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/blog/2012/01/07_example-of-some-org-syntax.html"/><updated>2012-01-07T11:23:00Z</updated><published>2012-01-07T11:23:00Z</published><id>blog/2012/01/07_example-of-some-org-syntax.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/org.html" term="org" label="org"/><content type="html">&lt;div id="outline-container-1" class="outline-3"&gt;
+</content></entry><entry><title type="html">Example of some org syntax</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/Tips/2012/01/07_example-of-some-org-syntax.html"/><updated>2012-01-07T11:23:00Z</updated><published>2012-01-07T11:23:00Z</published><id>Tips/2012/01/07_example-of-some-org-syntax.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/org.html" term="org" label="org"/><content type="html">&lt;div id="outline-container-1" class="outline-3"&gt;
 &lt;h3 id="sec-1"&gt;Titles&lt;/h3&gt;
 &lt;div class="outline-text-3" id="text-1"&gt;
 
@@ -849,7 +846,7 @@ the sun is R&lt;sub&gt;sun&lt;/sub&gt; = 6.96 x 10&lt;sup&gt;8&lt;/sup&gt; m.
 
 &lt;/div&gt;
 &lt;/div&gt;
-</content></entry><entry><title type="html">How to use tags</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/blog/2012/01/07_how-to-use-tags.html"/><updated>2012-01-07T00:28:00Z</updated><published>2012-01-07T00:28:00Z</published><id>blog/2012/01/07_how-to-use-tags.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/o-blog.html" term="o-blog" label="o-blog"/><content type="html">&lt;p&gt;
+</content></entry><entry><title type="html">How to use tags</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/Tips/2012/01/07_how-to-use-tags.html"/><updated>2012-01-07T00:28:00Z</updated><published>2012-01-07T00:28:00Z</published><id>Tips/2012/01/07_how-to-use-tags.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/o-blog.html" term="o-blog" label="o-blog"/><content type="html">&lt;p&gt;
 Tags are useful to classify articles. They are stored as &lt;a href="http://orgmode.org/manual/Tags.html"&gt;org-mode tags&lt;/a&gt; for
 each entries. To add or modify a tag for a post, just use &lt;code&gt;C-c C-c&lt;/code&gt; and
 enter the tag value.
@@ -867,7 +864,7 @@ Special characters used in tags:
 &lt;/li&gt;
 &lt;/ul&gt;
 
-</content></entry><entry><title type="html">Creating a blog</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/blog/2012/01/07_creating-a-blog.html"/><updated>2012-01-07T00:13:00Z</updated><published>2012-01-07T00:13:00Z</published><id>blog/2012/01/07_creating-a-blog.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/o-blog.html" term="o-blog" label="o-blog"/><content type="html">&lt;p&gt;
+</content></entry><entry><title type="html">Creating a blog</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/Tips/2012/01/07_creating-a-blog.html"/><updated>2012-01-07T00:13:00Z</updated><published>2012-01-07T00:13:00Z</published><id>Tips/2012/01/07_creating-a-blog.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/o-blog.html" term="o-blog" label="o-blog"/><content type="html">&lt;p&gt;
 A blog consists of org entries. Each entry has a title, some properties and
 some text. Exporting a blog means publishing all entries with a &lt;code&gt;DONE&lt;/code&gt;
 &lt;code&gt;TODO&lt;/code&gt;.
