@@ -200,10 +200,7 @@ be started using =#+o_blog_row_column= single directive (or =&lt;ogr= =TAB=
 shortcut).
 
 
-#+BEGIN_HTML
-&lt;div class=\"row show-grid\"&gt;&lt;div class=\"span6 \"&gt;
-#+END_HTML
-
+#+begin_o_blog_row 6 0 show-grid
 *Example*
 
 #+begin_src org
@@ -215,38 +212,21 @@ shortcut).
 #+end_src
 
 
-#+BEGIN_HTML
-&lt;/div&gt;&lt;div class=\"span6 \"&gt;
-#+END_HTML
-
+#+o_blog_row_column 6
 
 *Output*
 
-#+BEGIN_HTML
-&lt;div class=\"row show-grid\"&gt;&lt;div class=\"span2 offset1\"&gt;
-#+END_HTML
-
+#+begin_o_blog_row 2 -1 show-grid
 
 Column 1
 
-#+BEGIN_HTML
-&lt;/div&gt;&lt;div class=\"span2 \"&gt;
-#+END_HTML
-
+#+o_blog_row_column 2
 
 Column 2
 
+#+end_o_blog_row
 
-#+BEGIN_HTML
-&lt;/div&gt;&lt;/div&gt;
-#+END_HTML
-
-
-
-#+BEGIN_HTML
-&lt;/div&gt;&lt;/div&gt;
-#+END_HTML
-
+#+end_o_blog_row
 
 
 The syntax is:
@@ -270,10 +250,6 @@ be started using &lt;code&gt;#+o_blog_row_column&lt;/code&gt; single directive (
 shortcut).
 &lt;/p&gt;
 
-
-
-&lt;div class=\"row show-grid\"&gt;&lt;div class=\"span6 \"&gt;
-
 &lt;p&gt;
 &lt;b&gt;Example&lt;/b&gt;
 &lt;/p&gt;
@@ -289,36 +265,18 @@ Column 2
 
 
 
-&lt;/div&gt;&lt;div class=\"span6 \"&gt;
-
 
 &lt;p&gt;
 &lt;b&gt;Output&lt;/b&gt;
 &lt;/p&gt;
 
-
-&lt;div class=\"row show-grid\"&gt;&lt;div class=\"span2 offset1\"&gt;
-
-
 &lt;p&gt;
 Column 1
 &lt;/p&gt;
 
-
-&lt;/div&gt;&lt;div class=\"span2 \"&gt;
-
-
 &lt;p&gt;
 Column 2
 &lt;/p&gt;
-
-
-
-&lt;/div&gt;&lt;/div&gt;
-
-
-
-&lt;/div&gt;&lt;/div&gt;
 
 
 
@@ -368,10 +326,7 @@ Column n
 Icons from [[http://glyphicons.com/][glyphicons]] are supported support by simply naming the icon using
 italic style:
 
-#+BEGIN_HTML
-&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
-#+END_HTML
-
+#+begin_o_blog_row 6
 
 
 *Source example*
@@ -380,29 +335,19 @@ italic style:
   ,/icon-calendar/ calendar
 #+end_src
 
-#+BEGIN_HTML
-&lt;/div&gt;&lt;div class=\"span6 \"&gt;
-#+END_HTML
-
+#+o_blog_row_column 6
 
 *Rendered output*
 
 /icon-calendar/ calendar
 
-
-#+BEGIN_HTML
-&lt;/div&gt;&lt;/div&gt;
-#+END_HTML
-
+#+end_o_blog_row
 
 
 
 This could also be used for the top /navbar/ using something like:
 
-#+BEGIN_HTML
-&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
-#+END_HTML
-
+#+begin_o_blog_row 6
 
 *Source example*
 
@@ -426,10 +371,7 @@ This could also be used for the top /navbar/ using something like:
 
 #+end_src
 
-#+BEGIN_HTML
-&lt;/div&gt;&lt;div class=\"span6 \"&gt;
-#+END_HTML
-
+#+o_blog_row_column 6
 
 *Rendered output*
 
@@ -467,11 +409,7 @@ This could also be used for the top /navbar/ using something like:
 Please note the blank line between menu items. if blanks are omitted, the
 rendered result might be damaged.
 
-
-#+BEGIN_HTML
-&lt;/div&gt;&lt;/div&gt;
-#+END_HTML
-
+#+end_o_blog_row
 
 
 
@@ -480,10 +418,6 @@ rendered result might be damaged.
 Icons from &lt;a href=\"http://glyphicons.com/\"&gt;glyphicons&lt;/a&gt; are supported support by simply naming the icon using
 italic style:
 &lt;/p&gt;
-
-
-&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
-
 
 
 &lt;p&gt;
@@ -496,8 +430,6 @@ italic style:
 &lt;/pre&gt;
 
 
-&lt;/div&gt;&lt;div class=\"span6 \"&gt;
-
 
 &lt;p&gt;
 &lt;b&gt;Rendered output&lt;/b&gt;
@@ -508,18 +440,9 @@ italic style:
 
 
 
-&lt;/div&gt;&lt;/div&gt;
-
-
-
-
 &lt;p&gt;
 This could also be used for the top &lt;i&gt;navbar&lt;/i&gt; using something like:
 &lt;/p&gt;
-
-
-&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
-
 
 &lt;p&gt;
 &lt;b&gt;Source example&lt;/b&gt;
@@ -545,8 +468,6 @@ This could also be used for the top &lt;i&gt;navbar&lt;/i&gt; using something li
 
 &lt;/pre&gt;
 
-
-&lt;/div&gt;&lt;div class=\"span6 \"&gt;
 
 
 &lt;p&gt;
@@ -609,11 +530,6 @@ This could also be used for the top &lt;i&gt;navbar&lt;/i&gt; using something li
 Please note the blank line between menu items. if blanks are omitted, the
 rendered result might be damaged.
 &lt;/p&gt;
-
-
-
-&lt;/div&gt;&lt;/div&gt;
-
 
 
 
@@ -1914,10 +1830,10 @@ entry.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Quick start Guide"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20309 17776)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -1928,10 +1844,7 @@ entry.
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
-#+BEGIN_HTML
-&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
-#+END_HTML
-
+#+begin_o_blog_row 6
 
 #+HTML: &lt;div class=\"hero-unit\"&gt;
 
@@ -1941,10 +1854,7 @@ A stand-alone blogging and publication tool for [[http://orgmode.org/][org-mode]
 
 #+HTML: &lt;/div&gt;
 
-#+BEGIN_HTML
-&lt;/div&gt;&lt;div class=\"span6 \"&gt;
-#+END_HTML
-
+#+o_blog_row_column 6
 
 This is a sample website to show how to use [[https://github.com/renard/o-blog][o-blog]].
 
@@ -1956,19 +1866,12 @@ First you need:
 If you don't have them, you should install them fist.
 
 
-
-#+BEGIN_HTML
-&lt;/div&gt;&lt;/div&gt;
-#+END_HTML
-
+#+end_o_blog_row
 
 
 ** Setup
 
-#+BEGIN_HTML
-&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
-#+END_HTML
-
+#+begin_o_blog_row 6
 
 *Using el-get*
 
@@ -1978,10 +1881,7 @@ is to add =o-blog= to =el-get-sources= and type =M-x el-get-install o-blog=.
 If you are using =el-get= 4 or greater, you only need to type: =M-x
 el-get-install o-blog=.
 
-#+BEGIN_HTML
-&lt;/div&gt;&lt;div class=\"span5 \"&gt;
-#+END_HTML
-
+#+o_blog_row_column 5
 
 *Manual setup*
 
@@ -1999,11 +1899,7 @@ And add following to your =~/.emacs.d/init.el= file:
   (require 'o-blog)
 #+end_src
 
-
-#+BEGIN_HTML
-&lt;/div&gt;&lt;/div&gt;
-#+END_HTML
-
+#+end_o_blog_row
 
 
 ** Publish
@@ -2015,12 +1911,7 @@ org-publish-blog=. The result site would be published by default in
 See the [[file:blog/index.html][blog]] for more details.
 
 "</pre></td></tr>
-      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
-
-
-
-
-&lt;div class=\"hero-unit\"&gt;
+      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;div class=\"hero-unit\"&gt;
 
 &lt;h1&gt;o-blog&lt;/h1&gt;
 
@@ -2030,8 +1921,6 @@ A stand-alone blogging and publication tool for &lt;a href=\"http://orgmode.org/
 
 
 &lt;/div&gt;
-
-&lt;/div&gt;&lt;div class=\"span6 \"&gt;
 
 
 &lt;p&gt;
@@ -2055,19 +1944,10 @@ If you don't have them, you should install them fist.
 
 
 
-&lt;/div&gt;&lt;/div&gt;
-
-
-
-
 &lt;div id=\"outline-container-1\" class=\"outline-3\"&gt;
 &lt;h3 id=\"sec-1\"&gt;Setup&lt;/h3&gt;
 &lt;div class=\"outline-text-3\" id=\"text-1\"&gt;
 
-
-
-
-&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
 
 
 &lt;p&gt;
@@ -2080,10 +1960,6 @@ is to add &lt;code&gt;o-blog&lt;/code&gt; to &lt;code&gt;el-get-sources&lt;/code
 &lt;p&gt;
 If you are using &lt;code&gt;el-get&lt;/code&gt; 4 or greater, you only need to type: &lt;code&gt;M-x el-get-install o-blog&lt;/code&gt;.
 &lt;/p&gt;
-
-
-&lt;/div&gt;&lt;div class=\"span5 \"&gt;
-
 
 &lt;p&gt;
 &lt;b&gt;Manual setup&lt;/b&gt;
@@ -2109,9 +1985,6 @@ And add following to your &lt;code&gt;~/.emacs.d/init.el&lt;/code&gt; file:
 (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;o-blog&lt;/span&gt;)
 &lt;/pre&gt;
 
-
-
-&lt;/div&gt;&lt;/div&gt;
 
 
 
@@ -2145,10 +2018,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Changelog"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20309 17776)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2159,6 +2032,9 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
+- 2012-03-06
+  - Add support for Font-Awesome
+
 - 2012-02-28
   - Switched to bootstrap 2.0.1
   - Switched to lesscss 1.2.2
@@ -2167,6 +2043,14 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
   - Change tag system from \"Tags\" to org tagging system.
 "</pre></td></tr>
       <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;ul&gt;
+&lt;li&gt;2012-03-06
+&lt;ul&gt;
+&lt;li&gt;Add support for Font-Awesome
+
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/li&gt;
 &lt;li&gt;2012-02-28
 &lt;ul&gt;
 &lt;li&gt;Switched to bootstrap 2.0.1
@@ -2198,10 +2082,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Debug"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20309 17776)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"debug.html"</pre></td></tr>
@@ -2225,10 +2109,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Features"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20309 17776)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2243,6 +2127,7 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
   - Dynamic template system (using lisp functions) with [[file:./debug.html][nice debugging features]]
   - Syntax highlighting for exported code snippets
   - [[http://twitter.github.com/bootstrap/][bootstrap]] support
+  - [[http://fortaweso.me/font-awesome/][Font-Awesome]] support
   - [[http://lesscss.org/][lesscss]] support
   - [[http://jquery.com/][JQuery]] support
   - HTML5 / CSS3 ready
@@ -2266,6 +2151,8 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
 &lt;li&gt;Syntax highlighting for exported code snippets
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=\"http://twitter.github.com/bootstrap/\"&gt;bootstrap&lt;/a&gt; support
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=\"http://fortaweso.me/font-awesome/\"&gt;Font-Awesome&lt;/a&gt; support
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=\"http://lesscss.org/\"&gt;lesscss&lt;/a&gt; support
 &lt;/li&gt;
@@ -2321,10 +2208,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Templates"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20309 17776)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2551,10 +2438,10 @@ month and the whole archives.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Structures"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20309 17776)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2895,10 +2782,10 @@ Some variables may be defined in some functions:
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Functions"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20309 17776)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3374,10 +3261,10 @@ Add a human readable timestamp for a post:
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"FAQ"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20309 17776)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3514,16 +3401,16 @@ complex.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Copyright"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20309 17776)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/02"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/03"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"copyright"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/02/28_copyright.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/06_copyright.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -3546,16 +3433,16 @@ Copyright &#169; 2008-2012 &lt;a href=\"mailto:seb%20&#10088;&#593;&#422;&#629;&
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"About"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20309 17776)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/02"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/03"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"about"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/02/28_about.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/06_about.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -3576,16 +3463,16 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Navigation"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20300 2800)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20309 17776)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/02"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/03"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"navigation"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/02/28_navigation.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/06_navigation.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
