@@ -57,6 +57,10 @@
 <li>
 </li>
 <li><a href="./faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="./bug-report.html">Bug report</a>
 
 </li>
 </ul>
@@ -654,60 +658,55 @@ The /org template shorcut/ is =&lt;os= =TAB=. Two parameters might be used:
   content should be read.
 - The optional =mode= which could be determined by if omitted.
 
-Here is an example of the =README.asciidoc= file:
+Here is an example of the =sample-init.el= file:
 
 #+BEGIN_HTML
-&lt;div class=\"o-blog-source\"&gt;&lt;a class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#readmeasciidoc\" &gt;&lt;i class=\"icon-file icon-white\"&gt;&lt;/i&gt;&amp;nbsp;README.asciidoc&lt;/a&gt;&lt;/div&gt;&lt;div class=\"modal fade hide\" id=\"readmeasciidoc\"&gt;&lt;div class=\"modal-header\"&gt;&lt;a class=\"close\" data-dismiss=\"modal\"&gt;&#215;&lt;/a&gt;&lt;h3&gt;README.asciidoc&lt;/h3&gt;&lt;/div&gt;&lt;div class=\"modal-body\"&gt;&lt;pre&gt;
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;= &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 200%; font-weight: bold;\"&gt;o-blog quick start&lt;/span&gt;
+&lt;div class=\"o-blog-source\"&gt;&lt;a class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#sample-initel\" &gt;&lt;i class=\"icon-file icon-white\"&gt;&lt;/i&gt;&amp;nbsp;sample-init.el&lt;/a&gt;&lt;/div&gt;&lt;div class=\"modal fade hide\" id=\"sample-initel\"&gt;&lt;div class=\"modal-header\"&gt;&lt;a class=\"close\" data-dismiss=\"modal\"&gt;&#215;&lt;/a&gt;&lt;h3&gt;sample-init.el&lt;/h3&gt;&lt;/div&gt;&lt;div class=\"modal-body\"&gt;&lt;pre&gt;
+&lt;span style=\"color: #888a85;\"&gt;;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;sample-init.el --- sample init file to be used to debug o-blog
+&lt;/span&gt;
+&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Copyright &amp;#169; 2012 S&amp;#233;bastien Gross &amp;lt;seb&amp;#8226;&amp;#593;&amp;#428;&amp;#8226;chezwam&amp;#8226;&amp;#598;&amp;#629;&amp;#648;&amp;#8226;org&amp;gt;
+&lt;/span&gt;
+&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Author: S&amp;#233;bastien Gross &amp;lt;seb&amp;#8226;&amp;#593;&amp;#428;&amp;#8226;chezwam&amp;#8226;&amp;#598;&amp;#629;&amp;#648;&amp;#8226;org&amp;gt;
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Keywords: emacs, 
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Created: 2012-03-20
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Last changed: 2012-03-21 00:46:16
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Licence: WTFPL, grab your copy here: http://sam.zoy.org/wtfpl/
+&lt;/span&gt;
+&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;This file is NOT part of GNU Emacs.
+&lt;/span&gt;
+&lt;span style=\"color: #888a85;\"&gt;;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Commentary:
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;
+&lt;/span&gt;
 
-How to use &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/renard/o-blog&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt;.
+&lt;span style=\"color: #888a85;\"&gt;;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Code:
+&lt;/span&gt;
 
-&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://renard.github.com/o-blog&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Demo site&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt;.
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 180%; font-weight: bold;\"&gt;Quick start guide&lt;/span&gt;
-First you need:
-
-&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:www.gnu.org/s/emacs&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;emacs&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt; &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;I assume you already have it&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
-&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://orgmode.org/&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;org-mode&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt; &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;same as above&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
-
-If you don&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;'&lt;/span&gt;t have them, you should install them fist.
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;=== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 140%; font-weight: bold;\"&gt;Setup&lt;/span&gt;
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;==== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;Using &lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;
-
-If you are using &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/dimitri/el-get&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt; it would be very
-easy to install. All you need to do is to add &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; to &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;el-get-sources&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;
-and type &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
-
-If you are using &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; 4 or greater, you only need to type: &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x
-el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;==== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;Manual setup&lt;/span&gt;
-Start by cloning the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;git&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; repository from &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:github.com&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Github&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt;.
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
-&lt;span style=\"color: #87ceeb;\"&gt;cd ~/.emacs.d
-git clone https://github.com/renard/o-blog.git
-&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
-
-And add following to your &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/init.el&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; file:
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
-&lt;span style=\"color: #87ceeb;\"&gt;(add-to-list 'load-path \"~/.emacs.d/o-blog\")
-(require 'o-blog)
-&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;=== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 140%; font-weight: bold;\"&gt;Publish&lt;/span&gt;
-
-Open the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/o-blog/example/sample.org&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; file and type &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x
-org-publish-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;. The result site would be published by default in
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/o-blog/out&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
-
-See the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;example/out/blog/index.html&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; and &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;example/out/todo.html&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;' for more
-details.
-
-
+&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;defun&lt;/span&gt; &lt;span style=\"color: #edd400; font-weight: bold;\"&gt;ob-build-sample&lt;/span&gt; &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;
+  &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;let*&lt;/span&gt; &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;d default-directory&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
+         &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;sample &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/o-blog/example/sample.org\"&lt;/span&gt; d&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
+         &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;debugger
+          &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;lambda&lt;/span&gt; &lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;&amp;amp;rest&lt;/span&gt; debugger-args&lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;)&lt;/span&gt;
+            &lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;let*&lt;/span&gt; &lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #4e9a06; font-weight: bold;\"&gt;(&lt;/span&gt;trace &lt;span style=\"color: #75507b; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;with-temp-buffer&lt;/span&gt;
+                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;insert &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;with-output-to-string&lt;/span&gt; &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;backtrace&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;beginning-of-buffer&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+                            &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;error begins on line 16
+&lt;/span&gt;                            &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;line stats with \"  signal(error ...\"
+&lt;/span&gt;                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;goto-line 16&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;goto-char &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;point-at-bol&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+                            &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Remove null chars
+&lt;/span&gt;                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;replace-regexp-in-string
+                              &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;char-to-string 0&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #ad7fa8;\"&gt;\"^@\"&lt;/span&gt;
+                              &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;buffer-substring &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;point&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;point-max&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #75507b; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #4e9a06; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;)&lt;/span&gt;
+              &lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;(&lt;/span&gt;o-blog-bug-report trace&lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
+         &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;debug-on-error t&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
+         print-length print-level&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/org-mode/lisp\"&lt;/span&gt; d&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/org-mode/contrib/lisp\"&lt;/span&gt; d&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/o-blog\"&lt;/span&gt; d&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;find-file sample&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;org-publish-blog sample&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;kill-emacs&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 #+END_HTML
 
@@ -735,61 +734,56 @@ The &lt;i&gt;org template shorcut&lt;/i&gt; is &lt;code&gt;&amp;lt;os&lt;/code&g
 
 
 &lt;p&gt;
-Here is an example of the &lt;code&gt;README.asciidoc&lt;/code&gt; file:
+Here is an example of the &lt;code&gt;sample-init.el&lt;/code&gt; file:
 &lt;/p&gt;
 
 
-&lt;div class=\"o-blog-source\"&gt;&lt;a class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#readmeasciidoc\" &gt;&lt;i class=\"icon-file icon-white\"&gt;&lt;/i&gt;&amp;nbsp;README.asciidoc&lt;/a&gt;&lt;/div&gt;&lt;div class=\"modal fade hide\" id=\"readmeasciidoc\"&gt;&lt;div class=\"modal-header\"&gt;&lt;a class=\"close\" data-dismiss=\"modal\"&gt;&#215;&lt;/a&gt;&lt;h3&gt;README.asciidoc&lt;/h3&gt;&lt;/div&gt;&lt;div class=\"modal-body\"&gt;&lt;pre&gt;
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;= &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 200%; font-weight: bold;\"&gt;o-blog quick start&lt;/span&gt;
+&lt;div class=\"o-blog-source\"&gt;&lt;a class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#sample-initel\" &gt;&lt;i class=\"icon-file icon-white\"&gt;&lt;/i&gt;&amp;nbsp;sample-init.el&lt;/a&gt;&lt;/div&gt;&lt;div class=\"modal fade hide\" id=\"sample-initel\"&gt;&lt;div class=\"modal-header\"&gt;&lt;a class=\"close\" data-dismiss=\"modal\"&gt;&#215;&lt;/a&gt;&lt;h3&gt;sample-init.el&lt;/h3&gt;&lt;/div&gt;&lt;div class=\"modal-body\"&gt;&lt;pre&gt;
+&lt;span style=\"color: #888a85;\"&gt;;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;sample-init.el --- sample init file to be used to debug o-blog
+&lt;/span&gt;
+&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Copyright &amp;#169; 2012 S&amp;#233;bastien Gross &amp;lt;seb&amp;#8226;&amp;#593;&amp;#428;&amp;#8226;chezwam&amp;#8226;&amp;#598;&amp;#629;&amp;#648;&amp;#8226;org&amp;gt;
+&lt;/span&gt;
+&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Author: S&amp;#233;bastien Gross &amp;lt;seb&amp;#8226;&amp;#593;&amp;#428;&amp;#8226;chezwam&amp;#8226;&amp;#598;&amp;#629;&amp;#648;&amp;#8226;org&amp;gt;
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Keywords: emacs, 
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Created: 2012-03-20
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Last changed: 2012-03-21 00:44:39
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Licence: WTFPL, grab your copy here: http://sam.zoy.org/wtfpl/
+&lt;/span&gt;
+&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;This file is NOT part of GNU Emacs.
+&lt;/span&gt;
+&lt;span style=\"color: #888a85;\"&gt;;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Commentary:
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;
+&lt;/span&gt;
 
-How to use &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/renard/o-blog&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt;.
+&lt;span style=\"color: #888a85;\"&gt;;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Code:
+&lt;/span&gt;
 
-&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://renard.github.com/o-blog&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Demo site&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt;.
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 180%; font-weight: bold;\"&gt;Quick start guide&lt;/span&gt;
-First you need:
-
-&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:www.gnu.org/s/emacs&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;emacs&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt; &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;I assume you already have it&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
-&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://orgmode.org/&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;org-mode&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt; &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;same as above&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
-
-If you don&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;'&lt;/span&gt;t have them, you should install them fist.
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;=== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 140%; font-weight: bold;\"&gt;Setup&lt;/span&gt;
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;==== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;Using &lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;
-
-If you are using &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/dimitri/el-get&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt; it would be very
-easy to install. All you need to do is to add &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; to &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;el-get-sources&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;
-and type &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
-
-If you are using &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; 4 or greater, you only need to type: &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x
-el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;==== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;Manual setup&lt;/span&gt;
-Start by cloning the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;git&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; repository from &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:github.com&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Github&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt;.
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
-&lt;span style=\"color: #87ceeb;\"&gt;cd ~/.emacs.d
-git clone https://github.com/renard/o-blog.git
-&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
-
-And add following to your &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/init.el&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; file:
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
-&lt;span style=\"color: #87ceeb;\"&gt;(add-to-list 'load-path \"~/.emacs.d/o-blog\")
-(require 'o-blog)
-&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
-
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;=== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 140%; font-weight: bold;\"&gt;Publish&lt;/span&gt;
-
-Open the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/o-blog/example/sample.org&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; file and type &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x
-org-publish-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;. The result site would be published by default in
-&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;~/.emacs.d/o-blog/out&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
-
-See the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;example/out/blog/index.html&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; and &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;example/out/todo.html&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;' for more
-details.
-
-
+&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;defun&lt;/span&gt; &lt;span style=\"color: #edd400; font-weight: bold;\"&gt;ob-build-sample&lt;/span&gt; &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;
+  &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;let*&lt;/span&gt; &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;d default-directory&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
+         &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;sample &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/o-blog/example/sample.org\"&lt;/span&gt; d&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
+         &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;debugger
+          &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;lambda&lt;/span&gt; &lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;&amp;amp;rest&lt;/span&gt; debugger-args&lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;)&lt;/span&gt;
+            &lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;let*&lt;/span&gt; &lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #4e9a06; font-weight: bold;\"&gt;(&lt;/span&gt;trace &lt;span style=\"color: #75507b; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;with-temp-buffer&lt;/span&gt;
+                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;insert &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;with-output-to-string&lt;/span&gt; &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;backtrace&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;beginning-of-buffer&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+                            &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;error begins on line 16
+&lt;/span&gt;                            &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;line stats with \"  signal(error ...\"
+&lt;/span&gt;                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;goto-line 16&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;goto-char &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;point-at-bol&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+                            &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Remove null chars
+&lt;/span&gt;                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;replace-regexp-in-string
+                              &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;char-to-string 0&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #ad7fa8;\"&gt;\"^@\"&lt;/span&gt;
+                              &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;buffer-substring &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;point&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;point-max&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #75507b; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #4e9a06; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;)&lt;/span&gt;
+              &lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;(&lt;/span&gt;o-blog-bug-report trace&lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
+         &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;debug-on-error t&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
+         print-length print-level&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/org-mode/lisp\"&lt;/span&gt; d&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/org-mode/contrib/lisp\"&lt;/span&gt; d&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/o-blog\"&lt;/span&gt; d&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;find-file sample&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;org-publish-blog sample&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
+    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;kill-emacs&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 "</pre></td></tr>
@@ -1913,10 +1907,10 @@ entry.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Quick start Guide"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20329 3056)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -1928,7 +1922,7 @@ entry.
 
 
 #+BEGIN_HTML
-&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
+&lt;div class=\"row \"&gt;&lt;div class=\"span8 \"&gt;
 #+END_HTML
 
 
@@ -1941,19 +1935,22 @@ A stand-alone blogging and publication tool for [[http://orgmode.org/][org-mode]
 #+HTML: &lt;/div&gt;
 
 #+BEGIN_HTML
-&lt;/div&gt;&lt;div class=\"span6 \"&gt;
+&lt;/div&gt;&lt;div class=\"span4 \"&gt;
 #+END_HTML
 
 
-This is a sample website to show how to use [[https://github.com/renard/o-blog][o-blog]].
 
-First you need:
+#+HTML: &lt;div class=\"hero-unit\" style=\"font-size: 200%;\"&gt;
 
-- [[http://www.gnu.org/s/emacs][emacs]] (I assume you already have it)
-- [[http://orgmode.org/][org-mode]] (same as above)
+[[file:./features.html][/icon-cog icon-white/ Features]]
 
-If you don't have them, you should install them fist.
+[[https://github.com/renard/o-blog][/icon-github-sign icon-white/ Github]]
 
+[[file:./changelog.html][/icon-pencil icon-white/ Changelog]]
+
+
+
+#+HTML: &lt;/div&gt;
 
 
 #+BEGIN_HTML
@@ -1964,21 +1961,28 @@ If you don't have them, you should install them fist.
 
 ** Setup
 
+
+First you need to install [[http://www.gnu.org/s/emacs][emacs]] and [[http://orgmode.org/][org-mode]]. Then you have 2 ways to
+install [[https://github.com/renard/o-blog][o-blog]].
+
 #+BEGIN_HTML
-&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
+&lt;div class=\"row \"&gt;&lt;div class=\"span5 \"&gt;
 #+END_HTML
 
 
 *Using el-get*
 
 If you are using [[https://github.com/dimitri/el-get][el-get]] it would be very easy to install. All you need to do
-is to add =o-blog= to =el-get-sources= and type =M-x el-get-install o-blog=.
+is to add =o-blog= to =el-get-sources= and type:
 
-If you are using =el-get= 4 or greater, you only need to type: =M-x
-el-get-install o-blog=.
+=M-x el-get-install o-blog=
+
+If you are using =el-get= 4 or greater, you only need to type:
+
+=M-x el-get-install o-blog=.
 
 #+BEGIN_HTML
-&lt;/div&gt;&lt;div class=\"span5 \"&gt;
+&lt;/div&gt;&lt;div class=\"span6 \"&gt;
 #+END_HTML
 
 
@@ -2014,7 +2018,7 @@ org-publish-blog=. The result site would be published by default in
 See the [[file:blog/index.html][blog]] for more details.
 
 "</pre></td></tr>
-      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
+      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;div class=\"row \"&gt;&lt;div class=\"span8 \"&gt;
 
 
 
@@ -2030,28 +2034,26 @@ A stand-alone blogging and publication tool for &lt;a href=\"http://orgmode.org/
 
 &lt;/div&gt;
 
-&lt;/div&gt;&lt;div class=\"span6 \"&gt;
+&lt;/div&gt;&lt;div class=\"span4 \"&gt;
 
+
+
+&lt;div class=\"hero-unit\" style=\"font-size: 200%;\"&gt;
 
 &lt;p&gt;
-This is a sample website to show how to use &lt;a href=\"https://github.com/renard/o-blog\"&gt;o-blog&lt;/a&gt;.
+&lt;a href=\"./features.html\"&gt;&lt;i&gt;icon-cog icon-white&lt;/i&gt; Features&lt;/a&gt;
 &lt;/p&gt;
 &lt;p&gt;
-First you need:
+&lt;a href=\"https://github.com/renard/o-blog\"&gt;&lt;i&gt;icon-github-sign icon-white&lt;/i&gt; Github&lt;/a&gt;
 &lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=\"http://www.gnu.org/s/emacs\"&gt;emacs&lt;/a&gt; (I assume you already have it)
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=\"http://orgmode.org/\"&gt;org-mode&lt;/a&gt; (same as above)
-&lt;/li&gt;
-&lt;/ul&gt;
-
-
 &lt;p&gt;
-If you don't have them, you should install them fist.
+&lt;a href=\"./changelog.html\"&gt;&lt;i&gt;icon-pencil icon-white&lt;/i&gt; Changelog&lt;/a&gt;
 &lt;/p&gt;
 
 
+
+
+&lt;/div&gt;
 
 
 &lt;/div&gt;&lt;/div&gt;
@@ -2065,8 +2067,13 @@ If you don't have them, you should install them fist.
 
 
 
+&lt;p&gt;
+First you need to install &lt;a href=\"http://www.gnu.org/s/emacs\"&gt;emacs&lt;/a&gt; and &lt;a href=\"http://orgmode.org/\"&gt;org-mode&lt;/a&gt;. Then you have 2 ways to
+install &lt;a href=\"https://github.com/renard/o-blog\"&gt;o-blog&lt;/a&gt;.
+&lt;/p&gt;
 
-&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
+
+&lt;div class=\"row \"&gt;&lt;div class=\"span5 \"&gt;
 
 
 &lt;p&gt;
@@ -2074,14 +2081,20 @@ If you don't have them, you should install them fist.
 &lt;/p&gt;
 &lt;p&gt;
 If you are using &lt;a href=\"https://github.com/dimitri/el-get\"&gt;el-get&lt;/a&gt; it would be very easy to install. All you need to do
-is to add &lt;code&gt;o-blog&lt;/code&gt; to &lt;code&gt;el-get-sources&lt;/code&gt; and type &lt;code&gt;M-x el-get-install o-blog&lt;/code&gt;.
+is to add &lt;code&gt;o-blog&lt;/code&gt; to &lt;code&gt;el-get-sources&lt;/code&gt; and type:
 &lt;/p&gt;
 &lt;p&gt;
-If you are using &lt;code&gt;el-get&lt;/code&gt; 4 or greater, you only need to type: &lt;code&gt;M-x el-get-install o-blog&lt;/code&gt;.
+&lt;code&gt;M-x el-get-install o-blog&lt;/code&gt;
+&lt;/p&gt;
+&lt;p&gt;
+If you are using &lt;code&gt;el-get&lt;/code&gt; 4 or greater, you only need to type:
+&lt;/p&gt;
+&lt;p&gt;
+&lt;code&gt;M-x el-get-install o-blog&lt;/code&gt;.
 &lt;/p&gt;
 
 
-&lt;/div&gt;&lt;div class=\"span5 \"&gt;
+&lt;/div&gt;&lt;div class=\"span6 \"&gt;
 
 
 &lt;p&gt;
@@ -2144,10 +2157,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Changelog"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20329 3056)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2161,6 +2174,7 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
 - 2012-03-20
   - Add [[http://disqus.com][Disqus]] support.
   - User can select the file name sanitizer function.
+  - Add [[file:./bug-report.html][bug report howto]].
 
 - 2012-03-06
   - Add support for Font-Awesome
@@ -2178,6 +2192,8 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
 &lt;li&gt;Add &lt;a href=\"http://disqus.com\"&gt;Disqus&lt;/a&gt; support.
 &lt;/li&gt;
 &lt;li&gt;User can select the file name sanitizer function.
+&lt;/li&gt;
+&lt;li&gt;Add &lt;a href=\"./bug-report.html\"&gt;bug report howto&lt;/a&gt;.
 
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -2222,10 +2238,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Debug"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20329 3056)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"debug.html"</pre></td></tr>
@@ -2249,10 +2265,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Features"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20329 3056)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2264,7 +2280,8 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
 
 
 - Appearance
-  - Dynamic template system (using lisp functions) with [[file:./debug.html][nice debugging features]]
+  - Dynamic template system (using lisp functions) with [[file:./debug.html][nice debugging
+    features]] and easy embedded [[file:./bug-report.html][bug report tool]]
   - Syntax highlighting for exported code snippets
   - [[http://twitter.github.com/bootstrap/][bootstrap]] support
   - [[http://fortaweso.me/font-awesome/][Font-Awesome]] support
@@ -2276,7 +2293,7 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
   - [[file:./tags/index.html][Tag cloud]]
   - Multiple blogs
   - [[file:./archives.html][Archives]]
-  - [[http://disqus.com][Disqus]] support.
+  - [[http://disqus.com][Disqus]] support
 - Publication
   - Both synchrone and asynchrone publication
   - Publish directly to the webserver (using tramp)
@@ -2287,7 +2304,7 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
       <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;ul&gt;
 &lt;li&gt;Appearance
 &lt;ul&gt;
-&lt;li&gt;Dynamic template system (using lisp functions) with &lt;a href=\"./debug.html\"&gt;nice debugging features&lt;/a&gt;
+&lt;li&gt;Dynamic template system (using lisp functions) with &lt;a href=\"./debug.html\"&gt;nice debugging features&lt;/a&gt; and easy embedded &lt;a href=\"./bug-report.html\"&gt;bug report tool&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;Syntax highlighting for exported code snippets
 &lt;/li&gt;
@@ -2314,7 +2331,7 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=\"./archives.html\"&gt;Archives&lt;/a&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;a href=\"http://disqus.com\"&gt;Disqus&lt;/a&gt; support.
+&lt;li&gt;&lt;a href=\"http://disqus.com\"&gt;Disqus&lt;/a&gt; support
 &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -2351,10 +2368,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Templates"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20329 3056)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2581,10 +2598,10 @@ month and the whole archives.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Structures"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20329 3056)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2937,10 +2954,10 @@ Some variables may be defined in some functions:
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Functions"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20329 3056)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3109,7 +3126,6 @@ Add a human readable timestamp for a post:
     &lt;lisp&gt; (ob:format-date (ob:post-timestamp POST) \"%A %B, %d %Y at %H:%M:%S\") &lt;/lisp&gt;
   &lt;/time&gt;.
 #+end_src
-
 "</pre></td></tr>
       <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;p&gt;
 Basically any lisp function could be used withing a blog template as long as
@@ -3400,10 +3416,124 @@ Add a human readable timestamp for a post:
 &amp;lt;/&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;time&lt;/span&gt;&amp;gt;.
 &lt;/pre&gt;
 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+"</pre></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="debug post">
+  <h2>Bug report</h2>
+  <table>
+    <caption>Dump information for post Bug report</caption>
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>title</code></td><td class="value"><pre>"Bug report"</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20329 3056)</pre></td></tr>
+      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"bug-report"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"bug-report.html"</pre></td></tr>
+      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
+
+To report a bug please be sure your issue is =o-blog= related.
+
+You can bootstrap a simple clean environment
+
+#+begin_src sh
+rm -rf ~/dev/.emacs.d
+mkdir -p ~/dev/.emacs.d
+cd ~/dev/.emacs.d
+git clone git://github.com/renard/o-blog.git
+git clone git://orgmode.org/org-mode.git
+#+end_src
+
+
+Then launch =emacs=:
+
+#+begin_src sh
+  cd ~/dev
+  rm -rf .emacs.d/o-blog/example/out
+  emacs --debug-init -Q  -l .emacs.d/o-blog/sample-init.el --eval \\
+      '(progn (setq browse-url-generic-program \"x-www-browser\"
+        browse-url-browser-function (quote browse-url-generic))
+        (ob-build-sample))'
+#+end_src
+
+You can change =x-www-browser= to your favorite browser.
+
+If anything runs fine emacs would exit normally. Otherwise a buffer called
+=o-blog Bug-report= is created and its content is copied to primary X
+selection (if available). This buffer contains useful information for
+debugging your issue. A browser is launch to the [[https://github.com/renard/o-blog/issues/new][o-blog new issue page]]. You
+can either paste content of the =o-blog Bug-report= buffer or the X primary
+selection (middle click).
+
+Please describe as much as possible your issue (in English). do no hesitate
+to paste your blog file to https://gist.github.com/ this might be useful to
+debug.
+
+
+"</pre></td></tr>
+      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;p&gt;
+To report a bug please be sure your issue is &lt;code&gt;o-blog&lt;/code&gt; related.
+&lt;/p&gt;
+&lt;p&gt;
+You can bootstrap a simple clean environment
+&lt;/p&gt;
+
+
+
+&lt;pre class=\"src src-sh\"&gt;rm -rf ~/dev/.emacs.d
+mkdir -p ~/dev/.emacs.d
+&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; ~/dev/.emacs.d
+git clone git://github.com/renard/o-blog.git
+git clone git://orgmode.org/org-mode.git
+&lt;/pre&gt;
+
+
+
+&lt;p&gt;
+Then launch &lt;code&gt;emacs&lt;/code&gt;:
+&lt;/p&gt;
+
+
+
+&lt;pre class=\"src src-sh\"&gt;&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; ~/dev
+rm -rf .emacs.d/o-blog/example/out
+emacs --debug-init -Q  -l .emacs.d/o-blog/sample-init.el --eval &lt;span style=\"color: #ad7fa8;\"&gt;\\&lt;/span&gt;
+    &lt;span style=\"color: #ad7fa8;\"&gt;'(progn (setq browse-url-generic-program \"x-www-browser\"&lt;/span&gt;
+&lt;span style=\"color: #ad7fa8;\"&gt;      browse-url-browser-function (quote browse-url-generic))&lt;/span&gt;
+&lt;span style=\"color: #ad7fa8;\"&gt;      (ob-build-sample))'&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+You can change &lt;code&gt;x-www-browser&lt;/code&gt; to your favorite browser.
+&lt;/p&gt;
+&lt;p&gt;
+If anything runs fine emacs would exit normally. Otherwise a buffer called
+&lt;code&gt;o-blog Bug-report&lt;/code&gt; is created and its content is copied to primary X
+selection (if available). This buffer contains useful information for
+debugging your issue. A browser is launch to the &lt;a href=\"https://github.com/renard/o-blog/issues/new\"&gt;o-blog new issue page&lt;/a&gt;. You
+can either paste content of the &lt;code&gt;o-blog Bug-report&lt;/code&gt; buffer or the X primary
+selection (middle click).
+&lt;/p&gt;
+&lt;p&gt;
+Please describe as much as possible your issue (in English). do no hesitate
+to paste your blog file to &lt;a href=\"https://gist.github.com/\"&gt;https://gist.github.com/&lt;/a&gt; this might be useful to
+debug.
+&lt;/p&gt;
+
 "</pre></td></tr>
     </tbody>
   </table>
@@ -3414,12 +3544,12 @@ Add a human readable timestamp for a post:
     <caption>Dump information for post FAQ</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"FAQ"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20329 3056)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3556,16 +3686,16 @@ complex.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Copyright"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20329 3056)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/03"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"copyright"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/20_copyright.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/21_copyright.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -3588,16 +3718,16 @@ Copyright &#169; 2008-2012 &lt;a href=\"mailto:seb%20&#10088;&#593;&#422;&#629;&
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"About"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20329 3056)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/03"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"about"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/20_about.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/21_about.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -3618,16 +3748,16 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Navigation"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20329 3056)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/03"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"navigation"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/20_navigation.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/21_navigation.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -3638,8 +3768,10 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
   - [[file:../../../templates.html][Templates]]
   - [[file:../../../structures.html][Structures]]
   - [[file:../../../functions.html][Functions]]
-  -
+  - 
   - [[file:../../../faq.html][FAQ]]
+  - 
+  - [[file:../../../bug-report.html][Bug report]]
 
 - [[#][/icon-file icon-white/ Tips]]
   - [[file:Lisp error in nil: (void-function format%20"%25s/%25s"%20)][Lisp error in nil: (void-variable "Tips")]]
@@ -3673,6 +3805,10 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
 &lt;li&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=\"../../../faq.html\"&gt;FAQ&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=\"../../../bug-report.html\"&gt;Bug report&lt;/a&gt;
 
 &lt;/li&gt;
 &lt;/ul&gt;

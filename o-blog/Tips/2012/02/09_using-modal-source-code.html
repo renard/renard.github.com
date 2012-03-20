@@ -57,6 +57,10 @@
 <li>
 </li>
 <li><a href="../../../faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="../../../bug-report.html">Bug report</a>
 
 </li>
 </ul>
@@ -154,61 +158,56 @@ The <i>org template shorcut</i> is <code>&lt;os</code> <code>TAB</code>. Two par
 
 
 <p>
-Here is an example of the <code>README.asciidoc</code> file:
+Here is an example of the <code>sample-init.el</code> file:
 </p>
 
 
-<div class="o-blog-source"><a class="btn btn-info" data-toggle="modal" data-target="#readmeasciidoc" ><i class="icon-file icon-white"></i>&nbsp;README.asciidoc</a></div><div class="modal fade hide" id="readmeasciidoc"><div class="modal-header"><a class="close" data-dismiss="modal">×</a><h3>README.asciidoc</h3></div><div class="modal-body"><pre>
-<span style="color: #666666; background-color: #2e3436;">= </span><span style="color: #87ceeb; font-size: 200%; font-weight: bold;">o-blog quick start</span>
+<div class="o-blog-source"><a class="btn btn-info" data-toggle="modal" data-target="#sample-initel" ><i class="icon-file icon-white"></i>&nbsp;sample-init.el</a></div><div class="modal fade hide" id="sample-initel"><div class="modal-header"><a class="close" data-dismiss="modal">×</a><h3>sample-init.el</h3></div><div class="modal-body"><pre>
+<span style="color: #888a85;">;;; </span><span style="color: #888a85;">sample-init.el --- sample init file to be used to debug o-blog
+</span>
+<span style="color: #888a85;">;; </span><span style="color: #888a85;">Copyright &#169; 2012 S&#233;bastien Gross &lt;seb&#8226;&#593;&#428;&#8226;chezwam&#8226;&#598;&#629;&#648;&#8226;org&gt;
+</span>
+<span style="color: #888a85;">;; </span><span style="color: #888a85;">Author: S&#233;bastien Gross &lt;seb&#8226;&#593;&#428;&#8226;chezwam&#8226;&#598;&#629;&#648;&#8226;org&gt;
+</span><span style="color: #888a85;">;; </span><span style="color: #888a85;">Keywords: emacs, 
+</span><span style="color: #888a85;">;; </span><span style="color: #888a85;">Created: 2012-03-20
+</span><span style="color: #888a85;">;; </span><span style="color: #888a85;">Last changed: 2012-03-21 00:46:17
+</span><span style="color: #888a85;">;; </span><span style="color: #888a85;">Licence: WTFPL, grab your copy here: http://sam.zoy.org/wtfpl/
+</span>
+<span style="color: #888a85;">;; </span><span style="color: #888a85;">This file is NOT part of GNU Emacs.
+</span>
+<span style="color: #888a85;">;;; </span><span style="color: #888a85;">Commentary:
+</span><span style="color: #888a85;">;; </span><span style="color: #888a85;">
+</span>
 
-How to use <span style="color: #7f7f7f; background-color: #333333;">https://github.com/renard/o-blog</span><span style="color: #fce94f; font-weight: bold;">[</span><span style="color: #87ceeb; text-decoration: underline;">o-blog</span><span style="color: #fce94f; font-weight: bold;">]</span>.
+<span style="color: #888a85;">;;; </span><span style="color: #888a85;">Code:
+</span>
 
-<span style="color: #7f7f7f; background-color: #333333;">http://renard.github.com/o-blog</span><span style="color: #fce94f; font-weight: bold;">[</span><span style="color: #87ceeb; text-decoration: underline;">Demo site</span><span style="color: #fce94f; font-weight: bold;">]</span>.
-
-<span style="color: #666666; background-color: #2e3436;">== </span><span style="color: #87ceeb; font-size: 180%; font-weight: bold;">Quick start guide</span>
-First you need:
-
-<span style="color: #ffbbff; background-color: #7d26cd;">-</span><span style="color: #eeeeec; background-color: #2e3436;"> </span><span style="color: #7f7f7f; background-color: #333333;">http:www.gnu.org/s/emacs</span><span style="color: #fce94f; font-weight: bold;">[</span><span style="color: #87ceeb; text-decoration: underline;">emacs</span><span style="color: #fce94f; font-weight: bold;">]</span> <span style="color: #fce94f; font-weight: bold;">(</span>I assume you already have it<span style="color: #fce94f; font-weight: bold;">)</span>
-<span style="color: #ffbbff; background-color: #7d26cd;">-</span><span style="color: #eeeeec; background-color: #2e3436;"> </span><span style="color: #7f7f7f; background-color: #333333;">http://orgmode.org/</span><span style="color: #fce94f; font-weight: bold;">[</span><span style="color: #87ceeb; text-decoration: underline;">org-mode</span><span style="color: #fce94f; font-weight: bold;">]</span> <span style="color: #fce94f; font-weight: bold;">(</span>same as above<span style="color: #fce94f; font-weight: bold;">)</span>
-
-If you don<span style="color: #666666; background-color: #2e3436;">'</span>t have them, you should install them fist.
-
-<span style="color: #666666; background-color: #2e3436;">=== </span><span style="color: #87ceeb; font-size: 140%; font-weight: bold;">Setup</span>
-
-<span style="color: #666666; background-color: #2e3436;">==== </span><span style="color: #87ceeb; font-weight: bold; font-style: italic;">Using </span><span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb; font-weight: bold; font-style: italic;">el-get</span><span style="color: #666666; background-color: #2e3436;">+</span>
-
-If you are using <span style="color: #7f7f7f; background-color: #333333;">https://github.com/dimitri/el-get</span><span style="color: #fce94f; font-weight: bold;">[</span><span style="color: #87ceeb; text-decoration: underline;">el-get</span><span style="color: #fce94f; font-weight: bold;">]</span> it would be very
-easy to install. All you need to do is to add <span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb;">o-blog</span><span style="color: #666666; background-color: #2e3436;">+</span> to <span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb;">el-get-sources</span><span style="color: #666666; background-color: #2e3436;">+</span>
-and type <span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb;">M-x el-get-install o-blog</span><span style="color: #666666; background-color: #2e3436;">+</span>.
-
-If you are using <span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb;">el-get</span><span style="color: #666666; background-color: #2e3436;">+</span> 4 or greater, you only need to type: <span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb;">M-x
-el-get-install o-blog</span><span style="color: #666666; background-color: #2e3436;">+</span>.
-
-<span style="color: #666666; background-color: #2e3436;">==== </span><span style="color: #87ceeb; font-weight: bold; font-style: italic;">Manual setup</span>
-Start by cloning the <span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb;">git</span><span style="color: #666666; background-color: #2e3436;">+</span> repository from <span style="color: #7f7f7f; background-color: #333333;">http:github.com</span><span style="color: #fce94f; font-weight: bold;">[</span><span style="color: #87ceeb; text-decoration: underline;">Github</span><span style="color: #fce94f; font-weight: bold;">]</span>.
-
-<span style="color: #666666; background-color: #2e3436;">----</span>
-<span style="color: #87ceeb;">cd ~/.emacs.d
-git clone https://github.com/renard/o-blog.git
-</span><span style="color: #666666; background-color: #2e3436;">----</span>
-
-And add following to your <span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb;">~/.emacs.d/init.el</span><span style="color: #666666; background-color: #2e3436;">+</span> file:
-
-<span style="color: #666666; background-color: #2e3436;">----</span>
-<span style="color: #87ceeb;">(add-to-list 'load-path "~/.emacs.d/o-blog")
-(require 'o-blog)
-</span><span style="color: #666666; background-color: #2e3436;">----</span>
-
-<span style="color: #666666; background-color: #2e3436;">=== </span><span style="color: #87ceeb; font-size: 140%; font-weight: bold;">Publish</span>
-
-Open the <span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb;">~/.emacs.d/o-blog/example/sample.org</span><span style="color: #666666; background-color: #2e3436;">+</span> file and type <span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb;">M-x
-org-publish-blog</span><span style="color: #666666; background-color: #2e3436;">+</span>. The result site would be published by default in
-<span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb;">~/.emacs.d/o-blog/out</span><span style="color: #666666; background-color: #2e3436;">+</span>.
-
-See the <span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb;">example/out/blog/index.html</span><span style="color: #666666; background-color: #2e3436;">+</span> and <span style="color: #666666; background-color: #2e3436;">+</span><span style="color: #87ceeb;">example/out/todo.html</span><span style="color: #666666; background-color: #2e3436;">+</span>' for more
-details.
-
-
+<span style="color: #fce94f; font-weight: bold;">(</span><span style="color: #729fcf; font-weight: bold;">defun</span> <span style="color: #edd400; font-weight: bold;">ob-build-sample</span> <span style="color: #729fcf; font-weight: bold;">(</span><span style="color: #729fcf; font-weight: bold;">)</span>
+  <span style="color: #729fcf; font-weight: bold;">(</span><span style="color: #729fcf; font-weight: bold;">let*</span> <span style="color: #8ae234; font-weight: bold;">(</span><span style="color: #ad7fa8; font-weight: bold;">(</span>d default-directory<span style="color: #ad7fa8; font-weight: bold;">)</span>
+         <span style="color: #ad7fa8; font-weight: bold;">(</span>sample <span style="color: #f57900; font-weight: bold;">(</span>format <span style="color: #ad7fa8;">"%s/.emacs.d/o-blog/example/sample.org"</span> d<span style="color: #f57900; font-weight: bold;">)</span><span style="color: #ad7fa8; font-weight: bold;">)</span>
+         <span style="color: #ad7fa8; font-weight: bold;">(</span>debugger
+          <span style="color: #f57900; font-weight: bold;">(</span><span style="color: #729fcf; font-weight: bold;">lambda</span> <span style="color: #c4a000; font-weight: bold;">(</span><span style="color: #8ae234; font-weight: bold;">&amp;rest</span> debugger-args<span style="color: #c4a000; font-weight: bold;">)</span>
+            <span style="color: #c4a000; font-weight: bold;">(</span><span style="color: #729fcf; font-weight: bold;">let*</span> <span style="color: #3465a4; font-weight: bold;">(</span><span style="color: #4e9a06; font-weight: bold;">(</span>trace <span style="color: #75507b; font-weight: bold;">(</span><span style="color: #729fcf; font-weight: bold;">with-temp-buffer</span>
+                            <span style="color: #fce94f; font-weight: bold;">(</span>insert <span style="color: #729fcf; font-weight: bold;">(</span><span style="color: #729fcf; font-weight: bold;">with-output-to-string</span> <span style="color: #8ae234; font-weight: bold;">(</span>backtrace<span style="color: #8ae234; font-weight: bold;">)</span><span style="color: #729fcf; font-weight: bold;">)</span><span style="color: #fce94f; font-weight: bold;">)</span>
+                            <span style="color: #fce94f; font-weight: bold;">(</span>beginning-of-buffer<span style="color: #fce94f; font-weight: bold;">)</span>
+                            <span style="color: #888a85;">;; </span><span style="color: #888a85;">error begins on line 16
+</span>                            <span style="color: #888a85;">;; </span><span style="color: #888a85;">line stats with "  signal(error ..."
+</span>                            <span style="color: #fce94f; font-weight: bold;">(</span>goto-line 16<span style="color: #fce94f; font-weight: bold;">)</span>
+                            <span style="color: #fce94f; font-weight: bold;">(</span>goto-char <span style="color: #729fcf; font-weight: bold;">(</span>point-at-bol<span style="color: #729fcf; font-weight: bold;">)</span><span style="color: #fce94f; font-weight: bold;">)</span>
+                            <span style="color: #888a85;">;; </span><span style="color: #888a85;">Remove null chars
+</span>                            <span style="color: #fce94f; font-weight: bold;">(</span>replace-regexp-in-string
+                              <span style="color: #729fcf; font-weight: bold;">(</span>char-to-string 0<span style="color: #729fcf; font-weight: bold;">)</span> <span style="color: #ad7fa8;">"^@"</span>
+                              <span style="color: #729fcf; font-weight: bold;">(</span>buffer-substring <span style="color: #8ae234; font-weight: bold;">(</span>point<span style="color: #8ae234; font-weight: bold;">)</span> <span style="color: #8ae234; font-weight: bold;">(</span>point-max<span style="color: #8ae234; font-weight: bold;">)</span><span style="color: #729fcf; font-weight: bold;">)</span><span style="color: #fce94f; font-weight: bold;">)</span><span style="color: #75507b; font-weight: bold;">)</span><span style="color: #4e9a06; font-weight: bold;">)</span><span style="color: #3465a4; font-weight: bold;">)</span>
+              <span style="color: #3465a4; font-weight: bold;">(</span>o-blog-bug-report trace<span style="color: #3465a4; font-weight: bold;">)</span><span style="color: #c4a000; font-weight: bold;">)</span><span style="color: #f57900; font-weight: bold;">)</span><span style="color: #ad7fa8; font-weight: bold;">)</span>
+         <span style="color: #ad7fa8; font-weight: bold;">(</span>debug-on-error t<span style="color: #ad7fa8; font-weight: bold;">)</span>
+         print-length print-level<span style="color: #8ae234; font-weight: bold;">)</span>
+    <span style="color: #8ae234; font-weight: bold;">(</span>add-to-list 'load-path <span style="color: #ad7fa8; font-weight: bold;">(</span>format <span style="color: #ad7fa8;">"%s/.emacs.d/org-mode/lisp"</span> d<span style="color: #ad7fa8; font-weight: bold;">)</span><span style="color: #8ae234; font-weight: bold;">)</span>
+    <span style="color: #8ae234; font-weight: bold;">(</span>add-to-list 'load-path <span style="color: #ad7fa8; font-weight: bold;">(</span>format <span style="color: #ad7fa8;">"%s/.emacs.d/org-mode/contrib/lisp"</span> d<span style="color: #ad7fa8; font-weight: bold;">)</span><span style="color: #8ae234; font-weight: bold;">)</span>
+    <span style="color: #8ae234; font-weight: bold;">(</span>add-to-list 'load-path <span style="color: #ad7fa8; font-weight: bold;">(</span>format <span style="color: #ad7fa8;">"%s/.emacs.d/o-blog"</span> d<span style="color: #ad7fa8; font-weight: bold;">)</span><span style="color: #8ae234; font-weight: bold;">)</span>
+    <span style="color: #8ae234; font-weight: bold;">(</span><span style="color: #729fcf; font-weight: bold;">require</span> '<span style="color: #8ae234;">o-blog</span><span style="color: #8ae234; font-weight: bold;">)</span>
+    <span style="color: #8ae234; font-weight: bold;">(</span>find-file sample<span style="color: #8ae234; font-weight: bold;">)</span>
+    <span style="color: #8ae234; font-weight: bold;">(</span>org-publish-blog sample<span style="color: #8ae234; font-weight: bold;">)</span>
+    <span style="color: #8ae234; font-weight: bold;">(</span>kill-emacs<span style="color: #8ae234; font-weight: bold;">)</span><span style="color: #729fcf; font-weight: bold;">)</span><span style="color: #fce94f; font-weight: bold;">)</span>
 </pre></div></div>
 
 
