@@ -119,7 +119,7 @@
   $("#debug h1, #debug h2, #debug h3, #debug h4, #debug h5, #debug h6").each(function(i) {
   var current = $(this);
   current.attr("id", "title" + i);
-
+  
   $("#toc").append("<a id='link" + i + "' href='#title" + i + "' title='" + current[0].tagName + "'>" + current.html() + "</a>");
   });
   });
@@ -144,7 +144,7 @@
   #toc a[title=H4] { font-size: 11pt; margin-left: 40px;}
   #toc a[title=H5] { font-size: 10pt; margin-left: 50px;}
   #toc a[title=H6] { font-size: 9pt; margin-left: 60px;}
-
+  
 </style>
 
 <div id="debug">
@@ -184,7 +184,7 @@
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "Bootstrap" "bootstrap" nil nil))</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>([cl-struct-ob:tags "usage" "usage" nil nil] [cl-struct-ob:tags "Bootstrap" "bootstrap" nil nil])</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/02"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"using-bootstrap-grid"</pre></td></tr>
@@ -355,7 +355,7 @@ Column n
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "Bootstrap" "bootstrap" nil nil))</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>([cl-struct-ob:tags "usage" "usage" nil nil] [cl-struct-ob:tags "Bootstrap" "bootstrap" nil nil])</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/02"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"adding-icons"</pre></td></tr>
@@ -633,7 +633,7 @@ rendered result might be damaged.
       <tr><td class="property"><code>month</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>9</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "Bootstrap" "bootstrap" nil nil))</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>([cl-struct-ob:tags "usage" "usage" nil nil] [cl-struct-ob:tags "Bootstrap" "bootstrap" nil nil])</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/02"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"using-modal-source-code"</pre></td></tr>
@@ -660,15 +660,15 @@ Here is an example of the =README.asciidoc= file:
 &lt;div class=\"o-blog-source\"&gt;&lt;a class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#readmeasciidoc\" &gt;&lt;i class=\"icon-file icon-white\"&gt;&lt;/i&gt;&amp;nbsp;README.asciidoc&lt;/a&gt;&lt;/div&gt;&lt;div class=\"modal fade hide\" id=\"readmeasciidoc\"&gt;&lt;div class=\"modal-header\"&gt;&lt;a class=\"close\" data-dismiss=\"modal\"&gt;&#215;&lt;/a&gt;&lt;h3&gt;README.asciidoc&lt;/h3&gt;&lt;/div&gt;&lt;div class=\"modal-body\"&gt;&lt;pre&gt;
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;= &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 200%; font-weight: bold;\"&gt;o-blog quick start&lt;/span&gt;
 
-How to use &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/renard/o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt;.
+How to use &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/renard/o-blog&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt;.
 
-&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://renard.github.com/o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Demo site&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt;.
+&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://renard.github.com/o-blog&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Demo site&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt;.
 
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 180%; font-weight: bold;\"&gt;Quick start guide&lt;/span&gt;
 First you need:
 
-&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:www.gnu.org/s/emacs&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;emacs&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt; (I assume you already have it)
-&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://orgmode.org/&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;org-mode&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt; (same as above)
+&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:www.gnu.org/s/emacs&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;emacs&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt; &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;I assume you already have it&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://orgmode.org/&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;org-mode&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt; &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;same as above&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
 
 If you don&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;'&lt;/span&gt;t have them, you should install them fist.
 
@@ -676,7 +676,7 @@ If you don&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;'&lt;
 
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;==== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;Using &lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;
 
-If you are using &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/dimitri/el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt; it would be very
+If you are using &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/dimitri/el-get&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt; it would be very
 easy to install. All you need to do is to add &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; to &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;el-get-sources&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;
 and type &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
 
@@ -684,7 +684,7 @@ If you are using &lt;span style=\"color: #666666; background-color: #2e3436;\"&g
 el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
 
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;==== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;Manual setup&lt;/span&gt;
-Start by cloning the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;git&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; repository from &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:github.com&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Github&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt;.
+Start by cloning the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;git&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; repository from &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:github.com&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Github&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt;.
 
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
 &lt;span style=\"color: #87ceeb;\"&gt;cd ~/.emacs.d
@@ -742,15 +742,15 @@ Here is an example of the &lt;code&gt;README.asciidoc&lt;/code&gt; file:
 &lt;div class=\"o-blog-source\"&gt;&lt;a class=\"btn btn-info\" data-toggle=\"modal\" data-target=\"#readmeasciidoc\" &gt;&lt;i class=\"icon-file icon-white\"&gt;&lt;/i&gt;&amp;nbsp;README.asciidoc&lt;/a&gt;&lt;/div&gt;&lt;div class=\"modal fade hide\" id=\"readmeasciidoc\"&gt;&lt;div class=\"modal-header\"&gt;&lt;a class=\"close\" data-dismiss=\"modal\"&gt;&#215;&lt;/a&gt;&lt;h3&gt;README.asciidoc&lt;/h3&gt;&lt;/div&gt;&lt;div class=\"modal-body\"&gt;&lt;pre&gt;
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;= &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 200%; font-weight: bold;\"&gt;o-blog quick start&lt;/span&gt;
 
-How to use &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/renard/o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt;.
+How to use &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/renard/o-blog&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt;.
 
-&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://renard.github.com/o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Demo site&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt;.
+&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://renard.github.com/o-blog&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Demo site&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt;.
 
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-size: 180%; font-weight: bold;\"&gt;Quick start guide&lt;/span&gt;
 First you need:
 
-&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:www.gnu.org/s/emacs&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;emacs&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt; (I assume you already have it)
-&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://orgmode.org/&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;org-mode&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt; (same as above)
+&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:www.gnu.org/s/emacs&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;emacs&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt; &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;I assume you already have it&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+&lt;span style=\"color: #ffbbff; background-color: #7d26cd;\"&gt;-&lt;/span&gt;&lt;span style=\"color: #eeeeec; background-color: #2e3436;\"&gt; &lt;/span&gt;&lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http://orgmode.org/&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;org-mode&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt; &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;same as above&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
 
 If you don&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;'&lt;/span&gt;t have them, you should install them fist.
 
@@ -758,7 +758,7 @@ If you don&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;'&lt;
 
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;==== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;Using &lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;
 
-If you are using &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/dimitri/el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt; it would be very
+If you are using &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;https://github.com/dimitri/el-get&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;el-get&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt; it would be very
 easy to install. All you need to do is to add &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; to &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;el-get-sources&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;
 and type &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;M-x el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
 
@@ -766,7 +766,7 @@ If you are using &lt;span style=\"color: #666666; background-color: #2e3436;\"&g
 el-get-install o-blog&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;.
 
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;==== &lt;/span&gt;&lt;span style=\"color: #87ceeb; font-weight: bold; font-style: italic;\"&gt;Manual setup&lt;/span&gt;
-Start by cloning the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;git&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; repository from &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:github.com&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Github&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;]&lt;/span&gt;.
+Start by cloning the &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt;&lt;span style=\"color: #87ceeb;\"&gt;git&lt;/span&gt;&lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;+&lt;/span&gt; repository from &lt;span style=\"color: #7f7f7f; background-color: #333333;\"&gt;http:github.com&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;[&lt;/span&gt;&lt;span style=\"color: #87ceeb; text-decoration: underline;\"&gt;Github&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;]&lt;/span&gt;.
 
 &lt;span style=\"color: #666666; background-color: #2e3436;\"&gt;----&lt;/span&gt;
 &lt;span style=\"color: #87ceeb;\"&gt;cd ~/.emacs.d
@@ -809,7 +809,7 @@ details.
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>15</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil))</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>([cl-struct-ob:tags "usage" "usage" nil nil])</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"alerts"</pre></td></tr>
@@ -1056,7 +1056,7 @@ nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>10</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "html 5" "html-5" nil nil))</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>([cl-struct-ob:tags "html 5" "html-5" nil nil])</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"some-html5-samples"</pre></td></tr>
@@ -1142,7 +1142,7 @@ Works only with chrome.
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "org" "org" nil nil))</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>([cl-struct-ob:tags "usage" "usage" nil nil] [cl-struct-ob:tags "org" "org" nil nil])</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"example-of-some-org-syntax"</pre></td></tr>
@@ -1755,7 +1755,7 @@ the sun is R&lt;sub&gt;sun&lt;/sub&gt; = 6.96 x 10&lt;sup&gt;8&lt;/sup&gt; m.
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "o-blog" "o-blog" nil nil))</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>([cl-struct-ob:tags "usage" "usage" nil nil] [cl-struct-ob:tags "o-blog" "o-blog" nil nil])</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"how-to-use-tags"</pre></td></tr>
@@ -1810,7 +1810,7 @@ Special characters used in tags:
       <tr><td class="property"><code>month</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>((ob:tags "usage" "usage" nil nil) (ob:tags "o-blog" "o-blog" nil nil))</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>([cl-struct-ob:tags "usage" "usage" nil nil] [cl-struct-ob:tags "o-blog" "o-blog" nil nil])</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/01"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"creating-a-blog"</pre></td></tr>
@@ -1913,10 +1913,10 @@ entry.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Quick start Guide"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20311 59504)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2144,10 +2144,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Changelog"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20311 59504)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2157,6 +2157,9 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
+
+- 2012-03-20
+  - Add [[http://disqus.com][Disqus]] support.
 
 - 2012-03-06
   - Add support for Font-Awesome
@@ -2169,6 +2172,14 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
   - Change tag system from \"Tags\" to org tagging system.
 "</pre></td></tr>
       <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;ul&gt;
+&lt;li&gt;2012-03-20
+&lt;ul&gt;
+&lt;li&gt;Add &lt;a href=\"http://disqus.com\"&gt;Disqus&lt;/a&gt; support.
+
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/li&gt;
 &lt;li&gt;2012-03-06
 &lt;ul&gt;
 &lt;li&gt;Add support for Font-Awesome
@@ -2208,10 +2219,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Debug"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20311 59504)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"debug.html"</pre></td></tr>
@@ -2235,10 +2246,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Features"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20311 59504)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2262,6 +2273,7 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
   - [[file:./tags/index.html][Tag cloud]]
   - Multiple blogs
   - [[file:./archives.html][Archives]]
+  - [[http://disqus.com][Disqus]] support.
 - Publication
   - Both synchrone and asynchrone publication
   - Publish directly to the webserver (using tramp)
@@ -2299,6 +2311,8 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
 &lt;/li&gt;
 &lt;li&gt;&lt;a href=\"./archives.html\"&gt;Archives&lt;/a&gt;
 &lt;/li&gt;
+&lt;li&gt;&lt;a href=\"http://disqus.com\"&gt;Disqus&lt;/a&gt; support.
+&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;/li&gt;
@@ -2334,10 +2348,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Templates"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20311 59504)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2564,10 +2578,10 @@ month and the whole archives.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Structures"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20311 59504)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2608,6 +2622,8 @@ Structure used to define a blog:
    directive.
  - =default-category=: default category for posts  defined by the
    =#DEFAULT_CATEGORY:= header or =Blog=.
+ - =disqus=: [[http://docs.disqus.com/developers/universal/][disqus]] account (called a forum on [[http://disqus.com][Disqus]]) this system
+   belongs to. Defined by the \\\"#DISQUS\\\" header.
 
 Example:
 
@@ -2737,6 +2753,9 @@ Structure used to define a blog:
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;default-category&lt;/code&gt;: default category for posts  defined by the
    &lt;code&gt;#DEFAULT_CATEGORY:&lt;/code&gt; header or &lt;code&gt;Blog&lt;/code&gt;.
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;disqus&lt;/code&gt;: &lt;a href=\"http://docs.disqus.com/developers/universal/\"&gt;disqus&lt;/a&gt; account (called a forum on &lt;a href=\"http://disqus.com\"&gt;Disqus&lt;/a&gt;) this system
+   belongs to. Defined by the \\\"#DISQUS\\\" header.
 &lt;/li&gt;
 &lt;/ul&gt;
 
@@ -2908,10 +2927,10 @@ Some variables may be defined in some functions:
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Functions"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20311 59504)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3387,10 +3406,10 @@ Add a human readable timestamp for a post:
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"FAQ"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20311 59504)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3527,16 +3546,16 @@ complex.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Copyright"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20311 59504)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/03"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"copyright"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/08_copyright.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/20_copyright.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -3559,16 +3578,16 @@ Copyright &#169; 2008-2012 &lt;a href=\"mailto:seb%20&#10088;&#593;&#422;&#629;&
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"About"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20311 59504)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/03"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"about"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/08_about.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/20_about.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -3589,16 +3608,16 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Navigation"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20311 59504)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20327 47728)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>20</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/03"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"navigation"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/08_navigation.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/20_navigation.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -3783,13 +3802,13 @@ This is a sample blog to explain how <a href="https://github.com/renard/o-blog">
 	    <nav id="archives" class="span3">
 	      <h1>Archives</h1>
 	      <ul>
-		<li><a href="./Tips/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a></li> <li><a href="./Tips/2012/02/10_adding-icons.html">Adding icons</a></li> <li><a href="./Tips/2012/02/09_using-modal-source-code.html">Using modal source code</a></li> <li><a href="./Tips/2012/01/15_alerts.html">Alerts</a></li> <li><a href="./Tips/2012/01/10_some-html5-samples.html">Some HTML5 samples</a></li> <li><a href="./Tips/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="./Tips/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="./Tips/2012/01/07_creating-a-blog.html">Creating a blog</a></li>
+		<li><a href="./Tips/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a></li> <li><a href="./Tips/2012/02/10_adding-icons.html">Adding icons</a></li> <li><a href="./Tips/2012/02/09_using-modal-source-code.html">Using modal source code</a></li> <li><a href="./Tips/2012/01/15_alerts.html">Alerts</a></li> <li><a href="./Tips/2012/01/10_some-html5-samples.html">Some HTML5 samples</a></li> <li><a href="./Tips/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="./Tips/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="./Tips/2012/01/07_creating-a-blog.html">Creating a blog</a></li> 
 	      </ul>
 	    </nav>
 	    <nav class="tags span3">
 	      <h1>Tags</h1>
 	      <ul>
-  <li style="font-size: 126.67%;"><a href="./tags/bootstrap.html">Bootstrap</a></li> <li style="font-size: 80.00%;"><a href="./tags/html-5.html">html 5</a></li> <li style="font-size: 103.33%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li>
+  <li style="font-size: 126.67%;"><a href="./tags/bootstrap.html">Bootstrap</a></li> <li style="font-size: 80.00%;"><a href="./tags/html-5.html">html 5</a></li> <li style="font-size: 103.33%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li> 
 </ul>
 
 	    </nav>
@@ -3805,3 +3824,4 @@ Copyright © 2008-2012 <a href="mailto:seb%20❨ɑƦɵϐɑʂɛ❩%20chezwam%20�
       </div>
 </body>
 </html>
+

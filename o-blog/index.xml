@@ -3,7 +3,7 @@
   <title>o-blog</title>
   <link href="http://renard.github.com/o-blogindex.xml" rel="self" />
   <link href="http://renard.github.com/o-blog"/>
-  <updated>2012-03-08T17:36:06Z</updated>
+  <updated>2012-03-20T12:14:11Z</updated>
   <id>http://renard.github.com/o-blogindex.xml</id>
   <entry><title type="html">Using Bootstrap grid</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/Tips/2012/02/10_using-bootstrap-grid.html"/><updated>2012-02-10T01:19:00Z</updated><published>2012-02-10T01:19:00Z</published><id>Tips/2012/02/10_using-bootstrap-grid.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/bootstrap.html" term="Bootstrap" label="Bootstrap"/><content type="html">&lt;p&gt;
 &lt;a href="http://twitter.github.com/bootstrap/scaffolding.html"&gt;Bootstrap scaffolding&lt;/a&gt; could be defined using both &lt;code&gt;#+begin_o_blog_row&lt;/code&gt; and
@@ -252,15 +252,15 @@ Here is an example of the &lt;code&gt;README.asciidoc&lt;/code&gt; file:
 &lt;div class="o-blog-source"&gt;&lt;a class="btn btn-info" data-toggle="modal" data-target="#readmeasciidoc" &gt;&lt;i class="icon-file icon-white"&gt;&lt;/i&gt;&amp;nbsp;README.asciidoc&lt;/a&gt;&lt;/div&gt;&lt;div class="modal fade hide" id="readmeasciidoc"&gt;&lt;div class="modal-header"&gt;&lt;a class="close" data-dismiss="modal"&gt;&#215;&lt;/a&gt;&lt;h3&gt;README.asciidoc&lt;/h3&gt;&lt;/div&gt;&lt;div class="modal-body"&gt;&lt;pre&gt;
 &lt;span style="color: #666666; background-color: #2e3436;"&gt;= &lt;/span&gt;&lt;span style="color: #87ceeb; font-size: 200%; font-weight: bold;"&gt;o-blog quick start&lt;/span&gt;
 
-How to use &lt;span style="color: #7f7f7f; background-color: #333333;"&gt;https://github.com/renard/o-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;o-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;]&lt;/span&gt;.
+How to use &lt;span style="color: #7f7f7f; background-color: #333333;"&gt;https://github.com/renard/o-blog&lt;/span&gt;&lt;span style="color: #fce94f; font-weight: bold;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;o-blog&lt;/span&gt;&lt;span style="color: #fce94f; font-weight: bold;"&gt;]&lt;/span&gt;.
 
-&lt;span style="color: #7f7f7f; background-color: #333333;"&gt;http://renard.github.com/o-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;Demo site&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;]&lt;/span&gt;.
+&lt;span style="color: #7f7f7f; background-color: #333333;"&gt;http://renard.github.com/o-blog&lt;/span&gt;&lt;span style="color: #fce94f; font-weight: bold;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;Demo site&lt;/span&gt;&lt;span style="color: #fce94f; font-weight: bold;"&gt;]&lt;/span&gt;.
 
 &lt;span style="color: #666666; background-color: #2e3436;"&gt;== &lt;/span&gt;&lt;span style="color: #87ceeb; font-size: 180%; font-weight: bold;"&gt;Quick start guide&lt;/span&gt;
 First you need:
 
-&lt;span style="color: #ffbbff; background-color: #7d26cd;"&gt;-&lt;/span&gt;&lt;span style="color: #eeeeec; background-color: #2e3436;"&gt; &lt;/span&gt;&lt;span style="color: #7f7f7f; background-color: #333333;"&gt;http:www.gnu.org/s/emacs&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;emacs&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;]&lt;/span&gt; (I assume you already have it)
-&lt;span style="color: #ffbbff; background-color: #7d26cd;"&gt;-&lt;/span&gt;&lt;span style="color: #eeeeec; background-color: #2e3436;"&gt; &lt;/span&gt;&lt;span style="color: #7f7f7f; background-color: #333333;"&gt;http://orgmode.org/&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;org-mode&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;]&lt;/span&gt; (same as above)
+&lt;span style="color: #ffbbff; background-color: #7d26cd;"&gt;-&lt;/span&gt;&lt;span style="color: #eeeeec; background-color: #2e3436;"&gt; &lt;/span&gt;&lt;span style="color: #7f7f7f; background-color: #333333;"&gt;http:www.gnu.org/s/emacs&lt;/span&gt;&lt;span style="color: #fce94f; font-weight: bold;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;emacs&lt;/span&gt;&lt;span style="color: #fce94f; font-weight: bold;"&gt;]&lt;/span&gt; &lt;span style="color: #fce94f; font-weight: bold;"&gt;(&lt;/span&gt;I assume you already have it&lt;span style="color: #fce94f; font-weight: bold;"&gt;)&lt;/span&gt;
+&lt;span style="color: #ffbbff; background-color: #7d26cd;"&gt;-&lt;/span&gt;&lt;span style="color: #eeeeec; background-color: #2e3436;"&gt; &lt;/span&gt;&lt;span style="color: #7f7f7f; background-color: #333333;"&gt;http://orgmode.org/&lt;/span&gt;&lt;span style="color: #fce94f; font-weight: bold;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;org-mode&lt;/span&gt;&lt;span style="color: #fce94f; font-weight: bold;"&gt;]&lt;/span&gt; &lt;span style="color: #fce94f; font-weight: bold;"&gt;(&lt;/span&gt;same as above&lt;span style="color: #fce94f; font-weight: bold;"&gt;)&lt;/span&gt;
 
 If you don&lt;span style="color: #666666; background-color: #2e3436;"&gt;'&lt;/span&gt;t have them, you should install them fist.
 
@@ -268,7 +268,7 @@ If you don&lt;span style="color: #666666; background-color: #2e3436;"&gt;'&lt;/s
 
 &lt;span style="color: #666666; background-color: #2e3436;"&gt;==== &lt;/span&gt;&lt;span style="color: #87ceeb; font-weight: bold; font-style: italic;"&gt;Using &lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb; font-weight: bold; font-style: italic;"&gt;el-get&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;
 
-If you are using &lt;span style="color: #7f7f7f; background-color: #333333;"&gt;https://github.com/dimitri/el-get&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;el-get&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;]&lt;/span&gt; it would be very
+If you are using &lt;span style="color: #7f7f7f; background-color: #333333;"&gt;https://github.com/dimitri/el-get&lt;/span&gt;&lt;span style="color: #fce94f; font-weight: bold;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;el-get&lt;/span&gt;&lt;span style="color: #fce94f; font-weight: bold;"&gt;]&lt;/span&gt; it would be very
 easy to install. All you need to do is to add &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;o-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt; to &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;el-get-sources&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;
 and type &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;M-x el-get-install o-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;.
 
@@ -276,7 +276,7 @@ If you are using &lt;span style="color: #666666; background-color: #2e3436;"&gt;
 el-get-install o-blog&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;.
 
 &lt;span style="color: #666666; background-color: #2e3436;"&gt;==== &lt;/span&gt;&lt;span style="color: #87ceeb; font-weight: bold; font-style: italic;"&gt;Manual setup&lt;/span&gt;
-Start by cloning the &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;git&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt; repository from &lt;span style="color: #7f7f7f; background-color: #333333;"&gt;http:github.com&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;Github&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;]&lt;/span&gt;.
+Start by cloning the &lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt;&lt;span style="color: #87ceeb;"&gt;git&lt;/span&gt;&lt;span style="color: #666666; background-color: #2e3436;"&gt;+&lt;/span&gt; repository from &lt;span style="color: #7f7f7f; background-color: #333333;"&gt;http:github.com&lt;/span&gt;&lt;span style="color: #fce94f; font-weight: bold;"&gt;[&lt;/span&gt;&lt;span style="color: #87ceeb; text-decoration: underline;"&gt;Github&lt;/span&gt;&lt;span style="color: #fce94f; font-weight: bold;"&gt;]&lt;/span&gt;.
 
 &lt;span style="color: #666666; background-color: #2e3436;"&gt;----&lt;/span&gt;
 &lt;span style="color: #87ceeb;"&gt;cd ~/.emacs.d
