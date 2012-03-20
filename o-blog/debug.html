@@ -2160,6 +2160,7 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
 
 - 2012-03-20
   - Add [[http://disqus.com][Disqus]] support.
+  - User can select the file name sanitizer function.
 
 - 2012-03-06
   - Add support for Font-Awesome
@@ -2175,6 +2176,8 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
 &lt;li&gt;2012-03-20
 &lt;ul&gt;
 &lt;li&gt;Add &lt;a href=\"http://disqus.com\"&gt;Disqus&lt;/a&gt; support.
+&lt;/li&gt;
+&lt;li&gt;User can select the file name sanitizer function.
 
 &lt;/li&gt;
 &lt;/ul&gt;
@@ -2624,6 +2627,9 @@ Structure used to define a blog:
    =#DEFAULT_CATEGORY:= header or =Blog=.
  - =disqus=: [[http://docs.disqus.com/developers/universal/][disqus]] account (called a forum on [[http://disqus.com][Disqus]]) this system
    belongs to. Defined by the \\\"#DISQUS\\\" header.
+ - =filename-sanitizer=: 1-argument function to be used to sanitize
+   post filenames. Defined by =#+FILENAME_SANITIZER:= or
+   =ob-sanitize-string=.
 
 Example:
 
@@ -2756,6 +2762,10 @@ Structure used to define a blog:
 &lt;/li&gt;
 &lt;li&gt;&lt;code&gt;disqus&lt;/code&gt;: &lt;a href=\"http://docs.disqus.com/developers/universal/\"&gt;disqus&lt;/a&gt; account (called a forum on &lt;a href=\"http://disqus.com\"&gt;Disqus&lt;/a&gt;) this system
    belongs to. Defined by the \\\"#DISQUS\\\" header.
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;filename-sanitizer&lt;/code&gt;: 1-argument function to be used to sanitize
+   post filenames. Defined by &lt;code&gt;#+FILENAME_SANITIZER:&lt;/code&gt; or
+   &lt;code&gt;ob-sanitize-string&lt;/code&gt;.
 &lt;/li&gt;
 &lt;/ul&gt;
 

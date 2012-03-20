@@ -176,6 +176,10 @@ Structure used to define a blog:
 <li><code>disqus</code>: <a href="http://docs.disqus.com/developers/universal/">disqus</a> account (called a forum on <a href="http://disqus.com">Disqus</a>) this system
    belongs to. Defined by the \"#DISQUS\" header.
 </li>
+<li><code>filename-sanitizer</code>: 1-argument function to be used to sanitize
+   post filenames. Defined by <code>#+FILENAME_SANITIZER:</code> or
+   <code>ob-sanitize-string</code>.
+</li>
 </ul>
 
 
