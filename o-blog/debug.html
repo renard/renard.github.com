@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <title>Debug</title>
     <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less">
-    <script src="./style/js/less-1.2.2.min.js" type="text/javascript"></script>
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
     <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
     <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
@@ -12,28 +12,7 @@
     <script src="./style/js/prettify.js" type="text/javascript"></script>
     <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
     <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
-    <script type="text/javascript">
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
+    
   </head>
   <body>
 
@@ -194,7 +173,7 @@
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"using-bootstrap-grid"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/02/10_using-bootstrap-grid.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 [[http://twitter.github.com/bootstrap/scaffolding.html][Bootstrap scaffolding]] could be defined using both =#+begin_o_blog_row= and
@@ -365,7 +344,7 @@ Column n
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"adding-icons"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/02/10_adding-icons.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 Icons from [[http://glyphicons.com/][glyphicons]] are supported support by simply naming the icon using
@@ -419,7 +398,7 @@ This could also be used for the top /navbar/ using something like:
   ,  - [[file:../../../faq.html][FAQ]]
 
   ,- [[#][/icon-file icon-white/ Blog]]
-  ,  - [[file:Lisp error in nil: (void-function format%20"%25s/%25s"%20)][Lisp error in nil: (void-variable "Tips")]]
+  ,  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
   ,  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
   ,  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
   ,  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
@@ -452,7 +431,7 @@ This could also be used for the top /navbar/ using something like:
   - [[file:../../../faq.html][FAQ]]
 
 - [[#][/icon-file icon-white/ Blog]]
-  - [[file:Lisp error in nil: (void-function format%20"%25s/%25s"%20)][Lisp error in nil: (void-variable "Tips")]]
+  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
   - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
   - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
   - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
@@ -643,7 +622,7 @@ rendered result might be damaged.
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"using-modal-source-code"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/02/09_using-modal-source-code.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 The [[http://twitter.github.com/bootstrap/javascript.html#modals][Modal]] bootstrap script can be used to display the content of an external
@@ -669,7 +648,7 @@ Here is an example of the =sample-init.el= file:
 &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Author: S&amp;#233;bastien Gross &amp;lt;seb&amp;#8226;&amp;#593;&amp;#428;&amp;#8226;chezwam&amp;#8226;&amp;#598;&amp;#629;&amp;#648;&amp;#8226;org&amp;gt;
 &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Keywords: emacs, 
 &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Created: 2012-03-20
-&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Last changed: 2012-03-28 14:04:57
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Last changed: 2012-04-17 18:23:41
 &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Licence: WTFPL, grab your copy here: http://sam.zoy.org/wtfpl/
 &lt;/span&gt;
 &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;This file is NOT part of GNU Emacs.
@@ -681,37 +660,37 @@ Here is an example of the =sample-init.el= file:
 &lt;span style=\"color: #888a85;\"&gt;;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Code:
 &lt;/span&gt;
 
-&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;defun&lt;/span&gt; &lt;span style=\"color: #edd400; font-weight: bold;\"&gt;ob-build-sample&lt;/span&gt; &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;
-  &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;let*&lt;/span&gt; &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;d default-directory&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
-         &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;sample &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/o-blog/example/sample.org\"&lt;/span&gt; d&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
-         &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;debugger
-          &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;lambda&lt;/span&gt; &lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;&amp;amp;rest&lt;/span&gt; debugger-args&lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;)&lt;/span&gt;
-            &lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;let*&lt;/span&gt; &lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #4e9a06; font-weight: bold;\"&gt;(&lt;/span&gt;trace &lt;span style=\"color: #75507b; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;with-temp-buffer&lt;/span&gt;
-                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;insert &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;with-output-to-string&lt;/span&gt; &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;backtrace&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
-                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;beginning-of-buffer&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+(&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;defun&lt;/span&gt; &lt;span style=\"color: #edd400; font-weight: bold;\"&gt;ob-build-sample&lt;/span&gt; ()
+  (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;let*&lt;/span&gt; ((d default-directory)
+         (sample (format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/o-blog/example/sample.org\"&lt;/span&gt; d))
+         (debugger
+          (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;lambda&lt;/span&gt; (&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;&amp;amp;rest&lt;/span&gt; debugger-args)
+            (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;let*&lt;/span&gt; ((trace (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;with-temp-buffer&lt;/span&gt;
+                            (insert (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;with-output-to-string&lt;/span&gt; (backtrace)))
+                            (beginning-of-buffer)
                             &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;error begins on line 16
 &lt;/span&gt;                            &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;line stats with \"  signal(error ...\"
-&lt;/span&gt;                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;goto-line 16&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
-                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;goto-char &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;point-at-bol&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+&lt;/span&gt;                            (goto-line 16)
+                            (goto-char (point-at-bol))
                             &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Remove null chars
-&lt;/span&gt;                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;replace-regexp-in-string
-                              &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;char-to-string 0&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #ad7fa8;\"&gt;\"^@\"&lt;/span&gt;
-                              &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;buffer-substring &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;point&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;point-max&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #75507b; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #4e9a06; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;)&lt;/span&gt;
-              &lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;(&lt;/span&gt;o-blog-bug-report trace&lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
-         &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;debug-on-error t&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
-         print-length print-level&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/org-mode/lisp\"&lt;/span&gt; d&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/org-mode/contrib/lisp\"&lt;/span&gt; d&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/o-blog\"&lt;/span&gt; d&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;print
-      &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;concat
-        &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;emacs-version&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #ad7fa8;\"&gt;\"\\n\"&lt;/span&gt;
-        &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;org-version&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #ad7fa8;\"&gt;\"\\n\"&lt;/span&gt;
-        &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;o-blog-version&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #ad7fa8;\"&gt;\"\\n\"&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;find-file sample&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;org-publish-blog sample&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;kill-emacs&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+&lt;/span&gt;                            (replace-regexp-in-string
+                              (char-to-string 0) &lt;span style=\"color: #ad7fa8;\"&gt;\"^@\"&lt;/span&gt;
+                              (buffer-substring (point) (point-max))))))
+              (o-blog-bug-report trace))))
+         (debug-on-error t)
+         print-length print-level)
+    (add-to-list 'load-path (format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/org-mode/lisp\"&lt;/span&gt; d))
+    (add-to-list 'load-path (format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/org-mode/contrib/lisp\"&lt;/span&gt; d))
+    (add-to-list 'load-path (format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/o-blog\"&lt;/span&gt; d))
+    (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;o-blog&lt;/span&gt;)
+    (print
+      (concat
+        (emacs-version) &lt;span style=\"color: #ad7fa8;\"&gt;\"\\n\"&lt;/span&gt;
+        (org-version) &lt;span style=\"color: #ad7fa8;\"&gt;\"\\n\"&lt;/span&gt;
+        (o-blog-version) &lt;span style=\"color: #ad7fa8;\"&gt;\"\\n\"&lt;/span&gt;))
+    (find-file sample)
+    (org-publish-blog sample)
+    (kill-emacs)))
 &lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 #+END_HTML
 
@@ -763,37 +742,37 @@ Here is an example of the &lt;code&gt;sample-init.el&lt;/code&gt; file:
 &lt;span style=\"color: #888a85;\"&gt;;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Code:
 &lt;/span&gt;
 
-&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;defun&lt;/span&gt; &lt;span style=\"color: #edd400; font-weight: bold;\"&gt;ob-build-sample&lt;/span&gt; &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;
-  &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;let*&lt;/span&gt; &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;d default-directory&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
-         &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;sample &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/o-blog/example/sample.org\"&lt;/span&gt; d&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
-         &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;debugger
-          &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;lambda&lt;/span&gt; &lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;&amp;amp;rest&lt;/span&gt; debugger-args&lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;)&lt;/span&gt;
-            &lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;let*&lt;/span&gt; &lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #4e9a06; font-weight: bold;\"&gt;(&lt;/span&gt;trace &lt;span style=\"color: #75507b; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;with-temp-buffer&lt;/span&gt;
-                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;insert &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;with-output-to-string&lt;/span&gt; &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;backtrace&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
-                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;beginning-of-buffer&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+(&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;defun&lt;/span&gt; &lt;span style=\"color: #edd400; font-weight: bold;\"&gt;ob-build-sample&lt;/span&gt; ()
+  (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;let*&lt;/span&gt; ((d default-directory)
+         (sample (format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/o-blog/example/sample.org\"&lt;/span&gt; d))
+         (debugger
+          (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;lambda&lt;/span&gt; (&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;&amp;amp;rest&lt;/span&gt; debugger-args)
+            (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;let*&lt;/span&gt; ((trace (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;with-temp-buffer&lt;/span&gt;
+                            (insert (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;with-output-to-string&lt;/span&gt; (backtrace)))
+                            (beginning-of-buffer)
                             &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;error begins on line 16
 &lt;/span&gt;                            &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;line stats with \"  signal(error ...\"
-&lt;/span&gt;                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;goto-line 16&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
-                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;goto-char &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;point-at-bol&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+&lt;/span&gt;                            (goto-line 16)
+                            (goto-char (point-at-bol))
                             &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Remove null chars
-&lt;/span&gt;                            &lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;(&lt;/span&gt;replace-regexp-in-string
-                              &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;char-to-string 0&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #ad7fa8;\"&gt;\"^@\"&lt;/span&gt;
-                              &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;(&lt;/span&gt;buffer-substring &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;point&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;point-max&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #75507b; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #4e9a06; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;)&lt;/span&gt;
-              &lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;(&lt;/span&gt;o-blog-bug-report trace&lt;span style=\"color: #3465a4; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #c4a000; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
-         &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;debug-on-error t&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;
-         print-length print-level&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/org-mode/lisp\"&lt;/span&gt; d&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/org-mode/contrib/lisp\"&lt;/span&gt; d&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;add-to-list 'load-path &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/o-blog\"&lt;/span&gt; d&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;o-blog&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;print
-      &lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;(&lt;/span&gt;concat
-        &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;emacs-version&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #ad7fa8;\"&gt;\"\\n\"&lt;/span&gt;
-        &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;org-version&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #ad7fa8;\"&gt;\"\\n\"&lt;/span&gt;
-        &lt;span style=\"color: #f57900; font-weight: bold;\"&gt;(&lt;/span&gt;o-blog-version&lt;span style=\"color: #f57900; font-weight: bold;\"&gt;)&lt;/span&gt; &lt;span style=\"color: #ad7fa8;\"&gt;\"\\n\"&lt;/span&gt;&lt;span style=\"color: #ad7fa8; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;find-file sample&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;org-publish-blog sample&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;
-    &lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;(&lt;/span&gt;kill-emacs&lt;span style=\"color: #8ae234; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;)&lt;/span&gt;&lt;span style=\"color: #fce94f; font-weight: bold;\"&gt;)&lt;/span&gt;
+&lt;/span&gt;                            (replace-regexp-in-string
+                              (char-to-string 0) &lt;span style=\"color: #ad7fa8;\"&gt;\"^@\"&lt;/span&gt;
+                              (buffer-substring (point) (point-max))))))
+              (o-blog-bug-report trace))))
+         (debug-on-error t)
+         print-length print-level)
+    (add-to-list 'load-path (format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/org-mode/lisp\"&lt;/span&gt; d))
+    (add-to-list 'load-path (format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/org-mode/contrib/lisp\"&lt;/span&gt; d))
+    (add-to-list 'load-path (format &lt;span style=\"color: #ad7fa8;\"&gt;\"%s/.emacs.d/o-blog\"&lt;/span&gt; d))
+    (&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;o-blog&lt;/span&gt;)
+    (print
+      (concat
+        (emacs-version) &lt;span style=\"color: #ad7fa8;\"&gt;\"\\n\"&lt;/span&gt;
+        (org-version) &lt;span style=\"color: #ad7fa8;\"&gt;\"\\n\"&lt;/span&gt;
+        (o-blog-version) &lt;span style=\"color: #ad7fa8;\"&gt;\"\\n\"&lt;/span&gt;))
+    (find-file sample)
+    (org-publish-blog sample)
+    (kill-emacs)))
 &lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 "</pre></td></tr>
@@ -819,7 +798,7 @@ Here is an example of the &lt;code&gt;sample-init.el&lt;/code&gt; file:
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"alerts"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/01/15_alerts.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 Alerts are declared in =o_blog_alert= blocks. There are 4 types of
@@ -1066,7 +1045,7 @@ nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"some-html5-samples"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/01/10_some-html5-samples.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 ** tag: &lt;details&gt;
@@ -1152,7 +1131,7 @@ Works only with chrome.
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"example-of-some-org-syntax"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/01/07_example-of-some-org-syntax.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 ** Titles
@@ -1765,7 +1744,7 @@ the sun is R&lt;sub&gt;sun&lt;/sub&gt; = 6.96 x 10&lt;sup&gt;8&lt;/sup&gt; m.
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"how-to-use-tags"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/01/07_how-to-use-tags.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 Tags are useful to classify articles. They are stored as [[http://orgmode.org/manual/Tags.html][org-mode tags]] for
@@ -1820,7 +1799,7 @@ Special characters used in tags:
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"creating-a-blog"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/01/07_creating-a-blog.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 A blog consists of org entries. Each entry has a title, some properties and
@@ -1917,10 +1896,10 @@ entry.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Quick start Guide"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20338 14432)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20365 39140)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>17</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -1928,7 +1907,7 @@ entry.
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"index"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"index.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 #+BEGIN_HTML
@@ -1974,7 +1953,7 @@ A stand-alone blogging and publication tool for [[http://orgmode.org/][org-mode]
 
 
 First you need to install [[http://www.gnu.org/s/emacs][emacs]] (test with version 23, might work with 24)
-and [[http://orgmode.org/][org-mode]] (version 7.8 or greater). Then you have 2 ways to install
+and [[http://orgmode.org/][org-mode]] (version 7.8.09 or greater). Then you have 2 ways to install
 [[https://github.com/renard/o-blog][o-blog]].
 
 #+BEGIN_HTML
@@ -2083,7 +2062,7 @@ A stand-alone blogging and publication tool for &lt;a href=\"http://orgmode.org/
 
 &lt;p&gt;
 First you need to install &lt;a href=\"http://www.gnu.org/s/emacs\"&gt;emacs&lt;/a&gt; (test with version 23, might work with 24)
-and &lt;a href=\"http://orgmode.org/\"&gt;org-mode&lt;/a&gt; (version 7.8 or greater). Then you have 2 ways to install
+and &lt;a href=\"http://orgmode.org/\"&gt;org-mode&lt;/a&gt; (version 7.8.09 or greater). Then you have 2 ways to install
 &lt;a href=\"https://github.com/renard/o-blog\"&gt;o-blog&lt;/a&gt;.
 &lt;/p&gt;
 
@@ -2172,10 +2151,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Changelog"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20338 14432)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20365 39140)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>17</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2183,8 +2162,20 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"changelog"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"changelog.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
+
+- 2012-04-17
+  - Update to:
+    - less 1.3.0.
+    - Font-Awesome v1.0.0-7-g563a6f3.
+    - bootstrap v2.0.2-3-g6506ede.
+
+- 2012-04-10
+  - Add i18n support.
+
+- 2012-04-06
+  - Add org-mode CUSTOM_ID.
 
 - 2012-03-28
   - Add support for [[http://en.wikipedia.org/wiki/QR_code][QR-code]].
@@ -2205,6 +2196,39 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
   - Change tag system from \"Tags\" to org tagging system.
 "</pre></td></tr>
       <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;ul&gt;
+&lt;li&gt;2012-04-17
+&lt;ul&gt;
+&lt;li&gt;Update to:
+&lt;ul&gt;
+&lt;li&gt;less 1.3.0.
+&lt;/li&gt;
+&lt;li&gt;Font-Awesome v1.0.0-7-g563a6f3.
+&lt;/li&gt;
+&lt;li&gt;bootstrap v2.0.2-3-g6506ede.
+
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/li&gt;
+&lt;li&gt;2012-04-10
+&lt;ul&gt;
+&lt;li&gt;Add i18n support.
+
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/li&gt;
+&lt;li&gt;2012-04-06
+&lt;ul&gt;
+&lt;li&gt;Add org-mode CUSTOM&lt;sub&gt;ID&lt;/sub&gt;.
+
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/li&gt;
 &lt;li&gt;2012-03-28
 &lt;ul&gt;
 &lt;li&gt;Add support for &lt;a href=\"http://en.wikipedia.org/wiki/QR_code\"&gt;QR-code&lt;/a&gt;.
@@ -2264,10 +2288,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Debug"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20338 14432)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20365 39140)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>17</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"debug.html"</pre></td></tr>
@@ -2275,7 +2299,7 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"debug"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"debug.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 "</pre></td></tr>
       <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"
@@ -2291,10 +2315,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Features"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20338 14432)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20365 39140)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>17</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2302,7 +2326,7 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"features"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"features.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 - Appearance
@@ -2397,10 +2421,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Templates"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20338 14432)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20365 39140)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>17</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2408,7 +2432,7 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"templates"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"templates.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 Templates which are a big part of the [[https://github.com/renard/o-blog][o-blog]] export process, are HTML-based
@@ -2627,10 +2651,10 @@ month and the whole archives.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Structures"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20338 14432)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20365 39140)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>17</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2638,7 +2662,7 @@ month and the whole archives.
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"structures"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"structures.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 Some variables are available when publishing lisp parts of templates. These
@@ -2986,10 +3010,10 @@ Some variables may be defined in some functions:
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Functions"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20338 14432)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20365 39140)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>17</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2997,7 +3021,7 @@ Some variables may be defined in some functions:
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"functions"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"functions.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 Basically any lisp function could be used withing a blog template as long as
@@ -3463,10 +3487,10 @@ Add a human readable timestamp for a post:
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Bug report"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20338 14432)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20365 39140)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>17</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3474,7 +3498,7 @@ Add a human readable timestamp for a post:
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"bug-report"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"bug-report.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 To report a bug please be sure your issue is =o-blog= related.
@@ -3578,10 +3602,10 @@ debug.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"FAQ"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20338 14432)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20365 39140)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>17</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3589,7 +3613,7 @@ debug.
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"faq"</pre></td></tr>
       <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"faq.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 ** My page looks ugly
@@ -3708,7 +3732,7 @@ complex.
 
 </div>
 
-  <h1>Snippets</h1>
+  <h1></h1>
   <div class="debug post">
   <div class="debug post">
   <h2>Copyright</h2>
@@ -3718,18 +3742,18 @@ complex.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Copyright"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20338 14432)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20365 39140)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>17</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/03"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/04"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"copyright"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/28_copyright.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/04/17_copyright.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 Copyright &#169; 2008-2012 [[mailto:seb%2520%E2%9D%A8%C9%91%C6%A6%C9%B5%CF%90%C9%91%CA%82%C9%9B%E2%9D%A9%2520chezwam%2520%E2%9D%A8%C6%A4%C9%B5%C9%A9%C9%B2%CA%88%E2%9D%A9%2520org][S&#233;bastien Gross]]. Published under the therm of the
@@ -3750,18 +3774,18 @@ Copyright &#169; 2008-2012 &lt;a href=\"mailto:seb%20&#10088;&#593;&#422;&#629;&
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"About"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20338 14432)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20365 39140)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>17</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/03"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/04"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"about"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/28_about.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/04/17_about.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 This is a sample blog to explain how [[https://github.com/renard/o-blog][o-blog]] works.
@@ -3780,18 +3804,18 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Navigation"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20338 14432)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20365 39140)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>28</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>17</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/03"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/04"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"navigation"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/03/28_navigation.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/04/17_navigation.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:8 d:nil todo:nil &lt;:nil pri:nil tags:nil
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
 
 - [[file:../../../features.html][/icon-cog icon-white/ Features]]
@@ -3806,7 +3830,7 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
   - [[file:../../../bug-report.html][Bug report]]
 
 - [[#][/icon-file icon-white/ Tips]]
-  - [[file:Lisp error in nil: (void-function format%20"%25s/%25s"%20)][Lisp error in nil: (void-variable "Tips")]]
+  - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
   - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
   - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
   - [[file:Lisp error in nil: (void-variable "%s/%s")][Lisp error in nil: (void-variable "Tips")]]
@@ -3890,7 +3914,7 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
   <div class="debug tag">
   <h2>Bootstrap</h2>
   <table>
-    <caption>Dump information for tags "Bootstrap"</caption>
+    <caption>Dump information for tag "Bootstrap"</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
       <tr><td class="property"><code>name</code></td><td class="value"><pre>"Bootstrap"</pre></td></tr>
@@ -3903,7 +3927,7 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
 <div class="debug tag">
   <h2>html 5</h2>
   <table>
-    <caption>Dump information for tags "html 5"</caption>
+    <caption>Dump information for tag "html 5"</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
       <tr><td class="property"><code>name</code></td><td class="value"><pre>"html 5"</pre></td></tr>
@@ -3916,7 +3940,7 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
 <div class="debug tag">
   <h2>o-blog</h2>
   <table>
-    <caption>Dump information for tags "o-blog"</caption>
+    <caption>Dump information for tag "o-blog"</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
       <tr><td class="property"><code>name</code></td><td class="value"><pre>"o-blog"</pre></td></tr>
@@ -3929,7 +3953,7 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
 <div class="debug tag">
   <h2>org</h2>
   <table>
-    <caption>Dump information for tags "org"</caption>
+    <caption>Dump information for tag "org"</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
       <tr><td class="property"><code>name</code></td><td class="value"><pre>"org"</pre></td></tr>
@@ -3942,7 +3966,7 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
 <div class="debug tag">
   <h2>usage</h2>
   <table>
-    <caption>Dump information for tags "usage"</caption>
+    <caption>Dump information for tag "usage"</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
       <tr><td class="property"><code>name</code></td><td class="value"><pre>"usage"</pre></td></tr>
@@ -3969,11 +3993,11 @@ This is a sample blog to explain how <a href="https://github.com/renard/o-blog">
 	    <nav id="links" class="span3">
 	      <h1>Links</h1>
 	      <ul>
-		  <li class="home"><a href="./index.html">Home</a></li>
-  <li class="blog"><a href="./Tips/2012/02/10_using-bootstrap-grid.html">Blog</a></li>
-  <li class="tags"><a href="./tags/index.html">Tags</a></li>
-  <li class="archives"><a href="./archives.html">Archives</a></li>
-  <li class="rss"><a href="./index.xml">RSS</a></li>
+		<li class="home"><a href="./index.html">Home</a></li>
+<li class="blog"><a href="./Tips/2012/02/10_using-bootstrap-grid.html">Blog</a></li>
+<li class="tags"><a href="./tags/index.html">Tags</a></li>
+<li class="archives"><a href="./archives.html">Archives</a></li>
+<li class="rss"><a href="./index.xml">RSS</a></li>
 
 	      </ul>
 	    </nav>
@@ -3997,7 +4021,7 @@ This is a sample blog to explain how <a href="https://github.com/renard/o-blog">
 Copyright © 2008-2012 <a href="mailto:seb%20❨ɑƦɵϐɑʂɛ❩%20chezwam%20❨Ƥɵɩɲʈ❩%20org">Sébastien Gross</a>. Published under the therm of the
 <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.
 </p>
-	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	  <p>(ob:gettext powered-by) <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
 	</div>
       </div>
 </body>
