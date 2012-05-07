@@ -140,7 +140,7 @@ The <a href="http://www.google.com/webfonts#QuickUsePlace:quickUse/Family:">quic
 
 
 
-<pre class="src src-css"><span style="color: #729fcf;">@import</span> url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700&amp;subset=latin,latin-ext);
+<pre class="src src-css"><span style="color: #729fcf;">@import</span> url(<span style="color: #ad7fa8;">"http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700&amp;subset=latin,latin-ext"</span>);
 </pre>
 
 
@@ -174,62 +174,57 @@ And that's it.
 That is less efficient in terms of network resources but provide a good
 alternative for offline publications.
 </p>
+
 <p>
-First you need to download all fonts from
-<a href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700&amp;subset=latin,latin-ext">http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700&amp;subset=latin,latin-ext</a>
-into the <code>templates/style/font</code> directory.
+The script <code>get-font</code> does all needed jobs.
+</p>
+
+
+<div class="o-blog-source"><a class="btn btn-info" data-toggle="modal" data-target="#get-font" ><i class="icon-file icon-white"></i>&nbsp;get-font</a></div><div class="modal fade hide" id="get-font"><div class="modal-header"><a class="close" data-dismiss="modal">×</a><h3>get-font</h3></div><div class="modal-body"><pre>
+<span style="color: #888a85;">#</span><span style="color: #888a85;">!/bin/</span><span style="color: #729fcf; font-weight: bold;">sh</span><span style="color: #888a85;">
+</span>
+<span style="color: #729fcf; font-weight: bold;">if </span><span style="color: #729fcf;">test</span> -z <span style="color: #ad7fa8;">"$1"</span>; <span style="color: #729fcf; font-weight: bold;">then</span>
+    <span style="color: #729fcf;">echo</span> <span style="color: #ad7fa8;">"Usage: $0 font-url"</span>
+    <span style="color: #729fcf; font-weight: bold;">exit</span> 1
+<span style="color: #729fcf; font-weight: bold;">fi</span>
+
+<span style="color: #eeeeec;">FONT_DIR</span>=templates/style/font
+<span style="color: #eeeeec;">LESS_DIR</span>=templates/style/less
+
+<span style="color: #eeeeec;">FONT_URL</span>=<span style="color: #ad7fa8;">"$1"</span>
+<span style="color: #eeeeec;">LESS_FILE</span>=$(<span style="color: #729fcf;">echo</span> <span style="color: #ad7fa8;">"$FONT_URL"</span> | sed -n <span style="color: #ad7fa8;">'s/.*family=\([^:]\+\).*/\1/p'</span> | sed <span style="color: #ad7fa8;">'s/+/-/g'</span>)
+
+<span style="color: #888a85;"># </span><span style="color: #888a85;">Wee need to provide a valid user agent to get woff fonts
+</span><span style="color: #eeeeec;">UA</span>=<span style="color: #ad7fa8;">'User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/535.11 (KHTML, like Gecko) Chrome/17.0.963.65 Safari/535.11'</span>
+
+
+<span style="color: #eeeeec;">CSS</span>=$(curl -H <span style="color: #ad7fa8;">"${UA}"</span> ${<span style="color: #eeeeec;">FONT_URL</span>})
+
+<span style="color: #729fcf;">echo</span> <span style="color: #ad7fa8;">"${CSS}"</span> | sed -n <span style="color: #ad7fa8;">"s#.*local('\([^']\+\)'), url('\([^']\+\)').*#curl -o ${FONT_DIR}/\1.woff \2#p"</span> | sh -
+
+<span style="color: #729fcf;">echo</span> <span style="color: #ad7fa8;">"${CSS}"</span> | sed  <span style="color: #ad7fa8;">"s#\(.*\)local('\([^']\+\)'), url('\([^']\+\)')\(.*\)#\1local('\2'), url('../font/\2.woff')\4#"</span>  &gt; <span style="color: #ad7fa8;">"${LESS_DIR}/font-${LESS_FILE}.less"</span>
+
+<span style="color: #729fcf;">echo</span> <span style="color: #ad7fa8;">"You should add '@import \"font-${LESS_FILE}.less\";' to templates/style/less/o-blog-default.less"</span>
+</pre></div></div>
+
+
+<p>
+You can run:
 </p>
 
 
 
-<pre class="src src-sh">wget -O templates/style/font/yanone-kaffeesatz-regular.woff http://themes.googleusercontent.com/static/fonts/yanonekaffeesatz/v4/YDAoLskQQ5MOAgvHUQCcLcvyhSUCWNe0YoQkk3OBepg.woff
-wget -O templates/style/font/yanone-kaffeesatz-bold.woff http://themes.googleusercontent.com/static/fonts/yanonekaffeesatz/v4/We_iSDqttE3etzfdfhuPRWkfAKtHZKhf5n1BtpfNX_k.woff
-wget -O templates/style/font/yanone-kaffeesatz-light.woff http://themes.googleusercontent.com/static/fonts/yanonekaffeesatz/v4/We_iSDqttE3etzfdfhuPRYeadfj-6pacmJkCVgsbjK4.woff
-wget -O templates/style/font/yanone-kaffeesatz-extralight.woff http://themes.googleusercontent.com/static/fonts/yanonekaffeesatz/v4/We_iSDqttE3etzfdfhuPRem2G_Og_te2ADNUqKDN50k.woff
+<pre class="src src-sh">./get-font <span style="color: #ad7fa8;">'http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,200,300,700&amp;subset=latin,latin-ext'</span>
 </pre>
 
 
 <p>
-Then you should declare them into <code>templates/style/less/o-blog-default.less</code>:
+And add the font declaration in <code>templates/style/less/o-blog-default.less</code>:
 </p>
 
 
 
-<pre class="src src-css"><span style="color: #729fcf;">@font-face</span> {
-  <span style="color: #eeeeec;">font-family</span>: <span style="color: #ad7fa8;">'Yanone Kaffeesatz Regular'</span>;
-  <span style="color: #eeeeec;">font-style</span>: normal;
-  <span style="color: #eeeeec;">font-weight</span>: 400;
-  <span style="color: #eeeeec;">src</span>: local(<span style="color: #ad7fa8;">'Yanone Kaffeesatz Regular'</span>),
-  local(<span style="color: #ad7fa8;">'YanoneKaffeesatz-Regular'</span>),
-  url(<span style="color: #ad7fa8;">'../font/yanone-kaffeesatz-regular.woff'</span>) format(<span style="color: #ad7fa8;">'woff'</span>);
-}
-
-<span style="color: #729fcf;">@font-face</span> {
-  <span style="color: #eeeeec;">font-family</span>: <span style="color: #ad7fa8;">'Yanone Kaffeesatz Bold'</span>;
-  <span style="color: #eeeeec;">font-style</span>: normal;
-  <span style="color: #eeeeec;">font-weight</span>: 400;
-  <span style="color: #eeeeec;">src</span>: local(<span style="color: #ad7fa8;">'Yanone Kaffeesatz Bold'</span>),
-  local(<span style="color: #ad7fa8;">'YanoneKaffeesatz-Bold'</span>),
-  url(<span style="color: #ad7fa8;">'../font/yanone-kaffeesatz-bold.woff'</span>) format(<span style="color: #ad7fa8;">'woff'</span>);
-}
-
-<span style="color: #729fcf;">@font-face</span> {
-  <span style="color: #eeeeec;">font-family</span>: <span style="color: #ad7fa8;">'Yanone Kaffeesatz Light'</span>;
-  <span style="color: #eeeeec;">font-style</span>: normal;
-  <span style="color: #eeeeec;">font-weight</span>: 400;
-  <span style="color: #eeeeec;">src</span>: local(<span style="color: #ad7fa8;">'Yanone Kaffeesatz Light'</span>),
-  local(<span style="color: #ad7fa8;">'YanoneKaffeesatz-Light'</span>),
-  url(<span style="color: #ad7fa8;">'../font/yanone-kaffeesatz-light.woff'</span>) format(<span style="color: #ad7fa8;">'woff'</span>);
-}
-
-<span style="color: #729fcf;">@font-face</span> {
-  <span style="color: #eeeeec;">font-family</span>: <span style="color: #ad7fa8;">'Yanone Kaffeesatz Extralight'</span>;
-  <span style="color: #eeeeec;">font-style</span>: normal;
-  <span style="color: #eeeeec;">font-weight</span>: 400;
-  <span style="color: #eeeeec;">src</span>: local(<span style="color: #ad7fa8;">'Yanone Kaffeesatz Extralight'</span>),
-  local(<span style="color: #ad7fa8;">'YanoneKaffeesatz-Extralight'</span>),
-  url(<span style="color: #ad7fa8;">'../font/yanone-kaffeesatz-extralight.woff'</span>) format(<span style="color: #ad7fa8;">'woff'</span>);
-}
+<pre class="src src-css"><span style="color: #729fcf;">@import</span> <span style="color: #ad7fa8;">"font-Yanone-Kaffeesatz.less"</span>;
 </pre>
 
 
@@ -240,7 +235,7 @@ Add declare its use like in the Google API version:
 
 
 <pre class="src src-css"><span style="color: #edd400; font-weight: bold;">h1, h2, h3, h4, h5, h6 </span>{
-    <span style="color: #eeeeec;">font-family</span>: <span style="color: #ad7fa8;">"Yanone Kaffeesatz Regular"</span>, sans-serif;
+    <span style="color: #eeeeec;">font-family</span>: <span style="color: #ad7fa8;">"Yanone Kaffeesatz"</span>, sans-serif;
 }
 </pre>
 
