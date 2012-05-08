@@ -3,7 +3,7 @@
   <title>o-blog</title>
   <link href="http://renard.github.com/o-blogindex.xml" rel="self" />
   <link href="http://renard.github.com/o-blog"/>
-  <updated>2012-05-08T03:36:19Z</updated>
+  <updated>2012-05-08T04:04:53Z</updated>
   <id>http://renard.github.com/o-blogindex.xml</id>
   <entry><title type="html">Add a custom font</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/Tips/2012/05/07_add-a-custom-font.html"/><updated>2012-05-07T16:38:00Z</updated><published>2012-05-07T16:38:00Z</published><id>Tips/2012/05/07_add-a-custom-font.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/bootstrap.html" term="Bootstrap" label="Bootstrap"/><category scheme="/tags/o-blog.html" term="o-blog" label="o-blog"/><content type="html">&lt;p&gt;
 &lt;a href="http://www.google.com/webfonts"&gt;Google webfonts&lt;/a&gt; can be easily used in o-blog in 2 different ways: using
@@ -664,7 +664,7 @@ Here is an example of the &lt;code&gt;sample-init.el&lt;/code&gt; file:
 &lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;Author: S&amp;#233;bastien Gross &amp;lt;seb&amp;#8226;&amp;#593;&amp;#428;&amp;#8226;chezwam&amp;#8226;&amp;#598;&amp;#629;&amp;#648;&amp;#8226;org&amp;gt;
 &lt;/span&gt;&lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;Keywords: emacs, 
 &lt;/span&gt;&lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;Created: 2012-03-20
-&lt;/span&gt;&lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;Last changed: 2012-05-08 03:36:19
+&lt;/span&gt;&lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;Last changed: 2012-05-08 04:04:53
 &lt;/span&gt;&lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;Licence: WTFPL, grab your copy here: http://sam.zoy.org/wtfpl/
 &lt;/span&gt;
 &lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;This file is NOT part of GNU Emacs.
