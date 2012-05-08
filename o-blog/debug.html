@@ -1428,7 +1428,7 @@ Here is an example of the =sample-init.el= file:
 &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Author: S&amp;#233;bastien Gross &amp;lt;seb&amp;#8226;&amp;#593;&amp;#428;&amp;#8226;chezwam&amp;#8226;&amp;#598;&amp;#629;&amp;#648;&amp;#8226;org&amp;gt;
 &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Keywords: emacs, 
 &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Created: 2012-03-20
-&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Last changed: 2012-05-07 19:45:00
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Last changed: 2012-05-08 03:32:36
 &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Licence: WTFPL, grab your copy here: http://sam.zoy.org/wtfpl/
 &lt;/span&gt;
 &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;This file is NOT part of GNU Emacs.
@@ -2669,267 +2669,17 @@ entry.
   <h1>Static pages</h1>
   <div class="debug post">
   <div class="debug post">
-  <h2>Bug report</h2>
-  <table>
-    <caption>Dump information for post Bug report</caption>
-    <thead><tr><th>Property</th><th>Value</th></tr></thead>
-    <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
-      <tr><td class="property"><code>title</code></td><td class="value"><pre>"Bug report"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 2588)</pre></td></tr>
-      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"bug-report"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"bug-report.html"</pre></td></tr>
-      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
-
-
-To report a bug please be sure your issue is =o-blog= related.
-
-You can bootstrap a simple clean environment
-
-#+begin_src sh
-rm -rf ~/dev/.emacs.d
-mkdir -p ~/dev/.emacs.d
-cd ~/dev/.emacs.d
-git clone git://github.com/renard/o-blog.git
-git clone git://orgmode.org/org-mode.git
-#+end_src
-
-
-Then launch =emacs=:
-
-#+begin_src sh
-  cd ~/dev
-  rm -rf .emacs.d/o-blog/example/out
-  emacs --debug-init -Q  -l .emacs.d/o-blog/sample-init.el --eval \\
-      '(progn (setq browse-url-generic-program \"x-www-browser\"
-        browse-url-browser-function (quote browse-url-generic))
-        (ob-build-sample))'
-#+end_src
-
-You can change =x-www-browser= to your favorite browser.
-
-If anything runs fine emacs would exit normally. Otherwise a buffer called
-=o-blog Bug-report= is created and its content is copied to primary X
-selection (if available). This buffer contains useful information for
-debugging your issue. A browser is launch to the [[https://github.com/renard/o-blog/issues/new][o-blog new issue page]]. You
-can either paste content of the =o-blog Bug-report= buffer or the X primary
-selection (middle click).
-
-Please describe as much as possible your issue (in English). do no hesitate
-to paste your blog file to https://gist.github.com/ this might be useful to
-debug.
-
-
-"</pre></td></tr>
-      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;p&gt;
-To report a bug please be sure your issue is &lt;code&gt;o-blog&lt;/code&gt; related.
-&lt;/p&gt;
-&lt;p&gt;
-You can bootstrap a simple clean environment
-&lt;/p&gt;
-
-
-
-&lt;pre class=\"src src-sh\"&gt;rm -rf ~/dev/.emacs.d
-mkdir -p ~/dev/.emacs.d
-&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; ~/dev/.emacs.d
-git clone git://github.com/renard/o-blog.git
-git clone git://orgmode.org/org-mode.git
-&lt;/pre&gt;
-
-
-
-&lt;p&gt;
-Then launch &lt;code&gt;emacs&lt;/code&gt;:
-&lt;/p&gt;
-
-
-
-&lt;pre class=\"src src-sh\"&gt;&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; ~/dev
-rm -rf .emacs.d/o-blog/example/out
-emacs --debug-init -Q  -l .emacs.d/o-blog/sample-init.el --eval &lt;span style=\"color: #ad7fa8;\"&gt;\\&lt;/span&gt;
-    &lt;span style=\"color: #ad7fa8;\"&gt;'(progn (setq browse-url-generic-program \"x-www-browser\"&lt;/span&gt;
-&lt;span style=\"color: #ad7fa8;\"&gt;      browse-url-browser-function (quote browse-url-generic))&lt;/span&gt;
-&lt;span style=\"color: #ad7fa8;\"&gt;      (ob-build-sample))'&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-You can change &lt;code&gt;x-www-browser&lt;/code&gt; to your favorite browser.
-&lt;/p&gt;
-&lt;p&gt;
-If anything runs fine emacs would exit normally. Otherwise a buffer called
-&lt;code&gt;o-blog Bug-report&lt;/code&gt; is created and its content is copied to primary X
-selection (if available). This buffer contains useful information for
-debugging your issue. A browser is launch to the &lt;a href=\"https://github.com/renard/o-blog/issues/new\"&gt;o-blog new issue page&lt;/a&gt;. You
-can either paste content of the &lt;code&gt;o-blog Bug-report&lt;/code&gt; buffer or the X primary
-selection (middle click).
-&lt;/p&gt;
-&lt;p&gt;
-Please describe as much as possible your issue (in English). do no hesitate
-to paste your blog file to &lt;a href=\"https://gist.github.com/\"&gt;https://gist.github.com/&lt;/a&gt; this might be useful to
-debug.
-&lt;/p&gt;
-
-"</pre></td></tr>
-    </tbody>
-  </table>
-</div>
-<div class="debug post">
-  <h2>FAQ</h2>
-  <table>
-    <caption>Dump information for post FAQ</caption>
-    <thead><tr><th>Property</th><th>Value</th></tr></thead>
-    <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
-      <tr><td class="property"><code>title</code></td><td class="value"><pre>"FAQ"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 2588)</pre></td></tr>
-      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"faq"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"faq.html"</pre></td></tr>
-      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
-
-
-** My page looks ugly
-
-Maybe you are using [[https://www.google.com/chrome/][google-chrome]] and try to view your site locally using a
-=file:///path/to/your/site/out/index.html= scheme. Open the javascript console
-=Ctrl+Shift+I= you should see something like:
-
-#+begin_example
-XMLHttpRequest cannot load file:///path/to/your/site/out/out/style/css/o-blog.less. Cross origin requests are only supported for HTTP.
-less-1.2.1.min.js:8Uncaught Error: NETWORK_ERR: XMLHttpRequest Exception 101
-#+end_example
-
-There is a known Chrome issue with loading local javascript files. This is a
-/security feature/ in Chrome.
-
-You can disable this with the =--allow-file-access-from-files= option to
-chrome or you can use an other browser or setup a local webserver.
-
-There are many complex solutions for a webserver such as [[http://nginx.org/][nginx]] or [[http://httpd.apache.org/][Apache]] or
-many [[http://en.wikipedia.org/wiki/Comparison_of_web_server_software][others]].
-
-You may want to prefer a lighter and simpler solution.
-
-With python simply run:
-
-#+begin_src sh
-cd /path/to/your/site &amp;&amp; python -m SimpleHTTPServer
-#+end_src
-
-And browse http://localhost:8000
-
-Or within emacs you can run [[https://github.com/jrhbailey/emacs-http-server][emacs-http-server]]:
-
-#+begin_src emacs-lisp
-(require 'httpd)
-(setq httpd-root \"/path/to/your/site\")
-(httpd-start)
-#+end_src
-
-and browse http://localhost:8080
-
-An other alternative would be the use of [[http://www.emacswiki.org/emacs/Elnode][elnode]] but it seems to be more
-complex.
-"</pre></td></tr>
-      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;div id=\"outline-container-1\" class=\"outline-3\"&gt;
-&lt;h3 id=\"sec-1\"&gt;My page looks ugly&lt;/h3&gt;
-&lt;div class=\"outline-text-3\" id=\"text-1\"&gt;
-
-
-&lt;p&gt;
-Maybe you are using &lt;a href=\"https://www.google.com/chrome/\"&gt;google-chrome&lt;/a&gt; and try to view your site locally using a
-&lt;code&gt;file:///path/to/your/site/out/index.html&lt;/code&gt; scheme. Open the javascript console
-&lt;code&gt;Ctrl+Shift+I&lt;/code&gt; you should see something like:
-&lt;/p&gt;
-
-
-
-&lt;pre class=\"example\"&gt;XMLHttpRequest cannot load file:///path/to/your/site/out/out/style/css/o-blog.less. Cross origin requests are only supported for HTTP.
-less-1.2.1.min.js:8Uncaught Error: NETWORK_ERR: XMLHttpRequest Exception 101
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-There is a known Chrome issue with loading local javascript files. This is a
-&lt;i&gt;security feature&lt;/i&gt; in Chrome.
-&lt;/p&gt;
-&lt;p&gt;
-You can disable this with the &lt;code&gt;--allow-file-access-from-files&lt;/code&gt; option to
-chrome or you can use an other browser or setup a local webserver.
-&lt;/p&gt;
-&lt;p&gt;
-There are many complex solutions for a webserver such as &lt;a href=\"http://nginx.org/\"&gt;nginx&lt;/a&gt; or &lt;a href=\"http://httpd.apache.org/\"&gt;Apache&lt;/a&gt; or
-many &lt;a href=\"http://en.wikipedia.org/wiki/Comparison_of_web_server_software\"&gt;others&lt;/a&gt;.
-&lt;/p&gt;
-&lt;p&gt;
-You may want to prefer a lighter and simpler solution.
-&lt;/p&gt;
-&lt;p&gt;
-With python simply run:
-&lt;/p&gt;
-
-
-
-&lt;pre class=\"src src-sh\"&gt;&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; /path/to/your/site &amp;amp;&amp;amp; python -m SimpleHTTPServer
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-And browse &lt;a href=\"http://localhost:8000\"&gt;http://localhost:8000&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;
-Or within emacs you can run &lt;a href=\"https://github.com/jrhbailey/emacs-http-server\"&gt;emacs-http-server&lt;/a&gt;:
-&lt;/p&gt;
-
-
-
-&lt;pre class=\"src src-emacs-lisp\"&gt;(&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;httpd&lt;/span&gt;)
-(setq httpd-root &lt;span style=\"color: #ad7fa8;\"&gt;\"/path/to/your/site\"&lt;/span&gt;)
-(httpd-start)
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-and browse &lt;a href=\"http://localhost:8080\"&gt;http://localhost:8080&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;
-An other alternative would be the use of &lt;a href=\"http://www.emacswiki.org/emacs/Elnode\"&gt;elnode&lt;/a&gt; but it seems to be more
-complex.
-&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-"</pre></td></tr>
-    </tbody>
-  </table>
-</div>
-<div class="debug post">
   <h2>Quick start Guide</h2>
   <table>
     <caption>Dump information for post Quick start Guide</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Quick start Guide"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 2528)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 30608)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3181,12 +2931,12 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <caption>Dump information for post Changelog</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Changelog"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 2528)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 30608)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3376,12 +3126,12 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <caption>Dump information for post Debug</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Debug"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 2528)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 30608)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"debug.html"</pre></td></tr>
@@ -3403,12 +3153,12 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <caption>Dump information for post Features</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Features"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 2528)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 30608)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3515,12 +3265,12 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <caption>Dump information for post Templates</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Templates"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 2528)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 30608)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3745,12 +3495,12 @@ month and the whole archives.
     <caption>Dump information for post Structures</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Structures"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 2528)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 30608)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -4104,12 +3854,12 @@ Some variables may be defined in some functions:
     <caption>Dump information for post Functions</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Functions"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 2528)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 30608)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -4575,6 +4325,256 @@ Add a human readable timestamp for a post:
     </tbody>
   </table>
 </div>
+<div class="debug post">
+  <h2>Bug report</h2>
+  <table>
+    <caption>Dump information for post Bug report</caption>
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>title</code></td><td class="value"><pre>"Bug report"</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 30608)</pre></td></tr>
+      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"bug-report"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"bug-report.html"</pre></td></tr>
+      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
+
+
+To report a bug please be sure your issue is =o-blog= related.
+
+You can bootstrap a simple clean environment
+
+#+begin_src sh
+rm -rf ~/dev/.emacs.d
+mkdir -p ~/dev/.emacs.d
+cd ~/dev/.emacs.d
+git clone git://github.com/renard/o-blog.git
+git clone git://orgmode.org/org-mode.git
+#+end_src
+
+
+Then launch =emacs=:
+
+#+begin_src sh
+  cd ~/dev
+  rm -rf .emacs.d/o-blog/example/out
+  emacs --debug-init -Q  -l .emacs.d/o-blog/sample-init.el --eval \\
+      '(progn (setq browse-url-generic-program \"x-www-browser\"
+        browse-url-browser-function (quote browse-url-generic))
+        (ob-build-sample))'
+#+end_src
+
+You can change =x-www-browser= to your favorite browser.
+
+If anything runs fine emacs would exit normally. Otherwise a buffer called
+=o-blog Bug-report= is created and its content is copied to primary X
+selection (if available). This buffer contains useful information for
+debugging your issue. A browser is launch to the [[https://github.com/renard/o-blog/issues/new][o-blog new issue page]]. You
+can either paste content of the =o-blog Bug-report= buffer or the X primary
+selection (middle click).
+
+Please describe as much as possible your issue (in English). do no hesitate
+to paste your blog file to https://gist.github.com/ this might be useful to
+debug.
+
+
+"</pre></td></tr>
+      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;p&gt;
+To report a bug please be sure your issue is &lt;code&gt;o-blog&lt;/code&gt; related.
+&lt;/p&gt;
+&lt;p&gt;
+You can bootstrap a simple clean environment
+&lt;/p&gt;
+
+
+
+&lt;pre class=\"src src-sh\"&gt;rm -rf ~/dev/.emacs.d
+mkdir -p ~/dev/.emacs.d
+&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; ~/dev/.emacs.d
+git clone git://github.com/renard/o-blog.git
+git clone git://orgmode.org/org-mode.git
+&lt;/pre&gt;
+
+
+
+&lt;p&gt;
+Then launch &lt;code&gt;emacs&lt;/code&gt;:
+&lt;/p&gt;
+
+
+
+&lt;pre class=\"src src-sh\"&gt;&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; ~/dev
+rm -rf .emacs.d/o-blog/example/out
+emacs --debug-init -Q  -l .emacs.d/o-blog/sample-init.el --eval &lt;span style=\"color: #ad7fa8;\"&gt;\\&lt;/span&gt;
+    &lt;span style=\"color: #ad7fa8;\"&gt;'(progn (setq browse-url-generic-program \"x-www-browser\"&lt;/span&gt;
+&lt;span style=\"color: #ad7fa8;\"&gt;      browse-url-browser-function (quote browse-url-generic))&lt;/span&gt;
+&lt;span style=\"color: #ad7fa8;\"&gt;      (ob-build-sample))'&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+You can change &lt;code&gt;x-www-browser&lt;/code&gt; to your favorite browser.
+&lt;/p&gt;
+&lt;p&gt;
+If anything runs fine emacs would exit normally. Otherwise a buffer called
+&lt;code&gt;o-blog Bug-report&lt;/code&gt; is created and its content is copied to primary X
+selection (if available). This buffer contains useful information for
+debugging your issue. A browser is launch to the &lt;a href=\"https://github.com/renard/o-blog/issues/new\"&gt;o-blog new issue page&lt;/a&gt;. You
+can either paste content of the &lt;code&gt;o-blog Bug-report&lt;/code&gt; buffer or the X primary
+selection (middle click).
+&lt;/p&gt;
+&lt;p&gt;
+Please describe as much as possible your issue (in English). do no hesitate
+to paste your blog file to &lt;a href=\"https://gist.github.com/\"&gt;https://gist.github.com/&lt;/a&gt; this might be useful to
+debug.
+&lt;/p&gt;
+
+"</pre></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="debug post">
+  <h2>FAQ</h2>
+  <table>
+    <caption>Dump information for post FAQ</caption>
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>title</code></td><td class="value"><pre>"FAQ"</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 30608)</pre></td></tr>
+      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"faq"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"faq.html"</pre></td></tr>
+      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
+
+
+** My page looks ugly
+
+Maybe you are using [[https://www.google.com/chrome/][google-chrome]] and try to view your site locally using a
+=file:///path/to/your/site/out/index.html= scheme. Open the javascript console
+=Ctrl+Shift+I= you should see something like:
+
+#+begin_example
+XMLHttpRequest cannot load file:///path/to/your/site/out/out/style/css/o-blog.less. Cross origin requests are only supported for HTTP.
+less-1.2.1.min.js:8Uncaught Error: NETWORK_ERR: XMLHttpRequest Exception 101
+#+end_example
+
+There is a known Chrome issue with loading local javascript files. This is a
+/security feature/ in Chrome.
+
+You can disable this with the =--allow-file-access-from-files= option to
+chrome or you can use an other browser or setup a local webserver.
+
+There are many complex solutions for a webserver such as [[http://nginx.org/][nginx]] or [[http://httpd.apache.org/][Apache]] or
+many [[http://en.wikipedia.org/wiki/Comparison_of_web_server_software][others]].
+
+You may want to prefer a lighter and simpler solution.
+
+With python simply run:
+
+#+begin_src sh
+cd /path/to/your/site &amp;&amp; python -m SimpleHTTPServer
+#+end_src
+
+And browse http://localhost:8000
+
+Or within emacs you can run [[https://github.com/jrhbailey/emacs-http-server][emacs-http-server]]:
+
+#+begin_src emacs-lisp
+(require 'httpd)
+(setq httpd-root \"/path/to/your/site\")
+(httpd-start)
+#+end_src
+
+and browse http://localhost:8080
+
+An other alternative would be the use of [[http://www.emacswiki.org/emacs/Elnode][elnode]] but it seems to be more
+complex.
+"</pre></td></tr>
+      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;div id=\"outline-container-1\" class=\"outline-3\"&gt;
+&lt;h3 id=\"sec-1\"&gt;My page looks ugly&lt;/h3&gt;
+&lt;div class=\"outline-text-3\" id=\"text-1\"&gt;
+
+
+&lt;p&gt;
+Maybe you are using &lt;a href=\"https://www.google.com/chrome/\"&gt;google-chrome&lt;/a&gt; and try to view your site locally using a
+&lt;code&gt;file:///path/to/your/site/out/index.html&lt;/code&gt; scheme. Open the javascript console
+&lt;code&gt;Ctrl+Shift+I&lt;/code&gt; you should see something like:
+&lt;/p&gt;
+
+
+
+&lt;pre class=\"example\"&gt;XMLHttpRequest cannot load file:///path/to/your/site/out/out/style/css/o-blog.less. Cross origin requests are only supported for HTTP.
+less-1.2.1.min.js:8Uncaught Error: NETWORK_ERR: XMLHttpRequest Exception 101
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+There is a known Chrome issue with loading local javascript files. This is a
+&lt;i&gt;security feature&lt;/i&gt; in Chrome.
+&lt;/p&gt;
+&lt;p&gt;
+You can disable this with the &lt;code&gt;--allow-file-access-from-files&lt;/code&gt; option to
+chrome or you can use an other browser or setup a local webserver.
+&lt;/p&gt;
+&lt;p&gt;
+There are many complex solutions for a webserver such as &lt;a href=\"http://nginx.org/\"&gt;nginx&lt;/a&gt; or &lt;a href=\"http://httpd.apache.org/\"&gt;Apache&lt;/a&gt; or
+many &lt;a href=\"http://en.wikipedia.org/wiki/Comparison_of_web_server_software\"&gt;others&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+You may want to prefer a lighter and simpler solution.
+&lt;/p&gt;
+&lt;p&gt;
+With python simply run:
+&lt;/p&gt;
+
+
+
+&lt;pre class=\"src src-sh\"&gt;&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; /path/to/your/site &amp;amp;&amp;amp; python -m SimpleHTTPServer
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+And browse &lt;a href=\"http://localhost:8000\"&gt;http://localhost:8000&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Or within emacs you can run &lt;a href=\"https://github.com/jrhbailey/emacs-http-server\"&gt;emacs-http-server&lt;/a&gt;:
+&lt;/p&gt;
+
+
+
+&lt;pre class=\"src src-emacs-lisp\"&gt;(&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;httpd&lt;/span&gt;)
+(setq httpd-root &lt;span style=\"color: #ad7fa8;\"&gt;\"/path/to/your/site\"&lt;/span&gt;)
+(httpd-start)
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+and browse &lt;a href=\"http://localhost:8080\"&gt;http://localhost:8080&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+An other alternative would be the use of &lt;a href=\"http://www.emacswiki.org/emacs/Elnode\"&gt;elnode&lt;/a&gt; but it seems to be more
+complex.
+&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+"</pre></td></tr>
+    </tbody>
+  </table>
+</div>
 
 </div>
 
@@ -4588,16 +4588,16 @@ Add a human readable timestamp for a post:
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Copyright"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 2588)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 30608)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/05"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"copyright"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/07_copyright.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/08_copyright.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -4620,16 +4620,16 @@ Copyright &#169; 2008-2012 &lt;a href=\"mailto:seb%20&#10088;&#593;&#422;&#629;&
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"About"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 2588)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 30608)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/05"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"about"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/07_about.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/08_about.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -4650,16 +4650,16 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Navigation"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 2588)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 30608)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/05"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"navigation"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/07_navigation.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/08_navigation.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
