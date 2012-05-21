@@ -47,6 +47,8 @@
 </li>
 <li><a href="#"><i>icon-file icon-white</i> Tips</a>
 <ul>
+<li><a href="./Tips/2012/05/21_create-static-pages.html">Create static pages</a>
+</li>
 <li><a href="./Tips/2012/05/07_add-a-custom-font.html">Add a custom font</a>
 </li>
 <li><a href="./Tips/2012/05/03_some-bootstrap-features.html">Some bootstrap features</a>
@@ -54,8 +56,6 @@
 <li><a href="./Tips/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a>
 </li>
 <li><a href="./Tips/2012/02/10_adding-icons.html">Adding icons</a>
-</li>
-<li><a href="./Tips/2012/02/09_using-modal-source-code.html">Using modal source code</a>
 
 </li>
 </ul>
@@ -155,12 +155,98 @@
   <h1>Posts</h1>
   <div class="debug post">
   <div class="debug post">
+  <h2>Create static pages</h2>
+  <table>
+    <caption>Dump information for post Create static pages</caption>
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
+      <tr><td class="property"><code>title</code></td><td class="value"><pre>"Create static pages"</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7520)</pre></td></tr>
+      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>([cl-struct-ob:tags "usage" "usage" nil nil] [cl-struct-ob:tags "Bootstrap" "bootstrap" nil nil] [cl-struct-ob:tags "o-blog" "o-blog" nil nil])</pre></td></tr>
+      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/05"</pre></td></tr>
+      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"create-static-pages"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/21_create-static-pages.html"</pre></td></tr>
+      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
+
+
+#+BEGIN_HTML
+&lt;div class=\"row \"&gt;&lt;div class=\"span7 \"&gt;
+#+END_HTML
+
+
+
+Static pages are create exactly like blog pages. The only thing you need to
+add is a =PAGE= property. The exported path is relative to =#+PUBLISH_DIR:=.
+
+You can also specify a custom template for your static page by adding a
+=TEMPLATE= property. The template path is relative to =#+TEMPLATE_DIR:=.
+
+#+BEGIN_HTML
+&lt;/div&gt;&lt;div class=\"span4 \"&gt;
+#+END_HTML
+
+
+#+BEGIN_SRC org
+  ,* Static page
+  ,   :PROPERTIES:
+  ,   :PAGE:     path/to/static/page.html
+  ,   :TEMPLATE: static-page.html
+  ,   :END:
+#+END_SRC
+
+
+#+BEGIN_HTML
+&lt;/div&gt;&lt;/div&gt;
+#+END_HTML
+
+"</pre></td></tr>
+      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;div class=\"row \"&gt;&lt;div class=\"span7 \"&gt;
+
+
+
+&lt;p&gt;
+Static pages are create exactly like blog pages. The only thing you need to
+add is a &lt;code&gt;PAGE&lt;/code&gt; property. The exported path is relative to &lt;code&gt;#+PUBLISH_DIR:&lt;/code&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+You can also specify a custom template for your static page by adding a
+&lt;code&gt;TEMPLATE&lt;/code&gt; property. The template path is relative to &lt;code&gt;#+TEMPLATE_DIR:&lt;/code&gt;.
+&lt;/p&gt;
+
+
+&lt;/div&gt;&lt;div class=\"span4 \"&gt;
+
+
+
+&lt;pre class=\"src src-org\"&gt;&lt;span style=\"color: #edd400; font-weight: bold;\"&gt;* Static page&lt;/span&gt;
+&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;   :PROPERTIES:&lt;/span&gt;
+   &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;:PAGE:&lt;/span&gt;     path/to/static/page.html
+   &lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;:TEMPLATE:&lt;/span&gt; static-page.html
+&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;   :END:&lt;/span&gt;
+&lt;/pre&gt;
+
+
+
+&lt;/div&gt;&lt;/div&gt;
+
+"</pre></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="debug post">
   <h2>Add a custom font</h2>
   <table>
     <caption>Dump information for post Add a custom font</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Add a custom font"</pre></td></tr>
       <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20391 56904)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
@@ -257,8 +343,7 @@ Add declare its use like in the Google API version:
 h1, h2, h3, h4, h5, h6 {
     font-family: \"Yanone Kaffeesatz\", sans-serif;
 }
-#+END_SRC
-"</pre></td></tr>
+#+END_SRC"</pre></td></tr>
       <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;p&gt;
 &lt;a href=\"http://www.google.com/webfonts\"&gt;Google webfonts&lt;/a&gt; can be easily used in o-blog in 2 different ways: using
 google API or by providing resources in the &lt;code&gt;templates/style&lt;/code&gt; directory.
@@ -389,7 +474,7 @@ Add declare its use like in the Google API version:
     <caption>Dump information for post Some bootstrap features</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Some bootstrap features"</pre></td></tr>
       <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20386 57104)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
@@ -940,7 +1025,7 @@ Look, I'm in a well!
     <caption>Dump information for post Using Bootstrap grid</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Using Bootstrap grid"</pre></td></tr>
       <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 25204)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
@@ -1111,7 +1196,7 @@ Column n
     <caption>Dump information for post Adding icons</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Adding icons"</pre></td></tr>
       <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 21604)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
@@ -1233,7 +1318,6 @@ rendered result might be damaged.
 #+BEGIN_HTML
 &lt;/div&gt;&lt;/div&gt;
 #+END_HTML
-
 
 
 
@@ -1378,7 +1462,6 @@ rendered result might be damaged.
 
 
 
-
 "</pre></td></tr>
     </tbody>
   </table>
@@ -1389,7 +1472,7 @@ rendered result might be damaged.
     <caption>Dump information for post Using modal source code</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Using modal source code"</pre></td></tr>
       <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20276 17644)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
@@ -1428,7 +1511,7 @@ Here is an example of the =sample-init.el= file:
 &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Author: S&amp;#233;bastien Gross &amp;lt;seb&amp;#8226;&amp;#593;&amp;#428;&amp;#8226;chezwam&amp;#8226;&amp;#598;&amp;#629;&amp;#648;&amp;#8226;org&amp;gt;
 &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Keywords: emacs, 
 &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Created: 2012-03-20
-&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Last changed: 2012-05-08 04:25:04
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Last changed: 2012-05-21 12:50:40
 &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Licence: WTFPL, grab your copy here: http://sam.zoy.org/wtfpl/
 &lt;/span&gt;
 &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;This file is NOT part of GNU Emacs.
@@ -1565,7 +1648,7 @@ Here is an example of the &lt;code&gt;sample-init.el&lt;/code&gt; file:
     <caption>Dump information for post Alerts</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Alerts"</pre></td></tr>
       <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20243 11152)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
@@ -1812,7 +1895,7 @@ nulla. Nullam rutrum. Nam vestibulum accumsan nisl.
     <caption>Dump information for post Some HTML5 samples</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Some HTML5 samples"</pre></td></tr>
       <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20236 38984)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
@@ -1898,7 +1981,7 @@ Works only with chrome.
     <caption>Dump information for post Example of some org syntax</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Example of some org syntax"</pre></td></tr>
       <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20232 7428)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
@@ -2511,7 +2594,7 @@ the sun is R&lt;sub&gt;sun&lt;/sub&gt; = 6.96 x 10&lt;sup&gt;8&lt;/sup&gt; m.
     <caption>Dump information for post How to use tags</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>9</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"How to use tags"</pre></td></tr>
       <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20231 33664)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
@@ -2566,7 +2649,7 @@ Special characters used in tags:
     <caption>Dump information for post Creating a blog</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>9</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>10</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Creating a blog"</pre></td></tr>
       <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20231 32764)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
@@ -2676,10 +2759,10 @@ entry.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Quick start Guide"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 33788)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7640)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -2933,10 +3016,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Changelog"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 33788)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7640)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3128,10 +3211,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Debug"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 33788)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7640)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"debug.html"</pre></td></tr>
@@ -3155,10 +3238,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Features"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 33788)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7640)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3267,10 +3350,10 @@ See the &lt;a href=\"blog/index.html\"&gt;blog&lt;/a&gt; for more details.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Templates"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 33788)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7640)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3497,10 +3580,10 @@ month and the whole archives.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Structures"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 33788)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7640)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -3856,10 +3939,10 @@ Some variables may be defined in some functions:
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Functions"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 33788)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7640)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -4333,10 +4416,10 @@ Add a human readable timestamp for a post:
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Bug report"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 33788)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7640)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -4448,10 +4531,10 @@ debug.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"FAQ"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 33788)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7640)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
@@ -4588,16 +4671,16 @@ complex.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Copyright"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 33788)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7640)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/05"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"copyright"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/08_copyright.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/21_copyright.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -4620,16 +4703,16 @@ Copyright &#169; 2008-2012 &lt;a href=\"mailto:seb%20&#10088;&#593;&#422;&#629;&
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"About"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 33788)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7640)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/05"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"about"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/08_about.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/21_about.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -4650,16 +4733,16 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Navigation"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20392 33788)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20410 7640)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>8</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>21</pre></td></tr>
       <tr><td class="property"><code>category</code></td><td class="value"><pre>"Tips"</pre></td></tr>
       <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_post.html"</pre></td></tr>
       <tr><td class="property"><code>filepath</code></td><td class="value"><pre>"Tips/2012/05"</pre></td></tr>
       <tr><td class="property"><code>filename</code></td><td class="value"><pre>"navigation"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/08_navigation.html"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"Tips/2012/05/21_navigation.html"</pre></td></tr>
       <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"../../.."</pre></td></tr>
       <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
 
@@ -4765,8 +4848,8 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>name</code></td><td class="value"><pre>"Bootstrap"</pre></td></tr>
       <tr><td class="property"><code>safe</code></td><td class="value"><pre>"bootstrap"</pre></td></tr>
-      <tr><td class="property"><code>count</code></td><td class="value"><pre>5</pre></td></tr>
-      <tr><td class="property"><code>size</code></td><td class="value"><pre>150.0</pre></td></tr>
+      <tr><td class="property"><code>count</code></td><td class="value"><pre>6</pre></td></tr>
+      <tr><td class="property"><code>size</code></td><td class="value"><pre>157.77777777777777</pre></td></tr>
     </tbody>
   </table>
 </div>
@@ -4791,8 +4874,8 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>name</code></td><td class="value"><pre>"o-blog"</pre></td></tr>
       <tr><td class="property"><code>safe</code></td><td class="value"><pre>"o-blog"</pre></td></tr>
-      <tr><td class="property"><code>count</code></td><td class="value"><pre>3</pre></td></tr>
-      <tr><td class="property"><code>size</code></td><td class="value"><pre>115.0</pre></td></tr>
+      <tr><td class="property"><code>count</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>size</code></td><td class="value"><pre>126.66666666666666</pre></td></tr>
     </tbody>
   </table>
 </div>
@@ -4817,7 +4900,7 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>name</code></td><td class="value"><pre>"usage"</pre></td></tr>
       <tr><td class="property"><code>safe</code></td><td class="value"><pre>"usage"</pre></td></tr>
-      <tr><td class="property"><code>count</code></td><td class="value"><pre>9</pre></td></tr>
+      <tr><td class="property"><code>count</code></td><td class="value"><pre>10</pre></td></tr>
       <tr><td class="property"><code>size</code></td><td class="value"><pre>220.0</pre></td></tr>
     </tbody>
   </table>
@@ -4840,7 +4923,7 @@ This is a sample blog to explain how <a href="https://github.com/renard/o-blog">
 	      <h1>Links</h1>
 	      <ul>
 		<li class="home"><a href="./index.html">Home</a></li>
-<li class="blog"><a href="./Tips/2012/05/07_add-a-custom-font.html">Blog</a></li>
+<li class="blog"><a href="./Tips/2012/05/21_create-static-pages.html">Blog</a></li>
 <li class="tags"><a href="./tags/index.html">Tags</a></li>
 <li class="archives"><a href="./archives.html">Archives</a></li>
 <li class="rss"><a href="./index.xml">RSS</a></li>
@@ -4850,13 +4933,13 @@ This is a sample blog to explain how <a href="https://github.com/renard/o-blog">
 	    <nav id="archives" class="span3">
 	      <h1>Archives</h1>
 	      <ul>
-		<li><a href="./Tips/2012/05/07_add-a-custom-font.html">Add a custom font</a></li> <li><a href="./Tips/2012/05/03_some-bootstrap-features.html">Some bootstrap features</a></li> <li><a href="./Tips/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a></li> <li><a href="./Tips/2012/02/10_adding-icons.html">Adding icons</a></li> <li><a href="./Tips/2012/02/09_using-modal-source-code.html">Using modal source code</a></li> <li><a href="./Tips/2012/01/15_alerts.html">Alerts</a></li> <li><a href="./Tips/2012/01/10_some-html5-samples.html">Some HTML5 samples</a></li> <li><a href="./Tips/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="./Tips/2012/01/07_how-to-use-tags.html">How to use tags</a></li> <li><a href="./Tips/2012/01/07_creating-a-blog.html">Creating a blog</a></li> 
+		<li><a href="./Tips/2012/05/21_create-static-pages.html">Create static pages</a></li> <li><a href="./Tips/2012/05/07_add-a-custom-font.html">Add a custom font</a></li> <li><a href="./Tips/2012/05/03_some-bootstrap-features.html">Some bootstrap features</a></li> <li><a href="./Tips/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a></li> <li><a href="./Tips/2012/02/10_adding-icons.html">Adding icons</a></li> <li><a href="./Tips/2012/02/09_using-modal-source-code.html">Using modal source code</a></li> <li><a href="./Tips/2012/01/15_alerts.html">Alerts</a></li> <li><a href="./Tips/2012/01/10_some-html5-samples.html">Some HTML5 samples</a></li> <li><a href="./Tips/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> <li><a href="./Tips/2012/01/07_how-to-use-tags.html">How to use tags</a></li> 
 	      </ul>
 	    </nav>
 	    <nav class="tags span3">
 	      <h1>Tags</h1>
 	      <ul>
-  <li style="font-size: 150.00%;"><a href="./tags/bootstrap.html">Bootstrap</a></li> <li style="font-size: 80.00%;"><a href="./tags/html-5.html">html 5</a></li> <li style="font-size: 115.00%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li> 
+  <li style="font-size: 157.78%;"><a href="./tags/bootstrap.html">Bootstrap</a></li> <li style="font-size: 80.00%;"><a href="./tags/html-5.html">html 5</a></li> <li style="font-size: 126.67%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li> 
 </ul>
 
 	    </nav>

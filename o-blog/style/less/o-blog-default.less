@@ -8,6 +8,11 @@
 
 @linkColor: #933;
 
+@gridColumns:             12;
+@gridColumnWidth:         70px;
+@gridGutterWidth:         20px;
+
+
 
 @import "font-Yanone-Kaffeesatz.less";
 @import "font-Ubuntu-Mono.less";
@@ -33,30 +38,40 @@ nav a:hover {
 
 .breadcrumb {
     padding: 3px 14px;
+    li {
+	line-height: @baseLineHeight;
+    }
 }
 
 .modal {
-    left: 25%;
-    width: @gridRowWidth;
+    left: 15%;
+    width: 70% /*@gridRowWidth*/;
     margin-left: auto;
     margin-right: auto;
+    li {
+	line-height: @baseLineHeight
+    }
+}
+
+li {
+    line-height: 1.5 * @baseLineHeight;
 }
 
 #disqus_thread {
 
-    font-size: @baseFontSize * (13/18) ;    
+    font-size: @baseFontSize * (13/18);
     line-height: @baseLineHeight * (13/18);
 
     input,
     textarea,
     .uneditable-input {
-	font-size: @baseFontSize * (13/18) ;    
+	font-size: @baseFontSize * (13/18);
 	line-height: @baseLineHeight * (13/18);
 	height: @baseLineHeight * (13/18);
     }
 
     select {
-	font-size: @baseFontSize * (13/18) ;    
+	font-size: @baseFontSize * (13/18);
 	line-height: @baseLineHeight * (13/18);
 	height: 2 * @baseLineHeight * (13/18);
 
