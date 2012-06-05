@@ -3,7 +3,7 @@
   <title>o-blog</title>
   <link href="http://renard.github.com/o-blogindex.xml" rel="self" />
   <link href="http://renard.github.com/o-blog"/>
-  <updated>2012-05-23T13:29:42Z</updated>
+  <updated>2012-06-05T17:25:55Z</updated>
   <id>http://renard.github.com/o-blogindex.xml</id>
   <entry><title type="html">Create static pages</title><author><name>nil</name></author><link href="http://renard.github.com/o-blog/Tips/2012/05/21_create-static-pages.html"/><updated>2012-05-21T12:48:00Z</updated><published>2012-05-21T12:48:00Z</published><id>Tips/2012/05/21_create-static-pages.html</id><category scheme="/tags/usage.html" term="usage" label="usage"/><category scheme="/tags/bootstrap.html" term="Bootstrap" label="Bootstrap"/><category scheme="/tags/o-blog.html" term="o-blog" label="o-blog"/><content type="html">&lt;div class="row "&gt;&lt;div class="span7 "&gt;
 
@@ -581,21 +581,43 @@ This could also be used for the top &lt;i&gt;navbar&lt;/i&gt; using something li
 
 
 
-&lt;pre class="src src-org"&gt;- &lt;span style="color: #00ffff; text-decoration: underline;"&gt;[[#][/icon-book icon-white/ Documentation]]&lt;/span&gt;
-  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;[[file:./templates.html][Templates]]&lt;/span&gt;
-  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;[[file:./structures.html][Structures]]&lt;/span&gt;
-  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;[[file:./functions.html][Functions]]&lt;/span&gt;
+&lt;pre class="src src-org"&gt;- &lt;span style="color: #00ffff; text-decoration: underline;"&gt;/icon-book icon-white/ Documentation&lt;/span&gt;
+  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;Templates&lt;/span&gt;
+  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;Structures&lt;/span&gt;
+  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;Functions&lt;/span&gt;
   -
-  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;[[file:./faq.html][FAQ]]&lt;/span&gt;
+  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;FAQ&lt;/span&gt;
 
-- &lt;span style="color: #00ffff; text-decoration: underline;"&gt;[[#][/icon-file icon-white/ Blog]]&lt;/span&gt;
-  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;[[file:./Tips/2012/05/21_create-static-pages.html][Create static pages]]&lt;/span&gt;
-  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;[[file:./Tips/2012/05/07_add-a-custom-font.html][Add a custom font]]&lt;/span&gt;
-  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;[[file:./Tips/2012/05/03_some-bootstrap-features.html][Some bootstrap features]]&lt;/span&gt;
-  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;[[file:./Tips/2012/02/10_using-bootstrap-grid.html][Using Bootstrap grid]]&lt;/span&gt;
-  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;[[file:./Tips/2012/02/10_adding-icons.html][Adding icons]]&lt;/span&gt;
+- &lt;span style="color: #00ffff; text-decoration: underline;"&gt;/icon-file icon-white/ Blog&lt;/span&gt;
+  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;Create static pages&lt;/span&gt;
+  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;Add a custom font&lt;/span&gt;
+  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;Some bootstrap features&lt;/span&gt;
+  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;Using Bootstrap grid&lt;/span&gt;
+  - &lt;span style="color: #00ffff; text-decoration: underline;"&gt;Adding icons&lt;/span&gt;
 
-- &lt;span style="color: #00ffff; text-decoration: underline;"&gt;[[file:./templates.html"&gt;Templates&lt;/a&gt;
+- &lt;span style="color: #00ffff; font-style: italic; text-decoration: underline;"&gt;/icon-tags icon-white/&lt;/span&gt;&lt;span style="color: #00ffff; text-decoration: underline;"&gt; Tags&lt;/span&gt;
+
+&lt;/pre&gt;
+
+
+&lt;/div&gt;&lt;div class="span6 "&gt;
+
+
+&lt;p&gt;
+&lt;b&gt;Rendered output&lt;/b&gt;
+&lt;/p&gt;
+
+
+
+&lt;div class="navbar"&gt;
+&lt;div class="navbar-inner"&gt;
+&lt;div class="container"&gt;
+&lt;div class="nav-collapse"&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="#"&gt;&lt;i&gt;icon-book icon-white&lt;/i&gt; Documentation&lt;/a&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="./templates.html"&gt;Templates&lt;/a&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;a href="./structures.html"&gt;Structures&lt;/a&gt;
 &lt;/li&gt;
@@ -683,7 +705,7 @@ Here is an example of the &lt;code&gt;sample-init.el&lt;/code&gt; file:
 &lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;Author: S&amp;#233;bastien Gross &amp;lt;seb&amp;#8226;&amp;#593;&amp;#428;&amp;#8226;chezwam&amp;#8226;&amp;#598;&amp;#629;&amp;#648;&amp;#8226;org&amp;gt;
 &lt;/span&gt;&lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;Keywords: emacs, 
 &lt;/span&gt;&lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;Created: 2012-03-20
-&lt;/span&gt;&lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;Last changed: 2012-05-23 13:29:42
+&lt;/span&gt;&lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;Last changed: Tue Jun  5 17:25:55 2012 (cest)
 &lt;/span&gt;&lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;Licence: WTFPL, grab your copy here: http://sam.zoy.org/wtfpl/
 &lt;/span&gt;
 &lt;span style="color: #888a85;"&gt;;; &lt;/span&gt;&lt;span style="color: #888a85;"&gt;This file is NOT part of GNU Emacs.
