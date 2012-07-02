@@ -5,6 +5,7 @@
     <title>Debug</title>
     <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="o-blog version 1.2-78-g5ac21a1">
     <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
     <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
     <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
@@ -1555,7 +1556,7 @@ Here is an example of the =sample-init.el= file:
 &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Author: S&amp;#233;bastien Gross &amp;lt;seb&amp;#8226;&amp;#593;&amp;#428;&amp;#8226;chezwam&amp;#8226;&amp;#598;&amp;#629;&amp;#648;&amp;#8226;org&amp;gt;
 &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Keywords: emacs, 
 &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Created: 2012-03-20
-&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Last changed: 2012-07-02 22:34:35
+&lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Last changed: 2012-07-02 23:03:05
 &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;Licence: WTFPL, grab your copy here: http://sam.zoy.org/wtfpl/
 &lt;/span&gt;
 &lt;span style=\"color: #888a85;\"&gt;;; &lt;/span&gt;&lt;span style=\"color: #888a85;\"&gt;This file is NOT part of GNU Emacs.
@@ -2801,14 +2802,618 @@ entry.
   <h1>Static pages</h1>
   <div class="debug post">
   <div class="debug post">
+  <h2>Bug report</h2>
+  <table>
+    <caption>Dump information for post Bug report</caption>
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
+      <tr><td class="property"><code>title</code></td><td class="value"><pre>"Bug report"</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3204)</pre></td></tr>
+      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>[cl-struct-ob:category "Documentation" "documentation"]</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"bug-report"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"bug-report.html"</pre></td></tr>
+      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
+      <tr><td class="property"><code>sitemap</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
+
+
+To report a bug please be sure your issue is =o-blog= related.
+
+You can bootstrap a simple clean environment
+
+#+begin_src sh
+rm -rf ~/dev/.emacs.d
+mkdir -p ~/dev/.emacs.d
+cd ~/dev/.emacs.d
+git clone git://github.com/renard/o-blog.git
+git clone git://orgmode.org/org-mode.git
+#+end_src
+
+
+Then launch =emacs=:
+
+#+begin_src sh
+  cd ~/dev
+  rm -rf .emacs.d/o-blog/example/out
+  emacs --debug-init -Q  -l .emacs.d/o-blog/sample-init.el --eval \\
+      '(progn (setq browse-url-generic-program \"x-www-browser\"
+        browse-url-browser-function (quote browse-url-generic))
+        (ob-build-sample))'
+#+end_src
+
+You can change =x-www-browser= to your favorite browser.
+
+If anything runs fine emacs would exit normally. Otherwise a buffer called
+=o-blog Bug-report= is created and its content is copied to primary X
+selection (if available). This buffer contains useful information for
+debugging your issue. A browser is launch to the [[https://github.com/renard/o-blog/issues/new][o-blog new issue page]]. You
+can either paste content of the =o-blog Bug-report= buffer or the X primary
+selection (middle click).
+
+Please describe as much as possible your issue (in English). do no hesitate
+to paste your blog file to https://gist.github.com/ this might be useful to
+debug.
+
+
+"</pre></td></tr>
+      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;p&gt;
+To report a bug please be sure your issue is &lt;code&gt;o-blog&lt;/code&gt; related.
+&lt;/p&gt;
+&lt;p&gt;
+You can bootstrap a simple clean environment
+&lt;/p&gt;
+
+
+
+&lt;pre class=\"src src-sh\"&gt;rm -rf ~/dev/.emacs.d
+mkdir -p ~/dev/.emacs.d
+&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; ~/dev/.emacs.d
+git clone git://github.com/renard/o-blog.git
+git clone git://orgmode.org/org-mode.git
+&lt;/pre&gt;
+
+
+
+&lt;p&gt;
+Then launch &lt;code&gt;emacs&lt;/code&gt;:
+&lt;/p&gt;
+
+
+
+&lt;pre class=\"src src-sh\"&gt;&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; ~/dev
+rm -rf .emacs.d/o-blog/example/out
+emacs --debug-init -Q  -l .emacs.d/o-blog/sample-init.el --eval &lt;span style=\"color: #ad7fa8;\"&gt;\\&lt;/span&gt;
+    &lt;span style=\"color: #ad7fa8;\"&gt;'(progn (setq browse-url-generic-program \"x-www-browser\"&lt;/span&gt;
+&lt;span style=\"color: #ad7fa8;\"&gt;      browse-url-browser-function (quote browse-url-generic))&lt;/span&gt;
+&lt;span style=\"color: #ad7fa8;\"&gt;      (ob-build-sample))'&lt;/span&gt;
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+You can change &lt;code&gt;x-www-browser&lt;/code&gt; to your favorite browser.
+&lt;/p&gt;
+&lt;p&gt;
+If anything runs fine emacs would exit normally. Otherwise a buffer called
+&lt;code&gt;o-blog Bug-report&lt;/code&gt; is created and its content is copied to primary X
+selection (if available). This buffer contains useful information for
+debugging your issue. A browser is launch to the &lt;a href=\"https://github.com/renard/o-blog/issues/new\"&gt;o-blog new issue page&lt;/a&gt;. You
+can either paste content of the &lt;code&gt;o-blog Bug-report&lt;/code&gt; buffer or the X primary
+selection (middle click).
+&lt;/p&gt;
+&lt;p&gt;
+Please describe as much as possible your issue (in English). do no hesitate
+to paste your blog file to &lt;a href=\"https://gist.github.com/\"&gt;https://gist.github.com/&lt;/a&gt; this might be useful to
+debug.
+&lt;/p&gt;
+
+"</pre></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="debug post">
+  <h2>Testimonials</h2>
+  <table>
+    <caption>Dump information for post Testimonials</caption>
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
+      <tr><td class="property"><code>title</code></td><td class="value"><pre>"Testimonials"</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3204)</pre></td></tr>
+      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>[cl-struct-ob:category "Documentation" "documentation"]</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static_no_title.html"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"testimonials"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"testimonials.html"</pre></td></tr>
+      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
+      <tr><td class="property"><code>sitemap</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
+
+
+#+BEGIN_HTML
+&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
+#+END_HTML
+
+
+
+#+HTML: &lt;h1&gt;Testimonials&lt;/h1&gt;
+
+#+begin_quote
+/&#8220;o-blog, great static site generator from emacs org-mode.&#8221;/
+
+-- Pierre-Yves Ritschard [[https://twitter.com/pyr/status/160466727195521024][@pyr]] ([[http://openbds.org][OpenBSD]] relayd original author)
+
+-- Sergey Konoplev [[http://twitter.com/gray_hemp][@gray\\_hemp]] ([[http://PostgreSQL-Consulting.com][PostgreSQL Consultant]])
+
+-- Olivier Berger [[http://twitter.com/olberger][@olberger]] ([[http://www.april.org][APRIL administrator]])
+
+-- Dimitri Fontaine [[http://twitter.com/tapoueh][@tapoueh]] ([[http://tapoueh.org/projects.html][el-get and other]] author)
+
+-- Julien Danjou [[http://twitter.com/juldanjou][@juldanjou]] ([[http://awesome.naquadah.org/][Awesome window manager]] and [[http://julien.danjou.info/software/][other]] author)
+
+-- Daniel Farina [[http://twitter.com/danfarina][@danfarina]] (member of the [[http://www.heroku.com/][Heroku]] Department of Data)
+#+end_quote
+
+#+begin_quote
+/&#8220;o-blog, a cool static blog generator from org-mode markup with some nice
+Bootstrap integration.&#8221;/
+
+-- [[http://from-the-cloud.com/en/Random/2012/06/17_sites-back.html][Fabi&#225;n Ezequiel Gallina]]
+#+end_quote
+
+#+begin_quote
+/&#8220;Thank you so much for the truly excellent elisp app. I am learning many
+things from it.&#8221;/
+
+-- [[https://github.com/priyadarshan][priyadarshan]]
+#+end_quote
+
+#+begin_quote
+/&#8220;o-blog looks awesome!&#8221;/
+
+-- [[https://github.com/djcb][Dirk-Jan C. Binnema]] (Author of [[http://www.djcbsoftware.nl/code/mu4e][mu4e]] and [[http://emacs-fu.blogspot.com][emacs-fu]])
+#+end_quote
+
+#+begin_quote
+/&#8220;o-blog is amazing. After using Wordpress seemingly since the dawn of time, then Jekyll for a couple of years, this is like a spring breeze after a long, cold winter.&#8221;/
+
+-- [[https://github.com/fravashi][Farasha Euker]]
+#+end_quote
+
+
+
+#+BEGIN_HTML
+&lt;/div&gt;&lt;div class=\"span6 \"&gt;
+#+END_HTML
+
+
+#+BEGIN_HTML
+&lt;div class=\"hero-unit\"&gt;
+
+#+END_HTML
+
+
+#+HTML: &lt;h1&gt;They use it&lt;/h1&gt;
+
+- [[http://renard.github.com/o-blog][O-blog Project]]
+- [[http://docs.chezwam.org][Mes doc &#224; moi]]
+- [[http://from-the-cloud.com/][From the cloud]]
+- [[http://exaos.github.com/o-blog/][exaos]]
+- [[http://mikio.github.com/index.html][Mikio Kun]]
+- [[http://mimes.is/][Journal of the creative imagination]]
+- [[http://www.djcbsoftware.nl][DJCB Software]]
+
+
+#+BEGIN_HTML
+&lt;/div&gt;
+
+#+END_HTML
+
+
+
+#+BEGIN_HTML
+&lt;div class=\"hero-unit\"&gt;
+
+#+END_HTML
+
+If you do use o-blog, please [[https://github.com/renard/o-blog/issues/new][drop me a line]].
+
+#+BEGIN_HTML
+&lt;/div&gt;
+
+#+END_HTML
+
+
+
+
+#+BEGIN_HTML
+&lt;/div&gt;&lt;/div&gt;
+#+END_HTML
+
+
+"</pre></td></tr>
+      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
+
+
+
+
+
+&lt;h1&gt;Testimonials&lt;/h1&gt;
+
+&lt;blockquote&gt;
+
+&lt;p&gt;&lt;i&gt;&#8220;o-blog, great static site generator from emacs org-mode.&#8221;&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&amp;ndash; Pierre-Yves Ritschard &lt;a href=\"https://twitter.com/pyr/status/160466727195521024\"&gt;@pyr&lt;/a&gt; (&lt;a href=\"http://openbds.org\"&gt;OpenBSD&lt;/a&gt; relayd original author)
+&lt;/p&gt;
+&lt;p&gt;
+&amp;ndash; Sergey Konoplev &lt;a href=\"http://twitter.com/gray_hemp\"&gt;@gray_hemp&lt;/a&gt; (&lt;a href=\"http://PostgreSQL-Consulting.com\"&gt;PostgreSQL Consultant&lt;/a&gt;)
+&lt;/p&gt;
+&lt;p&gt;
+&amp;ndash; Olivier Berger &lt;a href=\"http://twitter.com/olberger\"&gt;@olberger&lt;/a&gt; (&lt;a href=\"http://www.april.org\"&gt;APRIL administrator&lt;/a&gt;)
+&lt;/p&gt;
+&lt;p&gt;
+&amp;ndash; Dimitri Fontaine &lt;a href=\"http://twitter.com/tapoueh\"&gt;@tapoueh&lt;/a&gt; (&lt;a href=\"http://tapoueh.org/projects.html\"&gt;el-get and other&lt;/a&gt; author)
+&lt;/p&gt;
+&lt;p&gt;
+&amp;ndash; Julien Danjou &lt;a href=\"http://twitter.com/juldanjou\"&gt;@juldanjou&lt;/a&gt; (&lt;a href=\"http://awesome.naquadah.org/\"&gt;Awesome window manager&lt;/a&gt; and &lt;a href=\"http://julien.danjou.info/software/\"&gt;other&lt;/a&gt; author)
+&lt;/p&gt;
+&lt;p&gt;
+&amp;ndash; Daniel Farina &lt;a href=\"http://twitter.com/danfarina\"&gt;@danfarina&lt;/a&gt; (member of the &lt;a href=\"http://www.heroku.com/\"&gt;Heroku&lt;/a&gt; Department of Data)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+&lt;blockquote&gt;
+
+&lt;p&gt;&lt;i&gt;&#8220;o-blog, a cool static blog generator from org-mode markup with some nice Bootstrap integration.&#8221;&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&amp;ndash; &lt;a href=\"http://from-the-cloud.com/en/Random/2012/06/17_sites-back.html\"&gt;Fabi&#225;n Ezequiel Gallina&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+&lt;blockquote&gt;
+
+&lt;p&gt;&lt;i&gt;&#8220;Thank you so much for the truly excellent elisp app. I am learning many things from it.&#8221;&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&amp;ndash; &lt;a href=\"https://github.com/priyadarshan\"&gt;priyadarshan&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+&lt;blockquote&gt;
+
+&lt;p&gt;&lt;i&gt;&#8220;o-blog looks awesome!&#8221;&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&amp;ndash; &lt;a href=\"https://github.com/djcb\"&gt;Dirk-Jan C. Binnema&lt;/a&gt; (Author of &lt;a href=\"http://www.djcbsoftware.nl/code/mu4e\"&gt;mu4e&lt;/a&gt; and &lt;a href=\"http://emacs-fu.blogspot.com\"&gt;emacs-fu&lt;/a&gt;)
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+&lt;blockquote&gt;
+
+&lt;p&gt;&lt;i&gt;&#8220;o-blog is amazing. After using Wordpress seemingly since the dawn of time, then Jekyll for a couple of years, this is like a spring breeze after a long, cold winter.&#8221;&lt;/i&gt;
+&lt;/p&gt;
+&lt;p&gt;
+&amp;ndash; &lt;a href=\"https://github.com/fravashi\"&gt;Farasha Euker&lt;/a&gt;
+&lt;/p&gt;
+&lt;/blockquote&gt;
+
+
+
+
+
+
+&lt;/div&gt;&lt;div class=\"span6 \"&gt;
+
+
+&lt;div class=\"hero-unit\"&gt;
+
+
+
+
+
+&lt;h1&gt;They use it&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=\"http://renard.github.com/o-blog\"&gt;O-blog Project&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=\"http://docs.chezwam.org\"&gt;Mes doc &#224; moi&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=\"http://from-the-cloud.com/\"&gt;From the cloud&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=\"http://exaos.github.com/o-blog/\"&gt;exaos&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=\"http://mikio.github.com/index.html\"&gt;Mikio Kun&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=\"http://mimes.is/\"&gt;Journal of the creative imagination&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=\"http://www.djcbsoftware.nl\"&gt;DJCB Software&lt;/a&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+
+
+&lt;/div&gt;
+
+
+
+
+&lt;div class=\"hero-unit\"&gt;
+
+
+&lt;p&gt;
+If you do use o-blog, please &lt;a href=\"https://github.com/renard/o-blog/issues/new\"&gt;drop me a line&lt;/a&gt;.
+&lt;/p&gt;
+
+
+&lt;/div&gt;
+
+
+
+
+
+&lt;/div&gt;&lt;/div&gt;
+
+
+"</pre></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="debug post">
+  <h2>Roadmap</h2>
+  <table>
+    <caption>Dump information for post Roadmap</caption>
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
+      <tr><td class="property"><code>title</code></td><td class="value"><pre>"Roadmap"</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3204)</pre></td></tr>
+      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>[cl-struct-ob:category "Documentation" "documentation"]</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"roadmap"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"roadmap.html"</pre></td></tr>
+      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
+      <tr><td class="property"><code>sitemap</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
+
+
+Here are some ideas for future versions
+
+- Use other source engines such as
+  - [[http://www.methods.co.nz/asciidoc/][AsciiDoc]]
+  - [[http://mwolson.org/projects/EmacsMuse.html][Emacs Muse]]
+  - etc...
+
+- Find a other name for the project such as
+  - Web Hypertext Otimized Rendering Easy System
+  - Building the Interweb from Texts Classic Hypermedia
+  - Build All Internet Standard E-documents
+  - Publication Unifi&#233;e de Tous E-documents
+  - el-site
+  - el-sitemanage
+  - el-sitepublish
+  - el-sitepress
+
+If you have any ideas please [[https://github.com/renard/o-blog/issues/new][drop me a line]].
+
+
+"</pre></td></tr>
+      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;p&gt;
+Here are some ideas for future versions
+&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Use other source engines such as
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=\"http://www.methods.co.nz/asciidoc/\"&gt;AsciiDoc&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;a href=\"http://mwolson.org/projects/EmacsMuse.html\"&gt;Emacs Muse&lt;/a&gt;
+&lt;/li&gt;
+&lt;li&gt;etc&amp;hellip;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/li&gt;
+&lt;li&gt;Find a other name for the project such as
+&lt;ul&gt;
+&lt;li&gt;Web Hypertext Otimized Rendering Easy System
+&lt;/li&gt;
+&lt;li&gt;Building the Interweb from Texts Classic Hypermedia
+&lt;/li&gt;
+&lt;li&gt;Build All Internet Standard E-documents
+&lt;/li&gt;
+&lt;li&gt;Publication Unifi&#233;e de Tous E-documents
+&lt;/li&gt;
+&lt;li&gt;el-site
+&lt;/li&gt;
+&lt;li&gt;el-sitemanage
+&lt;/li&gt;
+&lt;li&gt;el-sitepublish
+&lt;/li&gt;
+&lt;li&gt;el-sitepress
+&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;
+If you have any ideas please &lt;a href=\"https://github.com/renard/o-blog/issues/new\"&gt;drop me a line&lt;/a&gt;.
+&lt;/p&gt;
+
+"</pre></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="debug post">
+  <h2>FAQ</h2>
+  <table>
+    <caption>Dump information for post FAQ</caption>
+    <thead><tr><th>Property</th><th>Value</th></tr></thead>
+    <tbody>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>title</code></td><td class="value"><pre>"FAQ"</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3204)</pre></td></tr>
+      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
+      <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
+      <tr><td class="property"><code>category</code></td><td class="value"><pre>[cl-struct-ob:category "Documentation" "documentation"]</pre></td></tr>
+      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
+      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"faq"</pre></td></tr>
+      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"faq.html"</pre></td></tr>
+      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
+      <tr><td class="property"><code>sitemap</code></td><td class="value"><pre>nil</pre></td></tr>
+      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
+
+
+** My page looks ugly
+
+Maybe you are using [[https://www.google.com/chrome/][google-chrome]] and try to view your site locally using a
+=file:///path/to/your/site/out/index.html= scheme. Open the javascript console
+=Ctrl+Shift+I= you should see something like:
+
+#+begin_example
+XMLHttpRequest cannot load file:///path/to/your/site/out/out/style/css/o-blog.less. Cross origin requests are only supported for HTTP.
+less-1.2.1.min.js:8Uncaught Error: NETWORK_ERR: XMLHttpRequest Exception 101
+#+end_example
+
+There is a known Chrome issue with loading local javascript files. This is a
+/security feature/ in Chrome.
+
+You can disable this with the =--allow-file-access-from-files= option to
+chrome or you can use an other browser or setup a local webserver.
+
+There are many complex solutions for a webserver such as [[http://nginx.org/][nginx]] or [[http://httpd.apache.org/][Apache]] or
+many [[http://en.wikipedia.org/wiki/Comparison_of_web_server_software][others]].
+
+You may want to prefer a lighter and simpler solution.
+
+With python simply run:
+
+#+begin_src sh
+cd /path/to/your/site &amp;&amp; python -m SimpleHTTPServer
+#+end_src
+
+And browse http://localhost:8000
+
+Or within emacs you can run [[https://github.com/jrhbailey/emacs-http-server][emacs-http-server]]:
+
+#+begin_src emacs-lisp
+(require 'httpd)
+(setq httpd-root \"/path/to/your/site\")
+(httpd-start)
+#+end_src
+
+and browse http://localhost:8080
+
+An other alternative would be the use of [[http://www.emacswiki.org/emacs/Elnode][elnode]] but it seems to be more
+complex.
+"</pre></td></tr>
+      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;div id=\"outline-container-1\" class=\"outline-3\"&gt;
+&lt;h3 id=\"sec-1\"&gt;My page looks ugly&lt;/h3&gt;
+&lt;div class=\"outline-text-3\" id=\"text-1\"&gt;
+
+
+&lt;p&gt;
+Maybe you are using &lt;a href=\"https://www.google.com/chrome/\"&gt;google-chrome&lt;/a&gt; and try to view your site locally using a
+&lt;code&gt;file:///path/to/your/site/out/index.html&lt;/code&gt; scheme. Open the javascript console
+&lt;code&gt;Ctrl+Shift+I&lt;/code&gt; you should see something like:
+&lt;/p&gt;
+
+
+
+&lt;pre class=\"example\"&gt;XMLHttpRequest cannot load file:///path/to/your/site/out/out/style/css/o-blog.less. Cross origin requests are only supported for HTTP.
+less-1.2.1.min.js:8Uncaught Error: NETWORK_ERR: XMLHttpRequest Exception 101
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+There is a known Chrome issue with loading local javascript files. This is a
+&lt;i&gt;security feature&lt;/i&gt; in Chrome.
+&lt;/p&gt;
+&lt;p&gt;
+You can disable this with the &lt;code&gt;--allow-file-access-from-files&lt;/code&gt; option to
+chrome or you can use an other browser or setup a local webserver.
+&lt;/p&gt;
+&lt;p&gt;
+There are many complex solutions for a webserver such as &lt;a href=\"http://nginx.org/\"&gt;nginx&lt;/a&gt; or &lt;a href=\"http://httpd.apache.org/\"&gt;Apache&lt;/a&gt; or
+many &lt;a href=\"http://en.wikipedia.org/wiki/Comparison_of_web_server_software\"&gt;others&lt;/a&gt;.
+&lt;/p&gt;
+&lt;p&gt;
+You may want to prefer a lighter and simpler solution.
+&lt;/p&gt;
+&lt;p&gt;
+With python simply run:
+&lt;/p&gt;
+
+
+
+&lt;pre class=\"src src-sh\"&gt;&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; /path/to/your/site &amp;amp;&amp;amp; python -m SimpleHTTPServer
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+And browse &lt;a href=\"http://localhost:8000\"&gt;http://localhost:8000&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+Or within emacs you can run &lt;a href=\"https://github.com/jrhbailey/emacs-http-server\"&gt;emacs-http-server&lt;/a&gt;:
+&lt;/p&gt;
+
+
+
+&lt;pre class=\"src src-emacs-lisp\"&gt;(&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;httpd&lt;/span&gt;)
+(setq httpd-root &lt;span style=\"color: #ad7fa8;\"&gt;\"/path/to/your/site\"&lt;/span&gt;)
+(httpd-start)
+&lt;/pre&gt;
+
+
+&lt;p&gt;
+and browse &lt;a href=\"http://localhost:8080\"&gt;http://localhost:8080&lt;/a&gt;
+&lt;/p&gt;
+&lt;p&gt;
+An other alternative would be the use of &lt;a href=\"http://www.emacswiki.org/emacs/Elnode\"&gt;elnode&lt;/a&gt; but it seems to be more
+complex.
+&lt;/p&gt;&lt;/div&gt;
+&lt;/div&gt;
+"</pre></td></tr>
+    </tbody>
+  </table>
+</div>
+<div class="debug post">
   <h2>Quick start Guide</h2>
   <table>
     <caption>Dump information for post Quick start Guide</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Quick start Guide"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3144)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
@@ -3085,9 +3690,9 @@ See the &lt;a href=\"Tips/index.html\"&gt;tips&lt;/a&gt; for more details.
     <caption>Dump information for post Articles by tags</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Articles by tags"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3144)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
@@ -3113,9 +3718,9 @@ See the &lt;a href=\"Tips/index.html\"&gt;tips&lt;/a&gt; for more details.
     <caption>Dump information for post Changelog</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Changelog"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3144)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
@@ -3351,9 +3956,9 @@ See the &lt;a href=\"Tips/index.html\"&gt;tips&lt;/a&gt; for more details.
     <caption>Dump information for post Debug</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Debug"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3144)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
@@ -3379,9 +3984,9 @@ See the &lt;a href=\"Tips/index.html\"&gt;tips&lt;/a&gt; for more details.
     <caption>Dump information for post Features</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>4</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>8</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Features"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3144)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
@@ -3495,9 +4100,9 @@ See the &lt;a href=\"Tips/index.html\"&gt;tips&lt;/a&gt; for more details.
     <caption>Dump information for post Templates</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>5</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>9</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Templates"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3144)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
@@ -3726,9 +4331,9 @@ month and the whole archives.
     <caption>Dump information for post Structures</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>6</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>10</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Structures"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3144)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
@@ -4091,9 +4696,9 @@ Some variables may be defined in some functions:
     <caption>Dump information for post Functions</caption>
     <thead><tr><th>Property</th><th>Value</th></tr></thead>
     <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>7</pre></td></tr>
+      <tr><td class="property"><code>id</code></td><td class="value"><pre>11</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Functions"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3144)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
@@ -4564,610 +5169,6 @@ Add a human readable timestamp for a post:
   </table>
 </div>
 <div class="debug post">
-  <h2>Bug report</h2>
-  <table>
-    <caption>Dump information for post Bug report</caption>
-    <thead><tr><th>Property</th><th>Value</th></tr></thead>
-    <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>8</pre></td></tr>
-      <tr><td class="property"><code>title</code></td><td class="value"><pre>"Bug report"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
-      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>[cl-struct-ob:category "Documentation" "documentation"]</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"bug-report"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"bug-report.html"</pre></td></tr>
-      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>sitemap</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
-
-
-To report a bug please be sure your issue is =o-blog= related.
-
-You can bootstrap a simple clean environment
-
-#+begin_src sh
-rm -rf ~/dev/.emacs.d
-mkdir -p ~/dev/.emacs.d
-cd ~/dev/.emacs.d
-git clone git://github.com/renard/o-blog.git
-git clone git://orgmode.org/org-mode.git
-#+end_src
-
-
-Then launch =emacs=:
-
-#+begin_src sh
-  cd ~/dev
-  rm -rf .emacs.d/o-blog/example/out
-  emacs --debug-init -Q  -l .emacs.d/o-blog/sample-init.el --eval \\
-      '(progn (setq browse-url-generic-program \"x-www-browser\"
-        browse-url-browser-function (quote browse-url-generic))
-        (ob-build-sample))'
-#+end_src
-
-You can change =x-www-browser= to your favorite browser.
-
-If anything runs fine emacs would exit normally. Otherwise a buffer called
-=o-blog Bug-report= is created and its content is copied to primary X
-selection (if available). This buffer contains useful information for
-debugging your issue. A browser is launch to the [[https://github.com/renard/o-blog/issues/new][o-blog new issue page]]. You
-can either paste content of the =o-blog Bug-report= buffer or the X primary
-selection (middle click).
-
-Please describe as much as possible your issue (in English). do no hesitate
-to paste your blog file to https://gist.github.com/ this might be useful to
-debug.
-
-
-"</pre></td></tr>
-      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;p&gt;
-To report a bug please be sure your issue is &lt;code&gt;o-blog&lt;/code&gt; related.
-&lt;/p&gt;
-&lt;p&gt;
-You can bootstrap a simple clean environment
-&lt;/p&gt;
-
-
-
-&lt;pre class=\"src src-sh\"&gt;rm -rf ~/dev/.emacs.d
-mkdir -p ~/dev/.emacs.d
-&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; ~/dev/.emacs.d
-git clone git://github.com/renard/o-blog.git
-git clone git://orgmode.org/org-mode.git
-&lt;/pre&gt;
-
-
-
-&lt;p&gt;
-Then launch &lt;code&gt;emacs&lt;/code&gt;:
-&lt;/p&gt;
-
-
-
-&lt;pre class=\"src src-sh\"&gt;&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; ~/dev
-rm -rf .emacs.d/o-blog/example/out
-emacs --debug-init -Q  -l .emacs.d/o-blog/sample-init.el --eval &lt;span style=\"color: #ad7fa8;\"&gt;\\&lt;/span&gt;
-    &lt;span style=\"color: #ad7fa8;\"&gt;'(progn (setq browse-url-generic-program \"x-www-browser\"&lt;/span&gt;
-&lt;span style=\"color: #ad7fa8;\"&gt;      browse-url-browser-function (quote browse-url-generic))&lt;/span&gt;
-&lt;span style=\"color: #ad7fa8;\"&gt;      (ob-build-sample))'&lt;/span&gt;
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-You can change &lt;code&gt;x-www-browser&lt;/code&gt; to your favorite browser.
-&lt;/p&gt;
-&lt;p&gt;
-If anything runs fine emacs would exit normally. Otherwise a buffer called
-&lt;code&gt;o-blog Bug-report&lt;/code&gt; is created and its content is copied to primary X
-selection (if available). This buffer contains useful information for
-debugging your issue. A browser is launch to the &lt;a href=\"https://github.com/renard/o-blog/issues/new\"&gt;o-blog new issue page&lt;/a&gt;. You
-can either paste content of the &lt;code&gt;o-blog Bug-report&lt;/code&gt; buffer or the X primary
-selection (middle click).
-&lt;/p&gt;
-&lt;p&gt;
-Please describe as much as possible your issue (in English). do no hesitate
-to paste your blog file to &lt;a href=\"https://gist.github.com/\"&gt;https://gist.github.com/&lt;/a&gt; this might be useful to
-debug.
-&lt;/p&gt;
-
-"</pre></td></tr>
-    </tbody>
-  </table>
-</div>
-<div class="debug post">
-  <h2>Testimonials</h2>
-  <table>
-    <caption>Dump information for post Testimonials</caption>
-    <thead><tr><th>Property</th><th>Value</th></tr></thead>
-    <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>9</pre></td></tr>
-      <tr><td class="property"><code>title</code></td><td class="value"><pre>"Testimonials"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
-      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>[cl-struct-ob:category "Documentation" "documentation"]</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static_no_title.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"testimonials"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"testimonials.html"</pre></td></tr>
-      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>sitemap</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
-
-
-#+BEGIN_HTML
-&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
-#+END_HTML
-
-
-
-#+HTML: &lt;h1&gt;Testimonials&lt;/h1&gt;
-
-#+begin_quote
-/&#8220;o-blog, great static site generator from emacs org-mode.&#8221;/
-
--- Pierre-Yves Ritschard [[https://twitter.com/pyr/status/160466727195521024][@pyr]] ([[http://openbds.org][OpenBSD]] relayd original author)
-
--- Sergey Konoplev [[http://twitter.com/gray_hemp][@gray\\_hemp]] ([[http://PostgreSQL-Consulting.com][PostgreSQL Consultant]])
-
--- Olivier Berger [[http://twitter.com/olberger][@olberger]] ([[http://www.april.org][APRIL administrator]])
-
--- Dimitri Fontaine [[http://twitter.com/tapoueh][@tapoueh]] ([[http://tapoueh.org/projects.html][el-get and other]] author)
-
--- Julien Danjou [[http://twitter.com/juldanjou][@juldanjou]] ([[http://awesome.naquadah.org/][Awesome window manager]] and [[http://julien.danjou.info/software/][other]] author)
-
--- Daniel Farina [[http://twitter.com/danfarina][@danfarina]] (member of the [[http://www.heroku.com/][Heroku]] Department of Data)
-#+end_quote
-
-#+begin_quote
-/&#8220;o-blog, a cool static blog generator from org-mode markup with some nice
-Bootstrap integration.&#8221;/
-
--- [[http://from-the-cloud.com/en/Random/2012/06/17_sites-back.html][Fabi&#225;n Ezequiel Gallina]]
-#+end_quote
-
-#+begin_quote
-/&#8220;Thank you so much for the truly excellent elisp app. I am learning many
-things from it.&#8221;/
-
--- [[https://github.com/priyadarshan][priyadarshan]]
-#+end_quote
-
-#+begin_quote
-/&#8220;o-blog looks awesome!&#8221;/
-
--- [[https://github.com/djcb][Dirk-Jan C. Binnema]] (Author of [[http://www.djcbsoftware.nl/code/mu4e][mu4e]] and [[http://emacs-fu.blogspot.com][emacs-fu]])
-#+end_quote
-
-#+begin_quote
-/&#8220;o-blog is amazing. After using Wordpress seemingly since the dawn of time, then Jekyll for a couple of years, this is like a spring breeze after a long, cold winter.&#8221;/
-
--- [[https://github.com/fravashi][Farasha Euker]]
-#+end_quote
-
-
-
-#+BEGIN_HTML
-&lt;/div&gt;&lt;div class=\"span6 \"&gt;
-#+END_HTML
-
-
-#+BEGIN_HTML
-&lt;div class=\"hero-unit\"&gt;
-
-#+END_HTML
-
-
-#+HTML: &lt;h1&gt;They use it&lt;/h1&gt;
-
-- [[http://renard.github.com/o-blog][O-blog Project]]
-- [[http://docs.chezwam.org][Mes doc &#224; moi]]
-- [[http://from-the-cloud.com/][From the cloud]]
-- [[http://exaos.github.com/o-blog/][exaos]]
-- [[http://mikio.github.com/index.html][Mikio Kun]]
-- [[http://mimes.is/][Journal of the creative imagination]]
-- [[http://www.djcbsoftware.nl][DJCB Software]]
-
-
-#+BEGIN_HTML
-&lt;/div&gt;
-
-#+END_HTML
-
-
-
-#+BEGIN_HTML
-&lt;div class=\"hero-unit\"&gt;
-
-#+END_HTML
-
-If you do use o-blog, please [[https://github.com/renard/o-blog/issues/new][drop me a line]].
-
-#+BEGIN_HTML
-&lt;/div&gt;
-
-#+END_HTML
-
-
-
-
-#+BEGIN_HTML
-&lt;/div&gt;&lt;/div&gt;
-#+END_HTML
-
-
-"</pre></td></tr>
-      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;div class=\"row \"&gt;&lt;div class=\"span6 \"&gt;
-
-
-
-
-
-&lt;h1&gt;Testimonials&lt;/h1&gt;
-
-&lt;blockquote&gt;
-
-&lt;p&gt;&lt;i&gt;&#8220;o-blog, great static site generator from emacs org-mode.&#8221;&lt;/i&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&amp;ndash; Pierre-Yves Ritschard &lt;a href=\"https://twitter.com/pyr/status/160466727195521024\"&gt;@pyr&lt;/a&gt; (&lt;a href=\"http://openbds.org\"&gt;OpenBSD&lt;/a&gt; relayd original author)
-&lt;/p&gt;
-&lt;p&gt;
-&amp;ndash; Sergey Konoplev &lt;a href=\"http://twitter.com/gray_hemp\"&gt;@gray_hemp&lt;/a&gt; (&lt;a href=\"http://PostgreSQL-Consulting.com\"&gt;PostgreSQL Consultant&lt;/a&gt;)
-&lt;/p&gt;
-&lt;p&gt;
-&amp;ndash; Olivier Berger &lt;a href=\"http://twitter.com/olberger\"&gt;@olberger&lt;/a&gt; (&lt;a href=\"http://www.april.org\"&gt;APRIL administrator&lt;/a&gt;)
-&lt;/p&gt;
-&lt;p&gt;
-&amp;ndash; Dimitri Fontaine &lt;a href=\"http://twitter.com/tapoueh\"&gt;@tapoueh&lt;/a&gt; (&lt;a href=\"http://tapoueh.org/projects.html\"&gt;el-get and other&lt;/a&gt; author)
-&lt;/p&gt;
-&lt;p&gt;
-&amp;ndash; Julien Danjou &lt;a href=\"http://twitter.com/juldanjou\"&gt;@juldanjou&lt;/a&gt; (&lt;a href=\"http://awesome.naquadah.org/\"&gt;Awesome window manager&lt;/a&gt; and &lt;a href=\"http://julien.danjou.info/software/\"&gt;other&lt;/a&gt; author)
-&lt;/p&gt;
-&lt;p&gt;
-&amp;ndash; Daniel Farina &lt;a href=\"http://twitter.com/danfarina\"&gt;@danfarina&lt;/a&gt; (member of the &lt;a href=\"http://www.heroku.com/\"&gt;Heroku&lt;/a&gt; Department of Data)
-&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-&lt;blockquote&gt;
-
-&lt;p&gt;&lt;i&gt;&#8220;o-blog, a cool static blog generator from org-mode markup with some nice Bootstrap integration.&#8221;&lt;/i&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&amp;ndash; &lt;a href=\"http://from-the-cloud.com/en/Random/2012/06/17_sites-back.html\"&gt;Fabi&#225;n Ezequiel Gallina&lt;/a&gt;
-&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-&lt;blockquote&gt;
-
-&lt;p&gt;&lt;i&gt;&#8220;Thank you so much for the truly excellent elisp app. I am learning many things from it.&#8221;&lt;/i&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&amp;ndash; &lt;a href=\"https://github.com/priyadarshan\"&gt;priyadarshan&lt;/a&gt;
-&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-&lt;blockquote&gt;
-
-&lt;p&gt;&lt;i&gt;&#8220;o-blog looks awesome!&#8221;&lt;/i&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&amp;ndash; &lt;a href=\"https://github.com/djcb\"&gt;Dirk-Jan C. Binnema&lt;/a&gt; (Author of &lt;a href=\"http://www.djcbsoftware.nl/code/mu4e\"&gt;mu4e&lt;/a&gt; and &lt;a href=\"http://emacs-fu.blogspot.com\"&gt;emacs-fu&lt;/a&gt;)
-&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-&lt;blockquote&gt;
-
-&lt;p&gt;&lt;i&gt;&#8220;o-blog is amazing. After using Wordpress seemingly since the dawn of time, then Jekyll for a couple of years, this is like a spring breeze after a long, cold winter.&#8221;&lt;/i&gt;
-&lt;/p&gt;
-&lt;p&gt;
-&amp;ndash; &lt;a href=\"https://github.com/fravashi\"&gt;Farasha Euker&lt;/a&gt;
-&lt;/p&gt;
-&lt;/blockquote&gt;
-
-
-
-
-
-
-&lt;/div&gt;&lt;div class=\"span6 \"&gt;
-
-
-&lt;div class=\"hero-unit\"&gt;
-
-
-
-
-
-&lt;h1&gt;They use it&lt;/h1&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=\"http://renard.github.com/o-blog\"&gt;O-blog Project&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=\"http://docs.chezwam.org\"&gt;Mes doc &#224; moi&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=\"http://from-the-cloud.com/\"&gt;From the cloud&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=\"http://exaos.github.com/o-blog/\"&gt;exaos&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=\"http://mikio.github.com/index.html\"&gt;Mikio Kun&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=\"http://mimes.is/\"&gt;Journal of the creative imagination&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=\"http://www.djcbsoftware.nl\"&gt;DJCB Software&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-
-
-
-
-
-&lt;/div&gt;
-
-
-
-
-&lt;div class=\"hero-unit\"&gt;
-
-
-&lt;p&gt;
-If you do use o-blog, please &lt;a href=\"https://github.com/renard/o-blog/issues/new\"&gt;drop me a line&lt;/a&gt;.
-&lt;/p&gt;
-
-
-&lt;/div&gt;
-
-
-
-
-
-&lt;/div&gt;&lt;/div&gt;
-
-
-"</pre></td></tr>
-    </tbody>
-  </table>
-</div>
-<div class="debug post">
-  <h2>Roadmap</h2>
-  <table>
-    <caption>Dump information for post Roadmap</caption>
-    <thead><tr><th>Property</th><th>Value</th></tr></thead>
-    <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>10</pre></td></tr>
-      <tr><td class="property"><code>title</code></td><td class="value"><pre>"Roadmap"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
-      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>[cl-struct-ob:category "Documentation" "documentation"]</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"roadmap"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"roadmap.html"</pre></td></tr>
-      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>sitemap</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
-
-
-Here are some ideas for future versions
-
-- Use other source engines such as
-  - [[http://www.methods.co.nz/asciidoc/][AsciiDoc]]
-  - [[http://mwolson.org/projects/EmacsMuse.html][Emacs Muse]]
-  - etc...
-
-- Find a other name for the project such as
-  - Web Hypertext Otimized Rendering Easy System
-  - Building the Interweb from Texts Classic Hypermedia
-  - Build All Internet Standard E-documents
-  - Publication Unifi&#233;e de Tous E-documents
-  - el-site
-  - el-sitemanage
-  - el-sitepublish
-  - el-sitepress
-
-If you have any ideas please [[https://github.com/renard/o-blog/issues/new][drop me a line]].
-
-
-"</pre></td></tr>
-      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;p&gt;
-Here are some ideas for future versions
-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Use other source engines such as
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=\"http://www.methods.co.nz/asciidoc/\"&gt;AsciiDoc&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;a href=\"http://mwolson.org/projects/EmacsMuse.html\"&gt;Emacs Muse&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;etc&amp;hellip;
-
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/li&gt;
-&lt;li&gt;Find a other name for the project such as
-&lt;ul&gt;
-&lt;li&gt;Web Hypertext Otimized Rendering Easy System
-&lt;/li&gt;
-&lt;li&gt;Building the Interweb from Texts Classic Hypermedia
-&lt;/li&gt;
-&lt;li&gt;Build All Internet Standard E-documents
-&lt;/li&gt;
-&lt;li&gt;Publication Unifi&#233;e de Tous E-documents
-&lt;/li&gt;
-&lt;li&gt;el-site
-&lt;/li&gt;
-&lt;li&gt;el-sitemanage
-&lt;/li&gt;
-&lt;li&gt;el-sitepublish
-&lt;/li&gt;
-&lt;li&gt;el-sitepress
-&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;p&gt;
-If you have any ideas please &lt;a href=\"https://github.com/renard/o-blog/issues/new\"&gt;drop me a line&lt;/a&gt;.
-&lt;/p&gt;
-
-"</pre></td></tr>
-    </tbody>
-  </table>
-</div>
-<div class="debug post">
-  <h2>FAQ</h2>
-  <table>
-    <caption>Dump information for post FAQ</caption>
-    <thead><tr><th>Property</th><th>Value</th></tr></thead>
-    <tbody>
-      <tr><td class="property"><code>id</code></td><td class="value"><pre>11</pre></td></tr>
-      <tr><td class="property"><code>title</code></td><td class="value"><pre>"FAQ"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
-      <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
-      <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
-      <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
-      <tr><td class="property"><code>category</code></td><td class="value"><pre>[cl-struct-ob:category "Documentation" "documentation"]</pre></td></tr>
-      <tr><td class="property"><code>tags</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>template</code></td><td class="value"><pre>"blog_static.html"</pre></td></tr>
-      <tr><td class="property"><code>filepath</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>filename</code></td><td class="value"><pre>"faq"</pre></td></tr>
-      <tr><td class="property"><code>htmlfile</code></td><td class="value"><pre>"faq.html"</pre></td></tr>
-      <tr><td class="property"><code>path-to-root</code></td><td class="value"><pre>"."</pre></td></tr>
-      <tr><td class="property"><code>sitemap</code></td><td class="value"><pre>nil</pre></td></tr>
-      <tr><td class="property"><code>content</code></td><td class="value"><pre>"#+OPTIONS: H:7 num:nil  toc:nil d:nil todo:nil &lt;:nil pri:nil tags:nil
-
-
-** My page looks ugly
-
-Maybe you are using [[https://www.google.com/chrome/][google-chrome]] and try to view your site locally using a
-=file:///path/to/your/site/out/index.html= scheme. Open the javascript console
-=Ctrl+Shift+I= you should see something like:
-
-#+begin_example
-XMLHttpRequest cannot load file:///path/to/your/site/out/out/style/css/o-blog.less. Cross origin requests are only supported for HTTP.
-less-1.2.1.min.js:8Uncaught Error: NETWORK_ERR: XMLHttpRequest Exception 101
-#+end_example
-
-There is a known Chrome issue with loading local javascript files. This is a
-/security feature/ in Chrome.
-
-You can disable this with the =--allow-file-access-from-files= option to
-chrome or you can use an other browser or setup a local webserver.
-
-There are many complex solutions for a webserver such as [[http://nginx.org/][nginx]] or [[http://httpd.apache.org/][Apache]] or
-many [[http://en.wikipedia.org/wiki/Comparison_of_web_server_software][others]].
-
-You may want to prefer a lighter and simpler solution.
-
-With python simply run:
-
-#+begin_src sh
-cd /path/to/your/site &amp;&amp; python -m SimpleHTTPServer
-#+end_src
-
-And browse http://localhost:8000
-
-Or within emacs you can run [[https://github.com/jrhbailey/emacs-http-server][emacs-http-server]]:
-
-#+begin_src emacs-lisp
-(require 'httpd)
-(setq httpd-root \"/path/to/your/site\")
-(httpd-start)
-#+end_src
-
-and browse http://localhost:8080
-
-An other alternative would be the use of [[http://www.emacswiki.org/emacs/Elnode][elnode]] but it seems to be more
-complex.
-"</pre></td></tr>
-      <tr><td class="property"><code>content-html</code></td><td class="value"><pre>"&lt;div id=\"outline-container-1\" class=\"outline-3\"&gt;
-&lt;h3 id=\"sec-1\"&gt;My page looks ugly&lt;/h3&gt;
-&lt;div class=\"outline-text-3\" id=\"text-1\"&gt;
-
-
-&lt;p&gt;
-Maybe you are using &lt;a href=\"https://www.google.com/chrome/\"&gt;google-chrome&lt;/a&gt; and try to view your site locally using a
-&lt;code&gt;file:///path/to/your/site/out/index.html&lt;/code&gt; scheme. Open the javascript console
-&lt;code&gt;Ctrl+Shift+I&lt;/code&gt; you should see something like:
-&lt;/p&gt;
-
-
-
-&lt;pre class=\"example\"&gt;XMLHttpRequest cannot load file:///path/to/your/site/out/out/style/css/o-blog.less. Cross origin requests are only supported for HTTP.
-less-1.2.1.min.js:8Uncaught Error: NETWORK_ERR: XMLHttpRequest Exception 101
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-There is a known Chrome issue with loading local javascript files. This is a
-&lt;i&gt;security feature&lt;/i&gt; in Chrome.
-&lt;/p&gt;
-&lt;p&gt;
-You can disable this with the &lt;code&gt;--allow-file-access-from-files&lt;/code&gt; option to
-chrome or you can use an other browser or setup a local webserver.
-&lt;/p&gt;
-&lt;p&gt;
-There are many complex solutions for a webserver such as &lt;a href=\"http://nginx.org/\"&gt;nginx&lt;/a&gt; or &lt;a href=\"http://httpd.apache.org/\"&gt;Apache&lt;/a&gt; or
-many &lt;a href=\"http://en.wikipedia.org/wiki/Comparison_of_web_server_software\"&gt;others&lt;/a&gt;.
-&lt;/p&gt;
-&lt;p&gt;
-You may want to prefer a lighter and simpler solution.
-&lt;/p&gt;
-&lt;p&gt;
-With python simply run:
-&lt;/p&gt;
-
-
-
-&lt;pre class=\"src src-sh\"&gt;&lt;span style=\"color: #729fcf;\"&gt;cd&lt;/span&gt; /path/to/your/site &amp;amp;&amp;amp; python -m SimpleHTTPServer
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-And browse &lt;a href=\"http://localhost:8000\"&gt;http://localhost:8000&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;
-Or within emacs you can run &lt;a href=\"https://github.com/jrhbailey/emacs-http-server\"&gt;emacs-http-server&lt;/a&gt;:
-&lt;/p&gt;
-
-
-
-&lt;pre class=\"src src-emacs-lisp\"&gt;(&lt;span style=\"color: #729fcf; font-weight: bold;\"&gt;require&lt;/span&gt; '&lt;span style=\"color: #8ae234;\"&gt;httpd&lt;/span&gt;)
-(setq httpd-root &lt;span style=\"color: #ad7fa8;\"&gt;\"/path/to/your/site\"&lt;/span&gt;)
-(httpd-start)
-&lt;/pre&gt;
-
-
-&lt;p&gt;
-and browse &lt;a href=\"http://localhost:8080\"&gt;http://localhost:8080&lt;/a&gt;
-&lt;/p&gt;
-&lt;p&gt;
-An other alternative would be the use of &lt;a href=\"http://www.emacswiki.org/emacs/Elnode\"&gt;elnode&lt;/a&gt; but it seems to be more
-complex.
-&lt;/p&gt;&lt;/div&gt;
-&lt;/div&gt;
-"</pre></td></tr>
-    </tbody>
-  </table>
-</div>
-<div class="debug post">
   <h2>Redirect from (Example of some org syntax)</h2>
   <table>
     <caption>Dump information for post Redirect from (Example of some org syntax)</caption>
@@ -5175,7 +5176,7 @@ complex.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>nil</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Redirect from (Example of some org syntax)"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3204)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
@@ -5217,7 +5218,7 @@ complex.
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>0</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Copyright"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3204)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
@@ -5250,7 +5251,7 @@ Copyright &#169; 2008-2012 &lt;a href=\"mailto:seb%20&#10088;&#593;&#422;&#629;&
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>1</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"About"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3204)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
@@ -5281,7 +5282,7 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>2</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Navigation"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3204)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
@@ -5402,7 +5403,7 @@ This is a sample blog to explain how &lt;a href=\"https://github.com/renard/o-bl
     <tbody>
       <tr><td class="property"><code>id</code></td><td class="value"><pre>3</pre></td></tr>
       <tr><td class="property"><code>title</code></td><td class="value"><pre>"Navigation Footer"</pre></td></tr>
-      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 1464)</pre></td></tr>
+      <tr><td class="property"><code>timespamp</code></td><td class="value"><pre>(20466 3204)</pre></td></tr>
       <tr><td class="property"><code>year</code></td><td class="value"><pre>2012</pre></td></tr>
       <tr><td class="property"><code>month</code></td><td class="value"><pre>7</pre></td></tr>
       <tr><td class="property"><code>day</code></td><td class="value"><pre>2</pre></td></tr>
