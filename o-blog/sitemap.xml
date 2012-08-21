@@ -2,91 +2,98 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>http://renard.github.com/o-blog/</loc>
-    <lastmod>2012-08-10T10:25:58Z</lastmod>
+    <lastmod>2012-08-21T11:02:33Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
   <url>
     <loc>http://renard.github.com/o-blog/index.html</loc>
-    <lastmod>2012-08-21T02:02:00Z</lastmod>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/tags.html</loc>
-    <lastmod>2012-08-21T02:02:00Z</lastmod>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/changelog.html</loc>
-    <lastmod>2012-08-21T02:02:00Z</lastmod>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/features.html</loc>
-    <lastmod>2012-08-21T02:02:00Z</lastmod>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/templates.html</loc>
-    <lastmod>2012-08-21T02:02:00Z</lastmod>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/structures.html</loc>
-    <lastmod>2012-08-21T02:02:00Z</lastmod>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/functions.html</loc>
-    <lastmod>2012-08-21T02:02:00Z</lastmod>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/bug-report.html</loc>
-    <lastmod>2012-08-21T02:02:00Z</lastmod>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/testimonials.html</loc>
-    <lastmod>2012-08-21T02:02:00Z</lastmod>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/roadmap.html</loc>
-    <lastmod>2012-08-21T02:02:00Z</lastmod>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/faq.html</loc>
-    <lastmod>2012-08-21T02:02:00Z</lastmod>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
 <url>
     <loc>http://renard.github.com/o-blog/tips/2012/01/07_example-of-some-org-syntax/index.html</loc>
-    <lastmod>2012-08-21T02:02:00Z</lastmod>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://renard.github.com/o-blog/tips/2012/08/21_adding-an-image-into-a-post/index.html</loc>
+    <lastmod>2012-08-21T11:08:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -94,6 +101,12 @@
 
 
   <url>
+    <loc>http://renard.github.com/o-blog/tips/2012/08/21_adding-an-image-into-a-post.html</loc>
+    <lastmod>2012-08-21T10:43:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
     <loc>http://renard.github.com/o-blog/tips/2012/05/21_create-static-pages.html</loc>
     <lastmod>2012-05-21T12:48:00Z</lastmod>
     <changefreq>weekly</changefreq>

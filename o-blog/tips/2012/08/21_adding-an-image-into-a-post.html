@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>How to use tags</title>
+    <title>Adding an image into a post</title>
     <link rel="stylesheet" type="text/less" href="../../../style/less/o-blog.less">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="o-blog version 1.2-101-ge2de6a3">
@@ -100,7 +100,7 @@
       <div class="container">
 	<ul class="breadcrumb">
   <li><a href="../../../index.html">Home</a> <span class="divider">/</span></li>
-  <li><a href="../../../tips/index.html">Tips</a> <span class="divider">/</span></li><li><a href="../../../tips/2012/index.html">2012</a> <span class="divider">/</span></li><li><a href="../../../tips/2012/01/index.html">01</a> <span class="divider">/</span></li><li>How to use tags</li>
+  <li><a href="../../../tips/index.html">Tips</a> <span class="divider">/</span></li><li><a href="../../../tips/2012/index.html">2012</a> <span class="divider">/</span></li><li><a href="../../../tips/2012/08/index.html">08</a> <span class="divider">/</span></li><li>Adding an image into a post</li>
   </ul>
 
       </div>
@@ -112,45 +112,104 @@
     <div class="well">
       <div class="row">
 	<div class="date span1">
-	  <div class=" date-d">07</div>
-	  <div class=" date-m"><a href="../../../tips/2012/01/index.html">Jan</a></div>
+	  <div class=" date-d">21</div>
+	  <div class=" date-m"><a href="../../../tips/2012/08/index.html">Aug</a></div>
 	  <div class=" date-y"><a href="../../../tips/2012/index.html">2012</a>
 	  </div>
 	</div>
 	<div class="span1">
 	  <div class="qr-code">
-  <img src="http://chart.apis.google.com/chart?chs=50x50&cht=qr&chld=|0&chl=http%3a%2f%2frenard.github.com%2fo-blog%2ftips%2f2012%2f01%2f07_how-to-use-tags.html"
+  <img src="http://chart.apis.google.com/chart?chs=50x50&cht=qr&chld=|0&chl=http%3a%2f%2frenard.github.com%2fo-blog%2ftips%2f2012%2f08%2f21_adding-an-image-into-a-post.html"
        alt="qr-code" />
 </div>
 
 	</div>
-	<h1 class="offset2" style="font-size: 250%">How to use tags</h1>
+	<h1 class="offset2" style="font-size: 250%">Adding an image into a post</h1>
       </div>
       <nav>
 	<ul class="pager">
-	  <li class="previous"><a href="../../../tips/2012/01/07_creating-a-blog.html"><i class="icon-chevron-left"></i>&nbsp;Creating a blog</a></li><li class="next" style="text-align: right;"><a href="../../../tips/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax&nbsp;<i class="icon-chevron-right"></i></a></li>
+	  <li class="previous"><a href="../../../tips/2012/05/21_create-static-pages.html"><i class="icon-chevron-left"></i>&nbsp;Create static pages</a></li><li class="next">&nbsp;</li>
 	</ul>
       </nav>
     </div>
 
   </header>
   <div class="article-content">
-    <p>
-Tags are useful to classify o-blog articles/posts (but not for pages).
-They are stored as <a href="http://orgmode.org/manual/Tags.html">Org-mode tags</a> for each entry. To add or modify a
-tag for a post, just use <code>C-c C-c</code> when on an Org-mode headline, and
-enter the tag value.
-</p>
+    <div class="row "><div class="span8 ">
+
+
 <p>
-If an article has more than one tag, separate them by a colon (<code>:</code>).
+Adding an image to a post is pretty simple since
+<a href="http://orgmode.org">Org-mode</a> offers a special link scheme for
+that. Image source file can be stored anywhere since its path is
+valid. During the export process, the image file is copied into a folder
+related to the post and all links are corrected to point to its new
+location.
 </p>
+
+
+
+<div class="row "><div class="span5 ">
+
+
 <p>
-Special characters used in tags:
+For example, the following piece of code will copy the <code>emacs-logo.png</code> from the current
+directory and is is then copied into it into
+<code>tips/2012/08/21_adding-an-image-into-a-post/emacs-logo.png</code>.
 </p>
-<ul>
-<li>At sign (<code>@</code>) is converted to a dash (<code>-</code>).
+
+
+</div><div class="span3 ">
+
+
+
+
+<pre class="src src-org"><span style="color: #00ffff; text-decoration: underline;">file:emacs-logo.png</span>
+</pre>
+
+
+
+</div></div>
+
+
+
+
+</div><div class="span4 ">
+
+<p>
+<img src="../../../tips/2012/08/21_adding-an-image-into-a-post/emacs-logo.png"  alt="../../../tips/2012/08/21_adding-an-image-into-a-post/emacs-logo.png" />
+</p>
+
+
+
+</div></div>
+
+
+
+
+<p>
+The HTML result is something similar to:
+</p>
+
+
+
+<pre class="src src-html">&lt;<span style="color: #edd400; font-weight: bold;">img</span> <span style="color: #eeeeec;">src</span>=<span style="color: #ad7fa8;">"21_adding-an-image-into-a-post/emacs-logo.png"</span>  <span style="color: #eeeeec;">alt</span>=<span style="color: #ad7fa8;">"21_adding-an-image-into-a-post/emacs-logo.png"</span> /&gt;
+</pre>
+
+
+
+
+<p>
+A best practice is to have all files info a <code>/files</code> folder. Then you can
+create a sub-folder for each posts such as:
+</p><ul>
+<li><code>/files/post1/file1</code>
 </li>
-<li>Underscore (<code>_</code>) is converted to a blank (<code> </code>).
+<li><code>/files/post1/file2</code>
+</li>
+<li><code>/files/post2/file</code>
+</li>
+<li>&hellip;
 </li>
 </ul>
 
@@ -158,7 +217,7 @@ Special characters used in tags:
   </div>
   
   <footer class="well article-footer">
-    Posted on <time datetime=\"2012-01-07T00:28:00Z\"> Saturday January, 07 2012 at 00:28:00</time>.
+    Posted on <time datetime=\"2012-08-21T10:43:00Z\"> Tuesday August, 21 2012 at 10:43:00</time>.
     <nav class="tag-cloud">
       <h1><i class="icon-tags"></i> related tags</h1>
       <ul>
