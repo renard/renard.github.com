@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Quickstart</title> <meta name="viewport" content="width=device-width,
+    initial-scale=1.0"/> <meta name="generator"
+    content="o-blog v2.0"/> <link href="./style/bootstrap/css/bootstrap.css"
+    rel="stylesheet"> <link href="./style/bootstrap/css/bootstrap-theme.min.css"
+    rel="stylesheet">
+    <link href="./style/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    
+  </head>
+  <body>
+
+
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+      </div>
+      <a class="navbar-brand" href="./index.html"></a>
+      <div class="collapse navbar-collapse">
+	<!--/
+title: Navigation
+type: snippet
+/-->
+<ul>
+<li><a href="./index.html"><span class="icon-home"></span> Home</a></li>
+<li><a href="#"><span class="icon-book"></span> Documentation</a>
+<ul>
+<li><a href="./quickstart.html">Quickstart</a></li>
+<li><a href="./bootstrap-items.html">Bootstrap</a></li>
+<li><a href="./page-classes.html">Page classes</a></li>
+<li><a href="./publication.html">Publication</a></li>
+</ul></li>
+</ul>
+
+      </div>
+    </nav>
+
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider"></span></li>
+  <li>Quickstart</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <header class="article-header">
+    <div class="well">
+      <div class="row">
+	<h1 class="offset1" style="font-size: 250%;">Quickstart</h1>
+      </div>
+    </div>
+  </header>
+  <div class="article-content">
+    <!--/
+title: Quickstart
+type: page
+template: blog_static.html
+/-->
+
+
+<p class="lead">
+Starting a new blog from scratch is pretty easy. This article show you how to create a brand new site using o-blog and <em>pandoc</em>. Follow the step-by-step guide. If you want you can still use <em>org-mode</em> as in version 1.
+</p>
+
+<h1 id="required-software">Required software</h1>
+<p>You need:</p>
+<ul>
+<li><a href="http://www.gnu.org/software/emacs/">Emacs</a> (version 24 is highly recommended)</li>
+<li><a href="https://github.com/renard/o-blog">o-blog</a> Version 2</li>
+<li><a href="http://johnmacfarlane.net/pandoc/">pandoc</a> (at least version 1.12.4.2)</li>
+</ul>
+<p>The <code>o-blog</code> installation is pretty straightforward if you are using <a href="https://github.com/dimitri/el-get">el-get</a>. Meanwhile be sure you are using version 2. You can go to the <code>o-blog</code> directory (<kbd>M-x el-get-cd o-blog RET</kbd>) and switch to branch <code>o-blog-v2</code> (<kbd>M-! git checkout o-blog-v2 RET</kbd>).</p>
+<p>You you install <code>o-blog</code> manualy from <em>git</em> you need run and put in your this snippet to your <code>~/.emacs.d/init.el</code> file:</p>
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+</source>
+<div class="src sh">
+<pre>
+<span style="color: #729fcf;">cd</span> ~/.emacs.d
+git clone https://github.com/renard/o-blog.git
+git checkout o-blog-v2
+</pre>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="thumbnail">
+</source>
+<div class="src emacs-lisp">
+<pre>
+(add-to-list 'load-path <span style="color: #ad7fa8;">"~/.emacs.d/o-blog/lisp"</span>)
+(<span style="color: #729fcf; font-weight: bold;">require</span> '<span style="color: #8ae234;">o-blog</span>)
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+<h1 id="starting-a-blog">Starting a blog</h1>
+<p>Now you need to choose a directory where you site source will reside. This an be anywhere on your computer. Let's use <code>~/Documents/sites/example.com</code> as a root directory. In that file you first need to create a configuration file named <code>o-blog.conf</code> which contains:</p>
+</source>
+<div class="src conf">
+<pre>
+<span style="color: #eeeeec;">publish-dir</span> = out
+<span style="color: #eeeeec;">template-dir</span> = ~/.emacs.d/o-blog/templates/
+<span style="color: #eeeeec;">style-dir</span> = ~/.emacs.d/o-blog/templates/style/
+</pre>
+</div>
+<p>Where:</p>
+<ul>
+<li><code>publish-dir</code> is the path where the site would be published to.</li>
+<li><code>template-dir</code> is the path where the template are located. We will use <code>o-blog</code> defaults.</li>
+<li><code>style-dir</code> is the path where the styles (<em>CSS</em> and <em>JS</em>) are located. We will use <code>o-blog</code> defaults as well.</li>
+</ul>
+<h2 id="adding-snippets">Adding snippets</h2>
+<p>The default templates require some snippets to be defined. Those snippets are:</p>
+<ul>
+<li><code>About</code>: as defined in the <code>page_footer.html</code> file.</li>
+<li><code>Copyright</code>: as defined in the <code>page_footer.html</code> file.</li>
+<li><code>Navigation Footer</code>: as defined in the <code>page_footer.html</code> file.</li>
+<li><code>Navigation</code>: as defined in the <code>page_header.html</code> file.</li>
+</ul>
+<p>Snippets are a bunch of text that may change from one site to an other. This allow you to use the same templates for many sites by just changing some files.</p>
+<p>You can put a snippet anywhere in the site source tree as long as you define them using <code>type: snippet</code> in their file header. A good practice is to put them all in a single directory such as <code>_elements</code> at the site root.</p>
+<p>For exampe the <code>About</code> you need to create the file <code>_elements/About.snippet.txt</code> which contains following lines:</p>
+</source>
+<div class="src markdown">
+<pre>
+<span style="color: #888a85;">%</span> -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
+<span style="color: #888a85;">&lt;!--/
+title: About
+type: snippet
+/--&gt;</span><span style="color: #ad7fa8;">
+This is a sample blog to explain how </span><span style="color: #729fcf; font-weight: bold;">[o-blog]</span><span style="color: #ad7fa8;">(https://github.com/renard/o-blog)</span><span style="color: #ad7fa8;"> works.
+</span></pre>
+</div>
+<p>The most important lines are:</p>
+<ul>
+<li><code>title: About</code>: which defines the snippet name.</li>
+<li><code>type: snippet</code>: which defines the current file as a snippet.</li>
+</ul>
+<div class="alert alert-warning">
+Please note that file headers are enclosed within <code>&lt;!--/</code> and <code>/--&gt;</code> comments. Note the slash <code>/</code> at the end of the comment delimeter.
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<code>Copyright</code> snippet
+</div>
+<div class="panel-body">
+</source>
+<div class="src markdown">
+<pre>
+<span style="color: #888a85;">%</span> -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
+<span style="color: #888a85;">&lt;!--/
+title: Copyright
+type: snippet
+/--&gt;</span><span style="color: #ad7fa8;">
+Copyright S&#233;bastien Gross
+</span></pre>
+</div>
+</div>
+<div class="panel-footer">
+<code>_elements/Copyright.snippet.txt</code>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<code>Navigation Footer</code> snippet
+</div>
+<div class="panel-body">
+</source>
+<div class="src markdown">
+<pre>
+<span style="color: #888a85;">%</span> -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
+<span style="color: #888a85;">&lt;!--/
+title: Navigation Footer
+type: snippet
+/--&gt;</span><span style="color: #ad7fa8;">
+- </span><span style="color: #729fcf; font-weight: bold;">[&lt;icon icon="home"&gt; {lisp }(ob:gettext :home){/lisp}]</span><span style="color: #ad7fa8;">({lisp }(ob:path-to-root)</span><span style="color: #ad7fa8;">{/lisp}/index.html)
+</span></pre>
+</div>
+</div>
+<div class="panel-footer">
+<code>_elements/Navigation-footer.snippet.txt</code>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<code>Navigation</code> snippet
+</div>
+<div class="panel-body">
+</source>
+<div class="src markdown">
+<pre>
+<span style="color: #729fcf;">-</span> <span style="color: #729fcf; font-weight: bold;">[&lt;icon icon="home"&gt; Home]</span><span style="color: #ad7fa8;">({lisp }(ob:path-to-root)</span>{/lisp}/index.html)
+<span style="color: #729fcf;">-</span> <span style="color: #729fcf; font-weight: bold;">[&lt;icon icon="book"&gt; Documentation]</span><span style="color: #ad7fa8;">(#)</span>
+    <span style="color: #729fcf;">-</span> <span style="color: #729fcf; font-weight: bold;">[Quickstart]</span><span style="color: #ad7fa8;">({lisp }(ob:path-to-root)</span>{/lisp}/quickstart.html)
+    <span style="color: #729fcf;">-</span> <span style="color: #729fcf; font-weight: bold;">[Bootstrap]</span><span style="color: #ad7fa8;">({lisp }(ob:path-to-root)</span>{/lisp}/bootstrap-items.html)
+</pre>
+</div>
+</div>
+<div class="panel-footer">
+<code>_elements/Navigation.snippet.txt</code>
+</div>
+</div>
+<h2 id="creating-one-page">Creating one page</h2>
+<p>Now you can edit the <code>index.txt</code> which contains:</p>
+<div class="panel panel-default">
+<div class="panel-body">
+</source>
+<div class="src markdown">
+<pre>
+<span style="color: #888a85;">%</span> -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
+<span style="color: #888a85;">&lt;!--/
+title: index
+type: page
+template: blog_static.html
+/--&gt;</span>
+
+&lt;jumbotron&gt;
+&lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;/jumbotron&gt;
+
+&lt;justify&gt;
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+&lt;/justify&gt;
+
+</pre>
+</div>
+</div>
+<div class="panel-footer">
+<code>index.txt</code>
+</div>
+</div>
+<p>You can publish using <kbd>M-x o-blog-publish RET</kbd>. You will get something similar to:</p>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="jumbotron">
+<h1>
+Hello, world!
+</h1>
+</div>
+<p class="text-justify">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+</div>
+</div>
+
+  </div>
+</article>
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="col-md-3">
+	      <h1>About</h1>
+	      <!-- about -->
+	      <!--/
+title: About
+type: snippet
+/-->
+<p>This is a sample blog to explain how <a href="https://github.com/renard/o-blog">o-blog</a> works.</p>
+
+	      <!-- /about -->
+	    </nav>
+	    <nav id="links" class="col-md-3">
+	      <h1>Links</h1>
+	      <!-- Navigation Footer -->
+	      <!--/
+title: Navigation Footer
+type: snippet
+/-->
+<ul>
+<li><a href="./index.html"><span class="icon-home"></span> Home</a></li>
+<li><a href="./quickstart.html">Quickstart</a></li>
+<li><a href="./bootstrap-items.html">Bootstrap</a></li>
+<li><a href="./page-classes.html">Page classes</a></li>
+<li><a href="./publication.html">Publication</a></li>
+</ul>
+
+	      <!-- Navigation Footer -->
+	    </nav>
+	    <nav id="archives" class="col-md-3">
+	      <h1><a href="./archives.html">Archives</a></h1>
+	      <ul>
+		
+	      </ul>
+	    </nav>
+	    <nav class="tags col-md-3">
+	      <h1><a href="./tags/index.html">Tags</a></h1>
+	      <ul>
+  
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <!-- copyright -->
+	  <!--/
+title: Copyright
+type: snippet
+/-->
+
+
+<p>Copyright Sébastien Gross</p>
+
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </div>
+      <script src="./style/jquery-2.0.3.min.js"></script>
+      <script src="./style/bootstrap/js/bootstrap.min.js"></script>
+      <script src="./style/o-blog-bootstrap.min.js"></script>
+</body>
+</html>
+
