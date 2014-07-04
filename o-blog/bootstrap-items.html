@@ -5,8 +5,8 @@
     <title>Bootstrap items</title> <meta name="viewport" content="width=device-width,
     initial-scale=1.0"/> <meta name="generator"
     content="o-blog v2.0"/> <link href="./style/bootstrap/css/bootstrap.css"
-    rel="stylesheet"> <link href="./style/bootstrap/css/bootstrap-theme.min.css"
-    rel="stylesheet">
+    rel="stylesheet"><!--  <link href="./style/bootstrap/css/bootstrap-theme.min.css" -->
+    <!-- rel="stylesheet"> -->
     <link href="./style/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     
   </head>
@@ -29,15 +29,27 @@ title: Navigation
 type: snippet
 /-->
 <ul>
-<li><a href="./index.html"><span class="icon-home"></span> Home</a></li>
-<li><a href="#"><span class="icon-book"></span> Documentation</a>
+<li><a href="./index.html"><i class="fa fa-home"></i> Home</a></li>
+<li><a href="#"><i class="fa fa-book"></i> Documentation</a>
 <ul>
 <li><a href="./quickstart.html">Quickstart</a></li>
 <li><a href="./bootstrap-items.html">Bootstrap</a></li>
 <li><a href="./page-classes.html">Page classes</a></li>
 <li><a href="./publication.html">Publication</a></li>
 </ul></li>
+<li><a href="#"><i class="fa fa-book"></i> Blog</a>
+<ul class="blog"><li/></ul></li>
+<li><a href="#"><i class="fa fa-book"></i> Lorem</a>
+<ul class="lorem"><li/></ul></li>
+<li><a href="./tags/index.html"><i class="fa fa-tags"></i> Tags</a></li>
+<li><a href="./testimonials.html"><i class="fa fa-tags"></i> Testimonial</a></li>
 </ul>
+<!--
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="renard_0" data-hashtags="oblog,emacs" data-dnt="true">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+-->
+
+
 
       </div>
     </nav>
@@ -67,7 +79,7 @@ title: Bootstrap items
 type: page
 template: blog_static.html
 category: doc
-tags: bootstrap
+tags: bootstrap, help
 /-->
 
 <h1 id="inline-syntax">Inline syntax</h1>
@@ -121,7 +133,7 @@ This is a cloud: <span class="glyphicon glyphicon-cloud"></span>
 <div class="row">
 <div class="col-sm-6 col-md-6">
 <p>See <a href="http://getbootstrap.com/components/#glyphicons">Bootstrap official documentation</a> for further information about icons</p>
-This is a cloud in icon: <span class="icon-cloud"></span>
+This is a cloud in icon: <i class="fa fa-cloud"></i>
 </div>
 <div class="col-sm-6 col-md-6">
 </source>
@@ -470,11 +482,11 @@ title: Navigation Footer
 type: snippet
 /-->
 <ul>
-<li><a href="./index.html"><span class="icon-home"></span> Home</a></li>
-<li><a href="./quickstart.html">Quickstart</a></li>
-<li><a href="./bootstrap-items.html">Bootstrap</a></li>
-<li><a href="./page-classes.html">Page classes</a></li>
-<li><a href="./publication.html">Publication</a></li>
+<li><a href="./index.html"><i class="fa fa-home"></i> Home</a></li>
+<li><a href="./quickstart.html"><i class="fa fa-book"></i> Quickstart</a></li>
+<li><a href="./bootstrap-items.html"><i class="fa fa-book"></i> Bootstrap</a></li>
+<li><a href="./page-classes.html"><i class="fa fa-book"></i> Page classes</a></li>
+<li><a href="./publication.html"><i class="fa fa-book"></i> Publication</a></li>
 </ul>
 
 	      <!-- Navigation Footer -->
@@ -482,15 +494,11 @@ type: snippet
 	    <nav id="archives" class="col-md-3">
 	      <h1><a href="./archives.html">Archives</a></h1>
 	      <ul>
-		
+		<li><a href="./lorem/2014/07/04_lorem-ipsum-columns-mix.html">Lorem ipsum columns mix</a></li> <li><a href="./lorem/2014/07/04_lorem-ipsum-full-text.html">Lorem ipsum full text</a></li> <li><a href="./lorem/2014/07/04_lorem-ipsum-2-columns-version.html">Lorem ipsum 2 columns version</a></li> <li><a href="./blog/2014/07/03_o-blog-easy-web-site-and-bloging-system.html">O-Blog easy web site and bloging system</a></li> 
 	      </ul>
 	    </nav>
 	    <nav class="tags col-md-3">
 	      <h1><a href="./tags/index.html">Tags</a></h1>
-	      <ul>
-  
-</ul>
-
 	    </nav>
 	  </div>
 	</div>
@@ -507,7 +515,11 @@ type: snippet
 	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
 	</div>
       </div>
-      <script src="./style/jquery-2.0.3.min.js"></script>
+      <script type="text/javascript">
+      	var path_to_root = ".";
+	var ob_this_page = "bootstrap-items.html";
+      </script>
+      <script src="./style/jquery-2.1.1.min.js"></script>
       <script src="./style/bootstrap/js/bootstrap.min.js"></script>
       <script src="./style/o-blog-bootstrap.min.js"></script>
 </body>

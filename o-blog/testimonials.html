@@ -2,7 +2,7 @@
 <html lang="">
   <head>
     <meta charset="utf-8"/>
-    <title>Page classes</title> <meta name="viewport" content="width=device-width,
+    <title>Testimonials</title> <meta name="viewport" content="width=device-width,
     initial-scale=1.0"/> <meta name="generator"
     content="o-blog v2.0"/> <link href="./style/bootstrap/css/bootstrap.css"
     rel="stylesheet"><!--  <link href="./style/bootstrap/css/bootstrap-theme.min.css" -->
@@ -58,7 +58,7 @@ type: snippet
       <div class="container">
 	<ul class="breadcrumb">
   <li><a href="./index.html">Home</a> <span class="divider"></span></li>
-  <li>Page classes</li>
+  <li>Testimonials</li>
   </ul>
 
       </div>
@@ -66,73 +66,123 @@ type: snippet
     <div id="page" class="container">
 
 <article>
-  <header class="article-header">
-    <div class="well">
-      <div class="row">
-	<h1 class="offset1" style="font-size: 250%;">Page classes</h1>
-      </div>
-    </div>
-  </header>
   <div class="article-content">
     <!--/
-title: Page classes
+title: Testimonials
 type: page
-template: blog_static.html
-tags: help, o-blog internals
+template: blog_static_no_title.html
 /-->
 
-<p class="lead">
-With <code>o-blog</code> you can create three kind of page classes regarding your needs. This article will describe the page classes and how to use them.
-</p>
 
-<h1 id="snippets">Snippets</h1>
-<p>A <em>snippet</em> is not a page on its own. Snippets are used to fill some parts of the templates or any other page using the <code>ob:get-snippet</code> <em>lisp</em> function. A snippet takes only 2 parameters in the file headers:</p>
-<ul>
-<li><code>title: Snippet Name</code>: The insternal name of the snippet.</li>
-<li><code>type: snippet</code>: this line defines the file as a snippet.</li>
-</ul>
-<p>After the headers, you can put anything you want. The snippet content is processed during the publication and inserted into the pages that require that snippet.</p>
-<p>To include a snippet into a page:</p>
+
+
 <div class="row">
-<div class="col-md-6">
+<div class="col-md-4">
 <div class="thumbnail">
-</source>
-<div class="src markdown">
-<pre>
-&lt;lisp&gt;(ob:get-snippet "About")&lt;/lisp&gt;
-</pre>
+<img src="7696122.png" alt="thumbnail" />
 </div>
 </div>
-</div>
-<div class="col-md-6">
+<div class="col-md-4">
 <div class="thumbnail">
-<!--/
-title: About
-type: snippet
-/-->
-<p>This is a sample blog to explain how <a href="https://github.com/renard/o-blog">o-blog</a> works.</p>
-
+<img src="bjonnh.png" alt="thumbnail" />
+</div>
+</div>
+<div class="col-md-4">
+<div class="thumbnail">
+<img src="common-lisp.png" alt="thumbnail" />
 </div>
 </div>
 </div>
-<h1 id="pages">Pages</h1>
-<p>A <em>page</em> is for a static HTML page output. This class is useful for single pages such as a site homepage. A <em>page</em> takes 3 parameters in file headers:</p>
+<div class="row">
+<div class="col-md-4">
+<div class="thumbnail">
+<img src="djcbsoftware.png" alt="thumbnail" />
+</div>
+</div>
+<div class="col-md-4">
+<div class="thumbnail">
+<img src="ergoemacs.png" alt="thumbnail" />
+</div>
+</div>
+<div class="col-md-4">
+<div class="thumbnail">
+<img src="from-the-cloud.png" alt="thumbnail" />
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="thumbnail">
+<img src="hdurer.png" alt="thumbnail" />
+</div>
+</div>
+<div class="col-md-4">
+<div class="thumbnail">
+<img src="hillenius.png" alt="thumbnail" />
+</div>
+</div>
+<div class="col-md-4">
+<div class="thumbnail">
+<img src="kankanan.png" alt="thumbnail" />
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="thumbnail">
+<img src="popineau.png" alt="thumbnail" />
+</div>
+</div>
+<div class="col-md-4">
+<div class="thumbnail">
+<img src="underspecified.png" alt="thumbnail" />
+</div>
+</div>
+<div class="col-md-4">
+<div class="thumbnail">
+<img src="williamdenman.png" alt="thumbnail" />
+</div>
+</div>
+</div>
+<div style=" column-count:3;-webkit-column-count:3;-moz-column-count:3;">
 <ul>
-<li><code>title: Page classes</code>: The page title</li>
-<li><code>type: page</code>: this line defines the files as a single page.</li>
-<li><code>template: blog_static_no_title.html</code>: This line defines which template to use for the publication.</li>
+<li><a href="http://www.williamdenman.ca/index.html">http://www.williamdenman.ca/index.html</a></li>
+<li><a href="http://ionio.gr/~aribezas/index.html">http://ionio.gr/~aribezas/index.html</a></li>
+<li><a href="http://www.hillenius.com/about.html">http://www.hillenius.com/about.html</a></li>
+<li><a href="http://www.gibiris.org/eo-blog/index.html">http://www.gibiris.org/eo-blog/index.html</a></li>
+<li><a href="http://www.verona.se/index.html">http://www.verona.se/index.html</a></li>
+<li><a href="http://www.morediff.info/index.html">http://www.morediff.info/index.html</a></li>
+<li><a href="http://www.trick.email/index.html">http://www.trick.email/index.html</a></li>
+<li><a href="http://semantic.supelec.fr/popineau/teaching.html">http://semantic.supelec.fr/popineau/teaching.html</a></li>
+<li><a href="http://bjonnh.net/blog/">http://bjonnh.net/blog/</a></li>
+<li><a href="http://limist.com/">http://limist.com/</a></li>
+<li><a href="http://underspecified.com">http://underspecified.com</a></li>
+<li><a href="http://www.verona.se">http://www.verona.se</a></li>
+<li><a href="http://yagnesh.org">http://yagnesh.org</a></li>
+<li><a href="http://blog.hdurer.net">http://blog.hdurer.net</a></li>
+<li><a href="http://notes.secretsauce.net">http://notes.secretsauce.net</a></li>
+<li><a href="http://zwz.github.io/index.html">http://zwz.github.io/index.html</a></li>
+<li><a href="http://mauthesis.com">http://mauthesis.com</a></li>
 </ul>
-<p>After the header, you can write your page just like you want.</p>
-<h1 id="articles">Articles</h1>
-<p>An <em>article</em> is the main page class you need for a blog. An article (or blog post) takes several parameters in file headers:</p>
-<ul>
-<li><code>title: Page classes</code>: The page title</li>
-<li><code>type: article</code>: this line defines the files as a blog post.</li>
-<li><code>category: blog</code>: this defines in which category this post should go.</li>
-<li><code>tags: comma separated, tags, list</code>: a list of tags related to the post.</li>
-</ul>
-<p>The <em>article</em> page will be stored using the scheme: <code>category/year/month/day-title.html</code>. Within each directory an <code>index.html</code> is also created for easy navigation.</p>
-<p>When publishing articles, both <em>tags</em> and <em>archives</em> pages are also generated.</p>
+</div>
+<div style=" column-count:2;-webkit-column-count:2;-moz-column-count:2;">
+<blockquote>
+<p>“o-blog, a cool static blog generator from org-mode markup with some nice Bootstrap integration.”</p>
+<p>-- <a href="http://from-the-cloud.com/en/Random/2012/06/17_sites-back.html">Fabián Ezequiel Gallina</a></p>
+</blockquote>
+<blockquote>
+<p>“Thank you so much for the truly excellent elisp app. I am learning many things from it.”/</p>
+<p>-- <a href="https://github.com/priyadarshan">priyadarshan</a></p>
+</blockquote>
+<blockquote>
+<p>“o-blog looks awesome!”</p>
+<p>-- <a href="https://github.com/djcb">Dirk-Jan C. Binnema</a> (Author of <a href="http://www.djcbsoftware.nl/code/mu4e">mu4e</a> and <a href="http://emacs-fu.blogspot.com">emacs-fu</a>)</p>
+</blockquote>
+<blockquote>
+<p>“o-blog is amazing. After using Wordpress seemingly since the dawn of time, then Jekyll for a couple of years, this is like a spring breeze after a long, cold winter.”</p>
+<p>-- <a href="https://github.com/fravashi">Farasha Euker</a></p>
+</blockquote>
+</div>
 
   </div>
 </article>
@@ -194,7 +244,7 @@ type: snippet
       </div>
       <script type="text/javascript">
       	var path_to_root = ".";
-	var ob_this_page = "page-classes.html";
+	var ob_this_page = "testimonials.html";
       </script>
       <script src="./style/jquery-2.1.1.min.js"></script>
       <script src="./style/bootstrap/js/bootstrap.min.js"></script>
