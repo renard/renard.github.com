@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <url>
+    <loc>http://renard.github.io/o-blog/</loc>
+    <lastmod>2014-07-04T18:20:05Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://renard.github.io/o-blog/testimonials.html</loc>
+    <lastmod>2014-07-05T02:12:33Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://renard.github.io/o-blog/index.html</loc>
+    <lastmod>2014-07-05T02:12:33Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://renard.github.io/o-blog/quickstart.html</loc>
+    <lastmod>2014-07-05T02:12:33Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://renard.github.io/o-blog/publication.html</loc>
+    <lastmod>2014-07-05T02:12:33Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://renard.github.io/o-blog/page-classes.html</loc>
+    <lastmod>2014-07-05T02:12:33Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+<url>
+    <loc>http://renard.github.io/o-blog/bootstrap-items.html</loc>
+    <lastmod>2014-07-05T02:12:33Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+
+
+  <url>
+    <loc>http://renard.github.io/o-blog/lorem/2014/07/04_lorem-ipsum-columns-mix.html</loc>
+    <lastmod>2014-07-04T18:20:05Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://renard.github.io/o-blog/lorem/2014/07/04_lorem-ipsum-full-text.html</loc>
+    <lastmod>2014-07-04T16:39:32Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://renard.github.io/o-blog/lorem/2014/07/04_lorem-ipsum-2-columns-version.html</loc>
+    <lastmod>2014-07-04T16:42:32Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+<url>
+    <loc>http://renard.github.io/o-blog/blog/2014/07/03_o-blog-easy-web-site-and-bloging-system.html</loc>
+    <lastmod>2014-07-03T20:41:27Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
+

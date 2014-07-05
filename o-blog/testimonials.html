@@ -1,63 +1,105 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="utf-8"/>
-    <title>Testimonials</title> <meta name="viewport" content="width=device-width,
-    initial-scale=1.0"/> <meta name="generator"
-    content="o-blog v2.0"/> <link href="./style/bootstrap/css/bootstrap.css"
-    rel="stylesheet"><!--  <link href="./style/bootstrap/css/bootstrap-theme.min.css" -->
-    <!-- rel="stylesheet"> -->
-    <link href="./style/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
+    <title>Testimonials</title>
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog version 1.2-111-gfab6256"/>
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
     
   </head>
   <body>
 
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+	  <a class="brand" href="./index.html">o-blog</a>
+	  <div class="nav-collapse collapse">
+	    <ul>
+<li><a href="./features.html"><i>icon-cog icon-white</i> Features</a>
 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-      <div class="navbar-header">
-	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-	  <span class="sr-only">Toggle navigation</span>
-	  <span class="icon-bar"></span>
-	  <span class="icon-bar"></span>
-	  <span class="icon-bar"></span>
-	</button>
-      </div>
-      <a class="navbar-brand" href="./index.html"></a>
-      <div class="collapse navbar-collapse">
-	<!--/
-title: Navigation
-type: snippet
-/-->
+</li>
+<li><a href="#"><i>icon-book icon-white</i> Documentation</a>
 <ul>
-<li><a href="./index.html"><i class="fa fa-home"></i> Home</a></li>
-<li><a href="#"><i class="fa fa-book"></i> Documentation</a>
-<ul>
-<li><a href="./quickstart.html">Quickstart</a></li>
-<li><a href="./bootstrap-items.html">Bootstrap</a></li>
-<li><a href="./page-classes.html">Page classes</a></li>
-<li><a href="./publication.html">Publication</a></li>
-</ul></li>
-<li><a href="#"><i class="fa fa-book"></i> Blog</a>
-<ul class="blog"><li/></ul></li>
-<li><a href="#"><i class="fa fa-file-text"></i> Lorem</a>
-<ul class="lorem"><li/></ul></li>
-<li><a href="./tags/index.html"><i class="fa fa-tags"></i> Tags</a></li>
-<li><a href="./testimonials.html"><i class="fa fa-child"></i> Testimonial</a></li>
+<li><a href="./templates.html">Templates</a>
+</li>
+<li><a href="./structures.html">Structures</a>
+</li>
+<li><a href="./functions.html">Functions</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="./bug-report.html">Bug report</a>
+
+</li>
 </ul>
-<!--
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="renard_0" data-hashtags="oblog,emacs" data-dnt="true">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
--->
+
+</li>
+<li><a href="#"><i>icon-file icon-white</i> Tips</a>
+<ul>
+<li><a href="./tips/2012/08/21_adding-an-image-into-a-post.html">Adding an image into a post</a>
+</li>
+<li><a href="./tips/2012/05/21_create-static-pages.html">Create static pages</a>
+</li>
+<li><a href="./tips/2012/05/07_add-a-custom-font.html">Add a custom font</a>
+</li>
+<li><a href="./tips/2012/05/03_some-bootstrap-features.html">Some bootstrap features</a>
+</li>
+<li><a href="./tips/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="./tags.html"><i>icon-tags icon-white</i> Tags</a>
+
+</li>
+<li><a href="./archives.html"><i>icon-list icon-white</i> Archives</a>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./index.xml"><i>icon-rss icon-white</i> RSS</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+
+</li>
+<li><a href="./debug.html">(debug)</a>
+</li>
+</ul>
 
 
-
+	  </div>
+	</div>
       </div>
-    </nav>
-
+    </div>
     <div class="subnav subnav-fixed visible-desktop">
       <div class="container">
 	<ul class="breadcrumb">
-  <li><a href="./index.html">Home</a> <span class="divider"></span></li>
+  <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
   <li>Testimonials</li>
   </ul>
 
@@ -67,188 +109,141 @@ type: snippet
 
 <article>
   <div class="article-content">
-    <!--/
-title: Testimonials
-type: page
-template: blog_static_no_title.html
-/-->
+    <div class="row "><div class="span6 ">
 
 
 
 
-<div class="row">
-<div class="col-md-4">
-<div class="thumbnail">
-<a href="http://7696122.github.io"><img src="7696122.png" alt="thumbnail" /></a>
-<div class="caption">
-<p class="text-center">
-http://7696122.github.io
+
+<h1>Testimonials</h1>
+
+<blockquote>
+
+<p><i>“o-blog, great static site generator from emacs Org-mode.”</i>
 </p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="thumbnail">
-<a href="http://bjonnh.net/blog/"><img src="bjonnh.png" alt="thumbnail" /></a>
-<div class="caption">
-<p class="text-center">
-http://bjonnh.net/blog/
+<p>
+&ndash; Pierre-Yves Ritschard <a href="https://twitter.com/pyr/status/160466727195521024">@pyr</a> (<a href="http://openbds.org">OpenBSD</a> relayd original author)
 </p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="thumbnail">
-<a href="http://common-lisp.net"><img src="common-lisp.png" alt="thumbnail" /></a>
-<div class="caption">
-<p class="text-center">
-http://common-lisp.net
+<p>
+&ndash; Sergey Konoplev <a href="http://twitter.com/gray_hemp">@gray_hemp</a> (<a href="http://PostgreSQL-Consulting.com">PostgreSQL Consultant</a>)
 </p>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-4">
-<div class="thumbnail">
-<a href="http://www.djcbsoftware.nl"><img src="djcbsoftware.png" alt="thumbnail" /></a>
-<div class="caption">
-<p class="text-center">
-http://www.djcbsoftware.nl
+<p>
+&ndash; Olivier Berger <a href="http://twitter.com/olberger">@olberger</a> (<a href="http://www.april.org">APRIL administrator</a>)
 </p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="thumbnail">
-<a href="http://ergoemacs.github.io"><img src="ergoemacs.png" alt="thumbnail" /></a>
-<div class="caption">
-<p class="text-center">
-http://ergoemacs.github.io
+<p>
+&ndash; Dimitri Fontaine <a href="http://twitter.com/tapoueh">@tapoueh</a> (<a href="http://tapoueh.org/projects.html">el-get and other</a> author)
 </p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="thumbnail">
-<a href="http://from-the-cloud.com"><img src="from-the-cloud.png" alt="thumbnail" /></a>
-<div class="caption">
-<p class="text-center">
-http://from-the-cloud.com
+<p>
+&ndash; Julien Danjou <a href="http://twitter.com/juldanjou">@juldanjou</a> (<a href="http://awesome.naquadah.org/">Awesome window manager</a> and <a href="http://julien.danjou.info/software/">other</a> author)
 </p>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-4">
-<div class="thumbnail">
-<a href="http://blog.hdurer.net"><img src="hdurer.png" alt="thumbnail" /></a>
-<div class="caption">
-<p class="text-center">
-http://blog.hdurer.net
+<p>
+&ndash; Daniel Farina <a href="http://twitter.com/danfarina">@danfarina</a> (member of the <a href="http://www.heroku.com/">Heroku</a> Department of Data)
 </p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="thumbnail">
-<a href="http://www.hillenius.com/"><img src="hillenius.png" alt="thumbnail" /></a>
-<div class="caption">
-<p class="text-center">
-http://www.hillenius.com/
+</blockquote>
+
+
+<blockquote>
+
+<p><i>“o-blog, a cool static blog generator from org-mode markup with some nice Bootstrap integration.”</i>
 </p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="thumbnail">
-<a href="http://blog.kankanan.com"><img src="kankanan.png" alt="thumbnail" /></a>
-<div class="caption">
-<p class="text-center">
-http://blog.kankanan.com
+<p>
+&ndash; <a href="http://from-the-cloud.com/en/Random/2012/06/17_sites-back.html">Fabián Ezequiel Gallina</a>
 </p>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-md-4">
-<div class="thumbnail">
-<a href="http://semantic.supelec.fr/popineau/"><img src="popineau.png" alt="thumbnail" /></a>
-<div class="caption">
-<p class="text-center">
-http://semantic.supelec.fr/popineau/
+</blockquote>
+
+
+<blockquote>
+
+<p><i>“Thank you so much for the truly excellent elisp app. I am learning many things from it.”</i>
 </p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="thumbnail">
-<a href="http://underspecified.com"><img src="underspecified.png" alt="thumbnail" /></a>
-<div class="caption">
-<p class="text-center">
-http://underspecified.com
+<p>
+&ndash; <a href="https://github.com/priyadarshan">priyadarshan</a>
 </p>
-</div>
-</div>
-</div>
-<div class="col-md-4">
-<div class="thumbnail">
-<a href="http://www.williamdenman.ca/index.html"><img src="williamdenman.png" alt="thumbnail" /></a>
-<div class="caption">
-<p class="text-center">
-http://www.williamdenman.ca/
+</blockquote>
+
+
+<blockquote>
+
+<p><i>“o-blog looks awesome!”</i>
 </p>
-</div>
-</div>
-</div>
-</div>
-<div style=" column-count:3;-webkit-column-count:3;-moz-column-count:3;">
+<p>
+&ndash; <a href="https://github.com/djcb">Dirk-Jan C. Binnema</a> (Author of <a href="http://www.djcbsoftware.nl/code/mu4e">mu4e</a> and <a href="http://emacs-fu.blogspot.com">emacs-fu</a>)
+</p>
+</blockquote>
+
+
+<blockquote>
+
+<p><i>“o-blog is amazing. After using Wordpress seemingly since the dawn of time, then Jekyll for a couple of years, this is like a spring breeze after a long, cold winter.”</i>
+</p>
+<p>
+&ndash; <a href="https://github.com/fravashi">Farasha Euker</a>
+</p>
+</blockquote>
+
+
+
+
+
+
+</div><div class="span6 ">
+
+
+<div class="hero-unit">
+
+
+
+
+
+<h1>They use it</h1>
+
 <ul>
-<li><a href="http://ionio.gr/~aribezas/index.html">http://ionio.gr/~aribezas/index.html</a></li>
-<li><a href="http://www.gibiris.org/eo-blog/index.html">http://www.gibiris.org/eo-blog/index.html</a></li>
-<li><a href="http://www.morediff.info/index.html">http://www.morediff.info/index.html</a></li>
-<li><a href="http://www.trick.email/index.html">http://www.trick.email/index.html</a></li>
-<li><a href="http://limist.com/">http://limist.com/</a></li>
-<li><a href="http://www.verona.se">http://www.verona.se</a></li>
-<li><a href="http://yagnesh.org">http://yagnesh.org</a></li>
-<li><a href="http://notes.secretsauce.net">http://notes.secretsauce.net</a></li>
-<li><a href="http://zwz.github.io/index.html">http://zwz.github.io/index.html</a></li>
-<li><a href="http://mauthesis.com">http://mauthesis.com</a></li>
+<li><a href="http://renard.github.com/o-blog">O-blog Project</a>
+</li>
+<li><a href="http://docs.chezwam.org">Mes doc à moi</a>
+</li>
+<li><a href="http://from-the-cloud.com/">From the cloud</a>
+</li>
+<li><a href="http://exaos.github.com/o-blog/">exaos</a>
+</li>
+<li><a href="http://mikio.github.com/index.html">Mikio Kun</a>
+</li>
+<li><a href="http://mimes.is/">Journal of the creative imagination</a>
+</li>
+<li><a href="http://www.djcbsoftware.nl">DJCB Software</a>
+</li>
+<li><a href="http://dimilar.com/de/index.html">Erlang Vision</a>
+</li>
+<li><a href="http://pharos-alexandria.github.com">Pharos (Annette von Stockhausen)</a>
+</li>
 </ul>
+
+
+
+
+
 </div>
-<blockquote>
-<p>“o-blog, great static site generator from emacs Org-mode.”</p>
-<p>-- Pierre-Yves Ritschard <a href="https://twitter.com/pyr">@pyr</a> (<a href="http://openbds.org">OpenBSD</a> relayd original author)</p>
-<p>-- Sergey Konoplev <a href="http://twitter.com/gray_hemp">@gray_hemp</a> (<a href="http://PostgreSQL-Consulting.com">PostgreSQL Consultant</a>)</p>
-<p>-- Olivier Berger <a href="http://twitter.com/olberger">@olberger</a> (<a href="http://www.april.org">APRIL administrator</a>)</p>
-<p>-- Dimitri Fontaine <a href="http://twitter.com/tapoueh">@tapoueh</a> (<a href="http://tapoueh.org/projects.html">el-get and other</a> author)</p>
-<p>-- Julien Danjou <a href="http://twitter.com/juldanjou">@juldanjou</a> (<a href="http://awesome.naquadah.org/">Awesome window manager</a> and <a href="http://julien.danjou.info/software/">other</a> author)</p>
-<p>-- Daniel Farina <a href="http://twitter.com/danfarina">@danfarina</a> (member of the <a href="http://www.heroku.com/">Heroku</a> Department of Data)</p>
-<p><a href="https://twitter.com/pyr/status/160466727195521024">https://twitter.com/pyr/status/160466727195521024</a></p>
-</blockquote>
-<div style=" column-count:2;-webkit-column-count:2;-moz-column-count:2;">
-<blockquote>
-<p>“Thank you so much for the truly excellent elisp app. I am learning many things from it.”</p>
-<p>-- <a href="https://github.com/priyadarshan">priyadarshan</a></p>
-<p><a href="https://github.com/renard/o-blog/issues/24">https://github.com/renard/o-blog/issues/24</a></p>
-</blockquote>
-<blockquote>
-<p>“o-blog looks awesome!”</p>
-<p>-- <a href="https://github.com/djcb">Dirk-Jan C. Binnema</a> (Author of <a href="http://www.djcbsoftware.nl/code/mu4e">mu4e</a> and <a href="http://emacs-fu.blogspot.com">emacs-fu</a>)</p>
-<p><a href="https://github.com/renard/o-blog/issues/27">https://github.com/renard/o-blog/issues/27</a></p>
-</blockquote>
-<blockquote>
-<p>“o-blog, a cool static blog generator from org-mode markup with some nice Bootstrap integration.”</p>
-<p>-- <a href="http://from-the-cloud.com/en/random/2012/06/17_sites-back.html">Fabián Ezequiel Gallina</a></p>
-</blockquote>
-<blockquote>
-<p>“o-blog is amazing. After using Wordpress seemingly since the dawn of time, then Jekyll for a couple of years, this is like a spring breeze after a long, cold winter.”</p>
-<p>-- <a href="https://github.com/fravashi">Farasha Euker</a></p>
-<p><a href="https://github.com/renard/o-blog/issues/33">https://github.com/renard/o-blog/issues/33</a></p>
-</blockquote>
+
+
+
+
+<div class="hero-unit">
+
+
+<p>
+If you do use o-blog, please <a href="https://github.com/renard/o-blog/issues/new">drop me a line</a>.
+</p>
+
+
 </div>
+
+
+
+
+
+</div></div>
+
+
 
   </div>
 </article>
@@ -256,65 +251,64 @@ http://www.williamdenman.ca/
       <div id="footer">
 	<div class="container">
 	  <div class="row">
-	    <nav class="col-md-3">
+	    <section class="span3">
 	      <h1>About</h1>
-	      <!-- about -->
-	      <!--/
-title: About
-type: snippet
-/-->
-<p>This is a sample blog to explain how <a href="https://github.com/renard/o-blog">o-blog</a> works.</p>
-
-	      <!-- /about -->
-	    </nav>
-	    <nav id="links" class="col-md-3">
+	      <p>
+This is a sample blog to explain how <a href="https://github.com/renard/o-blog">o-blog</a> works.
+</p>
+	    </section>
+	    <nav id="links" class="span3">
 	      <h1>Links</h1>
-	      <!-- Navigation Footer -->
-	      <!--/
-title: Navigation Footer
-type: snippet
-/-->
-<ul>
-<li><a href="./index.html"><i class="fa fa-home"></i> Home</a></li>
-<li><a href="./quickstart.html"><i class="fa fa-book"></i> Quickstart</a></li>
-<li><a href="./bootstrap-items.html"><i class="fa fa-book"></i> Bootstrap</a></li>
-<li><a href="./page-classes.html"><i class="fa fa-book"></i> Page classes</a></li>
-<li><a href="./publication.html"><i class="fa fa-book"></i> Publication</a></li>
+	      <ul>
+		<ul>
+<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
+
+</li>
+<li><a href="./tips/2012/08/21_adding-an-image-into-a-post.html"><i>icon-file icon-white</i> Tips</a>
+
+</li>
+<li><a href="./tags.html"><i>icon-tags icon-white</i> Tags</a>
+
+</li>
+<li><a href="./archives.html"><i>icon-list icon-white</i> Archives</a>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+
+</li>
+<li><a href="./index.xml"><i>icon-rss icon-white</i> RSS</a>
+</li>
 </ul>
 
-	      <!-- Navigation Footer -->
-	    </nav>
-	    <nav id="archives" class="col-md-3">
-	      <h1><a href="./archives.html">Archives</a></h1>
-	      <ul>
-		<li><a href="./lorem/2014/07/04_lorem-ipsum-columns-mix.html">Lorem ipsum columns mix</a></li> <li><a href="./lorem/2014/07/04_lorem-ipsum-full-text.html">Lorem ipsum full text</a></li> <li><a href="./lorem/2014/07/04_lorem-ipsum-2-columns-version.html">Lorem ipsum 2 columns version</a></li> <li><a href="./blog/2014/07/03_o-blog-easy-web-site-and-bloging-system.html">O-Blog easy web site and bloging system</a></li> 
+
 	      </ul>
 	    </nav>
-	    <nav class="tags col-md-3">
+	    <nav id="archives" class="span3">
+	      <h1><a href="./archives.html">Archives</a></h1>
+	      <ul>
+		<li><a href="./tips/2012/08/21_adding-an-image-into-a-post.html">Adding an image into a post</a></li> <li><a href="./tips/2012/05/21_create-static-pages.html">Create static pages</a></li> <li><a href="./tips/2012/05/07_add-a-custom-font.html">Add a custom font</a></li> <li><a href="./tips/2012/05/03_some-bootstrap-features.html">Some bootstrap features</a></li> <li><a href="./tips/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a></li> <li><a href="./tips/2012/02/10_adding-icons.html">Adding icons</a></li> <li><a href="./tips/2012/02/09_using-modal-source-code.html">Using modal source code</a></li> <li><a href="./tips/2012/01/15_alerts.html">Alerts</a></li> <li><a href="./tips/2012/01/10_some-html5-samples.html">Some HTML5 samples</a></li> <li><a href="./tips/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> 
+	      </ul>
+	    </nav>
+	    <nav class="tags span3">
 	      <h1><a href="./tags/index.html">Tags</a></h1>
+	      <ul>
+  <li style="font-size: 150.00%;"><a href="./tags/bootstrap.html">Bootstrap</a></li> <li style="font-size: 80.00%;"><a href="./tags/html-5.html">html 5</a></li> <li style="font-size: 136.00%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li> 
+</ul>
+
 	    </nav>
 	  </div>
 	</div>
 	<div class="copyright" style="text-align: center;">
-	  <!-- copyright -->
-	  <!--/
-title: Copyright
-type: snippet
-/-->
-
-
-<p>Copyright Sébastien Gross</p>
-
+	  <p>
+Copyright © 2008-2012 <a href="mailto:seb%20❨ɑƦɵϐɑʂɛ❩%20chezwam%20❨Ƥɵɩɲʈ❩%20org">Sébastien Gross</a>. Published under the therm of the
+<a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.
+</p>
 	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
 	</div>
       </div>
-      <script type="text/javascript">
-      	var path_to_root = ".";
-	var ob_this_page = "testimonials.html";
-      </script>
-      <script src="./style/jquery-2.1.1.min.js"></script>
-      <script src="./style/bootstrap/js/bootstrap.min.js"></script>
-      <script src="./style/o-blog-bootstrap.min.js"></script>
 </body>
 </html>
 

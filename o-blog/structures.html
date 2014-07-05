@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Structures</title>
+    <link rel="stylesheet" type="text/less" href="./style/less/o-blog.less"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog version 1.2-111-gfab6256"/>
+    <script src="./style/js/less-1.3.0.min.js" type="text/javascript"></script>
+    <script src="./style/js/jquery-1.7.1.min.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-modal.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-transition.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-dropdown.js" type="text/javascript"></script>
+    <script src="./style/bootstrap/js/bootstrap-collapse.js" type="text/javascript"></script>
+    <script src="./style/js/prettify.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog.linenumber.js" type="text/javascript"></script>
+    <script src="./style/js/o-blog-fix.js" type="text/javascript"></script>
+    
+  </head>
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+	<div class="container">
+	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+	  <a class="brand" href="./index.html">o-blog</a>
+	  <div class="nav-collapse collapse">
+	    <ul>
+<li><a href="./features.html"><i>icon-cog icon-white</i> Features</a>
+
+</li>
+<li><a href="#"><i>icon-book icon-white</i> Documentation</a>
+<ul>
+<li><a href="./templates.html">Templates</a>
+</li>
+<li><a href="./structures.html">Structures</a>
+</li>
+<li><a href="./functions.html">Functions</a>
+</li>
+<li>
+</li>
+<li><a href="./faq.html">FAQ</a>
+</li>
+<li>
+</li>
+<li><a href="./bug-report.html">Bug report</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="#"><i>icon-file icon-white</i> Tips</a>
+<ul>
+<li><a href="./tips/2012/08/21_adding-an-image-into-a-post.html">Adding an image into a post</a>
+</li>
+<li><a href="./tips/2012/05/21_create-static-pages.html">Create static pages</a>
+</li>
+<li><a href="./tips/2012/05/07_add-a-custom-font.html">Add a custom font</a>
+</li>
+<li><a href="./tips/2012/05/03_some-bootstrap-features.html">Some bootstrap features</a>
+</li>
+<li><a href="./tips/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a>
+
+</li>
+</ul>
+
+</li>
+<li><a href="./tags.html"><i>icon-tags icon-white</i> Tags</a>
+
+</li>
+<li><a href="./archives.html"><i>icon-list icon-white</i> Archives</a>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./index.xml"><i>icon-rss icon-white</i> RSS</a>
+
+</li>
+<li><a href="./changelog.html"><i>icon-pencil icon-white</i> Changelog</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+
+</li>
+<li><a href="./debug.html">(debug)</a>
+</li>
+</ul>
+
+
+	  </div>
+	</div>
+      </div>
+    </div>
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider">/</span></li>
+  <li>Structures</li>
+  </ul>
+
+      </div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <header class="article-header">
+    <div class="well">
+      <div class="row">
+	<div class="span1">
+	  <div class="qr-code">
+  <img src="http://chart.apis.google.com/chart?chs=50x50&cht=qr&chld=|0&chl=http%3a%2f%2frenard.github.com%2fo-blog%2fstructures.html"
+       alt="qr-code" />
+</div>
+
+	</div>
+	<h1 class="offset1" style="font-size: 250%;">Structures</h1>
+      </div>
+    </div>
+  </header>
+  <div class="article-content">
+    <p>
+Some variables are available when publishing lisp parts of templates. These
+variables are defined using <a href="http://www.gnu.org/software/emacs/manual/html_node/cl/Structures.html">defstruct</a>, then any slot (or property) is
+available using a <code>(type-slot variable)</code> form.
+</p>
+
+<div id="outline-container-1" class="outline-3">
+<h3 id="sec-1">Structures</h3>
+<div class="outline-text-3" id="text-1">
+
+
+
+</div>
+
+<div id="outline-container-1-1" class="outline-4">
+<h4 id="sec-1-1">Structures: <code>ob:blog</code></h4>
+<div class="outline-text-4" id="text-1-1">
+
+
+<p>
+Structure used to define a blog:
+</p>
+<ul>
+<li><code>file</code>: The blog source file (read-only).
+</li>
+<li><code>buffer</code>: Buffer visiting the blog file (read-only).
+</li>
+<li><code>publish-dir</code>: Where to publish the blog, defined by the <code>#+PUBLISH_DIR:</code>
+   header directive or <code>out</code> in the same directory as the blog source file.
+</li>
+<li><code>template-dir</code>: Location of the template directory defined by the
+   <code>#+TEMPLATE_DIR:</code> header directive or the <code>templates</code> directory of the
+   <code>o-blog</code> library.
+</li>
+<li><code>style-dir</code>: Path of the <i>css</i> files defined by the <code>#STYLE_DIR:</code> header
+   directive or <code>style</code>. This directory is relative to <code>template-dir</code>.
+</li>
+<li><code>posts-filter</code>: Default filter for posts defined by the <code>#POSTS_FILTER:</code>
+   header directive or <code>+TODO={DONE}</code>.
+</li>
+<li><code>static-filter</code>: Default filter for static pages defined by the
+   <code>#STATIC_FILTER:</code> header directive or <code>+PAGES={.*}</code>.
+</li>
+<li><code>snippet-filter</code>  Default filter for snippets defined by the
+   <code>#SNIPPET_FILTER:</code> header directive or <code>+SNIPPET={.*}</code>.
+</li>
+<li><code>title</code>: Blog title defined by the <code>#+TITLE:</code> header directive.
+</li>
+<li><code>description</code>: Blog description defined by the <code>#+DESCRIPTION:</code> header
+   directive.
+</li>
+<li><code>url</code>: Blog base URL defined by the <code>#+URL:</code> header.
+</li>
+<li><code>default-category</code>: Default category for posts defined by the
+   <code>#DEFAULT_CATEGORY:</code> header or <code>Blog</code>.
+</li>
+<li><code>disqus</code>: The <a href="http://docs.disqus.com/developers/universal/">Disqus</a> account (called a forum on <a href="http://disqus.com">Disqus</a>) this o-blog
+   site belongs to. Defined by the <code>#+DISQUS:</code> header.
+</li>
+<li><code>filename-sanitizer</code>: A 1-argument function to be used to sanitize
+   post filenames. Defined by <code>#+FILENAME_SANITIZER:</code> or
+   <code>ob-sanitize-string</code>.
+</li>
+<li><code>post-sorter</code>: A 2-argument function to be used to sort the
+   posts. Defined by <code>#+POST_SORTER:</code> or <code>ob-sort-posts-by-date</code>.
+</li>
+</ul>
+
+
+<p>
+Example:
+</p>
+
+
+
+<pre class="src src-emacs-lisp"><span style="color: #888a85;">;; </span><span style="color: #888a85;">get the title of the current blog defined in variable BLOG.</span>
+(ob:blog-title BLOG)
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-2" class="outline-4">
+<h4 id="sec-1-2">Structures: <code>ob:post</code></h4>
+<div class="outline-text-4" id="text-1-2">
+
+
+<ul>
+<li><code>id</code>: The post's numerical id. Posts are sort by reversed chronological
+   order. The most recent post get the id 0.
+</li>
+<li><code>title</code>: The post title, read from the entry title.
+</li>
+<li><code>timestamp</code>: The post timestamp given by the <code>CLOSED</code> property or the
+   current time.
+</li>
+<li><code>year</code>: Numerical year computed from <code>timestamp</code>.
+</li>
+<li><code>month</code>: Numerical month computed from <code>timestamp</code>.
+</li>
+<li><code>day</code>: Numerical day computed from <code>timestamp</code>.
+</li>
+<li><code>category</code>: Category read from <code>CATEGORY</code> property org <code>blog</code>.
+</li>
+<li><code>tags</code>: List of <code>ob:tags</code>.
+</li>
+<li><code>template</code>: Template to use for current post read from <code>TEMPLATE</code>
+   property or <code>blog_post.html</code>.
+</li>
+<li><code>filepath</code>: Relative path from the blog root directory to the post
+   directory (directory only).
+</li>
+<li><code>filename</code>: Sanitized filename generated from <code>title</code>.
+</li>
+<li><code>htmlfile</code>: Full relative path to the post html file (file and
+   directory).
+</li>
+<li><code>path-to-root</code>: Relative path from the post html file to the blog root.
+</li>
+<li><code>content</code>: Raw content of the post (Org-mode format).
+</li>
+<li><code>content-html</code>: HTML export of the post.
+</li>
+</ul>
+
+
+<p>
+Example:
+</p>
+
+
+
+<pre class="src src-emacs-lisp"><span style="color: #888a85;">;; </span><span style="color: #888a85;">Get the HTML content of the post defined in variable POST.</span>
+(ob:post-content-html POST)
+</pre>
+
+
+</div>
+
+</div>
+
+<div id="outline-container-1-3" class="outline-4">
+<h4 id="sec-1-3">Structures: <code>ob:tags</code></h4>
+<div class="outline-text-4" id="text-1-3">
+
+
+<p>
+Structure used to define a tag:
+</p>
+<ul>
+<li><code>name</code>: The string defining the tag name.
+</li>
+<li><code>safe</code>: Web/URL-safe tag name.
+</li>
+<li><code>count</code>: How many times the tag is used across posts.
+</li>
+<li><code>size</code>: The font size in percent.
+</li>
+</ul>
+
+
+<p>
+Example:
+</p>
+
+
+
+<pre class="src src-emacs-lisp"><span style="color: #888a85;">;; </span><span style="color: #888a85;">get the name of the tag defined in variable TAG.</span>
+(ob:tags-name TAG)
+</pre>
+
+
+</div>
+</div>
+
+</div>
+
+<div id="outline-container-2" class="outline-3">
+<h3 id="sec-2">Variables</h3>
+<div class="outline-text-3" id="text-2">
+
+
+<p>
+The following variables are always available when publishing a blog:
+</p>
+<ul>
+<li><code>BLOG</code> (<code>ob:blog</code>): Information about the blog being published.
+</li>
+<li><code>POSTS</code> (list of <code>ob:post</code>): List of all posts of the blog or restricted
+   list of posts (depending on what is exported).
+</li>
+<li><code>ALL-POSTS</code>: A copy of <code>POSTS</code> except this <b>always</b> contains all the
+   posts from the blog.
+</li>
+<li><code>STATIC</code> (list of <code>ob:post</code>): List of static pages.
+</li>
+<li><code>SNIPPETS</code> (list of <code>ob:post</code>): List of snippets pages.
+</li>
+<li><code>TAGS</code> (list of <code>ob:tags</code>): List of all tags.
+</li>
+</ul>
+
+
+<p>
+Some variables may be defined in some functions:
+</p>
+<ul>
+<li><code>POST</code> (<code>ob:post</code>): The post (or static page) being currently published.
+</li>
+<li><code>TAG</code> (<code>ob:tags</code>): The tag being currently published.
+</li>
+<li><code>CATEGORY</code> (<code>string</code>): The category being published.
+</li>
+<li><code>YEAR</code>, <code>MONTH (=integer</code>): The year and month being published.
+</li>
+<li><code>PATH-TO-ROOT</code> (<code>string</code>): (internal use only, use <code>ob:path-to-root</code>
+   instead) Path to blog root used by <code>ob:path-to-root</code>.
+</li>
+</ul>
+
+</div>
+</div>
+
+  </div>
+</article>
+      </div>
+      <div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <section class="span3">
+	      <h1>About</h1>
+	      <p>
+This is a sample blog to explain how <a href="https://github.com/renard/o-blog">o-blog</a> works.
+</p>
+	    </section>
+	    <nav id="links" class="span3">
+	      <h1>Links</h1>
+	      <ul>
+		<ul>
+<li><a href="./index.html"><i>icon-home icon-white</i> Home</a>
+
+</li>
+<li><a href="./tips/2012/08/21_adding-an-image-into-a-post.html"><i>icon-file icon-white</i> Tips</a>
+
+</li>
+<li><a href="./tags.html"><i>icon-tags icon-white</i> Tags</a>
+
+</li>
+<li><a href="./archives.html"><i>icon-list icon-white</i> Archives</a>
+
+</li>
+<li><a href="./testimonials.html"><i>icon-comments-alt icon-white</i> Testimonials</a>
+
+</li>
+<li><a href="./roadmap.html"><i>icon-tasks icon-white</i> Roadmap</a>
+
+</li>
+<li><a href="./index.xml"><i>icon-rss icon-white</i> RSS</a>
+</li>
+</ul>
+
+
+	      </ul>
+	    </nav>
+	    <nav id="archives" class="span3">
+	      <h1><a href="./archives.html">Archives</a></h1>
+	      <ul>
+		<li><a href="./tips/2012/08/21_adding-an-image-into-a-post.html">Adding an image into a post</a></li> <li><a href="./tips/2012/05/21_create-static-pages.html">Create static pages</a></li> <li><a href="./tips/2012/05/07_add-a-custom-font.html">Add a custom font</a></li> <li><a href="./tips/2012/05/03_some-bootstrap-features.html">Some bootstrap features</a></li> <li><a href="./tips/2012/02/10_using-bootstrap-grid.html">Using Bootstrap grid</a></li> <li><a href="./tips/2012/02/10_adding-icons.html">Adding icons</a></li> <li><a href="./tips/2012/02/09_using-modal-source-code.html">Using modal source code</a></li> <li><a href="./tips/2012/01/15_alerts.html">Alerts</a></li> <li><a href="./tips/2012/01/10_some-html5-samples.html">Some HTML5 samples</a></li> <li><a href="./tips/2012/01/07_example-of-some-org-syntax.html">Example of some org syntax</a></li> 
+	      </ul>
+	    </nav>
+	    <nav class="tags span3">
+	      <h1><a href="./tags/index.html">Tags</a></h1>
+	      <ul>
+  <li style="font-size: 150.00%;"><a href="./tags/bootstrap.html">Bootstrap</a></li> <li style="font-size: 80.00%;"><a href="./tags/html-5.html">html 5</a></li> <li style="font-size: 136.00%;"><a href="./tags/o-blog.html">o-blog</a></li> <li style="font-size: 80.00%;"><a href="./tags/org.html">org</a></li> <li style="font-size: 220.00%;"><a href="./tags/usage.html">usage</a></li> 
+</ul>
+
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <p>
+Copyright © 2008-2012 <a href="mailto:seb%20❨ɑƦɵϐɑʂɛ❩%20chezwam%20❨Ƥɵɩɲʈ❩%20org">Sébastien Gross</a>. Published under the therm of the
+<a href="http://creativecommons.org/licenses/by-nc-sa/2.0/fr/">Creative Commons Attribution-Noncommercial-Share Alike 2.0 France License</a>.
+</p>
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	</div>
+      </div>
+</body>
+</html>
+
