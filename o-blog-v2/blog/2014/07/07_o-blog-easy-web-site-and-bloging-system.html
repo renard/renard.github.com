@@ -34,15 +34,19 @@ type: snippet
 <ul>
 <li><a href="../../../quickstart.html">Quickstart</a></li>
 <li><a href="../../../bootstrap-items.html">Bootstrap</a></li>
-<li>.</li>
+<li></li>
 <li><a href="../../../page-classes.html">Page classes</a></li>
 <li><a href="../../../publication.html">Publication</a></li>
-<li>.</li>
+<li></li>
 <li><a href="../../../javascript.html">Javascript</a></li>
 </ul></li>
 <li><a href="#"><i class="fa fa-book"></i> Blog</a> <span class="ob-articles" data-source="../../../articles.js" data-path-to-root="../../.." data-category="blog"/></li>
 <li><a href="#"><i class="fa fa-file-text"></i> Lorem</a> <span class="ob-articles" data-source="../../../articles.js" data-path-to-root="../../.." data-category="lorem"/></li>
-<li><a href="../../../tags/index.html"><i class="fa fa-tags"></i> Tags</a></li>
+<li><a href="#"><i class="fa fa-tags"></i> Tags</a>
+<ul>
+<li><a href="../../../tags/index.html">Cloud</a></li>
+<li><a href="../../../tags.html">Details</a></li>
+</ul></li>
 <li><a href="../../../testimonials.html"><i class="fa fa-child"></i> Testimonial</a></li>
 </ul>
 <!--
@@ -66,11 +70,30 @@ type: snippet
     </div>
     <div id="page" class="container">
 
-<article>
+  <div class="article">
+  <header class="article-header">
+
+    <div class="well">
+      <div class="row">
+	<div class="date span1">
+	  <div class=" date-d">07</div>
+	  <div class=" date-m"><a href="../../../blog/2014/07/index.html">Jul</a></div>
+	  <div class=" date-y"><a href="../../../blog/2014/index.html">2014</a>
+	  </div>
+	</div>
+	<h1 class="offset2" style="font-size: 250%">O-Blog easy web site and bloging system</h1>
+      </div>
+      <nav>
+	<ul class="pager">
+	  <li class="previous">&nbsp;</li><li class="next">&nbsp;</li>
+	</ul>
+      </nav>
+    </div>
+
+  </header>
   <div class="article-content">
     <!--/
 title: O-Blog easy web site and bloging system
-template: blog_static_no_title.html
 type: article
 category: Blog
 tags: blog
@@ -131,7 +154,32 @@ Publish
 </div>
 
   </div>
-</article>
+  
+  <footer class="well article-footer">
+    Posted on <time datetime="2014-07-07T01:07:49Z"> Monday July, 07 2014 at 01:07:49</time>.
+    <nav class="tag-cloud">
+      <h1><i class="icon-tags"></i> related tags</h1>
+      <ul>
+	<li class="label label-default small"><a href="../../../tags/blog.html">blog</a></li>
+      </ul>
+    </nav>
+  </footer>
+  </div>
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+  /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+  var disqus_shortname = ''; // required: replace example with your forum shortname
+
+  /* * * DON'T EDIT BELOW THIS LINE * * */
+  (function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+
       </div>
       <div id="footer">
 	<div class="container">
@@ -173,13 +221,13 @@ type: snippet
 
 <div>
 <h6>
-Blog
+<a href="../../../blog/index.html">Blog</a>
 </h6>
 <span class="ob-articles" data-source="../../../articles.js" data-path-to-root="../../.." data-category="blog"/>
 </div>
 <div>
 <h6>
-Lorem
+<a href="../../../lorem/index.html">Lorem</a>
 </h6>
 <span class="ob-articles" data-source="../../../articles.js" data-path-to-root="../../.." data-category="lorem"/>
 </div>
@@ -206,7 +254,7 @@ type: snippet
       </div>
       <script type="text/javascript">
       	var path_to_root = "../../..";
-	var ob_this_page = "blog/2014/07/03_o-blog-easy-web-site-and-bloging-system.html";
+	var ob_this_page = "blog/2014/07/07_o-blog-easy-web-site-and-bloging-system.html";
       </script>
       <script src="../../../style/jquery-2.1.1.min.js"></script>
       <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>

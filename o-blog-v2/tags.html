@@ -2,7 +2,7 @@
 <html lang="">
   <head>
     <meta charset="utf-8"/>
-    <title>Publication</title> <meta name="viewport" content="width=device-width,
+    <title>Articles by tags</title> <meta name="viewport" content="width=device-width,
     initial-scale=1.0"/> <meta name="generator"
     content="o-blog v2.0"/> <link href="./style/bootstrap/css/bootstrap.css"
     rel="stylesheet"><!--  <link href="./style/bootstrap/css/bootstrap-theme.min.css" -->
@@ -63,56 +63,27 @@ type: snippet
       <div class="container">
 	<ul class="breadcrumb">
   <li><a href="./index.html">Home</a> <span class="divider"></span></li>
-  <li>Publication</li>
+  <li>Articles by tags</li>
   </ul>
 
       </div>
     </div>
     <div id="page" class="container">
 
-<article>
-  <header class="article-header">
-    <div class="well">
-      <div class="row">
-	<h1 class="offset1" style="font-size: 250%;">Publication</h1>
-      </div>
-    </div>
-  </header>
+<div class="article">
   <div class="article-content">
-    <!--/
-title: Publication 
-type: page
-template: blog_static.html
-tags: help, o-blog internals
-/-->
-
-
-<p class="lead">
-This article deals about <code>o-blog</code> publication order. This will explain how things works under the hood.
-</p>
-
-<h1 id="functions">Functions</h1>
-<div class="panel panel-info">
-<div class="panel-body">
-<a href="functions.png"><img src="functions-tn.png" title="Class" alt="publication" /></a>
-</div>
-<div class="panel-footer">
-Functions callout herarchy during publication.
-</div>
-</div>
-<h1 id="templates">Templates</h1>
-<div class="panel panel-info">
-<div class="panel-body">
-<a href="templates.png"><img src="templates-tn.png" title="Class" alt="publication" /></a>
-</div>
-<div class="panel-footer">
-Templates callout herarchy during publication.
-</div>
-</div>
-<p>The templates are fully compatibles with <code>o-blog 1</code> templates.</p>
-
+    <div>
+      <nav>
+	<p class="lead"><a href="./tags/index.html">Tag cloud</a></p>
+      </nav>
+    </div>
+    <nav class="tag-detail">
+      <div class="multicolumn3">
+	<h3><a href="./tags/lorem.xml"><i class="fa fa-rss"></i></a> <a href="./tags/lorem.html">Lorem</a></h3><ul><li><a href="./lorem/2014/07/04_lorem-ipsum-columns-mix.html">Lorem ipsum columns mix</a></li><li><a href="./lorem/2014/07/04_lorem-ipsum-full-text.html">Lorem ipsum full text</a></li><li><a href="./lorem/2014/07/04_lorem-ipsum-2-columns-version.html">Lorem ipsum 2 columns version</a></li></ul><h3><a href="./tags/blog.xml"><i class="fa fa-rss"></i></a> <a href="./tags/blog.html">blog</a></h3><ul><li><a href="./blog/2014/07/07_o-blog-easy-web-site-and-bloging-system.html">O-Blog easy web site and bloging system</a></li></ul><h3><a href="./tags/bootstrap.xml"><i class="fa fa-rss"></i></a> <a href="./tags/bootstrap.html">bootstrap</a></h3><ul></ul><h3><a href="./tags/help.xml"><i class="fa fa-rss"></i></a> <a href="./tags/help.html">help</a></h3><ul></ul><h3><a href="./tags/o-blog-internals.xml"><i class="fa fa-rss"></i></a> <a href="./tags/o-blog-internals.html">o-blog internals</a></h3><ul></ul>
+      </div>
+    </nav>
   </div>
-</article>
+</div>
       </div>
       <div id="footer">
 	<div class="container">
@@ -187,7 +158,7 @@ type: snippet
       </div>
       <script type="text/javascript">
       	var path_to_root = ".";
-	var ob_this_page = "publication.html";
+	var ob_this_page = "tags.html";
       </script>
       <script src="./style/jquery-2.1.1.min.js"></script>
       <script src="./style/bootstrap/js/bootstrap.min.js"></script>

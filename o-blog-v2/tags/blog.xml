@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title></title>
+  <link href="http://renard.github.io/o-blogindex.xml" rel="self" />
+  <link href="http://renard.github.io/o-blog"/>
+  <updated>2014-07-07T23:32:37Z</updated>
+  <id>http://renard.github.io/o-blogindex.xml</id>
+  <entry><title type="html">O-Blog easy web site and bloging system</title><author><name>nil</name></author><link href="http://renard.github.io/o-blog/blog/2014/07/07_o-blog-easy-web-site-and-bloging-system.html"/><updated>2014-07-07T01:07:49Z</updated><published>2014-07-07T01:07:49Z</published><id>blog/2014/07/07_o-blog-easy-web-site-and-bloging-system.html</id><category scheme="/tags/blog.html" term="blog" label="blog"/><content type="html">&lt;!--/
+title: O-Blog easy web site and bloging system
+type: article
+category: Blog
+tags: blog
+/--&gt;
+
+&lt;p&gt;&lt;a href="https://github.com/renard/o-blog"&gt; &lt;img
+  style="position: fixed; top: 0; right: 0; border: 0; z-index: 999999;"
+  src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"
+  data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"&gt; &lt;/a&gt;&lt;/p&gt;
+&lt;div class="jumbotron"&gt;
+&lt;div class="page-header"&gt;
+&lt;h1&gt;
+o-blog &lt;small&gt;publication tool for emacs&lt;/small&gt;
+&lt;/h1&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="row"&gt;
+&lt;div class="col-sm-6 col-md-4"&gt;
+&lt;div class="thumbnail"&gt;
+&lt;div class="caption"&gt;
+&lt;h3&gt;
+Requirements
+&lt;/h3&gt;
+  
+&lt;ul&gt;
+&lt;li&gt;Emacs&lt;/li&gt;
+&lt;li&gt;pandoc or org-mode&lt;/li&gt;
+&lt;li&gt;el-get or git&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6 col-md-4"&gt;
+&lt;div class="thumbnail"&gt;
+&lt;div class="caption"&gt;
+&lt;h3&gt;
+Setup
+&lt;/h3&gt;
+&lt;p&gt;If you are using el-get it would be very easy to install. All you need to do is to add o-blog to el-get-sources and type:&lt;/p&gt;
+&lt;code&gt;M-x el-get-install o-blog&lt;/code&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="col-sm-6 col-md-4"&gt;
+&lt;div class="thumbnail"&gt;
+&lt;div class="caption"&gt;
+&lt;h3&gt;
+Publish
+&lt;/h3&gt;
+&lt;p&gt;Only one single command:&lt;/p&gt;
+&lt;code&gt;M-x o-blog-publish&lt;/code&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="alert alert-info"&gt;
+&lt;p&gt;Please note that this site is for &lt;code&gt;o-blog 2&lt;/code&gt;. Old &lt;code&gt;o-blog&lt;/code&gt; versions is still available under the &lt;code&gt;o-blog-v1&lt;/code&gt; branch. &lt;code&gt;o-blog 2&lt;/code&gt; has been designed to be fully compatible with &lt;code&gt;o-blog 1&lt;/code&gt; but if you have compatibility problems please &lt;a href="https://github.com/renard/o-blog/issues"&gt;open an issue on Github&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+</content></entry>
+</feed>
