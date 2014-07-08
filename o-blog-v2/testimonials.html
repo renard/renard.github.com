@@ -2,14 +2,15 @@
 <html lang="">
   <head>
     <meta charset="utf-8"/>
-    <title>Testimonials</title> <meta name="viewport" content="width=device-width,
-    initial-scale=1.0"/> <meta name="generator"
-    content="o-blog v2.0"/> <link href="./style/bootstrap/css/bootstrap.css"
-    rel="stylesheet"><!--  <link href="./style/bootstrap/css/bootstrap-theme.min.css" -->
+    <title>Testimonials</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog v2.0"/>
+    <!-- <link href="./style/bootstrap/css/bootstrap.css" rel="stylesheet"> -->
+    <!--  <link href="./style/bootstrap/css/bootstrap-theme.min.css" -->
     <!-- rel="stylesheet"> -->
-    <link href="./style/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="./style/tipue/css/tipuesearch.css" rel="stylesheet">
-        <link href="./style/tipue/css/tipuedrop.css" rel="stylesheet">
+    <!-- <link href="./style/Font-Awesome/css/font-awesome.min.css" rel="stylesheet"> -->
+    <!-- <link href="./style/tipue/css/tipuesearch.css" rel="stylesheet"> -->
+    <!--     <link href="./style/tipue/css/tipuedrop.css" rel="stylesheet"> -->
     
   </head>
   <body>
@@ -363,6 +364,13 @@ type: snippet
 	'tipuesearch_stop_words': [],
 	'show': 6
 	});
+
+        $("head").append([
+	'<link href="./style/bootstrap/css/bootstrap.css" rel="stylesheet">',
+	'<link href="./style/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">',
+	'<link href="./style/tipue/css/tipuesearch.css" rel="stylesheet">',
+        '<link href="./style/tipue/css/tipuedrop.css" rel="stylesheet">'].join());
+
 	});
      </script>
 
