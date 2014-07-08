@@ -8,6 +8,8 @@
     rel="stylesheet"><!--  <link href="../../../style/bootstrap/css/bootstrap-theme.min.css" -->
     <!-- rel="stylesheet"> -->
     <link href="../../../style/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../../style/tipue/css/tipuesearch.css" rel="stylesheet">
+        <link href="../../../style/tipue/css/tipuedrop.css" rel="stylesheet">
     
   </head>
   <body>
@@ -56,6 +58,15 @@ type: snippet
 
 
 
+	<form class="navbar-form navbar-left pull-right" role="search" action="../../../search.html">
+	  <div class="form-group">
+	    <div class="input-group margin-bottom-sm">
+	      <span class="input-group-addon" ><i class="fa fa-search"></i></span>
+	      <input  class="form-control" type="text" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search" required>
+	    </div>
+	    <div id="tipue_drop_content"></div>
+	  </div>
+	</form>
       </div>
     </nav>
 
@@ -73,19 +84,23 @@ type: snippet
   <div class="article">
   <header class="article-header">
 
-    <div class="well">
-      <div class="row">
-	<div class="date span1">
-	  <div class=" date-d">04</div>
-	  <div class=" date-m"><a href="../../../lorem/2014/07/index.html">Jul</a></div>
-	  <div class=" date-y"><a href="../../../lorem/2014/index.html">2014</a>
+    
+    
+    <div class="jumbotron">
+      <div class="page-header">
+	<time date="2014-07-04T18:20:05Z">
+	  <div>
+	    <span class="day">07</span>
+	    <span class="month"><a href="../../../lorem/2014/07/index.html">Jul</a>
+	    </span>
+	    <span class="year"><a href="../../../lorem/2014/index.html">2014</a></span>
 	  </div>
-	</div>
-	<h1 class="offset2" style="font-size: 250%">Lorem ipsum columns mix</h1>
+	  <h1>Lorem ipsum columns mix</h1>
+	</time>
       </div>
       <nav>
 	<ul class="pager">
-	  <li class="previous"><a href="../../../lorem/2014/07/04_lorem-ipsum-full-text.html"><i class="icon-chevron-left"></i>&nbsp;Lorem ipsum full text</a></li><li class="next">&nbsp;</li>
+	  <li class="previous"><a href="../../../lorem/2014/07/04_lorem-ipsum-full-text.html"><i class="fa fa-chevron-circle-left"></i>&nbsp;Lorem ipsum full text</a></li><li class="next">&nbsp;</li>
 	</ul>
       </nav>
     </div>
@@ -225,6 +240,25 @@ type: snippet
       <script src="../../../style/jquery-2.1.1.min.js"></script>
       <script src="../../../style/bootstrap/js/bootstrap.min.js"></script>
       <script src="../../../style/o-blog-bootstrap.min.js"></script>
+      <script src="../../../style/o-blog-tipue.js"></script>
+      <script src="../../../style/tipue/js/tipuesearch.min.js"></script>
+      <script src="../../../style/tipue/js/tipuedrop.min.js"></script>
+
+      <script type="text/javascript">
+	$(document).ready(function() {
+	$('#tipue_search_input').tipuedrop({
+	'mode': 'json',
+	'contentLocation': '../../../search.js'
+	});
+	$('#tipue_search_input').tipuesearch({
+	'mode': 'json',
+	'contentLocation': '../../../search.js',
+	'tipuesearch_stop_words': [],
+	'show': 6
+	});
+	});
+     </script>
+
 </body>
 </html>
 

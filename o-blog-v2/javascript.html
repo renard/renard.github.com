@@ -8,6 +8,8 @@
     rel="stylesheet"><!--  <link href="./style/bootstrap/css/bootstrap-theme.min.css" -->
     <!-- rel="stylesheet"> -->
     <link href="./style/Font-Awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="./style/tipue/css/tipuesearch.css" rel="stylesheet">
+        <link href="./style/tipue/css/tipuedrop.css" rel="stylesheet">
     
   </head>
   <body>
@@ -56,6 +58,15 @@ type: snippet
 
 
 
+	<form class="navbar-form navbar-left pull-right" role="search" action="./search.html">
+	  <div class="form-group">
+	    <div class="input-group margin-bottom-sm">
+	      <span class="input-group-addon" ><i class="fa fa-search"></i></span>
+	      <input  class="form-control" type="text" name="q" id="tipue_search_input" autocomplete="off" placeholder="Search" required>
+	    </div>
+	    <div id="tipue_drop_content"></div>
+	  </div>
+	</form>
       </div>
     </nav>
 
@@ -243,6 +254,25 @@ type: snippet
       <script src="./style/jquery-2.1.1.min.js"></script>
       <script src="./style/bootstrap/js/bootstrap.min.js"></script>
       <script src="./style/o-blog-bootstrap.min.js"></script>
+      <script src="./style/o-blog-tipue.js"></script>
+      <script src="./style/tipue/js/tipuesearch.min.js"></script>
+      <script src="./style/tipue/js/tipuedrop.min.js"></script>
+
+      <script type="text/javascript">
+	$(document).ready(function() {
+	$('#tipue_search_input').tipuedrop({
+	'mode': 'json',
+	'contentLocation': './search.js'
+	});
+	$('#tipue_search_input').tipuesearch({
+	'mode': 'json',
+	'contentLocation': './search.js',
+	'tipuesearch_stop_words': [],
+	'show': 6
+	});
+	});
+     </script>
+
 </body>
 </html>
 
