@@ -177,7 +177,7 @@ type: snippet
 
       <script type="text/javascript">
 $(document).ready(function() {
-    var p=/^http:/.test(d.location)?'http':'https', po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    var p=/^http:/.test(document.location)?'http':'https', po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
     po.src = p+'://apis.google.com/js/platform.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
 });
