@@ -7,11 +7,19 @@
     <meta name="generator" content="o-blog v2.0"/>
   </head>
   <body>
+    <div id="spinner" style="width:100%;height:100%;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto;z-index:999998;background-color:rgba(0,0,0,0.5);">
+      <div id="ob-spinner" style="width:100px;height:100px;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto;z-index:999999;background-color:rgba(127,127,127,0.5);"></div>
+      <script src="./style/js/spin.js"></script>
+      <script>
+	var ob_spinner = new Spinner({color: '#bbb'}).spin(document.getElementById('ob-spinner'));
+      </script>
+    </div>
 
 
+    <div class="ob-navbar-container">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="navbar-header">
-	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ob-navbar">
 	  <span class="sr-only">Toggle navigation</span>
 	  <span class="icon-bar"></span>
 	  <span class="icon-bar"></span>
@@ -19,7 +27,7 @@
 	</button>
       </div>
       <a class="navbar-brand" href="./index.html">o-blog</a>
-      <div class="collapse navbar-collapse">
+      <div class="collapse navbar-collapse ob-navbar">
 	<!--/
 title: Navigation
 type: snippet
@@ -60,13 +68,14 @@ type: snippet
 </li>
     <li><div class="g-plus" data-action="share" data-annotation="none"></div>
 </li>
+    <li><script type="IN/Share"></script>
+</li>
 
   </ul>
 </div>
 
 
       </div>
-
     </nav>
 
     <div class="subnav subnav-fixed visible-desktop">
@@ -78,6 +87,8 @@ type: snippet
 
       </div>
     </div>
+    </div>
+    
     <div id="page" class="container">
 
 <article>
@@ -109,10 +120,10 @@ tags: help
 </source>
 <div class="src org">
 <pre>
-#+begin_o_blog_hero_unit
-foo
-#+end_o_blog_hero_unit
-</pre>
+<span style="color: #888a85;">#+begin_o_blog_hero_unit
+</span>foo
+<span style="color: #888a85;">#+end_o_blog_hero_unit
+</span></pre>
 </div>
 </div>
 <div class="panel-footer">
@@ -135,12 +146,12 @@ Use <code>jumbotron</code> instead </source>
 </source>
 <div class="src org">
 <pre>
-#+begin_o_blog_row 5
-Col 1
+<span style="color: #888a85;">#+begin_o_blog_row 5
+</span>Col 1
 #+o_blog_row_column  6
 Col 2
-#+end_o_blog_row
-</pre>
+<span style="color: #888a85;">#+end_o_blog_row
+</span></pre>
 </div>
 </div>
 <div class="panel-footer">
@@ -250,18 +261,27 @@ type: snippet
 	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
 	</div>
       </div>
+      <div class="ob-script-container">
       <script type="text/javascript">
       	var path_to_root = ".";
 	var ob_this_page = "deprecation.html";
       </script>
-      <script src="./style/jquery-2.1.1.min.js"></script>
-      <script src="./style/bootstrap/js/bootstrap.min.js"></script>
-      <script src="./style/o-blog-bootstrap.min.js"></script>
+      <script src="./style/js/o-blog.min.js"></script>
+      <!-- <script src="./style/jquery-2.1.1.min.js"></script> -->
+      <!-- <script src="./style/jquery.equalizer.min.js"></script> -->
+      <!-- <script src="./style/bootstrap/js/bootstrap.min.js"></script> -->
+      <!-- <script src="./style/o-blog-bootstrap.min.js"></script> -->
+      <!-- <script type="text/javascript"> -->
+      <!-- 	$(document).ready(function() { -->
+      <!--   $("head").append([ -->
+      <!-- 	'<link href="./style/bootstrap/css/bootstrap.css" rel="stylesheet">', -->
+      <!-- 	'<link href="./style/font-awesome/css/font-awesome.min.css" rel="stylesheet">']) -->
+      <!-- 	}); -->
+      <!-- </script> -->
       <script type="text/javascript">
 	$(document).ready(function() {
-        $("head").append([
-	'<link href="./style/bootstrap/css/bootstrap.css" rel="stylesheet">',
-	'<link href="./style/font-awesome/css/font-awesome.min.css" rel="stylesheet">'])
+	$("head").append([ 
+      	'<link href="./style/css/o-blog.min.css" rel="stylesheet">'])
 	});
       </script>
       <script type="text/javascript">
@@ -283,6 +303,8 @@ $(document).ready(function() {
       <script type="text/javascript" src="//cdn.muut.com/1/moot.min.js"></script>
       <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
+      <script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+      </div>
 </body>
 </html>
 

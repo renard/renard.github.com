@@ -7,11 +7,19 @@
     <meta name="generator" content="o-blog v2.0"/>
   </head>
   <body>
+    <div id="spinner" style="width:100%;height:100%;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto;z-index:999998;background-color:rgba(0,0,0,0.5);">
+      <div id="ob-spinner" style="width:100px;height:100px;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto;z-index:999999;background-color:rgba(127,127,127,0.5);"></div>
+      <script src="./style/js/spin.js"></script>
+      <script>
+	var ob_spinner = new Spinner({color: '#bbb'}).spin(document.getElementById('ob-spinner'));
+      </script>
+    </div>
 
 
+    <div class="ob-navbar-container">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
       <div class="navbar-header">
-	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ob-navbar">
 	  <span class="sr-only">Toggle navigation</span>
 	  <span class="icon-bar"></span>
 	  <span class="icon-bar"></span>
@@ -19,7 +27,7 @@
 	</button>
       </div>
       <a class="navbar-brand" href="./index.html">o-blog</a>
-      <div class="collapse navbar-collapse">
+      <div class="collapse navbar-collapse ob-navbar">
 	<!--/
 title: Navigation
 type: snippet
@@ -60,13 +68,14 @@ type: snippet
 </li>
     <li><div class="g-plus" data-action="share" data-annotation="none"></div>
 </li>
+    <li><script type="IN/Share"></script>
+</li>
 
   </ul>
 </div>
 
 
       </div>
-
     </nav>
 
     <div class="subnav subnav-fixed visible-desktop">
@@ -78,6 +87,8 @@ type: snippet
 
       </div>
     </div>
+    </div>
+    
     <div id="page" class="container">
 
 <article>
@@ -166,13 +177,13 @@ git checkout o-blog-v2
 </source>
 <div class="src markdown">
 <pre>
-% -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
+<span style="color: #888a85;">%</span> -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
 <span style="color: #888a85;">&lt;!--/
 title: About
 type: snippet
-/--&gt;</span>
-This is a sample blog to explain how <span style="color: #729fcf; font-weight: bold;">[o-blog]</span><span style="color: #ad7fa8;">(https://github.com/renard/o-blog)</span> works.
-</pre>
+/--&gt;</span><span style="color: #ad7fa8;">
+This is a sample blog to explain how </span><span style="color: #729fcf; font-weight: bold;">[o-blog]</span><span style="color: #ad7fa8;">(https://github.com/renard/o-blog)</span><span style="color: #ad7fa8;"> works.
+</span></pre>
 </div>
 <p>The most important lines are:</p>
 <ul>
@@ -190,13 +201,13 @@ Please note that file headers are enclosed within <code>&lt;!--/</code> and <cod
 </source>
 <div class="src markdown">
 <pre>
-% -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
+<span style="color: #888a85;">%</span> -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
 <span style="color: #888a85;">&lt;!--/
 title: Copyright
 type: snippet
-/--&gt;</span>
+/--&gt;</span><span style="color: #ad7fa8;">
 Copyright S&#233;bastien Gross
-</pre>
+</span></pre>
 </div>
 </div>
 <div class="panel-footer">
@@ -211,13 +222,13 @@ Copyright S&#233;bastien Gross
 </source>
 <div class="src markdown">
 <pre>
-% -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
+<span style="color: #888a85;">%</span> -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
 <span style="color: #888a85;">&lt;!--/
 title: Navigation Footer
 type: snippet
-/--&gt;</span>
-<span style="color: #729fcf;">- </span><span style="color: #729fcf; font-weight: bold;">[&lt;icon icon="home"&gt; {lisp }(ob:gettext :home){/lisp}]</span><span style="color: #ad7fa8;">({lisp }(ob:path-to-root)</span>{/lisp}/index.html)
-</pre>
+/--&gt;</span><span style="color: #ad7fa8;">
+- </span><span style="color: #729fcf; font-weight: bold;">[&lt;icon icon="home"&gt; {lisp }(ob:gettext :home){/lisp}]</span><span style="color: #ad7fa8;">({lisp }(ob:path-to-root)</span><span style="color: #ad7fa8;">{/lisp}/index.html)
+</span></pre>
 </div>
 </div>
 <div class="panel-footer">
@@ -232,10 +243,10 @@ type: snippet
 </source>
 <div class="src markdown">
 <pre>
-<span style="color: #729fcf;">- </span><span style="color: #729fcf; font-weight: bold;">[&lt;icon icon="home"&gt; Home]</span><span style="color: #ad7fa8;">({lisp }(ob:path-to-root)</span>{/lisp}/index.html)
-<span style="color: #729fcf;">- </span><span style="color: #729fcf; font-weight: bold;">[&lt;icon icon="book"&gt; Documentation]</span><span style="color: #ad7fa8;">(#)</span>
-<span style="color: #729fcf;">    - </span><span style="color: #729fcf; font-weight: bold;">[Quickstart]</span><span style="color: #ad7fa8;">({lisp }(ob:path-to-root)</span>{/lisp}/quickstart.html)
-<span style="color: #729fcf;">    - </span><span style="color: #729fcf; font-weight: bold;">[Bootstrap]</span><span style="color: #ad7fa8;">({lisp }(ob:path-to-root)</span>{/lisp}/bootstrap-items.html)
+<span style="color: #729fcf;">-</span> <span style="color: #729fcf; font-weight: bold;">[&lt;icon icon="home"&gt; Home]</span><span style="color: #ad7fa8;">({lisp }(ob:path-to-root)</span>{/lisp}/index.html)
+<span style="color: #729fcf;">-</span> <span style="color: #729fcf; font-weight: bold;">[&lt;icon icon="book"&gt; Documentation]</span><span style="color: #ad7fa8;">(#)</span>
+    <span style="color: #729fcf;">-</span> <span style="color: #729fcf; font-weight: bold;">[Quickstart]</span><span style="color: #ad7fa8;">({lisp }(ob:path-to-root)</span>{/lisp}/quickstart.html)
+    <span style="color: #729fcf;">-</span> <span style="color: #729fcf; font-weight: bold;">[Bootstrap]</span><span style="color: #ad7fa8;">({lisp }(ob:path-to-root)</span>{/lisp}/bootstrap-items.html)
 </pre>
 </div>
 </div>
@@ -250,7 +261,7 @@ type: snippet
 </source>
 <div class="src markdown">
 <pre>
-% -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
+<span style="color: #888a85;">%</span> -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
 <span style="color: #888a85;">&lt;!--/
 title: index
 type: page
@@ -380,18 +391,27 @@ type: snippet
 	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
 	</div>
       </div>
+      <div class="ob-script-container">
       <script type="text/javascript">
       	var path_to_root = ".";
 	var ob_this_page = "quickstart.html";
       </script>
-      <script src="./style/jquery-2.1.1.min.js"></script>
-      <script src="./style/bootstrap/js/bootstrap.min.js"></script>
-      <script src="./style/o-blog-bootstrap.min.js"></script>
+      <script src="./style/js/o-blog.min.js"></script>
+      <!-- <script src="./style/jquery-2.1.1.min.js"></script> -->
+      <!-- <script src="./style/jquery.equalizer.min.js"></script> -->
+      <!-- <script src="./style/bootstrap/js/bootstrap.min.js"></script> -->
+      <!-- <script src="./style/o-blog-bootstrap.min.js"></script> -->
+      <!-- <script type="text/javascript"> -->
+      <!-- 	$(document).ready(function() { -->
+      <!--   $("head").append([ -->
+      <!-- 	'<link href="./style/bootstrap/css/bootstrap.css" rel="stylesheet">', -->
+      <!-- 	'<link href="./style/font-awesome/css/font-awesome.min.css" rel="stylesheet">']) -->
+      <!-- 	}); -->
+      <!-- </script> -->
       <script type="text/javascript">
 	$(document).ready(function() {
-        $("head").append([
-	'<link href="./style/bootstrap/css/bootstrap.css" rel="stylesheet">',
-	'<link href="./style/font-awesome/css/font-awesome.min.css" rel="stylesheet">'])
+	$("head").append([ 
+      	'<link href="./style/css/o-blog.min.css" rel="stylesheet">'])
 	});
       </script>
       <script type="text/javascript">
@@ -413,6 +433,8 @@ $(document).ready(function() {
       <script type="text/javascript" src="//cdn.muut.com/1/moot.min.js"></script>
       <script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
+      <script src="http://platform.linkedin.com/in.js" type="text/javascript"></script>
+      </div>
 </body>
 </html>
 
