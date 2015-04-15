@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Quickstart</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="generator" content="o-blog v2.0"/>
+    <link rel="icon" type="image/png" href="./style/img/favicon.png" />
+    <script src="./style/js/sidjs.min.js" async></script>
+    <script>
+      !function(){var a=function(b,c,d,e,f){return"undefined"==typeof e&&(e=10),"undefined"==typeof f&&(f=1e3),b()?c(d):void(f>=0&&setTimeout(function(){a(b,c,d,e,f-e)},e))};window.RunIf={runif:function(b,c,d,e,f){return a(b,c,d,e,f)}}}();
+      var path_to_root=".",ob_this_page="quickstart.html";RunIf.runif(function(){return window.Sid},function(){var a=/^http:/.test(document.location)?"http:":"https:";Sid.css("./style/css/o-blog.min.css",function(){RunIf.runif(function(){return window.jQuery},function(){$(".row").equalizer({columns:".thumbnail"}),$(".row").equalizer({columns:".src"})},void 0,100,6e4)},"head"),Sid.js("./style/js/spin.min.js",function(){ob_spinner=new Spinner({color:"#bbb"}).spin(document.getElementById("ob-spinner"))},"head"),Sid.js("./style/js/o-blog.min.js",void 0,"head");var b="1";""!==b&&Sid.js(a+"//platform.linkedin.com/in.js",void 0,"head");var c="renard_0";""!==c&&Sid.js(a+"//platform.twitter.com/widgets.js",void 0,"head");var d="1";""!==d&&Sid.js(a+"//apis.google.com/js/platform.js",void 0,"head");var d="UA-52987213-1";""!==d&&Sid.js(a+"//www.google-analytics.com/analytics.js",function(){ga("create",d,"auto"),ga("send","pageview")},"head")});
+    </script>
+  </head>
+  <body>
+    <div id="spinner" style="width:100%;height:100%;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto;z-index:999998;background-color:rgba(0,0,0,0.5);">
+      <div id="ob-spinner" style="width:100px;height:100px;position:fixed;top:0;bottom:0;left:0;right:0;margin:auto;z-index:999999;background-color:rgba(127,127,127,0.5);"></div>
+    </div>
+    <div id="page" class="container">
+
+<article>
+  <header class="article-header">
+    <div class="page-header">
+      	<h1>Quickstart</h1>
+    </div>
+  </header>
+  <div class="article-content">
+    <div class="lead">
+Starting a new blog from scratch is pretty easy. This article show you how to create a brand new site using o-blog and <em>pandoc</em>. Follow the step-by-step guide. If you want you can still use <em>org-mode</em> as in version 1.
+</div>
+<h1 id="required-software">Required software</h1>
+<p>You need:</p>
+<ul>
+<li><a href="http://www.gnu.org/software/emacs/">Emacs</a> (version 24 is highly recommended)</li>
+<li><a href="https://github.com/renard/o-blog">o-blog</a> Version 2</li>
+<li><a href="http://johnmacfarlane.net/pandoc/">pandoc</a> (at least version 1.12.4.2)</li>
+</ul>
+<p>The <code>o-blog</code> installation is pretty straightforward if you are using <a href="https://github.com/dimitri/el-get">el-get</a>. Meanwhile be sure you are using version 2. You can go to the <code>o-blog</code> directory (<kbd>M-x el-get-cd o-blog RET</kbd>) and switch to branch <code>o-blog-v2</code> (<kbd>M-! git checkout o-blog-v2 RET</kbd>).</p>
+<p>You you install <code>o-blog</code> manualy from <em>git</em> you need run and put in your this snippet to your <code>~/.emacs.d/init.el</code> file:</p>
+<div class="row">
+<div class="col-md-6">
+<div class="thumbnail">
+<div class="src sh">
+<pre>
+<span style="color: #729fcf;">cd</span> ~/.emacs.d
+git clone https://github.com/renard/o-blog.git
+git checkout o-blog-v2
+</pre>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="thumbnail">
+<div class="src emacs-lisp">
+<pre>
+(add-to-list 'load-path <span style="color: #ad7fa8; font-style: italic;">"~/.emacs.d/o-blog/lisp"</span>)
+(<span style="color: #729fcf; font-weight: bold;">require</span> '<span style="color: #8ae234;">o-blog</span>)
+
+</pre>
+</div>
+</div>
+</div>
+</div>
+<h1 id="starting-a-blog">Starting a blog</h1>
+<p>Now you need to choose a directory where you site source will reside. This an be anywhere on your computer. Let's use <code>~/Documents/sites/example.com</code> as a root directory. In that file you first need to create a configuration file named <code>o-blog.conf</code> which contains:</p>
+<div class="src conf">
+<pre>
+<span style="color: #eeeeec;">publish-dir</span> = out
+<span style="color: #eeeeec;">template-dir</span> = ~/.emacs.d/o-blog/templates/
+<span style="color: #eeeeec;">style-dir</span> = ~/.emacs.d/o-blog/templates/style/
+</pre>
+</div>
+<p>Where:</p>
+<ul>
+<li><code>publish-dir</code> is the path where the site would be published to.</li>
+<li><code>template-dir</code> is the path where the template are located. We will use <code>o-blog</code> defaults.</li>
+<li><code>style-dir</code> is the path where the styles (<em>CSS</em> and <em>JS</em>) are located. We will use <code>o-blog</code> defaults as well.</li>
+</ul>
+<h2 id="adding-snippets">Adding snippets</h2>
+<p>The default templates require some snippets to be defined. Those snippets are:</p>
+<ul>
+<li><code>About</code>: as defined in the <code>page_footer.html</code> file.</li>
+<li><code>Copyright</code>: as defined in the <code>page_footer.html</code> file.</li>
+<li><code>Navigation Footer</code>: as defined in the <code>page_footer.html</code> file.</li>
+<li><code>Navigation</code>: as defined in the <code>page_header.html</code> file.</li>
+</ul>
+<p>Snippets are a bunch of text that may change from one site to an other. This allow you to use the same templates for many sites by just changing some files.</p>
+<p>You can put a snippet anywhere in the site source tree as long as you define them using <code>type: snippet</code> in their file header. A good practice is to put them all in a single directory such as <code>_elements</code> at the site root.</p>
+<p>For exampe the <code>About</code> you need to create the file <code>_elements/About.snippet.txt</code> which contains following lines:</p>
+<div class="src markdown">
+<pre>
+<span style="color: #888a85;">%</span> -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
+<span style="color: #888a85;">&lt;!--/
+title: About
+type: snippet
+/--&gt;</span><span style="color: #ad7fa8; font-style: italic;">
+This is a sample blog to explain how </span><span style="color: #729fcf; font-weight: bold;">[o-blog]</span><span style="color: #ad7fa8; font-style: italic;">(https://github.com/renard/o-blog)</span><span style="color: #ad7fa8; font-style: italic;"> works.
+</span></pre>
+</div>
+<p>The most important lines are:</p>
+<ul>
+<li><code>title: About</code>: which defines the snippet name.</li>
+<li><code>type: snippet</code>: which defines the current file as a snippet.</li>
+</ul>
+<div class="alert alert-warning">
+Please note that file headers are enclosed within <code>&lt;!--/</code> and <code>/--&gt;</code> comments. Note the slash <code>/</code> at the end of the comment delimeter.
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<code>Copyright</code> snippet
+</div>
+<div class="panel-body">
+<div class="src markdown">
+<pre>
+<span style="color: #888a85;">%</span> -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
+<span style="color: #888a85;">&lt;!--/
+title: Copyright
+type: snippet
+/--&gt;</span><span style="color: #ad7fa8; font-style: italic;">
+Copyright S&#233;bastien Gross
+</span></pre>
+</div>
+</div>
+<div class="panel-footer">
+<code>_elements/Copyright.snippet.txt</code>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<code>Navigation Footer</code> snippet
+</div>
+<div class="panel-body">
+<div class="src markdown">
+<pre>
+<span style="color: #888a85;">%</span> -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
+<span style="color: #888a85;">&lt;!--/
+title: Navigation Footer
+type: snippet
+/--&gt;</span><span style="color: #ad7fa8; font-style: italic;">
+- </span><span style="color: #729fcf; font-weight: bold;">[&lt;icon icon="home"&gt; {lisp }(ob:gettext :home){/lisp}]</span><span style="color: #ad7fa8; font-style: italic;">({lisp }(ob:path-to-root)</span><span style="color: #ad7fa8; font-style: italic;">{/lisp}/index.html)
+</span></pre>
+</div>
+</div>
+<div class="panel-footer">
+<code>_elements/Navigation-footer.snippet.txt</code>
+</div>
+</div>
+<div class="panel panel-default">
+<div class="panel-heading">
+<code>Navigation</code> snippet
+</div>
+<div class="panel-body">
+<div class="src markdown">
+<pre>
+<span style="color: #729fcf;">-</span> <span style="color: #729fcf; font-weight: bold;">[&lt;icon icon="home"&gt; Home]</span><span style="color: #ad7fa8; font-style: italic;">({lisp }(ob:path-to-root)</span>{/lisp}/index.html)
+<span style="color: #729fcf;">-</span> <span style="color: #729fcf; font-weight: bold;">[&lt;icon icon="book"&gt; Documentation]</span><span style="color: #ad7fa8; font-style: italic;">(#)</span>
+    <span style="color: #729fcf;">-</span> <span style="color: #729fcf; font-weight: bold;">[Quickstart]</span><span style="color: #ad7fa8; font-style: italic;">({lisp }(ob:path-to-root)</span>{/lisp}/quickstart.html)
+    <span style="color: #729fcf;">-</span> <span style="color: #729fcf; font-weight: bold;">[Bootstrap]</span><span style="color: #ad7fa8; font-style: italic;">({lisp }(ob:path-to-root)</span>{/lisp}/bootstrap-items.html)
+</pre>
+</div>
+</div>
+<div class="panel-footer">
+<code>_elements/Navigation.snippet.txt</code>
+</div>
+</div>
+<h2 id="creating-one-page">Creating one page</h2>
+<p>Now you can edit the <code>index.txt</code> which contains:</p>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="src markdown">
+<pre>
+<span style="color: #888a85;">%</span> -<span style="color: #eeeeec; font-style: italic;">*- markdown -*</span>-
+<span style="color: #888a85;">&lt;!--/
+title: index
+type: page
+template: blog_static.html
+/--&gt;</span>
+
+&lt;jumbotron&gt;
+&lt;h1&gt;Hello, world!&lt;/h1&gt;
+&lt;/jumbotron&gt;
+
+&lt;justify&gt;
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+&lt;/justify&gt;
+
+</pre>
+</div>
+</div>
+<div class="panel-footer">
+<code>index.txt</code>
+</div>
+</div>
+<p>You can publish using <kbd>M-x o-blog-publish RET</kbd>. You will get something similar to:</p>
+<div class="panel panel-default">
+<div class="panel-body">
+<div class="jumbotron">
+<h1>
+Hello, world!
+</h1>
+</div>
+<p class="text-justify">
+Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+</div>
+</div>
+
+  </div>
+  <div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_shortname = 'renard-o-blog';
+  ob_js_to_load.push(disqus_shortname + '.disqus.com/embed.js');
+</script>
+
+</article>
+      </div>
+    <div class="ob-navbar-container">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="navbar-header">
+	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ob-navbar">
+	  <span class="sr-only">Toggle navigation</span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	  <span class="icon-bar"></span>
+	</button>
+	<a class="navbar-brand" href="./index.html">o-blog</a>
+      </div>
+      <div class="collapse navbar-collapse ob-navbar">
+	<ul>
+<li><a href="./index.html"><i class="fa fa-home"></i> Home</a></li>
+<li><a href="#"><i class="fa fa-book"></i> Documentation</a>
+<ul>
+<li><a href="./quickstart.html">Quickstart</a></li>
+<li><a href="./bootstrap-items.html">Bootstrap</a></li>
+<li></li>
+<li><a href="./page-classes.html">Page classes</a></li>
+<li><a href="./publication.html">Publication</a></li>
+<li></li>
+<li><a href="./javascript.html">Javascript</a> <!-- - [<i class="fa fa-book"></i> Blog](#) <span class="ob-articles" data-source="./articles.js" data-path-to-root="." data-category="Blog"></span> --></li>
+</ul></li>
+<li><a href="#"><i class="fa fa-file-text"></i> Lorem</a> <span class="ob-articles" data-source="./articles.js" data-path-to-root="." data-category="Lorem"></span></li>
+<li><a href="#"><i class="fa fa-tags"></i> Tags</a>
+<ul>
+<li><a href="./tags/index.html">Cloud</a></li>
+<li><a href="./tags.html">Details</a></li>
+</ul></li>
+<li><a href="./testimonials.html"><i class="fa fa-child"></i> Testimonial</a></li>
+<li><a href="./forum.html"><i class="fa fa-comments-o"></i> Forum</a></li>
+</ul>
+<!--
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="renard_0" data-hashtags="oblog,emacs" data-dnt="true">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+-->
+
+
+
+      </div>
+    </nav>
+
+    <div class="subnav subnav-fixed visible-desktop">
+      <div class="container">
+	<ul class="breadcrumb">
+  <li><a href="./index.html">Home</a> <span class="divider"></span></li>
+  <li>Quickstart</li>
+  </ul>
+
+      </div>
+    </div>
+    </div>
+
+<div id="footer">
+	<div class="container">
+	  <div class="row">
+	    <nav class="col-md-3 col-sm-3 col-xs-6">
+	      <h2>About</h2>
+	      <!-- about -->
+	      <p>This is a sample blog to explain how <a href="https://github.com/renard/o-blog">o-blog</a> works.</p>
+
+	      <!-- /about -->
+	    </nav>
+	    <nav id="links" class="col-md-3 col-sm-3 col-xs-6">
+	      <h2>Links</h2>
+	      <!-- Navigation Footer -->
+	      <ul>
+<li><a href="./index.html"><i class="fa fa-home"></i> Home</a></li>
+<li><a href="./quickstart.html"><i class="fa fa-book"></i> Quickstart</a></li>
+<li><a href="./bootstrap-items.html"><i class="fa fa-book"></i> Bootstrap</a></li>
+<li><a href="./page-classes.html"><i class="fa fa-book"></i> Page classes</a></li>
+<li><a href="./publication.html"><i class="fa fa-book"></i> Publication</a></li>
+</ul>
+
+	      <!-- Navigation Footer -->
+	    </nav>
+	    <nav id="archives" class="col-md-3 col-sm-3 col-xs-6">
+	      <h2><a href="./archives.html">Archives</a></h2>
+	      <div>
+<h6><a href="./lorem/index.html">Lorem</a></h6>
+<div class="ob-articles" data-source="./articles.js" data-path-to-root="." data-category="Lorem"></div>
+</div>
+	    </nav>
+	    <nav class="tags col-md-3 col-sm-3 col-xs-6">
+	      <h2><a href="./tags/index.html">Tags</a></h2>
+	      <span class="ob-tagcloud" data-source="./tags.js" data-path-to-root="."></span>
+	    </nav>
+	  </div>
+	</div>
+	<div class="copyright" style="text-align: center;">
+	  <!-- copyright -->
+	  <p>Copyright Sébastien Gross</p>
+
+	  <p>Powered by <a href="https://github.com/renard/o-blog">o-blog</a>.</p>
+	  <p>
+	    <a href="http://validator.w3.org/check?uri=http%3A%2F%2Frenard.github.io%2Fo-blog%2Fquickstart.html" data-toggle="tooltip" data-placement="top" title="HTML 5 valid"><i class="fa fa-html5"></i></a>
+	    <a href="http://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Frenard.github.io%2Fo-blog%2Fquickstart.html" data-toggle="tooltip" data-placement="top" title="CSS 3 valid"><i class="fa fa-css3"></i></a>
+	    <a href="https://www.google.com/webmasters/tools/mobile-friendly/?url=http%3A%2F%2Frenard.github.io%2Fo-blog%2Fquickstart.html" data-toggle="tooltip" data-placement="top" title="Mobile friendly"><i class="fa fa-mobile"></i></a>
+	    <a href="https://developers.google.com/speed/pagespeed/insights/?url=http%3A%2F%2Frenard.github.io%2Fo-blog%2Fquickstart.html" data-toggle="tooltip" data-placement="top" title="PageSpeed Insights"><i class="fa fa-flag-checkered"></i></a>
+	  </p>
+	</div>
+      </div>
+</body>
+</html>
+
